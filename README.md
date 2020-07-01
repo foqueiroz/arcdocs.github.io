@@ -6,8 +6,7 @@ This repository automatically builds and deploys html content onto the repositor
 
 ## Working with this project locally
 
-You can get this project working locally by using the environment.yml file to create a conda
-environment that contains all the dependencies required to get started.
+You can get this project working locally by using the environment.yml file to create a conda environment that contains all the dependencies required to get started.
 
 ```{bash}
 $ conda env create -f environment.yml
