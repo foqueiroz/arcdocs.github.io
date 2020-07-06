@@ -15,6 +15,7 @@ $ conda env create -f environment.yml
 To build the html content locally you can use the `jupyter-book` command line tool:
 
 ```
+
 # navigate to the repository root
 $ cd arcdocs-jupyterbook
 # sometimes worth running jupyter-book clean book/ to remove old files
