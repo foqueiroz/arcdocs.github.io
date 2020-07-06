@@ -1,4 +1,0 @@
-# gitignore for arcdocs.jupyterbook
-
-# built book
-**/_build/*
