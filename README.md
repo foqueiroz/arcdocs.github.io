@@ -13,6 +13,10 @@ Because this is a user/Organisation page on GitHub the website is hosted from th
 You can get this project working locally by using the environment.yml file to create a conda environment that contains all the dependencies required to get started.
 
 ```{bash}
+$ git clone https://github.com/arcdocs/arcdocs.github.io.git
+
+$ git checkout working-master # all work should be on this branch
+
 $ conda env create -f environment.yml
 ```
 
