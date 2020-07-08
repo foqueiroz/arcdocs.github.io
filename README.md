@@ -31,3 +31,18 @@ $ jupyter-book build book/
 ### Windows
 
 An important note is that the JupyterBook project does not currently support Windows ([see here for more](https://jupyterbook.org/advanced/advanced.html#working-on-windows)).
+
+To aid with this we have created a `Vagrantfile` that can allow Windows users who have a virtualisation provider installed (such as [VirtualBox](https://www.virtualbox.org/)) and [Vagrant](https://www.vagrantup.com/) installed to create a headless virtual Linux machine that will build the jupyter book. You can do this with the following steps once you've installed a virtualisation provider and vagrant:
+```
+# within git-bash or powershell
+$ cd arcdocs.github.io
+$ vagrant up
+
+# to rebuild the site after changes with the vagrant box running
+$ vagrant reload --provision
+
+# don't forget to destroy the box when you're done
+$ vagrant destroy
+```
+
+This will build the jupyter-book html files on your Windows file system (by navigating via /vagrant) so your local build will still persist after you've destroyed your vagrant box.
