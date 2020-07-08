@@ -16,3 +16,19 @@
   sections:
     - file: getting_started/request_hpc_acct
     - file: getting_started/request_install
+
+# ===== Useage ==========================================
+- file: useage/start
+
+# ===== Software ==========================================
+- file: software/start
+
+# ===== Systems ==========================================
+- file: systems/start
+
+# ===== Training ==========================================
+- url: https://arcleeds.github.io/training/
+  title: Training
+
+# ===== Contact ==========================================
+- file: contact/start
