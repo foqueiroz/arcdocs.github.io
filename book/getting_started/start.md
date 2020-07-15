@@ -7,3 +7,5 @@ Find details on:
 
 - [Requesting an account for our HPC systems](./request_hpc_acct)
 - [Requesting the installation of software on HPC](./request_install)
+- [How to connect and log on to ARC3/ARC4](./logon)
+- [Linux basics](./linuxbasics)
