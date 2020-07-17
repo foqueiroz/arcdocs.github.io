@@ -1,0 +1,708 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Logging on &#8212; ARC Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/getting_started/logon.html" />
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Linux basics" href="linuxbasics.html" />
+    <link rel="prev" title="Requesting a software install on HPC" href="request_install.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/getting_started/logon.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Logging on" />
+<meta property="og:description" content="Logging on  Warning  Read carefully This is a big article that covers lots of important details about logging in especially for those connecting from off campus" />
+<meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">ARC Documentation</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="start.html">
+   Getting Started
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="request_hpc_acct.html">
+     Requesting a HPC Account
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="request_install.html">
+     Requesting a software install on HPC
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Logging on
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="linuxbasics.html">
+     Linux basics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../useage/start.html">
+   Useage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/start.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../systems/start.html">
+   Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://arcleeds.github.io/training/">
+   Training
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contact/start.html">
+   Contact Us
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit the <a href="https://arcleeds.github.io/">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/getting_started/logon.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fgetting_started/logon.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/master/book/getting_started/logon.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connecting-from-linux-macos-systems">
+   <strong>
+    Connecting from Linux/MacOS systems
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ssh-via-terminal">
+     SSH via Terminal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graphics-forwarding-x11">
+     Graphics forwarding (X11)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configuring-ssh-for-off-campus-connections">
+     Configuring SSH for off-campus connections
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connecting-from-windows">
+   <strong>
+    Connecting from Windows
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-mobaxterm">
+     Setting up MobaXTerm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#connecting-via-mobaxterm">
+     Connecting via MobaXTerm
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creating-an-ssh-session">
+       Creating an SSH session
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-the-mobaxterm-terminal">
+       Using the MobaXTerm Terminal
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#configuring-mobaxterm-terminal">
+         Configuring MobaXTerm Terminal
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#sshing-via-the-mobaxterm-terminal">
+         SSHing via the MobaXTerm Terminal
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="logging-on">
+<h1>Logging on<a class="headerlink" href="#logging-on" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Read carefully</strong>
+This is a big article that covers lots of important details about logging in especially for those connecting from off campus.</p>
+</div>
+<p>Once you have an account you’ll be able to connect to the University HPC systems using a secure shell (SSH). In the page below we’ll cover how to make sure you can SSH from your machine (installing any prerequired software) and how to configure your SSH to connect from off-campus.</p>
+<div class="section" id="connecting-from-linux-macos-systems">
+<h2><strong>Connecting from Linux/MacOS systems</strong><a class="headerlink" href="#connecting-from-linux-macos-systems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ssh-via-terminal">
+<h3>SSH via Terminal<a class="headerlink" href="#ssh-via-terminal" title="Permalink to this headline">¶</a></h3>
+<p>Linux and MacOS systems all come with a Terminal application that opens a command-line shell. In the following example code snippets we’ll be connecting with the username <code class="docutils literal notranslate"><span class="pre">exuser</span></code>. When you come to log in to a system you’ll need to use your own university username in place of <code class="docutils literal notranslate"><span class="pre">exuser</span></code>.</p>
+<p>To log in from your Terminal use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># to log into ARC4</span>
+$ ssh exuser@arc4.leeds.ac.uk
+
+<span class="c1"># to log into ARC4</span>
+$ ssh exuser@arc3.leeds.ac.uk
+</pre></div>
+</div>
+<p>You will then be prompted for your password which you should enter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For security placeholder characters
+will not appear as you type your password. Your keystrokes are recorded so please type carefully!</p>
+</div>
+</div>
+<div class="section" id="graphics-forwarding-x11">
+<h3>Graphics forwarding (X11)<a class="headerlink" href="#graphics-forwarding-x11" title="Permalink to this headline">¶</a></h3>
+<p>Secure shell allows X display (GUI) traffic to be tunnelled (and encrypted) through the SSH connection. Provided your local display is set up correctly, the -Y flag can be used to allow trusted X11 forwarding:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ssh -Y exuser@arc4.leeds.ac.uk
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>For macOS Users</strong>
+The latest versions of macOS do not have an X11 client installed so this will need to be downloaded and installed seperately. X11 for Mac can be obtained from the <a class="reference external" href="http://www.xquartz.org/index.html">XQuartz</a>. This is a dmg file so will prompt you with the correct instructions for installation.</p>
+</div>
+</div>
+<div class="section" id="configuring-ssh-for-off-campus-connections">
+<h3>Configuring SSH for off-campus connections<a class="headerlink" href="#configuring-ssh-for-off-campus-connections" title="Permalink to this headline">¶</a></h3>
+<p>In order to connect to ARC when you’re off campus you’ll need to do some extra configuration so that your SSH connection goes via our <code class="docutils literal notranslate"><span class="pre">remote-access</span></code> server. The following steps outline how to setup this configuration:</p>
+<ol>
+<li><p>Open a Terminal on your Linux/macOS machine</p></li>
+<li><p>Create a directory called <code class="docutils literal notranslate"><span class="pre">.ssh</span></code> in your home directory (if one doesn’t already exist)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir ~/.ssh
+</pre></div>
+</div>
+</li>
+<li><p>Then open a text editor of your choice and create a file called <code class="docutils literal notranslate"><span class="pre">config</span></code> in your <code class="docutils literal notranslate"><span class="pre">.ssh</span></code> directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># for instance use the simple nano text editor</span>
+$ nano ~/.ssh/config
+</pre></div>
+</div>
+</li>
+<li><p>Within this file include the following contents where <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code> is replaced by your university username</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Host *.leeds.ac.uk !remote-access.leeds.ac.uk
+ProxyJump USERNAME@remote-access.leeds.ac.uk
+User USERNAME
+</pre></div>
+</div>
+</li>
+<li><p>Save this file and your configuration is all set up!</p></li>
+</ol>
+<p>You will now be prompted for your password twice everytime you attempt to log into ARC, this is because you are logging into the remote-access server first and then connecting to ARC.</p>
+</div>
+</div>
+<div class="section" id="connecting-from-windows">
+<h2><strong>Connecting from Windows</strong><a class="headerlink" href="#connecting-from-windows" title="Permalink to this headline">¶</a></h2>
+<p>Windows by default does not come with an SSH client. Therefore, we need to install an SSH client and an X server for forwarding graphical applications. We recommend using <a class="reference external" href="http://mobaxterm.mobatek.net/">MobaXTerm</a> which combines an SSH program (similar to PuTTY), a simple file transfer utility, a text editor and an X-Server into a single package.</p>
+<div class="section" id="setting-up-mobaxterm">
+<h3>Setting up MobaXTerm<a class="headerlink" href="#setting-up-mobaxterm" title="Permalink to this headline">¶</a></h3>
+<p>To get started you need to install MobaXTerm. You can do this by downloading the <strong>Portable Home edition</strong> <a class="reference external" href="https://mobaxterm.mobatek.net/download-home-edition.html">(Click here to go to the download page)</a> which is a .zip file containing the software. You can follow the steps in the below video to help walkthrough getting set up.</p>
+<iframe src="https://mymedia.leeds.ac.uk/Mediasite/Play/7c25b8af4c7f43f7898efeba0ec6dd311d" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" scrolling="auto" allowfullscreen="allowfullscreen" style="display:block;"> </iframe>
+</div>
+<div class="section" id="connecting-via-mobaxterm">
+<h3>Connecting via MobaXTerm<a class="headerlink" href="#connecting-via-mobaxterm" title="Permalink to this headline">¶</a></h3>
+<p>Once you have MobaXTerm downloaded you can connect to ARC via two mechanisms: using the builtin local terminal to connect using SSH commands; or creating an SSH session via the GUI.</p>
+<div class="section" id="creating-an-ssh-session">
+<h4>Creating an SSH session<a class="headerlink" href="#creating-an-ssh-session" title="Permalink to this headline">¶</a></h4>
+<p>You can create an SSH session to connect to ARC using the following steps:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>1. Open the initial MobaXTerm Menu and select Session</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Open the initial MobaXTerm Menu and select Session" src="../_images/mobaXTerm1.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>2. In the Session Wizard Window select SSH</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="In the Session Wizard Window select SSH" src="../_images/mobaXTerm2.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>3. Input the basic setting details for SSH session: the host (address of ARC), the username (your university username)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Input the basic setting details for SSH session: the host (address of ARC), the username (your university username)" src="../_images/mobaXTerm3.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>4. Select the Network Settings tab within the Session Settings window</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Select the Network Settings tab within the Session Settings window" src="../_images/mobaXTerm4.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>5. Select the “Connect through SSH gateway (jump host) option and input details for connecting to remote-access.leeds.ac.uk (Gateway SSH server) and specify your username</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Select the &quot;Connect through SSH gateway (jump host) option" src="../_images/mobaXTerm5.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>6. You will immediately be prompted for your password to connect to the remote-access server</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="You will immediately be prompted for your password to connect to the remote-access server" src="../_images/mobaXTerm6.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>7. After it accepts your password it will request your password again, this time to log into ARC4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="After it accepts your password it will request your password again, this time to log into ARC4" src="../_images/mobaXTerm7.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For security placeholder characters
+will not appear as you type your password. Your keystrokes are recorded so please type carefully!</p>
+</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>8. Once successful you will see the ARC4 message of the day and the ARC prompt</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Once successful you will see the ARC4 message of the day and the ARC prompt" src="../_images/mobaXTerm8.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>9. You can restart an existing session after it has closed by double-clicking the session under the User sessions folder on the left-hand panel of the main MobaXTerm menu</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="You can restart an existing session after it has closed by double-clicking the session under the User sessions" src="../_images/mobaXTerm9.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="using-the-mobaxterm-terminal">
+<h4>Using the MobaXTerm Terminal<a class="headerlink" href="#using-the-mobaxterm-terminal" title="Permalink to this headline">¶</a></h4>
+<p>Alternatively, you can connect to ARC using the builtin Terminal within MobaXTerm and use the <code class="docutils literal notranslate"><span class="pre">ssh</span></code> command.</p>
+<div class="section" id="configuring-mobaxterm-terminal">
+<h5>Configuring MobaXTerm Terminal<a class="headerlink" href="#configuring-mobaxterm-terminal" title="Permalink to this headline">¶</a></h5>
+<p>In order to successfully connect off-campus you are required to adjust some settings within MobaXTerm to create a persistent home directory and create a configuration file for SSH.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>1. Open the initial MobaXTerm Menu and select Settings</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Open the initial MobaXTerm Menu and select Settings" src="../_images/mobaSSH1.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>2. Select the folder icon on the right-hand side of the Persistent home directory setting box</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Select the folder icon on the right-hand side of the Persistent home directory setting box" src="../_images/mobaSSH2.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>3. Select a folder location to use for your persistent home directory (this can be any writeable folder on your computer), here I am using my C:\User\university_username folder</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Select a folder location to use for your persistent home directory" src="../_images/mobaSSH3.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>4. This takes you back to the MobaXTerm Setting Menu, where you can now select OK</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="This takes you back to the MobaXTerm Setting Menu, where you can now select OK" src="../_images/mobaSSH4.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>5. You will then be prompted to restart MobaXTerm so that the new settings are applied</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="You will then be prompted to restart MobaXTerm so that the new settings are applied" src="../_images/mobaSSH5.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>6. When MobaXTerm restarts, select the Start Local Terminal option</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="When MobaXTerm restarts, select the Start Local Terminal option" src="../_images/mobaSSH6.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>7. This takes you to the MobaXTerm terminal view</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="This takes you to the MobaXTerm terminal view" src="../_images/mobaSSH7.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>8. Next create a folder called <code class="docutils literal notranslate"><span class="pre">.ssh</span></code> using the command <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">.ssh</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="This takes you to the MobaXTerm terminal view" src="../_images/mobaSSH8.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If this folder already exists you will get an error saying this file/folder already exists just skip to step 9</p>
+</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>9. Then go to Tools &gt; MobaTextEditor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="This takes you to the MobaXTerm terminal view" src="../_images/mobaSSH9.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>10. Type the contents of the file as follows where <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code> is your university username</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><pre id="codecell0"> Host *.leeds.ac.uk !remote-access.leeds.ac.uk <br> ProxyJump USERNAME&#64;remote-access.leeds.ac.uk <br> User USERNAME </pre></p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="This takes you to the MobaXTerm terminal view" src="../_images/mobaSSH10.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>11. Once complete go to File &gt; Save As</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Once complete go to File &gt; Save As" src="../_images/mobaSSH11.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>12. Select the <code class="docutils literal notranslate"><span class="pre">.ssh</span></code> folder you created in the step 8.</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt=" Select the .ssh folder you created in the step 8." src="../_images/mobaSSH12.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>13. Name the file as <code class="docutils literal notranslate"><span class="pre">config</span></code> and press Save and close MobaTextEditor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Name the file as  and press Save" src="../_images/mobaSSH13.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<p>And now MobaXTerm should be configured so we can SSH to ARC using the MobaXTerm Terminal.</p>
+</div>
+<div class="section" id="sshing-via-the-mobaxterm-terminal">
+<h5>SSHing via the MobaXTerm Terminal<a class="headerlink" href="#sshing-via-the-mobaxterm-terminal" title="Permalink to this headline">¶</a></h5>
+<p>We can use the MobaXTerm Terminal like a standard unix shell to navigate around our local computer and also to SSH onto remote hosts including ARC. In order to connect to ARC we need to make sure we have configured MobaXTerm as described in <a class="reference external" href="#configuring-mobaxterm-terminal">the above section</a></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>1. Within a local Terminal on MobaXTerm we use the <code class="docutils literal notranslate"><span class="pre">ssh</span></code> command to connect to ARC</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="Within a local Terminal on MobaXTerm we use the  command to connect to ARC" src="../_images/mobaSSH_1.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>2. We are then prompted to submit our password to connect to <code class="docutils literal notranslate"><span class="pre">remote-access.leeds.ac.uk</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="We are then prompted to submit our password to connect to remote-access" src="../_images/mobaSSH_2.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>3. We are then prompted to submit our password to connect to <code class="docutils literal notranslate"><span class="pre">arc4.leeds.ac.uk</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="We are then prompted to submit our password to connect to arc4" src="../_images/mobaSSH_3.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>4. Once we have successfully submitted our passwords our prompt will change and the message of the day for ARC4 will be displayed</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="ARC4 message of the day on MobaXTerm" src="../_images/mobaSSH_4.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="request_install.html" title="previous page">Requesting a software install on HPC</a>
+    <a class='right-next' id="next-link" href="linuxbasics.html" title="next page">Linux basics</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By University of Leeds Research Computing Team<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
