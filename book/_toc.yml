@@ -18,6 +18,8 @@
     - file: getting_started/request_install
     - file: getting_started/logon
     - file: getting_started/linuxbasics
+    - file: getting_started/file_transfer.md
+    - file: getting_started/nobackup.md
 
 # ===== Useage ==========================================
 - file: useage/start
