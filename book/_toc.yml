@@ -27,6 +27,9 @@
 
 # ===== Systems ==========================================
 - file: systems/start
+  sections:
+    - file: systems/arc4
+    - file: systems/arc3
 
 # ===== Training ==========================================
 - url: https://arcleeds.github.io/training/
