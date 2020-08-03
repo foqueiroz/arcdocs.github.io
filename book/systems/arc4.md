@@ -33,7 +33,7 @@ These can be requested by adding this line to submission scripts:
 
 #### GPGPU nodes
 3 nodes each with 40 cores, 192GB of system memory, a hard disk drive within the node with 800GB of storage and **4 x NVIDIA V100 GPUs**.
-See GPU section below on how to access these nodes
+[See GPU section below](#using-the-v100-gpu-nodes) on how to access these nodes
 
 ### Lustre Storage
 
