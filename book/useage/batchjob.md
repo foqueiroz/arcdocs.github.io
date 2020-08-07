@@ -36,6 +36,41 @@ You can use the command `dos2unix job_script.sh` on HPC to convert your script t
 
 ### The Hello world job script
 
+In this basic hello world job script example we've got a job script called `job_script1.sh` requests a single core, 1GB of RAM, 15 minutes of run time in order to run some R code.
+
+```shell
+#R single core submission script
+
+#Run with current environment (-V) and in the current directory (-cwd)
+#$ -V -cwd
+
+#Request some time- min 15 mins - max 48 hours
+#$ -l h_rt=00:15:00
+
+#Request some memory per core
+#$ -l h_vmem=1G
+
+#Get email at start and end of the job
+#$ -m be
+
+#Now run the job
+module load R
+R CMD BATCH R.in R.out
+```
+
+We can submit this script to the scheduler by using `qsub`:
+
+```bash
+$ qsub job_script1.sh
+Your job 42 ("job_script1.sh") has been submitted
+```
+
+This returns some text to confirm our job has been submitted and provides us with the jobs unique ID number (in this case 42).
+
+``` {note} **Array jobs** <br>
+If you intend to runs multiple similar jobs with the same resource specification, we recommend using the [task array system](./taskarrays).
+```
+
 ### Resource specification
 
 ### Monitoring jobs
