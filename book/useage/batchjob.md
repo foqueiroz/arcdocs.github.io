@@ -2,6 +2,37 @@
 
 Utilising the computational power of the HPC facilities at Leeds is organised through a batch job scheduling system. This involves users submitting a script that outlines the resources required and the program to be run to the scheduler which allocates that job a position in the queue of jobs. The scheduler software run on both ARC3 and ARC4 is [Son of Grid Engine](https://arc.liv.ac.uk/trac/SGE), plus locally developed and implemented patches.
 
+## Job scripts
+
+The scripts submitted are referred to as **job scripts** or **job submission scripts** these are shell scripts (files ending `.sh`) and at a bare minimum specify:
+
+- how long the job needs to run for
+- on how many processors to use (assumed 1 unless otherwise told)
+
+With this information, the scheduler is able to run jobs at some point in the future when the resources become available. Crucially, the queue is **not** a first-come-first-serve and implements a [fair-share policy](#fair-share-policy) to guide the scheduler towards allocating resources fairly between different faculties.
+
+The common commands used on HPC to interact with batch jobs are:
+
+- [`qsub`](#the-hello-world-job-script) - submits a job script to the scheduler
+- [`qstat`](#monitoring-jobs) - checks the status of submitted jobs
+- [`qdel`](#deleting-jobs) - deletes a specified job from the queue
+
+### Writing jobs scripts on HPC
+
+
+
+### The Hello world job script
+
+### Resource specification
+
+### Monitoring jobs
+
+#### Deleting jobs
+
+### Job output
+
+### Job holding
+
 ### Fair share policy
 
 The fair-share policy is two-tiered policy that takes into account the useage of a faculty as a whole and the past useage of the user. In the first tier of the policy faculties are allocated a share of the queue space on the basis of funding, meaning that faculties do not have equal shares of system capacity. The fair-share policy then determines an initial faculty level priority based on the faculties share and the total useage by all faculty member users.
