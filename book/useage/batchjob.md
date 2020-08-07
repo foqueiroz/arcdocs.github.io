@@ -19,7 +19,20 @@ The common commands used on HPC to interact with batch jobs are:
 
 ### Writing jobs scripts on HPC
 
+We encourage users to write their job submission scripts using text editor tools available on ARC3 and ARC4 such as:
 
+- `nano` (recommended for beginners)
+- `gedit`
+- `vim`
+- `emacs`
+
+The basic useage to create a new job submission file on HPC would be `nano job_submit.sh` or `vim job_submit.sh`. This opens the new empty file in the text editor ready for you to write its contents.
+
+``` {warning}
+Job scripts written on Windows computers contain different invisible line ending characters that lead to job submission failures such as
+`/bin/bash^M: bad interpreter: No such file or directory` <br>
+You can use the command `dos2unix job_script.sh` on HPC to convert your script to the correct line ending.
+```
 
 ### The Hello world job script
 
