@@ -24,6 +24,12 @@
 
 # ===== Useage ==========================================
 - file: useage/start
+  sections:
+    - file: useage/batchjob
+    - file: useage/interactive
+    - file: useage/troubleshooting
+    - file: useage/taskarrays
+    - file: useage/gpgpu
 
 # ===== Software ==========================================
 - file: software/start
