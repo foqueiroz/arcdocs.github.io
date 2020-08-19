@@ -73,6 +73,38 @@ If you intend to runs multiple similar jobs with the same resource specification
 
 ### Resource specification
 
+The job script specified above includes a number of lines that request some amount of compute resource for our job. This is defined by the syntax `#$ <option>`. These lines are commented out of the shell script but are read by the scheduler to determine how much compute resource is required and thus how to fit the job into the queue.
+
+The first things we specify in the example script above were:
+
+```bash
+#$ -V -cwd
+```
+
+`-V` tells the scheduler to use the current environment (including environment variables and loaded modules) and `-cwd` tells the scheduler to run the job within the current directory (helping ensure any paths specified are correct). These are commonly included in all job scripts.
+
+Next we have the lines requesting a time allocation and the amount of memory required per core:
+
+```bash
+#$ -l h_rt=00:15:00
+
+#$ -l h_vmem=1G
+```
+
+Here `-l h_rt=hh:mm:ss` is a request for a specific amount of runtime, with a maximum limit of 48h. The line `-l h_vmem=` requests a specific amount of memory per core, in the example we request 1 GB.
+
+```{warning}
+If your job attempts to run for longer than the amount of time or using more memory per core than requested this will cause the scheduler to kill your job. This is one of the most common problems people encounter, read more on the [troubleshooting page](./troubleshooting).
+```
+
+Next we have options to request notifications about the job:
+
+```bash
+#$ -m be
+```
+
+The option `-m` will specify that we wish to receive an email about the job, in this case `be` at the start and the end of the job. This will automatically be sent to your University of Leeds email address.
+
 ### Monitoring jobs
 
 Once you've submitted a job you can monitor its progress in the queue using the command `qstat JOBID` where `JOBID` is the unique numeric ID of your submitted job.
