@@ -18,7 +18,7 @@ To log in from your Terminal use the following command:
 # to log into ARC4
 $ ssh exuser@arc4.leeds.ac.uk
 
-# to log into ARC4
+# to log into ARC3
 $ ssh exuser@arc3.leeds.ac.uk
 ```
 
