@@ -75,6 +75,27 @@ If you intend to runs multiple similar jobs with the same resource specification
 
 ### Monitoring jobs
 
+Once you've submitted a job you can monitor its progress in the queue using the command `qstat JOBID` where JOBID is the unique numeric ID of your submitted job.
+
+In the example below we've just submitted a job and want to check its status in the queue.
+```bash
+$ qstat 54
+# go get example qstat output
+```
+
+```{note}
+If you run `qstat` expecting an output and nothing happens and your prompt is returned it means you have no jobs currently in the queue. This suggests your job has completed.
+```
+
+Using `qstat` returns some details about our job such as:
+
+- the user who submitted the job
+- the name of the submission script
+- its job ID
+- its state in the queue
+- the number of slots (cores) requested
+- the submission time, or if the job is running the start time
+
 #### Deleting jobs
 
 ### Job output
