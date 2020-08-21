@@ -108,6 +108,19 @@ $ qstat -u '*'
 
 #### Deleting jobs
 
+Sometimes a situation might arise where you need to delete one of your submitted jobs from the queue. You can do this with the straightforward command `qdel JOBID` where `JOBID` is the unique numeric ID of the job we wish to delete. 
+
+When the job is successfully deleted we get the following output:
+
+```bash
+$ qdel 42
+# get SGE message for successful deletion
+```
+
+```{note}
+You can only use `qdel` to delete your own submitted jobs from the queue, so don't try and be smart and clear the queue just for your jobs as it won't work.
+```
+
 ### Job output
 
 ### Job holding
