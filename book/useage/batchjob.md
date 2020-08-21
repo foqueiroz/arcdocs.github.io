@@ -136,6 +136,22 @@ Both these files often contain very useful information about how the job progres
 
 ### Job holding
 
+Often a workflow can involve a number of steps in a process, where each steps requires the outputs of the previous and should only start when the previous step completes. The scheduler has a system of job dependencies built into it that allows you to submit a series of jobs and specify that jobs should be on hold until another job has completed.
+
+For instance you could do this with two submission scripts `job1.sh` and `job2.sh`, where `job2.sh` should only begin once `job1.sh` has finished. You can specify this when submitting jobs as follows:
+
+```bash
+$ qsub job1.sh
+Your job 626 ("job1.sh") has been submitted
+
+$ qsub -hold_jid 626 job2.sh
+Your job 627 ("job2.sh") has been submitted
+```
+
+`job2.sh` will then be held in the queue until `job1.sh` is completed.
+
+This allows for developing a workflow of jobs that run one after another to complete long stepwise tasks.
+
 ### Fair share policy
 
 The fair-share policy is two-tiered policy that takes into account the useage of a faculty as a whole and the past useage of the user. In the first tier of the policy faculties are allocated a share of the queue space on the basis of funding, meaning that faculties do not have equal shares of system capacity. The fair-share policy then determines an initial faculty level priority based on the faculties share and the total useage by all faculty member users.
