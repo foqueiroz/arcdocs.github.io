@@ -123,6 +123,17 @@ You can only use `qdel` to delete your own submitted jobs from the queue, so don
 
 ### Job output
 
+When a job runs it produces two output files by default even if you haven't specified your code to write a results file. These contain information from the standard output and standard error produced by your jobs are are named following the pattern `submission_script.sh.oJOBID` and `submission_script.sh.eJOBID`. Where `JOBID` is the unique numeric ID of the job that ran.
+
+For example if submitted a job called `test_run.sh` and it was given the job ID `4689` we'd expect the following files produced alongside any results files:
+
+```bash
+test_run.sh.o4689
+test_run.sh.e4689
+```
+
+Both these files often contain very useful information about how the job progressed and are especially useful if you job encountered an error. You can read more about using these files to help troubleshoot problems in the [troubleshooting section](./troubleshooting).
+
 ### Job holding
 
 ### Fair share policy
