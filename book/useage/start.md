@@ -4,12 +4,8 @@ This page is an overview of all pages within the Useage section. This covers top
 
 ## Find details on:
 
-### - [Batch jobs](./batchjob)
-
-### - [Interactive jobs](./interactive)
-
-### - [Troubleshooting jobs](./troubleshooting)
-
-### - [Task Arrays](./taskarrays)
-
-### - [General Purpose GPU](./gpgpu)
+- [Batch jobs](./batchjob)
+- [Interactive jobs](./interactive)
+- [Troubleshooting jobs](./troubleshooting)
+- [Task Arrays](./taskarrays)
+- [General Purpose GPU](./gpgpu)
