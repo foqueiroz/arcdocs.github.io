@@ -7,7 +7,7 @@ Utilising the computational power of the HPC facilities at Leeds is organised th
 The scripts submitted are referred to as **job scripts** or **job submission scripts** these are shell scripts (files ending `.sh`) and at a bare minimum specify:
 
 - how long the job needs to run for
-- on how many processors to use (assumed 1 unless otherwise told)
+- on how many processors to use (assumed 1 unless otherwise specified)
 
 With this information, the scheduler is able to run jobs at some point in the future when the resources become available. Crucially, the queue is **not** a first-come-first-serve and implements a [fair-share policy](#fair-share-policy) to guide the scheduler towards allocating resources fairly between different faculties.
 
@@ -26,12 +26,12 @@ We encourage users to write their job submission scripts using text editor tools
 - `vim`
 - `emacs`
 
-The basic useage to create a new job submission file on HPC would be `nano job_submit.sh` or `vim job_submit.sh`. This opens the new empty file in the text editor ready for you to write its contents.
+The basic useage to create a new job submission file on HPC would be `nano job_submit.sh` or `vim job_submit.sh`. This opens the new empty file in the text editor ready for you to write it's contents.
 
 ``` {warning}
 Job scripts written on Windows computers contain different invisible line ending characters that lead to job submission failures such as
 `/bin/bash^M: bad interpreter: No such file or directory` <br>
-You can use the command `dos2unix job_script.sh` on HPC to convert your script to the correct line ending.
+You can use the command `dos2unix job_script.sh` on HPC to convert your script to the correct line endings.
 ```
 
 ### The Hello world job script
@@ -78,23 +78,30 @@ If you intend to runs multiple similar jobs with the same resource specification
 Once you've submitted a job you can monitor its progress in the queue using the command `qstat JOBID` where `JOBID` is the unique numeric ID of your submitted job.
 
 In the example below we've just submitted a job and want to check its status in the queue.
+
 ```bash
 $ qstat 54
-# go get example qstat output
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+ 54 0.00000 test_sub.s exuser     qw    08/21/2019 14:09:08                                    1        
+
 ```
+
+Using `qstat` returns a table with the following columns:
+
+- the job ID
+- the job priority determined by the scheduler [fair share policy](#fair-share-policy)
+- the name of the submission script
+- the user who submitted the job
+- the jobs state in the queue
+    (`qw` for waiting; `r` for running; `hqw` for hold waiting, `Eqw` for errored whilst queueing, `t` for transferring state)
+- the submission time, or if the job is running the start time
+- the number of slots (cores) requested
+- the task ID number if the job is a [task array](./taskarrays)
 
 ```{note}
 If you run `qstat` expecting an output and nothing happens and your prompt is returned it means you have no jobs currently in the queue. This suggests your job has completed.
 ```
-
-Using `qstat` returns some details about our job such as:
-
-- the user who submitted the job
-- the name of the submission script
-- its job ID
-- its state in the queue
-- the number of slots (cores) requested
-- the submission time, or if the job is running the start time
 
 You can also pass the `qstat` command a number of additional arguments to view the queue or other users queues.
 
@@ -108,13 +115,13 @@ $ qstat -u '*'
 
 #### Deleting jobs
 
-Sometimes a situation might arise where you need to delete one of your submitted jobs from the queue. You can do this with the straightforward command `qdel JOBID` where `JOBID` is the unique numeric ID of the job we wish to delete. 
+Sometimes a situation might arise where you need to delete one of your submitted jobs from the queue. You can do this with the straightforward command `qdel JOBID` where `JOBID` is the unique numeric ID of the job we wish to delete.
 
 When the job is successfully deleted we get the following output:
 
 ```bash
 $ qdel 42
-# get SGE message for successful deletion
+exuser has deleted job 42
 ```
 
 ```{note}
@@ -123,16 +130,16 @@ You can only use `qdel` to delete your own submitted jobs from the queue, so don
 
 ### Job output
 
-When a job runs it produces two output files by default even if you haven't specified your code to write a results file. These contain information from the standard output and standard error produced by your jobs are are named following the pattern `submission_script.sh.oJOBID` and `submission_script.sh.eJOBID`. Where `JOBID` is the unique numeric ID of the job that ran.
+When a job runs it produces two output files by default even if you haven't specified your code to write a results file. These contain information from the standard output and standard error produced by your job and are are named following the pattern `submission_script.sh.oJOBID` and `submission_script.sh.eJOBID`. Where `submission_script.sh` is the name of your job script and `JOBID` is the unique numeric ID of the job when it was submitted.
 
-For example if submitted a job called `test_run.sh` and it was given the job ID `4689` we'd expect the following files produced alongside any results files:
+For example, if we submitted a job called `test_run.sh` and it was given the job ID `4689` we'd expect the following files produced alongside any results files:
 
 ```bash
 test_run.sh.o4689
 test_run.sh.e4689
 ```
 
-Both these files often contain very useful information about how the job progressed and are especially useful if you job encountered an error. You can read more about using these files to help troubleshoot problems in the [troubleshooting section](./troubleshooting).
+Both these files contain useful information about how the job progressed and are especially useful if your job encountered an error. You can read more about using these files to help troubleshoot problems in the [troubleshooting section](./troubleshooting).
 
 ### Job holding
 
