@@ -91,7 +91,15 @@ Next we have the lines requesting a time allocation and the amount of memory req
 #$ -l h_vmem=1G
 ```
 
-Here `-l h_rt=hh:mm:ss` is a request for a specific amount of runtime, with a maximum limit of 48h. The line `-l h_vmem=` requests a specific amount of memory per core, in the example we request 1 GB.
+Here `-l h_rt=hh:mm:ss` is a request for a specific amount of runtime, with a maximum limit of 48h. The line `-l h_vmem=` requests a specific amount of memory per core, in the example we request 1 GB to run on 1 core.
+
+To use multiple cores within a node using the OpenMP protocol you include the following option:
+
+```bash
+#$ -pe smp np
+```
+
+Where `np` is the number of cores you wish to request. The maximum number of cores you can request using `smp` is the total number of cores available on a node (ARC4 - 40, ARC3 - 24).
 
 ```{warning}
 If your job attempts to run for longer than the amount of time or using more memory per core than requested this will cause the scheduler to kill your job. This is one of the most common problems people encounter, read more on the [troubleshooting page](./troubleshooting).
@@ -104,6 +112,74 @@ Next we have options to request notifications about the job:
 ```
 
 The option `-m` will specify that we wish to receive an email about the job, in this case `be` at the start and the end of the job. This will automatically be sent to your University of Leeds email address.
+
+#### List of SGE options
+
+```{list-table}
+:header-rows: 1
+:widths: 10 30 10
+
+* - Option
+  - Description
+  - Default
+* - `-l h_rt=hh:mm:ss`
+  - The wall clock time (amount of real time needed by the job). This parameter must be specified, failure to include this parameter will result in an error message.
+  - Required
+* - `-l h_vmem=memory`
+  - Sets the limit of virtual memory required per core. If you require more memory than 1GB/process you must specify this flag. e.g. `-l h_vmem=12G` will request 12GB memory. The maxium memory that can be requested for a shared memory job is the sum of the processes requested and the virtual memory requested that must be equal to or less than the amount available in a single node.
+  - 1G
+* - `-pe smp np`
+  - Specifies the shared memory parallel environment for parallel programs using OpenMP. `np` is the number of cores to be used by the parallel job. The number maximum number of cores that can be requested for shared memory jobs is limited by the number of cores available in a single node.
+  - 1
+* - `-pe ib np`
+  - Specifies the parallel environment for parallel programs using MPI, `np` is the number of cores to be used by the parallel job.
+  -
+* - `-l nodes=x[,ppn=y][,tpp=z]`
+  - Specifies a job for parallel programs using MPI. Assigns whole compute nodes. `x` is the number of nodes, `y` is the number of processes per node, `z` is the number of threads per process.
+  -
+* - `-l np=x[,ppn=y][,tpp=z]`
+  -  Specifies a job for parallel programs using MPI. Assigns whole compute nodes. `x` is the number of processes, `y` is the number of processes per node, `z` is the number of threads per process.
+  -
+* - `-l node_type=type`
+  - Specifies the type of node to be used. Where `type` can be: a standard node with the flag `40core-192G` or the high memory node with the flag `40core-768G`.
+  - 40core-192G (ARC4) 24core-128G (ARC3)
+* - `-l coproc=`
+  - A wrapper line for requesting resources on GPGPU nodes, see [GPGPU page](./gpgpu) for more details. Passing a number between 1 and 4 requests a proportion of the resources on GPGPU nodes.
+  -
+* - `nvidia-smi -L`
+  - Option that confirms what GPGPU cards you have been allocated.
+  -
+* - `-hold_jid prev_job_id`
+  - Hold the job until the previous job (`prev_job_id`) has completed – useful for chaining runs together.
+  -
+* - `-l placement=type`
+  - Choose optimal for launching a process topology which minimises the number of infiniband switch hops used in the calculation, minimising latency. Choose `scatter` for running processes anywhere on the system without topology considerations.
+  -
+* - `-t start-stop`
+  - Produce an array of sub-tasks (loop) from `start` to `stop`, giving `$SGE_TASK_ID` variable to identify the individual sub-tasks. See [task array page](./taskarrays) for more details.
+  -
+* - `-help`
+  - Prints a list of options.
+  -
+* - `-cwd`
+  - Execute the job from the current working directory; output files are sent to the directory form which the job was submitted, not to the user’s home directory.
+  -
+* - `-V`
+  -  Export all current environment variables to all spawned processes. Necessary for current module environment to be transferred to SGE shell.
+  -
+* - `-m be`
+  - Send mail at the beginning (`b`) and at the end (`e`) of the job to the owner.
+  -
+* - `-M email@leeds.ac.uk`
+  - Specify mail address for `-m` option.
+  - Your user email address
+* - `-j y`
+  - Combine the standard error and standard output into one file.
+  -
+* - `-N name`
+  - Give the job a specific name. Where `name` is the desired job name.
+  - Name of submission script
+```
 
 ### Monitoring jobs
 
