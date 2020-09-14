@@ -1,0 +1,94 @@
+dakota_cantilever_dream.in
+PASS test 0
+PASS test 1
+dakota_hybrid.in
+SKIP test 0
+SKIP test 1
+SKIP test 2
+SKIP test 3
+SKIP test 4
+dakota_logratio_pce.in
+PASS test 0
+PASS test 1
+PASS test 2
+PASS test 3
+dakota_ouu_cantilever_lps.in
+PASS test 0
+PASS test 1
+PASS test 2
+PASS test 3
+dakota_ouu_tbch_lps.in
+PASS test 0
+PASS test 1
+PASS test 2
+PASS test 3
+dakota_separable_ego_5D.in
+PASS test 0
+dakota_textbook_num_derivs.in
+PASS test 0
+PASS test 1
+PASS test 2
+PASS test 3
+PASS test 4
+PASS test 5
+PASS test 6
+PASS test 7
+PASS test 8
+PASS test 9
+dakota_uq_gerstner_adapt_gsg.in
+PASS test 0
+PASS test 1
+PASS test 2
+PASS test 3
+PASS test 4
+PASS test 5
+PASS test 6
+PASS test 7
+PASS test 8
+PASS test 9
+PASS test 10
+PASS test 11
+dakota_uq_ishigami_adapt_exp.in
+PASS test 0
+PASS test 1
+PASS test 2
+PASS test 3
+PASS test 4
+PASS test 5
+PASS test 6
+PASS test 7
+PASS test 8
+PASS test 9
+dakota_uq_rosenbrock_adapt_exp.in
+PASS test 0
+PASS test 1
+PASS test 2
+PASS test 3
+PASS test 4
+PASS test 5
+PASS test 6
+PASS test 7
+PASS test 8
+PASS test 9
+PASS test 10
+PASS test 11
+dakota_uq_rosenbrock_pce_all.in
+PASS test 0
+PASS test 1
+PASS test 2
+PASS test 3
+PASS test 4
+PASS test 5
+dakota_uq_short_column_adapt_gsg.in
+PASS test 0
+PASS test 1
+PASS test 2
+PASS test 3
+PASS test 4
+PASS test 5
+PASS test 6
+PASS test 7
+dakota_uq_textbook_pce.in
+PASS test 0
+PASS test 1
+PASS test 2

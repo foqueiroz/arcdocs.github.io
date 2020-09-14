@@ -1,0 +1,154 @@
+################# ACADEMIC LICENSE ##################################
+#                                                                   #
+#   This file is a license for OpenEye Scientific Software.  Any    #
+#   modifications to this file may invalidate the license.          #
+#                                                                   #
+#   The laboratory of Richard Foster                                #
+#   University of Leeds                                             #
+#                                                                   #
+#   Thu Feb  9 06:41:25 2017                                        #
+#####################################################################
+#PRODUCT: bioisostere
+#EXP_DATE: 2018 02 09
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 32c7eb6410d6bec5c7167139875b0931c51e8253a81d1a1138e8660d429d067c
+#PRODUCT: docking
+#EXP_DATE: 2018 02 09
+#FEATURES: python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 6150f4e4cbc7e218f3cbdc9a661fa7705cdc408cbd578e6b75fa504d95fef505
+#PRODUCT: eon
+#EXP_DATE: 2018 02 09
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 57911c9592d1fa256bcda23cffe41feb469a51693e55f27d6910d36120074c45
+#PRODUCT: fastrocs
+#EXP_DATE: 2018 02 09
+#FEATURES: python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: e1e6a5712e8d39d5341ca10d7e487fdfc23d1e1b9a062fa88e30d83811e5910b
+#PRODUCT: filter
+#EXP_DATE: 2018 02 09
+#FEATURES: toolkit;python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 2ffb948c89b782257aa28312629cc2fb5a4d4e81dd4ed41e31e15daccf082b92
+#PRODUCT: fred2
+#EXP_DATE: 2018 02 09
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 5de042050a8f593f6f7ad4932912dbc98313c843f5884be593f871edf4a90e8a
+#PRODUCT: grapheme
+#EXP_DATE: 2018 02 09
+#FEATURES: python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 7d22f272968e3d32476a056a9a07f46dde0fdb28c0e3bb618bcbe6666bcc5d27
+#PRODUCT: graphsim
+#EXP_DATE: 2018 02 09
+#FEATURES: python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: c06e5e9e6ddf0bad62cf41937d751bdd16a0ab81c46369e16ea77aa3692108e9
+#PRODUCT: iupac
+#EXP_DATE: 2018 02 09
+#FEATURES: python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: f70ade818e1509d3fa67d88a9a4921b90ef2dbbc5831a397a7545de94ed6b6a7
+#PRODUCT: oechem
+#EXP_DATE: 2018 02 09
+#FEATURES: python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 742fb28408519a4a98e180ea0b8c812af83aa7873a7da9b53f5226f7cc71b1a6
+#PRODUCT: oedepict
+#EXP_DATE: 2018 02 09
+#FEATURES: python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: a4da8e7e86b8bc00a2a61c83242ea35cbb81e14995089b2e422514f2748f1fec
+#PRODUCT: oemedchem
+#EXP_DATE: 2018 02 09
+#FEATURES: python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: dfe84685d13e9184aea6cddaf886e5bbf148633ea6b04a00821160f41ce685b1
+#PRODUCT: omega
+#EXP_DATE: 2018 02 09
+#FEATURES: gas-phase;toolkit;python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: eb0e14c436e1828e024f041c097e4f74c8529f222a6aba43f6d4a24b5ed1b244
+#PRODUCT: omega-db
+#EXP_DATE: 2018 02 09
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 4e9ea36611e8892fde58de86329054b71a1e2d028b60ef517ece6e77b71877ee
+#PRODUCT: posit
+#EXP_DATE: 2018 02 09
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: f5e706694a51675a3eb2d308ecd1f55e6c09a2e1b2738dbf31f8ca61eb9cb76d
+#PRODUCT: quacpac
+#EXP_DATE: 2018 02 09
+#FEATURES: beta;python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: f4c589cff05806cb164ef972dfe5861a537ae85b32e9abda215802539824b975
+#PRODUCT: rocs
+#EXP_DATE: 2018 02 09
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 0c054bd3fea3c8025c70e960519b0dec1116dffea15349a22a79fdc0cf35b1f4
+#PRODUCT: shape
+#EXP_DATE: 2018 02 09
+#FEATURES: molecules;grids;python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: f7a68c6912f591ce3c22ad8a021ea2ff701d09dfb701c88d5d505a8baff19eba
+#PRODUCT: spicoli
+#EXP_DATE: 2018 02 09
+#FEATURES: python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: a24829aff752d8bbbcae5b369d9781d0dfe0afe92752fb268c21635e4ed662d1
+#PRODUCT: szmap
+#EXP_DATE: 2018 02 09
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 2aed4105f9997410ce338022340c0856f0528770d419c560261fecc22624fa88
+#PRODUCT: szmaptk
+#EXP_DATE: 2018 02 09
+#FEATURES: python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 898a96ae34e3912c75c0fe11255b1bfb40338c8e026bf7c6d0eedc5c11e19f58
+#PRODUCT: szybki
+#EXP_DATE: 2018 02 09
+#FEATURES: python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 78ea10f75eacffe8c06e1de19cb4fee569345b569e3870bad9a435940e0aab54
+#PRODUCT: case
+#EXP_DATE: 2018 02 09
+#FEATURES: python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: b93c4f1d0e0cea3b545e0f1c6b630f276b5be60e4acdd4e679fefc7e24648b76
+#PRODUCT: vida
+#EXP_DATE: 2018 02 09
+#FEATURES: script line
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 31d267edc1d228e1b8b76462fa9f89ccbe1c09c1bfd053b51afffab9144473d4
+#PRODUCT: zap
+#EXP_DATE: 2018 02 09
+#FEATURES: basic toolkit;protein pka;perfect charge;python;java;clr
+#LICENSEE: The laboratory of Richard Foster
+#SITE: University of Leeds
+LICENSE_KEY: 481cebcdd4fed8d445f9011c9af17339e02691965de5a442f4f0c58fc0b1facc
+
