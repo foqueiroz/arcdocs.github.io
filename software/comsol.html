@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comsol {#comsol .entry-title} &#8212; ARC Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/software/comsol.html" />
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/comsol.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Comsol {#comsol .entry-title}" />
+<meta property="og:description" content="Comsol {#comsol .entry-title}  Contents  [1]{.toc_number .toc_depth_1} Introduction  [2]{.toc_number .toc_depth_1} Versions available:  [3]{.toc_number .toc_dep" />
+<meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">ARC Documentation</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting_started/start.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../useage/start.html">
+   Useage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="start.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../systems/start.html">
+   Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://arcleeds.github.io/training/">
+   Training
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contact/start.html">
+   Contact Us
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit the <a href="https://arcleeds.github.io/">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/software/comsol.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fsoftware/comsol.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/comsol.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-introduction">
+   [Introduction]{#Introduction}
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#versions-available-versions-available">
+   [Versions available:]{#Versions_available}
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-the-software-accessing-the-software">
+   [Accessing the software]{#Accessing_the_software}
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-script-example-script">
+   [Example script]{#Example_script}
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-batch-license-using-batch-license">
+   [Using batch license]{#Using_batch_license}
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#managing-comsol-memory-usage-while-running-managing-comsol-memory-usage-while-running">
+   [Managing comsol memory usage while running:]{#Managing_comsol_memory_usage_while_running}
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="comsol-comsol-entry-title">
+<h1>Comsol {#comsol .entry-title}<a class="headerlink" href="#comsol-comsol-entry-title" title="Permalink to this headline">¶</a></h1>
+<p>Contents</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#Introduction">[1]{.toc_number .toc_depth_1} Introduction</a></p></li>
+<li><p><a class="reference external" href="#Versions_available">[2]{.toc_number .toc_depth_1} Versions
+available:</a></p></li>
+<li><p><a class="reference external" href="#Accessing_the_software">[3]{.toc_number .toc_depth_1} Accessing the
+software</a></p></li>
+<li><p><a class="reference external" href="#Example_script">[4]{.toc_number .toc_depth_1} Example script</a></p></li>
+<li><p><a class="reference external" href="#Using_batch_license">[5]{.toc_number .toc_depth_1} Using batch
+license</a></p></li>
+<li><p><a class="reference external" href="#Managing_comsol_memory_usage_while_running">[6]{.toc_number .toc_depth_1} Managing comsol memory usage while
+running:</a>
+:::</p></li>
+</ul>
+<div class="section" id="introduction-introduction">
+<h2>[Introduction]{#Introduction}<a class="headerlink" href="#introduction-introduction" title="Permalink to this headline">¶</a></h2>
+<p>COMSOL Multiphysics provides a range of simulation, finite element
+analysis and solver functionality. More information on the package is
+available here:<br />
+<a class="reference external" href="http://www.comsol.com/">http://www.comsol.com/</a></p>
+</div>
+<div class="section" id="versions-available-versions-available">
+<h2>[Versions available:]{#Versions_available}<a class="headerlink" href="#versions-available-versions-available" title="Permalink to this headline">¶</a></h2>
+<p></p>
+<p><strong>System</strong>   Version(s)   Load command</p>
+<hr class="docutils" />
+<p>ARC3         5.2          module load comsol/5.2
+ARC3         5.2a         module load comsol/5.2a
+ARC3         5.3          module load comsol/5.3
+ARC3         5.3a         module load comsol/5.3a
+ARC3         5.4          module load comsol/5.4
+ARC3         5.5          module load comsol/5.5
+ARC4         5.3a         module load comsol/5.3a
+ARC4         5.4          module load comsol/5.4
+ARC4         5.5          module load comsol/5.5</p>
+</div>
+<div class="section" id="accessing-the-software-accessing-the-software">
+<h2>[Accessing the software]{#Accessing_the_software}<a class="headerlink" href="#accessing-the-software-accessing-the-software" title="Permalink to this headline">¶</a></h2>
+<p>To make COMSOL available in your environment, enter the command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>module load comsol
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-script-example-script">
+<h2>[Example script]{#Example_script}<a class="headerlink" href="#example-script-example-script" title="Permalink to this headline">¶</a></h2>
+<p>This script will request exclusive access to an entire node.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
+# Run in current working directory with current environment
+#$ -cwd -V
+
+#change this line for time
+#$ -l h_rt=01:00:00
+
+#Email on start and end of job
+#$ -m be
+#$ -M &lt;email&gt;@leeds.ac.uk
+
+#the line below sets the number of cores and nodes
+#$ -l nodes=1
+
+module load comsol/5.1
+export LM_LICENSE_FILE=&lt;port@server&gt;:$LM_LICENSE_FILE
+comsol batch -np $NSLOTS -tmpdir $TMPDIR -inputfile input.mph -outputfile outphysics.mph -recoverydir /nobackup/$USER/comsolrecovery
+</pre></div>
+</div>
+<p>In the script above:</p>
+<p>Change [&lt;email&gt;]{.lang:default .decode:true .crayon-inline} to your
+username. For example, if your username is [matzz]{.lang:default
+.decode:true .crayon-inline} :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#$ -M matzz@leeds.ac.uk
+</pre></div>
+</div>
+<p>Change [&lt;port&#64;server&gt;]{.lang:default .decode:true .crayon-inline} to
+the license server details obtained from your Faculty IT support. For
+example is you are given [1322&#64;server]{.lang:default .decode:true
+.crayon-inline} :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>export LM_LICENSE_FILE=1322@server:$LM_LICENSE_FILE
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-batch-license-using-batch-license">
+<h2>[Using batch license]{#Using_batch_license}<a class="headerlink" href="#using-batch-license-using-batch-license" title="Permalink to this headline">¶</a></h2>
+<p>In addition to the default licenses available for COMSOL, additional
+batch licenses are available.  These can be used by adding an additional
+flag to you COMSOL command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-usebatchlic
+</pre></div>
+</div>
+</div>
+<div class="section" id="managing-comsol-memory-usage-while-running-managing-comsol-memory-usage-while-running">
+<h2>[Managing comsol memory usage while running:]{#Managing_comsol_memory_usage_while_running}<a class="headerlink" href="#managing-comsol-memory-usage-while-running-managing-comsol-memory-usage-while-running" title="Permalink to this headline">¶</a></h2>
+<p>Running comsol in command line can often create a large number of
+temporary files in the .comsol directory in your home directory
+(<a class="reference external" href="https://www.hpc.dtu.dk/?page_id=1257">Details on running comsol in command
+line</a>). This can often lead to a
+quota exceeded error on jobs.</p>
+<p>To resolve this we recommend creating a comsolrecovery directory in your
+nobackup and adding the following line to your comsol batch command in
+your submission script.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-recoverydir /nobackup/$USER/comsolrecovery
+</pre></div>
+</div>
+<p>:::</p>
+<p>::: {.entry-meta}
+:::
+:::
+:::
+:::</p>
+<p>::: {.container}
+::: {.site-info}
+::: {.footer-credit}
+Built with <a class="reference external" href="https://thethemefoundry.com/make/">Make</a>{.theme-name}. Your
+friendly WordPress page builder theme.
+:::
+:::
+:::
+:::</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./software"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By University of Leeds Research Computing Team<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

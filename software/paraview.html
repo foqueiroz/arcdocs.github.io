@@ -1,0 +1,646 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Research Computing {#advanced-research-computing .site-title .screen-reader-text} &#8212; ARC Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/software/paraview.html" />
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/paraview.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Advanced Research Computing {#advanced-research-computing .site-title .screen-reader-text}" />
+<meta property="og:description" content="Advanced Research Computing {#advanced-research-computing .site-title .screen-reader-text}  [ Powering Research at Leeds ]{.site-description .screen-reader-text" />
+<meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">ARC Documentation</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting_started/start.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../useage/start.html">
+   Useage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="start.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../systems/start.html">
+   Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://arcleeds.github.io/training/">
+   Training
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contact/start.html">
+   Contact Us
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit the <a href="https://arcleeds.github.io/">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/software/paraview.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fsoftware/paraview.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/paraview.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p>::: {#site-wrapper .site-wrapper}
+<a class="reference external" href="#site-content">Skip to content</a>{.skip-link .screen-reader-text}</p>
+<p>::: {.header-bar .right-content}
+::: {.container}
+:::
+:::</p>
+<p>::: {.site-header-main}
+::: {.container}
+::: {.site-branding}
+<a class="reference external" href="https://arc.leeds.ac.uk/"><img alt="Advanced ResearchComputing" src="https://arc.leeds.ac.uk/wp-content/uploads/2016/01/web_banner_132.png" />{.custom-logo
+width=”1102” height=”132” sizes=”(max-width: 1102px) 100vw, 1102px”
+srcset=”https://arc.leeds.ac.uk/wp-content/uploads/2016/01/web_banner_132.png 1102w, https://arc.leeds.ac.uk/wp-content/uploads/2016/01/web_banner_132-300x36.png 300w, https://arc.leeds.ac.uk/wp-content/uploads/2016/01/web_banner_132-768x92.png 768w, https://arc.leeds.ac.uk/wp-content/uploads/2016/01/web_banner_132-1024x123.png 1024w”}</a>{.custom-logo-link}</p>
+<div class="section" id="advanced-research-computing-advanced-research-computing-site-title-screen-reader-text">
+<h1><a class="reference external" href="https://arc.leeds.ac.uk/">Advanced Research Computing</a> {#advanced-research-computing .site-title .screen-reader-text}<a class="headerlink" href="#advanced-research-computing-advanced-research-computing-site-title-screen-reader-text" title="Permalink to this headline">¶</a></h1>
+<p>[ Powering Research at Leeds ]{.site-description .screen-reader-text}
+:::</p>
+<p>[Menu]{.menu-toggle}</p>
+<p>::: {.mobile-menu}</p>
+<ul class="simple">
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/">Home</a>]{#menu-item-496}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/research-at-home/">Research&#64;Home</a>]{#menu-item-4432}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/apply/">Apply</a>]{#menu-item-1213}</p>
+<ul>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/apply/getting-an-account/">Request HPC
+accounts</a>]{#menu-item-607}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/apply/application-installation-request/">Application or Library installation
+request</a>]{#menu-item-3577}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/apply/grant-applications/">HPC costs on grant
+applications</a>]{#menu-item-1404}</p></li>
+</ul>
+</li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/">Using</a>]{#menu-item-1371}</p>
+<ul>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/arc-acknowledgement/">ARC
+Acknowledgement</a>]{#menu-item-1364}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/getting-started/">Getting
+Started</a>]{#menu-item-500}</p>
+<ul>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/getting-started/">Getting
+Started</a>]{#menu-item-3147}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/getting-started/logon-from-linux/">Logon from
+Linux</a>]{#menu-item-1251}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/getting-started/logon-from-mac-os-x/">Logon from Mac OS
+X</a>]{#menu-item-1329}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/getting-started/logon-from-windows/">Logon from
+Windows</a>]{#menu-item-1338}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/getting-started/access-from-off-campus/">Access From
+Off-Campus</a>]{#menu-item-1255}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/getting-started/using-linux-the-basics/">Using Linux: The
+Basics</a>]{#menu-item-1354}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/getting-started/nobackup/">/nobackup</a>]{#menu-item-2112}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/getting-started/using-software-modules/">Using Software:
+Modules</a>]{#menu-item-1280}</p></li>
+</ul>
+</li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/">What is a
+Scheduler?</a>]{#menu-item-3165}</p>
+<ul>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/">What is a
+Scheduler?</a>]{#menu-item-3540}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/the-scheduler-sge/">The Scheduler:
+SGE</a>]{#menu-item-1357}</p>
+<ul>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/the-scheduler-sge/sge-submitting-your-first-job-examples/">SGE: Submitting Your First Job With
+Examples</a>]{#menu-item-1487}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/the-scheduler-sge/sge-examples-with-extracts-of-submission-scripts/">SGE: Examples with Extracts of Submission
+Scripts</a>]{#menu-item-1488}</p></li>
+</ul>
+</li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/qsub-qrsh-usage/">Advanced SGE: qsub &amp; qrsh
+Usage</a>]{#menu-item-3550}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/advanced-sge-submitting-mixed-mode-jobs/">Advanced SGE: Mixed Mode
+Jobs</a>]{#menu-item-1539}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/gpgpu/">Advanced SGE:
+GPGPU</a>]{#menu-item-3559}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/advanced-sge-job-dependencies/">Advanced SGE: Job
+Dependencies</a>]{#menu-item-1527}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/advanced-sge-task-arrays/">Advanced SGE: Task
+Arrays</a>]{#menu-item-1533}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/tmp-and-scratch/">Advanced SGE: Local
+Storage</a>]{#menu-item-3560}</p></li>
+</ul>
+</li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/advanced-topics/">Advanced
+Topics</a>]{#menu-item-1368}</p>
+<ul>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/advanced-topics/compiling-codes/">Compiling and Running
+Codes</a>]{#menu-item-2646}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/advanced-topics/tutorial-of-parallel-computing/">Tutorial of Parallel
+Computing</a>]{#menu-item-2653}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/advanced-topics/efficient-file-transfer/">Efficient File
+Transfer</a>]{#menu-item-1583}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/advanced-topics/debugging-and-profiling-tools/">Debugging and Profiling
+Tools</a>]{#menu-item-1613}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/advanced-topics/flexlm-licensing/">FLEXLM
+licensing</a>]{#menu-item-3952}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/advanced-topics/remote-graphics-x2go/">Remote Graphics –
+X2GO</a>]{#menu-item-3562}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/advanced-topics/installing-applications-and-libraries-with-conda/">Installing applications and libraries with
+Conda</a>]{#menu-item-3641}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/advanced-topics/installing-applications-and-libraries-with-spack/">Installing applications and libraries with
+Spack</a>]{#menu-item-3640}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/advanced-topics/using-the-gpu-nodes/">Using the GPU
+nodes</a>]{#menu-item-3642}</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/systems/">Systems</a>]{#menu-item-501}</p>
+<ul>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/systems/arc4/">ARC4</a>]{#menu-item-4276}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/systems/arc3/">ARC3</a>]{#menu-item-2964}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/systems/disc-quotas-and-filesystems/">Disc Quotas and
+Filesystems</a>]{#menu-item-1232}</p></li>
+</ul>
+</li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/software/">Software</a>]{#menu-item-933}</p>
+<ul>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/software/applications/">Applications</a>]{#menu-item-4021}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/software/compilers-and-interpreters-2/">Compilers and
+Interpreters</a>]{#menu-item-4022}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/software/infrastructure-and-utilities/">Infrastructure and
+Utilities</a>]{#menu-item-4023}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/software/libraries/">Libraries</a>]{#menu-item-4024}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/software/arc3-modules/">ARC3
+Modules</a>]{#menu-item-3592}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/software/arc2-modules/">ARC2
+Modules</a>]{#menu-item-3591}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/software/marc1-modules/">MARC1
+Modules</a>]{#menu-item-3590}</p></li>
+</ul>
+</li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/training/">Training</a>]{#menu-item-888}</p>
+<ul>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/training/">Training
+Courses</a>]{#menu-item-3095}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/training/pathways/">Training
+Pathways</a>]{#menu-item-3795}</p></li>
+</ul>
+</li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/info/">Info</a>]{#menu-item-1377}</p>
+<ul>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/info/privacy/">Privacy and
+Cookies</a>]{#menu-item-2083}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/info/events/">Events</a>]{#menu-item-1415}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/info/events/materials/">Materials</a>]{#menu-item-3086}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/info/impact/">Case
+Studies</a>]{#menu-item-1011}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/info/partnerships/">Partnerships</a>]{#menu-item-1736}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/info/social-media/">Social
+Media</a>]{#menu-item-1551}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/info/contributing-pages/">Contributing Web
+Pages</a>]{#menu-item-1403}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/info/sitemap/">Sitemap</a>]{#menu-item-1386}</p></li>
+</ul>
+</li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/contact/">Contact</a>]{#menu-item-497}</p></li>
+<li><p>[<a class="reference external" href="https://arc.leeds.ac.uk/blog/">Blog</a>]{#menu-item-4083}
+:::
+:::
+:::</p></li>
+</ul>
+<p>::: {#site-content .site-content}
+::: {.container}
+::: {#site-main .site-main role=”main”}
+::: {.entry-meta}
+:::</p>
+</div>
+<div class="section" id="paraview-paraview-entry-title">
+<h1>Paraview {#paraview .entry-title}<a class="headerlink" href="#paraview-paraview-entry-title" title="Permalink to this headline">¶</a></h1>
+<p>::: {.entry-meta}
+:::</p>
+<p>::: {.entry-content}
+<a class="reference external" href="http://www.paraview.org/">Paraview</a> is a data analysis and
+visualisation application, developed to be able to analyse large
+datasets. We show here how to start the program on our facilities;
+however, please refer to the project documentation for details on how to
+use the application itself. If you are using ARC3 use
+<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/advanced-topics/remote-graphics-x2go/">X2GO</a>
+when you login and the images will render better and you will get rid of
+the OpenGL warnings that appear on ARC2.</p>
+<p>Although paraview is flexible in the way it is deployed, the simplest
+method of invoking it is to run these commands on a login node:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load paraview
+$ paraview --mesa-llvm &amp;
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load paraview
+$ paraview --mesa-llvm  &amp;
+</pre></div>
+</div>
+<p>This will provide the core functionality. More complicated methods are
+described below, offering different levels of performance. For example,
+the graphical interface can be run locally on a low-end
+workstation/laptop, while the rendering takes place in parallel on the
+cluster – taking advantage of the CPU, memory and storage resources
+available. Although not making use of the acceleration that graphics
+cards provide, it can allow larger datasets that cannot fit onto a
+graphics card to be analysed.</p>
+<p>::: {#toc_container .no_bullets}
+Contents</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#Running_the_paraview_graphical_interface">[1]{.toc_number .toc_depth_1} Running the paraview graphical
+interface</a></p>
+<ul>
+<li><p><a class="reference external" href="#On_a_cluster_login_node_quick_start">[1.1]{.toc_number .toc_depth_2} On a cluster login node (quick
+start)</a></p></li>
+<li><p><a class="reference external" href="#On_a_cluster_compute_node">[1.2]{.toc_number .toc_depth_2} On a cluster compute
+node</a></p></li>
+<li><p><a class="reference external" href="#On_your_local_workstation">[1.3]{.toc_number .toc_depth_2} On your local
+workstation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#Running_the_paraview_server">[2]{.toc_number .toc_depth_1} Running the paraview
+server</a></p>
+<ul>
+<li><p><a class="reference external" href="#On_a_cluster_login_node">[2.1]{.toc_number .toc_depth_2} On a cluster login
+node</a></p></li>
+<li><p><a class="reference external" href="#On_a_cluster_compute_node_serial">[2.2]{.toc_number .toc_depth_2} On a cluster compute node
+(serial)</a></p></li>
+<li><p><a class="reference external" href="#On_a_cluster_compute_node_parallel">[2.3]{.toc_number .toc_depth_2} On a cluster compute node
+(parallel)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#Connecting_to_a_paraview_server_with_the_graphical_interface">[3]{.toc_number .toc_depth_1} Connecting to a paraview server with
+the graphical
+interface</a></p>
+<ul>
+<li><p><a class="reference external" href="#Graphical_interface_running_on_a_cluster_login_or_compute_node">[3.1]{.toc_number .toc_depth_2} Graphical interface running on
+a cluster login or compute
+node</a></p></li>
+<li><p><a class="reference external" href="#Graphical_interface_running_on_your_local_workstation">[3.2]{.toc_number .toc_depth_2} Graphical interface running on
+your local
+workstation</a>
+:::</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="running-the-paraview-graphical-interface-running-the-paraview-graphical-interface">
+<h2>[Running the paraview graphical interface]{#Running_the_paraview_graphical_interface}<a class="headerlink" href="#running-the-paraview-graphical-interface-running-the-paraview-graphical-interface" title="Permalink to this headline">¶</a></h2>
+<p>The paraview graphical interface can be run in several ways. Once
+running, the graphical interface can either be used as-is, or paired
+with a separate server program that can offload the rendering and
+storage access to one or more cluster compute nodes.</p>
+<p>Please note that methods (1) and (2) depend on your workstation having
+an X server running and for you to have enabled X11 forwarding through
+your SSH client.</p>
+<div class="section" id="on-a-cluster-login-node-quick-start-on-a-cluster-login-node-quick-start">
+<h3>[On a cluster login node (quick start)]{#On_a_cluster_login_node_quick_start}<a class="headerlink" href="#on-a-cluster-login-node-quick-start-on-a-cluster-login-node-quick-start" title="Permalink to this headline">¶</a></h3>
+<p>Recommended for very short or undemanding pieces of work. Login to the
+cluster and execute:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load paraview
+$ paraview --mesa-llvm 
+</pre></div>
+</div>
+<p>Please note that, as they are shared between all users, it is important
+not to tackle large pieces of work on the login nodes.</p>
+</div>
+<div class="section" id="on-a-cluster-compute-node-on-a-cluster-compute-node">
+<h3>[On a cluster compute node]{#On_a_cluster_compute_node}<a class="headerlink" href="#on-a-cluster-compute-node-on-a-cluster-compute-node" title="Permalink to this headline">¶</a></h3>
+<p>Recommended for larger pieces of work:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load paraview
+$ qrsh -cwd -V -l h_rt= -l h_vmem= paraview --mesa-llvm
+</pre></div>
+</div>
+<p>In the above command, hh:mm:ss is the length of real time the program
+will be run for and vmem is the amount of memory required.</p>
+</div>
+<div class="section" id="on-your-local-workstation-on-your-local-workstation">
+<h3>[On your local workstation]{#On_your_local_workstation}<a class="headerlink" href="#on-your-local-workstation-on-your-local-workstation" title="Permalink to this headline">¶</a></h3>
+<p>Recommended where the graphical interface (menu items, etc.) feels
+sluggish, or where the best possible performance is required.</p>
+<p>Select a version number from the list of installed versions of the
+paraview server, then download and install a copy of that version
+appropriate to your machine from <a class="reference external" href="http://www.paraview.org/">http://www.paraview.org/</a>. The list of
+installed versions is provided by the command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module avail paraview-osmesa
+</pre></div>
+</div>
+<p>Once installed and running, it can be used to connect to a paraview
+server running on the cluster (see below).</p>
+</div>
+</div>
+<div class="section" id="running-the-paraview-server-running-the-paraview-server">
+<h2>[Running the paraview server]{#Running_the_paraview_server}<a class="headerlink" href="#running-the-paraview-server-running-the-paraview-server" title="Permalink to this headline">¶</a></h2>
+<p>The paraview server does not need to be run on the same computer as the
+graphical interface and takes on the role of file access and graphics
+rendering. Warning – there is no authentication step when connecting to
+a paraview server! Between the time of start of the server and the time
+at which a client is connected to it, anyone logged into the cluster can
+connect a client to it!</p>
+<p>Once started, it will print a line of the form:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Accepting connection(s): :
+</pre></div>
+</div>
+<p>Please take a note of &lt;hostname&gt; and &lt;number&gt; – they will be needed
+to connect the graphical interface.</p>
+<div class="section" id="on-a-cluster-login-node-on-a-cluster-login-node">
+<h3>[On a cluster login node]{#On_a_cluster_login_node}<a class="headerlink" href="#on-a-cluster-login-node-on-a-cluster-login-node" title="Permalink to this headline">¶</a></h3>
+<p>Recommended for very short or undemanding pieces of work. Login to the
+cluster and execute:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load paraview-osmesa
+$ pvserver --server-port=
+</pre></div>
+</div>
+<p>For port, please select a number between 10000 and 20000.</p>
+</div>
+<div class="section" id="on-a-cluster-compute-node-serial-on-a-cluster-compute-node-serial">
+<h3>[On a cluster compute node (serial)]{#On_a_cluster_compute_node_serial}<a class="headerlink" href="#on-a-cluster-compute-node-serial-on-a-cluster-compute-node-serial" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load paraview-osmesa
+$ qrsh -cwd -V -l h_rt= -l h_vmem= pvserver --server-port=
+</pre></div>
+</div>
+<p>In the above command, hh:mm:ss is the length of real time the program
+will be run for and vmem is the amount of memory required. For port,
+please select a number between 10000 and 20000.</p>
+</div>
+<div class="section" id="on-a-cluster-compute-node-parallel-on-a-cluster-compute-node-parallel">
+<h3>[On a cluster compute node (parallel)]{#On_a_cluster_compute_node_parallel}<a class="headerlink" href="#on-a-cluster-compute-node-parallel-on-a-cluster-compute-node-parallel" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load paraview-osmesa
+$ qrsh -cwd -V -l h_rt= -l nodes= pvserver --server-port=
+</pre></div>
+</div>
+<p>In the above command, hh:mm:ss is the length of real time the program
+will be run for and num is the number of compute nodes required.
+Recommended to start with 1 node. For port, please select a number
+between 10000 and 20000.</p>
+</div>
+</div>
+<div class="section" id="connecting-to-a-paraview-server-with-the-graphical-interface-connecting-to-a-paraview-server-with-the-graphical-interface">
+<h2>[Connecting to a paraview server with the graphical interface]{#Connecting_to_a_paraview_server_with_the_graphical_interface}<a class="headerlink" href="#connecting-to-a-paraview-server-with-the-graphical-interface-connecting-to-a-paraview-server-with-the-graphical-interface" title="Permalink to this headline">¶</a></h2>
+<p>Once a paraview server is running, a graphical interface can connect to
+it. Select the menu item File-&gt;Connect to bring up the Choose Server
+Configuration box. Assuming you have not already created a suitable
+configuration, select Add Server for the Edit Server Configuration box.</p>
+<p>The server configuration details depend on where the graphical interface
+is running (below). Once done, click Configure, leave Startup Type and
+Manual and click Save. Double-click on the configuration to attempt to
+contact the server.</p>
+<div class="section" id="graphical-interface-running-on-a-cluster-login-or-compute-node-graphical-interface-running-on-a-cluster-login-or-compute-node">
+<h3>[Graphical interface running on a cluster login or compute node]{#Graphical_interface_running_on_a_cluster_login_or_compute_node}<a class="headerlink" href="#graphical-interface-running-on-a-cluster-login-or-compute-node-graphical-interface-running-on-a-cluster-login-or-compute-node" title="Permalink to this headline">¶</a></h3>
+<p>Please give the configuration a memorable name, and leave Server Type as
+Client/Server. Note that you will not be able to save the configuration
+unless it is given a name. The hostname from the output of pvserver
+should be entered into the Host field, and the number into the Port
+field.</p>
+</div>
+<div class="section" id="graphical-interface-running-on-your-local-workstation-graphical-interface-running-on-your-local-workstation">
+<h3>[Graphical interface running on your local workstation]{#Graphical_interface_running_on_your_local_workstation}<a class="headerlink" href="#graphical-interface-running-on-your-local-workstation-graphical-interface-running-on-your-local-workstation" title="Permalink to this headline">¶</a></h3>
+<p>Please give the configuration a memorable name, leave Server Type as
+Client/Server, enter localhost into the Host field and 11111 into the
+Port field. Note that you will not be able to save the configuration
+unless it is given a name.</p>
+<p>Configure your workstation’s SSH client to forward local port 11111 to
+the hostname and port from the output of pvserver. On a Linux
+workstation and paraview running somewhere on arc2, this can be achieved
+via the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ssh -L11111:: arc2.leeds.ac.uk
+</pre></div>
+</div>
+<p>:::</p>
+<p>::: {.entry-meta}
+:::
+:::
+:::
+:::</p>
+<p>::: {.container}
+::: {.site-info}
+::: {.footer-credit}
+Built with <a class="reference external" href="https://thethemefoundry.com/make/">Make</a>{.theme-name}. Your
+friendly WordPress page builder theme.
+:::
+:::
+:::
+:::</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./software"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By University of Leeds Research Computing Team<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R {#r .entry-title} &#8212; ARC Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/software/R.html" />
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/R.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="R {#r .entry-title}" />
+<meta property="og:description" content="R {#r .entry-title}  Contents  [1]{.toc_number .toc_depth_1} Setting up the path and environment:  [2]{.toc_number .toc_depth_1} Launching on the front end  [3]" />
+<meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">ARC Documentation</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting_started/start.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../useage/start.html">
+   Useage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="start.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../systems/start.html">
+   Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://arcleeds.github.io/training/">
+   Training
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contact/start.html">
+   Contact Us
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit the <a href="https://arcleeds.github.io/">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/software/R.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fsoftware/R.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/R.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-the-path-and-environment-setting-up-the-path-and-environment">
+   [Setting up the path and environment:]{#Setting_up_the_path_and_environment}
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#launching-on-the-front-end-launching-on-the-front-end">
+   [Launching on the front end]{#Launching_on_the_front_end}
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-through-an-interactive-shell-running-through-an-interactive-shell">
+   [Running through an interactive shell]{#Running_through_an_interactive_shell}
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#batch-execution-batch-execution">
+   [Batch Execution]{#Batch_Execution}
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-r-packages-installing-r-packages">
+   [Installing R packages]{#Installing_R_packages}
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#r-2-15-0-and-later-r-2150-and-later">
+     [R 2.15.0 and later]{#R_2150_and_later}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="r-r-entry-title">
+<h1>R {#r .entry-title}<a class="headerlink" href="#r-r-entry-title" title="Permalink to this headline">¶</a></h1>
+<p>Contents</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#Setting_up_the_path_and_environment">[1]{.toc_number .toc_depth_1} Setting up the path and
+environment:</a></p></li>
+<li><p><a class="reference external" href="#Launching_on_the_front_end">[2]{.toc_number .toc_depth_1} Launching on the front
+end</a></p></li>
+<li><p><a class="reference external" href="#Running_through_an_interactive_shell">[3]{.toc_number .toc_depth_1} Running through an interactive
+shell</a></p></li>
+<li><p><a class="reference external" href="#Batch_Execution">[4]{.toc_number .toc_depth_1} Batch Execution</a></p></li>
+<li><p><a class="reference external" href="#Installing_R_packages">[5]{.toc_number .toc_depth_1} Installing R
+packages</a></p>
+<ul>
+<li><p><a class="reference external" href="#R_2150_and_later">[5.1]{.toc_number .toc_depth_2} R 2.15.0 and
+later</a>
+:::</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="setting-up-the-path-and-environment-setting-up-the-path-and-environment">
+<h2>[Setting up the path and environment:]{#Setting_up_the_path_and_environment}<a class="headerlink" href="#setting-up-the-path-and-environment-setting-up-the-path-and-environment" title="Permalink to this headline">¶</a></h2>
+<p>All required environment variables can be set by loading the R module,
+to do this issue:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module add R
+</pre></div>
+</div>
+</div>
+<div class="section" id="launching-on-the-front-end-launching-on-the-front-end">
+<h2>[Launching on the front end]{#Launching_on_the_front_end}<a class="headerlink" href="#launching-on-the-front-end-launching-on-the-front-end" title="Permalink to this headline">¶</a></h2>
+<p>R can be launched by entering its name at the command prompt; i.e.:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ R
+</pre></div>
+</div>
+<p>Please note that this method should not be used apart from for quick
+tests. Exit the R console by typing.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>q()
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-through-an-interactive-shell-running-through-an-interactive-shell">
+<h2>[Running through an interactive shell]{#Running_through_an_interactive_shell}<a class="headerlink" href="#running-through-an-interactive-shell-running-through-an-interactive-shell" title="Permalink to this headline">¶</a></h2>
+<p>The following will launch R interactively via the batch queues.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ qrsh -cwd -V -l h_rt= R 
+</pre></div>
+</div>
+<p>The [&lt;startup_flag&gt;]{.lang:default .decode:true .crayon-inline} can
+be [–save]{.lang:default .decode:true .crayon-inline} ,
+[–no-save]{.lang:default .decode:true .crayon-inline} or
+[–vanilla]{.lang:default .decode:true .crayon-inline} . I have used
+–vanilla but information on the meaning of these flags can is
+<a class="reference external" href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Startup.html">here</a>.
+In the above command, is the length of real-time the shell will exist
+for. e.g. to run R for 6 hours:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ qrsh -cwd -V -l h_rt=6:00:00 R --vanilla
+</pre></div>
+</div>
+<p>This will run R from within the terminal from which it was launched.</p>
+</div>
+<div class="section" id="batch-execution-batch-execution">
+<h2>[Batch Execution]{#Batch_Execution}<a class="headerlink" href="#batch-execution-batch-execution" title="Permalink to this headline">¶</a></h2>
+<p>To run R in batch-mode you must first generate a list of commands for R
+to process in a file, e.g. [r.in]{.lang:default .decode:true
+.crayon-inline}. You needed to make sure that this file is executable.
+You can do this by running the command [chmod u+x .sh]{.lang:default
+.decode:true .crayon-inline}. You can check this by running the command
+[ls -la]{.lang:default .decode:true .crayon-inline} command and the
+information for that line will contain an x for execute like this
+[-rwxr–r–]{.lang:default .decode:true .crayon-inline}.</p>
+<p>A script must then be created that will request resources from the
+queuing system and launch the R executable; script
+[runR.sh]{.lang:default .decode:true .crayon-inline} :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
+# Run in current working directory and use current environment
+#$ -cwd -V
+# Set a 6 hour limit
+#$ -l h_rt=6:00:00
+#Request more memory, the default is 1Gb
+#$ -l h_vmem=1536M
+# Load R module
+module add R
+# run R using command file
+# CMD BATCH flag should be given to suppress graphics
+R CMD BATCH r.in r.out
+</pre></div>
+</div>
+<p>This can be submitted to the queuing system using:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ qsub runR.sh
+</pre></div>
+</div>
+<p>The files for a simple R test example are available to download in this
+tar
+file,<a class="reference external" href="https://arc.leeds.ac.uk/wp-content/uploads/2016/01/R.tar">R.tar</a>.</p>
+</div>
+<div class="section" id="installing-r-packages-installing-r-packages">
+<h2>[Installing R packages]{#Installing_R_packages}<a class="headerlink" href="#installing-r-packages-installing-r-packages" title="Permalink to this headline">¶</a></h2>
+<p>Given the large number of R packages available and pace of development,
+it is preferable that users install the packages they need as opposed to
+using a centrally provided set of packages.</p>
+<div class="section" id="r-2-15-0-and-later-r-2150-and-later">
+<h3>[R 2.15.0 and later]{#R_2150_and_later}<a class="headerlink" href="#r-2-15-0-and-later-r-2150-and-later" title="Permalink to this headline">¶</a></h3>
+<p>To install package [foo]{.lang:default .decode:true .crayon-inline} ,
+start an R session by entering its name at the command prompt; i.e.:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ R
+</pre></div>
+</div>
+<p>and then from within R, install the package:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;install.packages(&#39;foo&#39;)
+</pre></div>
+</div>
+<p>This will install the package and any dependencies that are required.
+The package should then be accessible from subsequent R interactive
+sessions and batch jobs.</p>
+</div>
+<div class="section" id="id1">
+<h3><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>:::</p>
+<p>::: {.entry-meta}
+:::
+:::
+:::
+:::</p>
+<p>::: {.container}
+::: {.site-info}
+::: {.footer-credit}
+Built with <a class="reference external" href="https://thethemefoundry.com/make/">Make</a>{.theme-name}. Your
+friendly WordPress page builder theme.
+:::
+:::
+:::
+:::</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./software"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By University of Leeds Research Computing Team<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
