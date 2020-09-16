@@ -35,3 +35,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./book/_build/html
         publish_branch: master
+        cname: arcdocs.leeds.ac.uk
