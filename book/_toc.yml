@@ -27,6 +27,24 @@
 
 # ===== Software ==========================================
 - file: software/start
+  sections:
+    -file: software/abaqus.md
+    -file: software/amber.md
+    -file: software/ansys.md
+    -file: software/comsol.md
+    -file: software/dl_poly.md
+    -file: software/gaussian.md
+    -file: software/gromacs.md
+    -file: software/idl.md
+    -file: software/matlab.md
+    -file: software/molpro.md
+    -file: software/namd.md
+    -file: software/openfoam.md
+    -file: software/paraview.md
+    -file: software/R.md
+    -file: software/stata.md
+    -file: software/visit.md
+    -file: software/vmd.md
 
 # ===== Systems ==========================================
 - file: systems/start
