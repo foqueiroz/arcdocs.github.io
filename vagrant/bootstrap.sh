@@ -14,4 +14,5 @@ chown -R vagrant:vagrant /home/vagrant/miniconda
 cd /vagrant
 conda env create -f environment.yml
 conda activate arcdocs-jb
+jb clean book/
 jb build book/

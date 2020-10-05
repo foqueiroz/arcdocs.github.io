@@ -5,14 +5,14 @@ queries people have around using the High Performance Computing facilities (ARC3
 
 ## Find details on:
 
-### - [Requesting an account for HPC systems](./request_hpc_acct)
+- [Requesting an account for HPC systems](./request_hpc_acct)
 
-### - [Requesting software installation on HPC](./request_install)
+- [Requesting software installation on HPC](./request_install)
 
-### - [How to connect and log on to ARC3/ARC4](./logon)
+- [How to connect and log on to ARC3/ARC4](./logon)
 
-### - [Linux basics](./linuxbasics)
+- [Linux basics](./linuxbasics)
 
-### - [File Transfer on HPC](./file_transfer)
+- [File Transfer on HPC](./file_transfer)
 
-### - [Storage on HPC](./nobackup)
+- [Storage on HPC](./nobackup)
