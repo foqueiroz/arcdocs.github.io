@@ -1,5 +1,6 @@
-Visit {#visit .entry-title}
-=====
+# Visit
+
+## Introduction
 
 [VisIt](https://visit.llnl.gov/) is a data analysis and visualisation
 application, developed to be able to analyse large datasets. We show
@@ -22,34 +23,13 @@ Although not making use of the acceleration that graphics cards provide,
 it can allow larger datasets that cannot fit onto a graphics card to be
 analysed.
 
-::: {#toc_container .no_bullets}
-Contents
-
--   [[1]{.toc_number .toc_depth_1} Running VisIt on the ARC
-    Systems](#Running_VisIt_on_the_ARC_Systems)
-    -   [[1.1]{.toc_number .toc_depth_2} On a cluster login node (quick
-        start)](#On_a_cluster_login_node_quick_start)
-    -   [[1.2]{.toc_number .toc_depth_2} On the cluster compute
-        nodes](#On_the_cluster_compute_nodes)
--   [[2]{.toc_number .toc_depth_1} Running VisIT on your workstation,
-    offload storage and processing to the ARC
-    systems.](#Running_VisIT_on_your_workstation_offload_storage_and_processing_to_the_ARC_systems)
-    -   [[2.1]{.toc_number .toc_depth_2} Configure for remote
-        execution](#Configure_for_remote_execution)
-    -   [[2.2]{.toc_number .toc_depth_2} Launch remote
-        execution](#Launch_remote_execution)
--   [[3]{.toc_number .toc_depth_1} Developing plugins with
-    VisIt](#Developing_plugins_with_VisIt)
-:::
-
-[Running VisIt on the ARC Systems]{#Running_VisIt_on_the_ARC_Systems}
----------------------------------------------------------------------
+## Running VisIt on the ARC Systems
 
 Please note that these methods depend on your workstation having an X
 server running and for you to have enabled X11 forwarding through your
 SSH client.
 
-### [On a cluster login node (quick start)]{#On_a_cluster_login_node_quick_start}
+### On a cluster login node (quick start)
 
 Recommended for very short or undemanding pieces of work. Login to the
 cluster and execute:
@@ -60,7 +40,7 @@ cluster and execute:
 Please note that, as they are shared between all users, it is important
 not to tackle large pieces of work on the login nodes.
 
-### [On the cluster compute nodes]{#On_the_cluster_compute_nodes}
+### On the cluster compute nodes
 
 Recommended for larger pieces of work:
 
@@ -78,8 +58,7 @@ will be run for, vmem is the amount of memory required per core (e.g.
 "1G" for 1 GB RAM), and num is the number of cores required (please note
 it appears twice in the command).
 
-[Running VisIT on your workstation, offload storage and processing to the ARC systems.]{#Running_VisIT_on_your_workstation_offload_storage_and_processing_to_the_ARC_systems}
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Running VisIT on your workstation, offload storage and processing to the ARC systems
 
 Recommended where the graphical interface (menu items, etc.) feels
 sluggish, or where the best possible performance is required.
@@ -93,19 +72,16 @@ is provided by executing the following command on the cluster:
 
 If installing on a Windows platform, you will be asked to select the
 desired network configuration and given a choice of a number of
-institutions. Please select [None]{.lang:default .decode:true
-.crayon-inline} .
+institutions. Please select `None` .
 
-### [Configure for remote execution]{#Configure_for_remote_execution}
+### Configure for remote execution
 
 Once installed, start the program and then exit it: this will create a
 number of directories.
 
 Then, download the files corresponding to the cluster you wish to use --
-for each, rename the file extension from [.txt]{.lang:default
-.decode:true .crayon-inline} to [.xml]{.lang:default .decode:true
-.crayon-inline} (unfortunately our hosting provider does not allow
-[.xml]{.lang:default .decode:true .crayon-inline} files on the
+for each, rename the file extension from `.txt` to `.xml` (unfortunately our hosting provider does not allow
+`.xml` files on the
 website!):
 
 [host\_arc2](https://arc.leeds.ac.uk/wp-content/uploads/2016/02/host_arc2.txt)
@@ -115,19 +91,17 @@ website!):
 [host\_marc1](https://arc.leeds.ac.uk/wp-content/uploads/2016/02/host_marc1.txt)
 
 On a Linux, Unix or Mac platform, please save these files to your
-[.visit/hosts/]{.lang:default .decode:true .crayon-inline} directory,
+`.visit/hosts/` directory,
 found within your home directory.
 
 On a Windows platform, please save these files to the application
 directory. Depending on whether VisIT was installed by an administrator
 for all users or just for your account, this may be found under
-[Computer-\>C:-\>Profile Files/LLNL/VisIt \<ver\>/hosts]{.lang:default
-.decode:true .crayon-inline} or
-[Computer-\>C:-\>Users-\>YourUsername-\>AppData-\>Local-\>Programs-\>LLNL-\>VisIT
-\<ver\>-\>hosts]{.lang:default .decode:true .crayon-inline}
+`Computer->C:->Profile Files/LLNL/VisIt <ver>/hosts` or
+`Computer->C:->Users->YourUsername->AppData->Local->Programs->LLNL->VisIT
+<ver>->hosts`
 
-Start VisIt once again and select the menu item [Options-\>Host
-Profiles...]{.lang:default .decode:true .crayon-inline} This will open a
+Start VisIt once again and select the menu item `Options->Host Profiles...` This will open a
 window, which should contain an entry on the left hand side for each of
 the host files saved earlier. For each host in turn:
 
@@ -138,86 +112,57 @@ module for the version you want and examining a variable.
     echo $VISIT_HOME
 
 2\. Highlight the hostname by clicking on it. On the right hand side,\
-look for the configuration item [Path to VisIt
-installation]{.lang:default .decode:true .crayon-inline} . If you cannot
-see it, click on the [Machines]{.lang:default .decode:true
-.crayon-inline} and [Host Settings]{.lang:default .decode:true
-.crayon-inline} tabs. Enter the location string found in step (1) above.
+look for the configuration item `Path to VisIt
+installation` . If you cannot
+see it, click on the `Machines` and `Host Settings` tabs. Enter the location string found in step (1) above.
 
-3\. Close the window with the [Dismiss]{.lang:default .decode:true
-.crayon-inline} button
+3\. Close the window with the `Dismiss` button
 
-4\. Save settings with the [Options-\>Save Settings]{.lang:default
-.decode:true .crayon-inline} menu item
+4\. Save settings with the `Options->Save Settings` menu item
 
-### [Launch remote execution]{#Launch_remote_execution}
+### Launch remote execution
 
-1\. With VisIt running on your workstation, select menu item [File-\>Open
-file...]{.lang:default .decode:true .crayon-inline} to open the [File
-open]{.lang:default .decode:true .crayon-inline} window.
+1\. With VisIt running on your workstation, select menu item `File->Open file...` to open the `File open` window.
 
-2\. There will be a drop-down text box marked [Host]{.lang:default
-.decode:true .crayon-inline} . Click on its arrow, which should show a
-list including [localhost]{.lang:default .decode:true .crayon-inline}
+2\. There will be a drop-down text box marked `Host` . Click on its arrow, which should show a
+list including `localhost`
 (your workstation) and each of the clusters you configured in the steps
 above. Select the cluster you wish to use.
 
-3\. The [File open]{.lang:default .decode:true .crayon-inline} window
+3\. The `File open` window
 should now show files on the cluster. Select a file visit understands
-and press [OK]{.lang:default .decode:true .crayon-inline}
+and press `OK`
 
-4\. A Select options for [\<clustername\>]{.lang:default .decode:true
-.crayon-inline} should appear. Select [serial (login
-node)]{.lang:default .decode:true .crayon-inline} for a single process
+4\. A Select options for `<clustername>` should appear. Select `serial (login
+node)`S for a single process
 on a login node (please note that login nodes are shared between all
 users of the cluster -- it should only be used for short or undemanding
-pieces of work), or [mpi (batch queue)]{.lang:default .decode:true
-.crayon-inline} to launch visit on the cluster's compute nodes through
+pieces of work), or `mpi (batch queue)` to launch visit on the cluster's compute nodes through
 the batch queue system (*note: unavailable for version 2.6.3*). When
 launching through the batch queues, specify the number of cores required
-into [Num procs]{.lang:default .decode:true .crayon-inline} , the length
-of time the resources are required into [Time limit]{.lang:default
-.decode:true .crayon-inline} and any other batch queue options into
-[Bank]{.lang:default .decode:true .crayon-inline} (the default value,
-[-l h\_vmem=1G]{.lang:default .decode:true .crayon-inline} requests 1G
+into `Num procs` , the length
+of time the resources are required into [Time limit] and any other batch queue options into
+`Bank` (the default value,
+`-l h_vmem=1G` requests 1G
 RAM per requested process).
 
 Once VisIt has launched onto the login node or the batch queue has
 started running, use VisIt normally.
 
 To double-check what resources are in use, select the menu item
-[File-\>Compute Engines...]{.lang:default .decode:true .crayon-inline}
+`File->Compute Engines...`
 
-[Developing plugins with VisIt]{#Developing_plugins_with_VisIt}
----------------------------------------------------------------
+## Developing plugins with VisIt
 
 When developing plugins to extend the software it is probably useful to
 use the same development environment used to build VisIt, in order to
 minimise compatibility problems between different C++ compilers, etc. If
 we have compiled a particular version of VisIt ourselves instead of
 using the version from the VisIt website, loading the
-[visit]{.lang:default .decode:true .crayon-inline} module will set
-environment variable [VISIT\_BUILD\_MODULES]{.lang:default .decode:true
-.crayon-inline} to contain the list of modules used build it. For
+`visit` module will set
+environment variable `VISIT_BUILD_MODULES` to contain the list of modules used build it. For
 example:
 
     $ module load visit
     $ echo $VISIT_BUILD_MODULES
     bit/64 gnu/4.9.1 openmpi/1.6.5 mkl/11.2
-:::
-
-::: {.entry-meta}
-:::
-:::
-:::
-:::
-
-::: {.container}
-::: {.site-info}
-::: {.footer-credit}
-Built with [Make](https://thethemefoundry.com/make/){.theme-name}. Your
-friendly WordPress page builder theme.
-:::
-:::
-:::
-:::

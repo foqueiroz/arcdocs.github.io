@@ -1,50 +1,33 @@
-Comsol {#comsol .entry-title}
-======
+# Comsol 
 
-Contents
-
--   [[1]{.toc_number .toc_depth_1} Introduction](#Introduction)
--   [[2]{.toc_number .toc_depth_1} Versions
-    available:](#Versions_available)
--   [[3]{.toc_number .toc_depth_1} Accessing the
-    software](#Accessing_the_software)
--   [[4]{.toc_number .toc_depth_1} Example script](#Example_script)
--   [[5]{.toc_number .toc_depth_1} Using batch
-    license](#Using_batch_license)
--   [[6]{.toc_number .toc_depth_1} Managing comsol memory usage while
-    running:](#Managing_comsol_memory_usage_while_running)
-:::
-
-### [Introduction]{#Introduction}
+## Introduction
 
 COMSOL Multiphysics provides a range of simulation, finite element
 analysis and solver functionality. More information on the package is
 available here:\
 <http://www.comsol.com/>
 
-### [Versions available:]{#Versions_available}
+## Versions available
 
- 
+  |**System**  |Version(s)   |Load command
+  |------------|-------------|----------------------
+  |ARC3        |5.2          |module load comsol/5.2
+  |ARC3        |5.2a         |module load comsol/5.2a
+  |ARC3        |5.3          |module load comsol/5.3
+  |ARC3        |5.3a         |module load comsol/5.3a
+  |ARC3        |5.4          |module load comsol/5.4
+  |ARC3        |5.5          |module load comsol/5.5
+  |ARC4        |5.3a         |module load comsol/5.3a
+  |ARC4        |5.4          |module load comsol/5.4
+  |ARC4        |5.5          |module load comsol/5.5
 
-  **System**   Version(s)   Load command
-  ------------ ------------ -------------------------
-  ARC3         5.2          module load comsol/5.2
-  ARC3         5.2a         module load comsol/5.2a
-  ARC3         5.3          module load comsol/5.3
-  ARC3         5.3a         module load comsol/5.3a
-  ARC3         5.4          module load comsol/5.4
-  ARC3         5.5          module load comsol/5.5
-  ARC4         5.3a         module load comsol/5.3a
-  ARC4         5.4          module load comsol/5.4
-  ARC4         5.5          module load comsol/5.5
-
-### [Accessing the software]{#Accessing_the_software}
+## Accessing the software
 
 To make COMSOL available in your environment, enter the command:
 
     module load comsol
 
-### [Example script]{#Example_script}
+## Example script
 
 This script will request exclusive access to an entire node.
 
@@ -68,20 +51,18 @@ This script will request exclusive access to an entire node.
 
 In the script above:
 
-Change [\<email\>]{.lang:default .decode:true .crayon-inline} to your
-username. For example, if your username is [matzz]{.lang:default
-.decode:true .crayon-inline} :
+Change `<email>` to your
+username. For example, if your username is `matzz` :
 
     #$ -M matzz@leeds.ac.uk
 
-Change [\<port@server\>]{.lang:default .decode:true .crayon-inline} to
+Change `<port@server>` to
 the license server details obtained from your Faculty IT support. For
-example is you are given [1322@server]{.lang:default .decode:true
-.crayon-inline} :
+example is you are given `1322@server` :
 
     export LM_LICENSE_FILE=1322@server:$LM_LICENSE_FILE
 
-### [Using batch license]{#Using_batch_license}
+## Using batch license
 
 In addition to the default licenses available for COMSOL, additional
 batch licenses are available.  These can be used by adding an additional
@@ -89,7 +70,7 @@ flag to you COMSOL command:
 
     -usebatchlic
 
-### [Managing comsol memory usage while running:]{#Managing_comsol_memory_usage_while_running}
+## Managing comsol memory usage while running
 
 Running comsol in command line can often create a large number of
 temporary files in the .comsol directory in your home directory
@@ -102,20 +83,3 @@ nobackup and adding the following line to your comsol batch command in
 your submission script.
 
     -recoverydir /nobackup/$USER/comsolrecovery
-:::
-
-::: {.entry-meta}
-:::
-:::
-:::
-:::
-
-::: {.container}
-::: {.site-info}
-::: {.footer-credit}
-Built with [Make](https://thethemefoundry.com/make/){.theme-name}. Your
-friendly WordPress page builder theme.
-:::
-:::
-:::
-:::
