@@ -101,7 +101,7 @@ To do this, add a -tc clause to the submission script:
 #$ -tc 50
 ```
 
-This would run 5000 tasks but limit just 50 to run at any point in time. **On the MARC1 cluster, we ask you to limit your use of the machine to a maximum of 100 cores at any one time** (ie. 100 single core jobs, 50 2-core jobs etc.)
+This would run 5000 tasks but limit just 50 to run at any point in time.
 
 ## Using the SGE environment variables
 

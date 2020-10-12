@@ -146,9 +146,6 @@ The option `-m` will specify that we wish to receive an email about the job, in 
 * - `-l coproc=`
   - A wrapper line for requesting resources on GPGPU nodes, see [GPGPU page](./gpgpu) for more details. Passing a number between 1 and 4 requests a proportion of the resources on GPGPU nodes.
   -
-* - `nvidia-smi -L`
-  - Option that confirms what GPGPU cards you have been allocated.
-  -
 * - `-hold_jid prev_job_id`
   - Hold the job until the previous job (`prev_job_id`) has completed – useful for chaining runs together.
   -
@@ -267,24 +264,24 @@ Your job 627 ("job2.sh") has been submitted
 
 This allows for developing a workflow of jobs that run one after another to complete long stepwise tasks.
 
-### Fair share policy
+### Fair-share policy
 
-The fair-share policy is two-tiered policy that takes into account the useage of a faculty as a whole and the past useage of the user. In the first tier of the policy faculties are allocated a share of the queue space on the basis of funding, meaning that faculties do not have equal shares of system capacity. The fair-share policy then determines an initial faculty level priority based on the faculties share and the total useage by all faculty member users.
+The fair-share policy is two-tiered policy that takes into account the usage of a faculty as a whole and the past usage of the user. In the first tier of the policy faculties are allocated a share of the queue space on the basis of funding, meaning that faculties do not have equal shares of system capacity. The fair-share policy then determines an initial faculty level priority based on the faculties share and the total useage by all faculty member users.
 
 ```{note}
-The fair share policy and levels are set by the ARC management group and cannot be altered by the system’s support team.
+The fair-share policy and levels are set by the ARC management group and cannot be altered by the system’s support team.
 ```
 
-Next the fair-share policy determines an individual users job priority. Initially, all users from a faculty have the same initial priority which then decreases based on the users useage of the HPC. Essentially, this means that a user with recent (the last 7 days) heavy usage will have their jobs reduced in priority to allow other user’s jobs to run.
+Next the fair-share policy determines an individual user's job priority. Initially, all users from a faculty have the same initial priority which then decreases based on the users usage of the HPC. Essentially, this means that a user with recent (the last 7 days) heavy usage will have their jobs reduced in priority to allow other user’s jobs to run.
 
 The fair-share policy has the following consequences:
 
-- The more useage by members of your faculty, the more jobs submitted by users in the faculty, the longer you have to wait in the queue
+- The more usage by members of your faculty, the more jobs submitted by users in the faculty, the longer you have to wait in the queue
 - If you submit lots of jobs your subsequent jobs will have a lower priority and you will have to wait longer in the queue and so will jobs submit by other users from your faculty for the next 1 or 2 weeks
 - Jobs submitted by people from another faculty may start before yours
 - Jobs submitted after your job may start before yours
 
 ```{note}
-There is no test queue on the ARC service. To help determine your most efficient useage we recommend submit small test jobs.
+There is no test queue on the ARC service. To help determine your most efficient usage we recommend submit small test jobs.
 The smaller the jobs the less time it will wait in the queue and the less impact it will have on your priority.
 ```
