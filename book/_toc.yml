@@ -22,14 +22,14 @@
     - file: getting_started/file_transfer
 
 
-# ===== Useage ==========================================
-- file: useage/start
+# ===== Usage ==========================================
+- file: usage/start
   sections:
-    - file: useage/batchjob
-    - file: useage/interactive
-    - file: useage/troubleshooting
-    - file: useage/taskarrays
-    - file: useage/gpgpu
+    - file: usage/batchjob
+    - file: usage/interactive
+    - file: usage/troubleshooting
+    - file: usage/taskarrays
+    - file: usage/gpgpu
 
 # ===== Software ==========================================
 - file: software/start
