@@ -86,7 +86,7 @@ The ARC4 system also comes with the following GPU resources:
 
 - 3 nodes each with 40 cores, 192GB of system memory, a hard disk drive within the node with 800GB of storage and 4 x NVIDIA V100 GPUs.
 
-### Useage
+### Usage
 
 #### V100 GPU
 

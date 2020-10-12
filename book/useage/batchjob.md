@@ -1,15 +1,15 @@
 # Batch jobs
 
-Utilising the computational power of the HPC facilities at Leeds is organised through a batch job scheduling system. This involves users submitting a script that outlines the resources required and the program to be run to the scheduler which allocates that job a position in the queue of jobs. The scheduler software run on both ARC3 and ARC4 is [Son of Grid Engine](https://arc.liv.ac.uk/trac/SGE), plus locally developed and implemented patches.
+The computational power of the HPC facilities at Leeds is organised through a batch job scheduling system. This involves users submitting a script that outlines the resources required, and the program to be run, to the scheduler which allocates that job a position in the queue of jobs. The scheduler software that runs on both ARC3 and ARC4 is [Son of Grid Engine](https://arc.liv.ac.uk/trac/SGE), plus locally developed and implemented patches.
 
 ## Job scripts
 
-The scripts submitted are referred to as **job scripts** or **job submission scripts** these are shell scripts (files ending `.sh`) and at a bare minimum specify:
+The scripts submitted are referred to as **job scripts** or **job submission scripts**. These are shell scripts (files ending `.sh`) and at a bare minimum specify:
 
 - how long the job needs to run for
-- on how many processors to use (assumed 1 unless otherwise specified)
+- on how many processors to run (assumed 1 unless otherwise specified)
 
-With this information, the scheduler is able to run jobs at some point in the future when the resources become available. Crucially, the queue is **not** a first-come-first-serve and implements a [fair-share policy](#fair-share-policy) to guide the scheduler towards allocating resources fairly between different faculties.
+With this information, the scheduler is able to run jobs at some point in the future when the resources become available. Crucially, the queue is **not** first-come-first-serve and implements a [fair-share policy](#fair-share-policy) to guide the scheduler towards allocating resources fairly between different faculties and users.
 
 The common commands used on HPC to interact with batch jobs are:
 
@@ -26,7 +26,7 @@ We encourage users to write their job submission scripts using text editor tools
 - `vim`
 - `emacs`
 
-The basic useage to create a new job submission file on HPC would be `nano job_submit.sh` or `vim job_submit.sh`. This opens the new empty file in the text editor ready for you to write it's contents.
+The basic approach to create a new job submission file on HPC would be `nano job_submit.sh` or `vim job_submit.sh`. This opens the new empty file in the text editor ready for you to write its contents.
 
 ``` {warning}
 Job scripts written on Windows computers contain different invisible line ending characters that lead to job submission failures such as
@@ -36,7 +36,7 @@ You can use the command `dos2unix job_script.sh` on HPC to convert your script t
 
 ### The Hello world job script
 
-In this basic hello world job script example we've got a job script called `job_script1.sh` requests a single core, 1GB of RAM, 15 minutes of run time in order to run some R code.
+In this basic hello world job script example we've got a job script called `job_script1.sh` that requests a single core, 1GB of RAM, and 15 minutes of run time in order to run some R code.
 
 ```shell
 #R single core submission script
@@ -102,7 +102,7 @@ To use multiple cores within a node using the OpenMP protocol you include the fo
 Where `np` is the number of cores you wish to request. The maximum number of cores you can request using `smp` is the total number of cores available on a node (ARC4 - 40, ARC3 - 24).
 
 ```{warning}
-If your job attempts to run for longer than the amount of time or using more memory per core than requested this will cause the scheduler to kill your job. This is one of the most common problems people encounter, read more on the [troubleshooting page](./troubleshooting).
+If your job attempts to run for longer than the amount of time or use more memory per core than requested this will cause the scheduler to kill your job. This is one of the most common problems people encounter, read more on the [troubleshooting page](./troubleshooting).
 ```
 
 Next we have options to request notifications about the job:
@@ -126,10 +126,10 @@ The option `-m` will specify that we wish to receive an email about the job, in 
   - The wall clock time (amount of real time needed by the job). This parameter must be specified, failure to include this parameter will result in an error message.
   - Required
 * - `-l h_vmem=memory`
-  - Sets the limit of virtual memory required per core. If you require more memory than 1GB/process you must specify this flag. e.g. `-l h_vmem=12G` will request 12GB memory. The maxium memory that can be requested for a shared memory job is the sum of the processes requested and the virtual memory requested that must be equal to or less than the amount available in a single node.
+  - Sets the limit of virtual memory required per core. If you require more memory than 1GB/process you must specify this flag. e.g. `-l h_vmem=12G` will request 12GB memory. The maximum memory that can be requested for a shared memory job is the total of the processes requested multiplied by the virtual memory requested per core, and this must be equal to or less than the amount available in a single node.
   - 1G
 * - `-pe smp np`
-  - Specifies the shared memory parallel environment for parallel programs using OpenMP. `np` is the number of cores to be used by the parallel job. The number maximum number of cores that can be requested for shared memory jobs is limited by the number of cores available in a single node.
+  - Specifies the shared memory parallel environment for parallel programs using OpenMP/threads. `np` is the number of cores to be used by the parallel job. The maximum number of cores that can be requested for shared memory jobs is limited by the number of cores available in a single node.
   - 1
 * - `-pe ib np`
   - Specifies the parallel environment for parallel programs using MPI, `np` is the number of cores to be used by the parallel job.
