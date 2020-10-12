@@ -266,7 +266,7 @@ This allows for developing a workflow of jobs that run one after another to comp
 
 ### Fair-share policy
 
-The fair-share policy is two-tiered policy that takes into account the usage of a faculty as a whole and the past usage of the user. In the first tier of the policy faculties are allocated a share of the queue space on the basis of funding, meaning that faculties do not have equal shares of system capacity. The fair-share policy then determines an initial faculty level priority based on the faculties share and the total useage by all faculty member users.
+The fair-share policy is two-tiered policy that takes into account the usage of a faculty as a whole and the past usage of the user. In the first tier of the policy faculties are allocated a share of the queue space on the basis of funding, meaning that faculties do not have equal shares of system capacity. The fair-share policy then determines an initial faculty level priority based on the faculties share and the total usage by all faculty member users.
 
 ```{note}
 The fair-share policy and levels are set by the ARC management group and cannot be altered by the system’s support team.
