@@ -11,10 +11,15 @@ Windows users who make use of MobaXTerm can take advantage of some builtin tools
  In this file explorer we can see all the folders and files within the directory path specified at the top (in this example `/home/home01/medacola/`), we can change this directory path if we wish to look in a different directory (that we have permission to view).
 
 <p style="text-align:center;">
-<img alt="Zoomed in view of MobaXTerm file explorer" src="../_images/mobaWindow2.png" style="width:250px;"/>
+
+```{image} ../assets/img/filetransfer/mobaWindow2.png
+:alt: Zoomed in view of MobaXTerm file explorer
+:width: 250px
+```
+
 </p>
 
-We can also download files from ARC onto our local computer by selecting them in the file explorer window and pressing the Download icon <img alt="Download icon" src="../_images/mobaWindow2down.png" style="width:50px;"/>.
+We can also download files from ARC onto our local computer by selecting them in the file explorer window and pressing the Download icon ![Download icon](../assets/img/filetransfer/mobaWindow2down50x46.png).
 
 We can upload files and directories using this file explorer by dragging and dropping them into that window.
 
