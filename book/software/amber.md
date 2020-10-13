@@ -1,5 +1,6 @@
-AMBER {#amber .entry-title}
-=====
+# AMBER 
+
+## Introduction
 
 Before you are able to access AMBER, you will be asked to read and agree
 to the licence terms.
@@ -10,28 +11,26 @@ print out and sign a copy for your own reference.
 
 To access Amber, load its module through:
 
-     
     $ module load amber 
 
-This sets the [AMBERHOME]{.lang:default .decode:true .crayon-inline}
-environment variable and your path to include the [bin]{.lang:default
-.decode:true .crayon-inline} directory, with common executables as
+This sets the `AMBERHOME`
+environment variable and your path to include the `bin` directory, with common executables as
 follows:
 
-  ------------------------------------------------------------------------- ----------------------------------------------------------------------------------
-  [\$AMBERHOME/bin/sander]{.lang:default .decode:true .crayon-inline}       Serial version of SANDER
-  [\$AMBERHOME/bin/sander.MPI]{.lang:default .decode:true .crayon-inline}   [sander]{.lang:default .decode:true .crayon-inline} built to run over Infiniband
-  [\$AMBERHOME/bin/pmemd]{.lang:default .decode:true .crayon-inline}        Serial version of PMEMD
-  [\$AMBERHOME/bin/pmemd.MPI]{.lang:default .decode:true .crayon-inline}    [pmemd]{.lang:default .decode:true .crayon-inline} built to run over Infiniband
-  ------------------------------------------------------------------------- ----------------------------------------------------------------------------------
+ `\$AMBERHOME/bin/sander`       Serial version of SANDER
 
-Example job submission scripts.
--------------------------------
+ `\$AMBERHOME/bin/sander.MPI`   `sander` built to run over Infiniband
+
+ `\$AMBERHOME/bin/pmemd`        Serial version of PMEMD
+
+ `\$AMBERHOME/bin/pmemd.MPI`    `pmemd` built to run over Infiniband
+ 
+## Example job submission scripts.
 
 The following script will run pmemd on 16 cores for 48 hours, the module
 command is included in the submission script therefore it is not
 necessary to have the environment loaded prior to job submission:
-[run.sh]{.lang:default .decode:true .crayon-inline} :
+`run.sh` :
 
     #!/bin/sh
     #$ -cwd
@@ -48,20 +47,3 @@ necessary to have the environment loaded prior to job submission:
 This script can be submitted to the batch queues with:
 
     % qsub run.sh
-:::
-
-::: {.entry-meta}
-:::
-:::
-:::
-:::
-
-::: {.container}
-::: {.site-info}
-::: {.footer-credit}
-Built with [Make](https://thethemefoundry.com/make/){.theme-name}. Your
-friendly WordPress page builder theme.
-:::
-:::
-:::
-:::
