@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gromacs {#gromacs .entry-title} &#8212; ARC Documentation</title>
+    <title>Gromacs &#8212; ARC Documentation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="IDL {#idl .entry-title}" href="idl.html" />
+    <link rel="next" title="IDL" href="idl.html" />
     <link rel="prev" title="DLpoly {#dlpoly .entry-title}" href="gaussian.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -67,8 +67,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/gromacs.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Gromacs {#gromacs .entry-title}" />
-<meta property="og:description" content="Gromacs {#gromacs .entry-title}  Gromacs is freely available and open source software.  ::: {#toc_container .no_bullets} Contents  [1]{.toc_number .toc_depth_1}" />
+<meta property="og:title"       content="Gromacs" />
+<meta property="og:description" content="Gromacs  Introduction  Gromacs is freely available and open source software.  Setting the module environment  A number of versions of Gromacs are available on t" />
 <meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -130,7 +130,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="amber.html">
-     AMBER {#amber .entry-title}
+     AMBER
     </a>
    </li>
    <li class="toctree-l2">
@@ -140,12 +140,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="comsol.html">
-     Comsol {#comsol .entry-title}
+     Comsol
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dl_poly.html">
-     DLpoly {#dlpoly .entry-title}
+     DLpoly
     </a>
    </li>
    <li class="toctree-l2">
@@ -155,62 +155,57 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Gromacs {#gromacs .entry-title}
+     Gromacs
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="idl.html">
-     IDL {#idl .entry-title}
+     IDL
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="matlab.html">
-     Matlab {#matlab .entry-title}
+     Matlab
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="molpro.html">
-     Molpro {#molpro .entry-title}
+     Molpro
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="namd.html">
-     NAMD {#namd .entry-title}
+     NAMD
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="openfoam.html">
-     OpenFoam {#openfoam .entry-title}
+     OpenFoam
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="paraview.html">
-     Advanced Research Computing {#advanced-research-computing .site-title .screen-reader-text}
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="paraview.html#paraview-paraview-entry-title">
-     Paraview {#paraview .entry-title}
+     Paraview
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="R.html">
-     R {#r .entry-title}
+     R
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="stata.html">
-     Stata {#stata .entry-title}
+     Stata
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="visit.html">
-     Visit {#visit .entry-title}
+     Visit
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="vmd.html">
-     VMD (Visual Molecular Dynamics) {#vmd-visual-molecular-dynamics .entry-title}
+     VMD (Visual Molecular Dynamics)
     </a>
    </li>
   </ul>
@@ -323,31 +318,36 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-the-module-environment-setting-the-module-environment">
-   [ Setting the module environment]{#Setting_the_module_environment}
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#executable-naming-conventions-executable-naming-conventions">
-   [ Executable naming conventions]{#Executable_naming_conventions}
+  <a class="reference internal nav-link" href="#setting-the-module-environment">
+   Setting the module environment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#batch-execution-batch-execution">
-   [ Batch execution]{#Batch_execution}
+  <a class="reference internal nav-link" href="#executable-naming-conventions">
+   Executable naming conventions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#batch-execution">
+   Batch execution
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#serial-execution-serial-execution">
-     [ Serial execution]{#Serial_execution}
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#parallel-execution-parallel-execution">
-     [ Parallel execution]{#Parallel_execution}
+    <a class="reference internal nav-link" href="#serial-execution">
+     Serial execution
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parallel-execution">
+   Parallel execution
+  </a>
  </li>
 </ul>
 
@@ -360,28 +360,14 @@
         
               <div>
                 
-  <div class="section" id="gromacs-gromacs-entry-title">
-<h1>Gromacs {#gromacs .entry-title}<a class="headerlink" href="#gromacs-gromacs-entry-title" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="gromacs">
+<h1>Gromacs<a class="headerlink" href="#gromacs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Gromacs is freely available and open source software.</p>
-<p>::: {#toc_container .no_bullets}
-Contents</p>
-<ul class="simple">
-<li><p><a class="reference external" href="#Setting_the_module_environment">[1]{.toc_number .toc_depth_1} Setting the module
-environment</a></p></li>
-<li><p><a class="reference external" href="#Executable_naming_conventions">[2]{.toc_number .toc_depth_1} Executable naming
-conventions</a></p></li>
-<li><p><a class="reference external" href="#Batch_execution">[3]{.toc_number .toc_depth_1} Batch execution</a></p>
-<ul>
-<li><p><a class="reference external" href="#Serial_execution">[3.1]{.toc_number .toc_depth_2} Serial
-execution</a></p></li>
-<li><p><a class="reference external" href="#Parallel_execution">[3.2]{.toc_number .toc_depth_2} Parallel
-execution</a>
-:::</p></li>
-</ul>
-</li>
-</ul>
-<div class="section" id="setting-the-module-environment-setting-the-module-environment">
-<h2>[ Setting the module environment]{#Setting_the_module_environment}<a class="headerlink" href="#setting-the-module-environment-setting-the-module-environment" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="setting-the-module-environment">
+<h2>Setting the module environment<a class="headerlink" href="#setting-the-module-environment" title="Permalink to this headline">¶</a></h2>
 <p>A number of versions of Gromacs are available on the facility.</p>
 <p>To set up the environment, when you log in, use (for example):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module add gromacs/4.5.3
@@ -394,33 +380,56 @@ execution</a>
 </div>
 <p>Will add the executables for the default 4.6.3 version.</p>
 </div>
-<div class="section" id="executable-naming-conventions-executable-naming-conventions">
-<h2>[ Executable naming conventions]{#Executable_naming_conventions}<a class="headerlink" href="#executable-naming-conventions-executable-naming-conventions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="executable-naming-conventions">
+<h2>Executable naming conventions<a class="headerlink" href="#executable-naming-conventions" title="Permalink to this headline">¶</a></h2>
 <p>The main executables available are :</p>
-<hr class="docutils" />
-<p>[mdrun]{.lang:default .decode:true .crayon-inline}                  single precision serial executable
-[mdrun_d]{.lang:default .decode:true .crayon-inline}               double precision serial executable
-[mpirun mdrun_mpi]{.lang:default .decode:true .crayon-inline}      single precision parallel MPI executable
-[mpirun mdrun_mpi_d]{.lang:default .decode:true .crayon-inline}   double precision parallel MPI exectable</p>
-<hr class="docutils" />
-<p>However, the naming convention for [Gromacs]{.lang:default .decode:true
-.crayon-inline} versions below [4.6.3]{.lang:default .decode:true
-.crayon-inline} are a little different:</p>
-<hr class="docutils" />
-<p>[mdrun.MPI]{.lang:default .decode:true .crayon-inline}      single precision, parallel MPI executable
-[mdrun_d.MPI]{.lang:default .decode:true .crayon-inline}   double precision, parallel MPI executable</p>
-<hr class="docutils" />
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Executable</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mdrun</span></code></p></td>
+<td><p>single precision serial executable</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mdrun\_d</span></code></p></td>
+<td><p>double precision serial executable</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mpirun</span> <span class="pre">mdrun\_mpi</span></code></p></td>
+<td><p>single precision parallel MPI executable</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mpirun</span> <span class="pre">mdrun\_mpi\_d</span></code></p></td>
+<td><p>double precision parallel MPI exectable</p></td>
+</tr>
+</tbody>
+</table>
+<p>However, the naming convention for <code class="docutils literal notranslate"><span class="pre">Gromacs</span></code> versions below <code class="docutils literal notranslate"><span class="pre">4.6.3</span></code> are a little different:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Executable</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mdrun.MPI</span></code></p></td>
+<td><p>single precision, parallel MPI executable</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mdrun\_d.MPI</span></code></p></td>
+<td><p>double precision, parallel MPI executable</p></td>
+</tr>
+</tbody>
+</table>
 <p>There are also single/double precision versions of the tools that come
 with the application, with the same naming scheme as above. For more
 information look at the <a class="reference external" href="http://www.gromacs.org/">Gromacs</a> homepage and
 at the <a class="reference external" href="http://www.gromacs.org/Documentation">Gromacs documentation</a>.</p>
 </div>
-<div class="section" id="batch-execution-batch-execution">
-<h2>[ Batch execution]{#Batch_execution}<a class="headerlink" href="#batch-execution-batch-execution" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="serial-execution-serial-execution">
-<h3>[ Serial execution]{#Serial_execution}<a class="headerlink" href="#serial-execution-serial-execution" title="Permalink to this headline">¶</a></h3>
-<p>An example script, [example_serial.sh]{.lang:default .decode:true
-.crayon-inline} , looks like:</p>
+<div class="section" id="batch-execution">
+<h2>Batch execution<a class="headerlink" href="#batch-execution" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="serial-execution">
+<h3>Serial execution<a class="headerlink" href="#serial-execution" title="Permalink to this headline">¶</a></h3>
+<p>An example script, <code class="docutils literal notranslate"><span class="pre">example\_serial.sh</span></code> , looks like:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 #$ -cwd -V 
 # request 10 hours of runtime
@@ -429,13 +438,12 @@ mdrun_d  [...]
 </pre></div>
 </div>
 <p>This requests 10 hours of runtime, to run in the current directory(
-[-cwd]{.lang:default .decode:true .crayon-inline} ) and using the
-current environment ( [-V]{.lang:default .decode:true .crayon-inline} ),
+<code class="docutils literal notranslate"><span class="pre">-cwd</span></code> ) and using the
+current environment ( <code class="docutils literal notranslate"><span class="pre">-V</span></code> ),
 using the double precision version of mdrun, and where
-[[…]]{.lang:default .decode:true .crayon-inline} represents the
+<code class="docutils literal notranslate"><span class="pre">[...]</span></code> represents the
 arguments to mdrun. More memory per core can be requested, 2Gb for
-instance, by adding the line [#$ -l h_vmem=2G]{.lang:default
-.decode:true .crayon-inline} to the script. For more options look at
+instance, by adding the line <code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">h_vmem=2G</span></code> to the script. For more options look at
 <a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/qsub-qrsh-usage/">qsub
 options</a>.
 The script can be submitted with:</p>
@@ -443,10 +451,11 @@ The script can be submitted with:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="parallel-execution-parallel-execution">
-<h3>[ Parallel execution]{#Parallel_execution}<a class="headerlink" href="#parallel-execution-parallel-execution" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="parallel-execution">
+<h2>Parallel execution<a class="headerlink" href="#parallel-execution" title="Permalink to this headline">¶</a></h2>
 <p>For the parallel version, an example script,
-[example_parallel.sh]{.lang:default .decode:true .crayon-inline} will
+<code class="docutils literal notranslate"><span class="pre">example\parallel.sh</span></code> will
 take the form:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 #$ -cwd -V 
@@ -458,35 +467,19 @@ mpirun mdrun_mpi_d
 </pre></div>
 </div>
 <p>This requests 10 hours of runtime, to run in the current directory(
-[-cwd]{.lang:default .decode:true .crayon-inline} ), using the current
-environment ( [-V]{.lang:default .decode:true .crayon-inline} ), running
-on 4 cores ( [-pe ib 4]{.lang:default .decode:true .crayon-inline} ),
+<code class="docutils literal notranslate"><span class="pre">-cwd</span></code> ), using the current
+environment ( <code class="docutils literal notranslate"><span class="pre">-V</span></code> ), running
+on 4 cores ( <code class="docutils literal notranslate"><span class="pre">-pe</span> <span class="pre">ib</span> <span class="pre">4</span></code> ),
 using the double precision parallel version of mdrun, and where
-[&lt;options&gt;]{.lang:default .decode:true .crayon-inline} represents the
-arguments to [mdrun]{.lang:default .decode:true .crayon-inline} .</p>
+<code class="docutils literal notranslate"><span class="pre">&lt;options&gt;</span></code> represents the
+arguments to <code class="docutils literal notranslate"><span class="pre">mdrun</span></code> .</p>
 <p>More memory per core can be requested, 2Gb for instance, by adding the
-line [#$ -l h_vmem=2G]{.lang:default .decode:true .crayon-inline} to
+line <code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">h_vmem=2G</span></code> to
 the script. For more options look at <a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/qsub-qrsh-usage/">qsub
 options</a>.
 The script can be submitted with:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ qsub example_parallel.sh
 </pre></div>
-</div>
-<p>:::</p>
-<p>::: {.entry-meta}
-:::
-:::
-:::
-:::</p>
-<p>::: {.container}
-::: {.site-info}
-::: {.footer-credit}
-Built with <a class="reference external" href="https://thethemefoundry.com/make/">Make</a>{.theme-name}. Your
-friendly WordPress page builder theme.
-:::
-:::
-:::
-:::</p>
 </div>
 </div>
 </div>
@@ -520,7 +513,7 @@ friendly WordPress page builder theme.
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="gaussian.html" title="previous page">DLpoly {#dlpoly .entry-title}</a>
-    <a class='right-next' id="next-link" href="idl.html" title="next page">IDL {#idl .entry-title}</a>
+    <a class='right-next' id="next-link" href="idl.html" title="next page">IDL</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

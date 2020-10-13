@@ -1,41 +1,9 @@
-Matlab {#matlab .entry-title}
-======
+# Matlab 
 
 Matlab is installed on the HPC clusters and is licensed for academic use
 only.
 
-::: {#toc_container .no_bullets}
-Contents
-
--   [[1]{.toc_number .toc_depth_1} Setting up the
-    environment](#Setting_up_the_environment)
--   [[2]{.toc_number .toc_depth_1} Running on the login
-    nodes](#Running_on_the_login_nodes)
--   [[3]{.toc_number .toc_depth_1} Running through the batch
-    scheduler](#Running_through_the_batch_scheduler)
-    -   [[3.1]{.toc_number .toc_depth_2} Running through an interactive
-        shell](#Running_through_an_interactive_shell)
-    -   [[3.2]{.toc_number .toc_depth_2} Batch
-        Execution](#Batch_Execution)
--   [[4]{.toc_number .toc_depth_1} Parallel Matlab
-    jobs](#Parallel_Matlab_jobs)
-    -   [[4.1]{.toc_number .toc_depth_2} Multi-threaded
-        support](#Multi-threaded_support)
-    -   [[4.2]{.toc_number .toc_depth_2} Multiple \"worker\" support (on
-        a single host)](#Multiple_worker_support_on_a_single_host)
-    -   [[4.3]{.toc_number .toc_depth_2} Multiple \"worker\" support (on
-        multiple hosts)](#Multiple_worker_support_on_multiple_hosts)
--   [[5]{.toc_number .toc_depth_1} GPU Matlab jobs](#GPU_Matlab_jobs)
--   [[6]{.toc_number .toc_depth_1} Compiling Matlab](#Compiling_Matlab)
-    -   [[6.1]{.toc_number .toc_depth_2} Code
-        preparation](#Code_preparation)
-    -   [[6.2]{.toc_number .toc_depth_2} Compiling](#Compiling)
-    -   [[6.3]{.toc_number .toc_depth_2} Running the
-        application](#Running_the_application)
-:::
-
-[Setting up the environment]{#Setting_up_the_environment}
----------------------------------------------------------
+## Setting up the environment
 
 All required environment variables can be set by loading the Matlab
 module, to do this type the command:
@@ -45,8 +13,7 @@ module, to do this type the command:
 Matlab is now centrally licenced and managed so there is no need to set
 a licence server before using it.
 
-[Running on the login nodes]{#Running_on_the_login_nodes}
----------------------------------------------------------
+## Running on the login nodes
 
 Matlab can be launched by entering its name at the command prompt; i.e.:
 
@@ -55,27 +22,25 @@ Matlab can be launched by entering its name at the command prompt; i.e.:
 Please note that this method should not be used for long computational
 use.
 
-[Running through the batch scheduler]{#Running_through_the_batch_scheduler}
----------------------------------------------------------------------------
+## Running through the batch scheduler
 
 The batch scheduler allows both interactive and batch jobs to be
 submitted during which users will have exclusive access to the resources
 they request.
 
-### [Running through an interactive shell]{#Running_through_an_interactive_shell}
+### Running through an interactive shell
 
 The following will launch Matlab interactively, displaying the full GUI:
 
     $ qrsh -V -l h_rt=hh:mm:ss matlab -desktop -singleCompThread
 
 In the above command:\
-[hh:mm:ss]{.lang:default .decode:true .crayon-inline} is the length of
+`hh:mm:ss` is the length of
 real-time the shell will exist for,\
-[-V]{.lang:default .decode:true .crayon-inline} exports the the current
+`-V` exports the the current
 environment.
 
-The parameter [-singleCompThread]{.lang:default .decode:true
-.crayon-inline} ensures that Matlab will run only on a single thread,
+The parameter `-singleCompThread` ensures that Matlab will run only on a single thread,
 since the default multiple threaded behaviour can cause problems.
 
 e.g. to run Matlab for 6 hours:
@@ -89,16 +54,15 @@ the interaction is via a command prompt interface only:
 
     $ qrsh -pty y -V -l h_rt=6:00:00 matlab -nodesktop -singleCompThread
 
-Where, [hh:mm:ss]{.lang:default .decode:true .crayon-inline} is the
+Where, `hh:mm:ss` is the
 length of real-time the shell will exist for.
 
-### [Batch Execution]{#Batch_Execution}
+### Batch Execution
 
 To run matlab in batch-mode you must first generate a list of commands
-for matlab to process in a file; e.g. file [cosplot.m]{.lang:default
-.decode:true .crayon-inline}:
+for matlab to process in a file; e.g. file `cosplot.m`:
 
-*The [%]{.lang:default .decode:true .crayon-inline} symbol denotes a
+*The `%` symbol denotes a
 comment in Matlab scripts*
 
     % MATLAB M-file example to approximate a sawtooth
@@ -116,12 +80,11 @@ comment in Matlab scripts*
     print -deps matlab_test_plot.ps;
     quit;
 
-Please note that the last line must be " [quit;]{.lang:default
-.decode:true .crayon-inline} "!
+Please note that the last line must be " `quit;` "!
 
 A script must then be created that will request resources from the
 queuing system and launch the matlab executable; script
-[runmatlab.sh]{.lang:default .decode:true .crayon-inline}:
+`runmatlab.sh`:
 
     # Export current environment  
     #$ -V
@@ -138,30 +101,26 @@ This can be submitted to the batch scheduler system using:
      
     $ qsub runmatlab.sh
 
-The output file [matlab\_test\_plot.ps\
-]{.lang:default .decode:true .crayon-inline} can be viewed with
-Ghostscript using the command [gs matlab\_test\_plot.ps]{.lang:default
-.decode:true .crayon-inline}.
+The output file `matlab\test\plot.ps` can be viewed with
+Ghostscript using the command `gs matlab\test\plot.ps`.
 
-[Parallel Matlab jobs]{#Parallel_Matlab_jobs}
----------------------------------------------
+## Parallel Matlab jobs
 
 Recent versions of Matlab support three methods of making use of
 multiple CPU cores:
 
 1.  Multi-threaded support in various Matlab routines and toolboxes
-2.  Multiple \"worker\" support (on a single host)
-3.  Multiple \"worker\" support (on multiple hosts)
+2.  Multiple "worker" support (on a single host)
+3.  Multiple "worker" support (on multiple hosts)
 
-### [Multi-threaded support]{#Multi-threaded_support}
+### Multi-threaded support
 
 This is the simplest method of allowing Matlab to use more than one CPU
-core. Many functions and toolboxes, for example [fft()]{.lang:default
-.decode:true .crayon-inline} and various linear algebra routines,
+core. Many functions and toolboxes, for example `fft()` and various linear algebra routines,
 automatically make use of multiple cores where available.
 
-To do this, we would recommend adding the flag [-l
-nodes=1,ppn=1]{.lang:default .decode:true .crayon-inline} to your qsub
+To do this, we would recommend adding the flag `-l
+nodes=1,ppn=1` to your qsub
 command and job scripts. This will ask for an entire compute node. Note
 that this will **NOT** speed up Matlab while it is not using functions
 that are able to take advantage of multiple cores.
@@ -169,30 +128,27 @@ that are able to take advantage of multiple cores.
 Please see the Matlab product documentation for details on what
 functions are multithreaded.
 
-### [Multiple \"worker\" support (on a single host)]{#Multiple_worker_support_on_a_single_host}
+### Multiple "worker" support (on a single host)
 
 Matlab can launch multiple copies of itself, called workers, that are
 able to communicate and share work between them. This functionality is
 called the Parallel Toolbox and you may need to adjust code to work
-properly in this fashion. For example, [for]{.lang:default .decode:true
-.crayon-inline} loops that can be run in parallel may be distributed
-across all workers by use of the [parfor]{.lang:default .decode:true
-.crayon-inline} Matlab command.
+properly in this fashion. For example, `for` loops that can be run in parallel may be distributed
+across all workers by use of the `parfor` Matlab command.
 
-To do this, launch a parallel job, for example by adding the [-pe smp
-8]{.lang:default .decode:true .crayon-inline} flag to the qrsh or qsub
+To do this, launch a parallel job, for example by adding the `-pe smp
+8` flag to the qrsh or qsub
 commands from above. This requests 8 cores on a single compute node and
 stores the number of cores granted in the NSLOTS environment variable.
-Once it has started, execute the Matlab command [parpool(\'local\',
-8)]{.lang:default .decode:true .crayon-inline} or, more generally,
-[parpool(\'local\', str2num(getenv(\'NSLOTS\')))]{.lang:default
-.decode:true .crayon-inline}, which in this case would launch 8 workers.
+Once it has started, execute the Matlab command `parpool('local',
+8)` or, more generally,
+`parpool('local', str2num(getenv('NSLOTS')))`, which in this case would launch 8 workers.
 
-According to Matlab\'s documentation, there may be a limit on the number
+According to Matlab's documentation, there may be a limit on the number
 of workers that can be requested in this way; however, this has been
 tested on ARC3 on up to 24 cores.
 
-### [Multiple \"worker\" support (on multiple hosts)]{#Multiple_worker_support_on_multiple_hosts}
+### Multiple \"worker\" support (on multiple hosts)
 
 The multiple workers in the Parallel Toolbox can be spread across
 multiple hosts in order to make use of a greater number of cores and/or
@@ -212,18 +168,17 @@ Setup steps:
 
 -   *Configure Matlab to use an appropriate MPI.* Execute the following
     commands:
-    -   [\$ mkdir \~/matlab]{.lang:default .decode:true .crayon-inline}
-    -   [\$ cp
-        \$SGE\_ROOT/\$SGE\_CELL/common/leeds/pe/matlab/mpiLibConf.m
-        \~/matlab/]{.lang:default .decode:true .crayon-inline}
+    -   `$ mkdir ~/matlab`
+    -   `$ cp
+        $SGE_ROOT/$SGE_CELL/common/leeds/pe/matlab/mpiLibConf.m
+        ~/matlab/`
 -   *Configure Matlab to submit batch jobs.* Launch Matlab on a login
     node and:
     -   From the toolbar, select: *HOME -\> Parallel -\> Manage Cluster
         Profiles*
     -   Select *Import*
     -   Select file
-        [/services/sge\_prod/default/common/leeds/pe/matlab/Gridengine.settings]{.lang:default
-        .decode:true .crayon-inline}
+        `/services/sge_prod/default/common/leeds/pe/matlab/Gridengine.settings`
 
 *(these steps should become redundant in future installations of Matlab
 on ARC)*
@@ -232,8 +187,7 @@ To use:
 
 -   Launch Matlab on a login node and *NOT* from inside a job.
 -   Launch a 32 worker distributed pool with the following Matlab
-    command: [pool = parpool(\'Gridengine\', 32);]{.lang:default
-    .decode:true .crayon-inline}
+    command: `pool = parpool('Gridengine', 32);`
 -   This causes Matlab to submit a 32 core job. Once it has started
     running, you will be able to type further commands.
 
@@ -286,14 +240,12 @@ Troubleshooting Distributed Computing Server:
     it submits before the jobs themselves are deleted. If this happens,
     please qdel the job manually.
 
-[GPU Matlab jobs]{#GPU_Matlab_jobs}
------------------------------------
+## GPU Matlab jobs
 
 Matlab can take advantage of GPU hardware. To do this, first launch
 Matlab inside a job where GPU resources have been requested (see
 [here](https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/gpgpu/)).
-Within Matlab, the [gpuDevices]{.lang:default .decode:true
-.crayon-inline} command will provide details of the available GPU(s):
+Within Matlab, the `gpuDevices` command will provide details of the available GPU(s):
 
 e.g.
 
@@ -333,8 +285,7 @@ conjunction with the Parallel Toolbox feature (see the above section on
 parallel jobs and the Matlab website) as a single worker can only use
 one GPU at a time.
 
-[Compiling Matlab]{#Compiling_Matlab}
--------------------------------------
+## Compiling Matlab
 
 To run a large number of matlab jobs simultaneously it may be necessary
 to use the matlab compiler to create a stand-alone application. This
@@ -343,7 +294,7 @@ the compiler please look at the in-program help or the [Matlab compiler
 user\'s
 guide](http://www.mathworks.co.uk/help/toolbox/compiler/index.html).
 
-### [Code preparation]{#Code_preparation}
+### Code preparation
 
 ***Script*** m-files cannot be compiled directly, first they have to be
 converted to ***function*** m-files. In general, this is a case of
@@ -352,7 +303,7 @@ look at [converting script
 m-files](http://www-rohan.sdsu.edu/doc/matlab/toolbox/compiler/ch03get9.html)
 section in the user guide.
 
-### [Compiling]{#Compiling}
+### Compiling
 
 The Matlab compiler makes use of the GNU C compilers and as the Intel
 compiler is loaded by default you shouldswitch to the correct version of
@@ -361,31 +312,30 @@ GNU compiler via the command:
     module switch intel gnu
 
 The compiler can be invoked from within Matlab or directly from the
-command line via the tool [mcc]{.lang:default .decode:true
-.crayon-inline} . However, to get the code to compile in single threaded
+command line via the tool [mcc] . However, to get the code to compile in single threaded
 mode the compiler should be invoked directly from the command line. In
 general this would take the form:
 
     mcc -R -singleCompThread  -m your_program.m
 
 It is very important that you include the [-R
-singleCompThread]{.lang:default .decode:true .crayon-inline}, otherwise
+singleCompThread], otherwise
 matlab will run in multi-threaded mode and cause problems when running
 through the batch queues.
 
 This compilation will yield two files of interest
 
--   [your\_program]{.lang:default .decode:true .crayon-inline} , which
+-   `your_program` , which
     is the compiled code
--   [runyourprogram.sh]{.lang:default .decode:true .crayon-inline} ,
+-   `runyourprogram.sh` ,
     which is the wrapper to run your compiled code.
 
-### [Running the application]{#Running_the_application}
+### Running the application
 
 Once the matlab module is loaded, you can run your stand-alone
 application via the wrapper and specifing the correct path to various
 Matlab components. This can easily be done via the environment variable
-[\$MATLAB\_HOME]{.lang:default .decode:true .crayon-inline}. An example
+`$MATLAB_HOME`. An example
 job script for submission to the batch queue would look like:
 
     # Export current environment  
@@ -396,20 +346,3 @@ job script for submission to the batch queue would look like:
     module add matlab
     #set the path to Matlab runtime, via $MATLAB_HOME, run program via wrapper
     ./run_your_program.sh $MATLAB_HOME 
-:::
-
-::: {.entry-meta}
-:::
-:::
-:::
-:::
-
-::: {.container}
-::: {.site-info}
-::: {.footer-credit}
-Built with [Make](https://thethemefoundry.com/make/){.theme-name}. Your
-friendly WordPress page builder theme.
-:::
-:::
-:::
-:::

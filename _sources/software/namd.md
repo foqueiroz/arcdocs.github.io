@@ -1,8 +1,6 @@
-NAMD {#namd .entry-title}
-====
+# NAMD
 
-License Arrangements
---------------------
+## License Arrangements
 
 This software is installed with a non-commercial use license. Access to
 this software is restricted. User must agree to the license, found
@@ -11,11 +9,9 @@ written statement accepting the license terms as a ticket to the
 Research Computing Team (<https://bit.ly/arc-help>) in order for us to
 give you access to NAMD.
 
-Example submission script
--------------------------
+## Example submission script
 
-An example script, [namdexample.sh]{.lang:default .decode:true
-.crayon-inline} , looks like:
+An example script, `namdexample.sh` , looks like:
 
     #!/bin/bash
     #$ -pe ib 8
@@ -30,23 +26,4 @@ This example requests 8 cores for 12 hours, with each core limited to
 1Gb of RAM. It assumes that you are submitting the job from the
 directory containing your input files.
 
-**Note**: prior to NAMD 2.9, the [namd2]{.lang:default .decode:true
-.crayon-inline} binary was called [namd2.MPI]{.lang:default .decode:true
-.crayon-inline} .
-:::
-
-::: {.entry-meta}
-:::
-:::
-:::
-:::
-
-::: {.container}
-::: {.site-info}
-::: {.footer-credit}
-Built with [Make](https://thethemefoundry.com/make/){.theme-name}. Your
-friendly WordPress page builder theme.
-:::
-:::
-:::
-:::
+**Note**: prior to NAMD 2.9, the `namd2` binary was called `namd2.MPI` .

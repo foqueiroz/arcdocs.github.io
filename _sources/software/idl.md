@@ -1,22 +1,20 @@
-IDL {#idl .entry-title}
-===
+# IDL 
 
 IDL is a data analysis programming language. Only authorised users can
 use IDL.
 
 [Vendor Website](http://www.exelisvis.co.uk/ProductsServices/IDL.aspx)
 
-### Getting started
+## Getting started
 
 In order to use IDL on the ARC clusters, you will need to contact your
 department for licence server information. This will normally be
-provided as a [port]{.lang:default .decode:true .crayon-inline} and a
-[machine name]{.lang:default .decode:true .crayon-inline} in the format:
+provided as a `port` and a
+`machine name` in the format:
 
     port@machine
 
-You will need to set the [LM\_LICENSE\_FILE]{.lang:default .decode:true
-.crayon-inline} environment variable before you use IDL:
+You will need to set the `LM\LICENSE\FILE` environment variable before you use IDL:
 
     export LM_LICENSE_FILE=port@machine:$LM_LICENSE_FILE
 
@@ -24,10 +22,9 @@ After that, you should be able to load the IDL module:
 
     module load idl
 
-and then run the application by entering the command [idl]{.lang:default
-.decode:true .crayon-inline}
+and then run the application by entering the command `idl`
 
-### Running IDL as a batch job
+## Running IDL as a batch job
 
 A suitable script to run an IDL program as a batch job with no
 interaction is:
@@ -47,15 +44,15 @@ This will run the application:
 -   requesting 1GByte of memory
 
 If this is saved as a text file with the name:
-[idl\_script.sh]{.lang:default .decode:true .crayon-inline} it can then
+`idl\script.sh` it can then
 be submitted with:
 
     qsub idl_script.sh
 
-### Running IDL as an interactive job on the compute nodes
+## Running IDL as an interactive job on the compute nodes
 
 IDL can also be launched as an interactive job on the back-end compute
-nodes through [qrsh]{.lang:default .decode:true .crayon-inline} :
+nodes through `qrsh` :
 
     export LM_LICENSE_FILE=port@machine:$LM_LICENSE_FILE
     module load idl
@@ -68,20 +65,3 @@ tries to allocate them, then the request will fail.
 
 You may find you have to submit the request a few times until it is
 successful.
-:::
-
-::: {.entry-meta}
-:::
-:::
-:::
-:::
-
-::: {.container}
-::: {.site-info}
-::: {.footer-credit}
-Built with [Make](https://thethemefoundry.com/make/){.theme-name}. Your
-friendly WordPress page builder theme.
-:::
-:::
-:::
-:::

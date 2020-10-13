@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AMBER {#amber .entry-title} &#8212; ARC Documentation</title>
+    <title>AMBER &#8212; ARC Documentation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -67,8 +67,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/amber.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="AMBER {#amber .entry-title}" />
-<meta property="og:description" content="AMBER {#amber .entry-title}  Before you are able to access AMBER, you will be asked to read and agree to the licence terms.  These can be viewed by following th" />
+<meta property="og:title"       content="AMBER" />
+<meta property="og:description" content="AMBER  Introduction  Before you are able to access AMBER, you will be asked to read and agree to the licence terms.  These can be viewed by following this link." />
 <meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -130,7 +130,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     AMBER {#amber .entry-title}
+     AMBER
     </a>
    </li>
    <li class="toctree-l2">
@@ -140,12 +140,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="comsol.html">
-     Comsol {#comsol .entry-title}
+     Comsol
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dl_poly.html">
-     DLpoly {#dlpoly .entry-title}
+     DLpoly
     </a>
    </li>
    <li class="toctree-l2">
@@ -155,62 +155,57 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="gromacs.html">
-     Gromacs {#gromacs .entry-title}
+     Gromacs
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="idl.html">
-     IDL {#idl .entry-title}
+     IDL
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="matlab.html">
-     Matlab {#matlab .entry-title}
+     Matlab
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="molpro.html">
-     Molpro {#molpro .entry-title}
+     Molpro
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="namd.html">
-     NAMD {#namd .entry-title}
+     NAMD
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="openfoam.html">
-     OpenFoam {#openfoam .entry-title}
+     OpenFoam
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="paraview.html">
-     Advanced Research Computing {#advanced-research-computing .site-title .screen-reader-text}
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="paraview.html#paraview-paraview-entry-title">
-     Paraview {#paraview .entry-title}
+     Paraview
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="R.html">
-     R {#r .entry-title}
+     R
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="stata.html">
-     Stata {#stata .entry-title}
+     Stata
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="visit.html">
-     Visit {#visit .entry-title}
+     Visit
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="vmd.html">
-     VMD (Visual Molecular Dynamics) {#vmd-visual-molecular-dynamics .entry-title}
+     VMD (Visual Molecular Dynamics)
     </a>
    </li>
   </ul>
@@ -323,6 +318,11 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-job-submission-scripts">
    Example job submission scripts.
   </a>
@@ -338,8 +338,10 @@
         
               <div>
                 
-  <div class="section" id="amber-amber-entry-title">
-<h1>AMBER {#amber .entry-title}<a class="headerlink" href="#amber-amber-entry-title" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="amber">
+<h1>AMBER<a class="headerlink" href="#amber" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Before you are able to access AMBER, you will be asked to read and agree
 to the licence terms.</p>
 <p>These can be viewed by following <a class="reference external" href="http://ambermd.org/amber14.license.html">this
@@ -349,22 +351,20 @@ print out and sign a copy for your own reference.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load amber 
 </pre></div>
 </div>
-<p>This sets the [AMBERHOME]{.lang:default .decode:true .crayon-inline}
-environment variable and your path to include the [bin]{.lang:default
-.decode:true .crayon-inline} directory, with common executables as
+<p>This sets the <code class="docutils literal notranslate"><span class="pre">AMBERHOME</span></code>
+environment variable and your path to include the <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory, with common executables as
 follows:</p>
-<hr class="docutils" />
-<p>[$AMBERHOME/bin/sander]{.lang:default .decode:true .crayon-inline}       Serial version of SANDER
-[$AMBERHOME/bin/sander.MPI]{.lang:default .decode:true .crayon-inline}   [sander]{.lang:default .decode:true .crayon-inline} built to run over Infiniband
-[$AMBERHOME/bin/pmemd]{.lang:default .decode:true .crayon-inline}        Serial version of PMEMD
-[$AMBERHOME/bin/pmemd.MPI]{.lang:default .decode:true .crayon-inline}    [pmemd]{.lang:default .decode:true .crayon-inline} built to run over Infiniband</p>
-<hr class="docutils" />
+<p><code class="docutils literal notranslate"><span class="pre">\$AMBERHOME/bin/sander</span></code>       Serial version of SANDER</p>
+<p><code class="docutils literal notranslate"><span class="pre">\$AMBERHOME/bin/sander.MPI</span></code>   <code class="docutils literal notranslate"><span class="pre">sander</span></code> built to run over Infiniband</p>
+<p><code class="docutils literal notranslate"><span class="pre">\$AMBERHOME/bin/pmemd</span></code>        Serial version of PMEMD</p>
+<p><code class="docutils literal notranslate"><span class="pre">\$AMBERHOME/bin/pmemd.MPI</span></code>    <code class="docutils literal notranslate"><span class="pre">pmemd</span></code> built to run over Infiniband</p>
+</div>
 <div class="section" id="example-job-submission-scripts">
 <h2>Example job submission scripts.<a class="headerlink" href="#example-job-submission-scripts" title="Permalink to this headline">¶</a></h2>
 <p>The following script will run pmemd on 16 cores for 48 hours, the module
 command is included in the submission script therefore it is not
 necessary to have the environment loaded prior to job submission:
-[run.sh]{.lang:default .decode:true .crayon-inline} :</p>
+<code class="docutils literal notranslate"><span class="pre">run.sh</span></code> :</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/bin/sh
 #$ -cwd
 #$ -l h_rt=48:00:00
@@ -382,21 +382,6 @@ mpirun pmemd.MPI  -O -i $f.in -o $f.out -inf $f.inf \
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>% qsub run.sh
 </pre></div>
 </div>
-<p>:::</p>
-<p>::: {.entry-meta}
-:::
-:::
-:::
-:::</p>
-<p>::: {.container}
-::: {.site-info}
-::: {.footer-credit}
-Built with <a class="reference external" href="https://thethemefoundry.com/make/">Make</a>{.theme-name}. Your
-friendly WordPress page builder theme.
-:::
-:::
-:::
-:::</p>
 </div>
 </div>
 

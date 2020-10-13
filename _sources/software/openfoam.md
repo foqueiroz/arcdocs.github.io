@@ -1,58 +1,17 @@
-OpenFoam {#openfoam .entry-title}
-========
+# OpenFoam 
 
 OpenFOAM is an open-source set of C++ based command tools which can be
 used to perform Computational Fluid Dynamics simulations, it is entirely
 based inside the terminal and has no direct user interface.\
 Results from the simulations can be viewed by running the command:
-[paraFoam]{.lang:default .decode:true .crayon-inline} to launch an
+`paraFoam` to launch an
 external viewing application.\
 This wiki will run through how to set up a case for running OpenFoam, as
 well as listing some of the basic tips on performing a simulation
 without error, primarily using the software available inside Mechanical
 Engineering.
 
-::: {#toc_container .no_bullets}
-Contents
-
--   [[1]{.toc_number .toc_depth_1} Overview of case
-    setup:](#Overview_of_case_setup)
--   [[2]{.toc_number .toc_depth_1} Building the computational
-    domain:](#Building_the_computational_domain)
--   [[3]{.toc_number .toc_depth_1} Setting boundary conditions for
-    export and changing
-    filetype](#Setting_boundary_conditions_for_export_and_changing_filetype)
--   [[4]{.toc_number .toc_depth_1} Control dictionary
-    settings](#Control_dictionary_settings)
--   [[5]{.toc_number .toc_depth_1} RAS/LES properties and
-    transportDict.](#RASLES_properties_and_transportDict)
-    -   [[5.1]{.toc_number .toc_depth_2} RASProperties:](#RASProperties)
-    -   [[5.2]{.toc_number .toc_depth_2} LESProperties:](#LESProperties)
--   [[6]{.toc_number .toc_depth_1} fvSchemes and
-    fvSolutions](#fvSchemes_and_fvSolutions)
--   [[7]{.toc_number .toc_depth_1} Initial Fields and their boundary
-    conditions](#Initial_Fields_and_their_boundary_conditions)
--   [[8]{.toc_number .toc_depth_1} Running a simulation and viewing the
-    results](#Running_a_simulation_and_viewing_the_results)
--   [[9]{.toc_number .toc_depth_1} General advice and starting
-    tips](#General_advice_and_starting_tips)
--   [[10]{.toc_number .toc_depth_1} Running OpenFOAM](#Running_OpenFOAM)
-    -   [[10.1]{.toc_number .toc_depth_2} Setting up the
-        environment](#Setting_up_the_environment)
-    -   [[10.2]{.toc_number .toc_depth_2} Launching on the front
-        end](#Launching_on_the_front_end)
-    -   [[10.3]{.toc_number .toc_depth_2} Using Sun Grid
-        Engine](#Using_Sun_Grid_Engine)
-        -   [[10.3.1]{.toc_number .toc_depth_3} Running through an
-            interactive shell](#Running_through_an_interactive_shell)
-        -   [[10.3.2]{.toc_number .toc_depth_3} Batch
-            Execution](#Batch_Execution)
-        -   [[10.3.3]{.toc_number .toc_depth_3} Parallel
-            Execution](#Parallel_Execution)
-:::
-
-[Overview of case setup:]{#Overview_of_case_setup}
---------------------------------------------------
+## Overview of case setup
 
 An OpenFoam case will consist of 3 separate directories:
 
@@ -77,8 +36,7 @@ Useful information on how to install the required modules and the
 submission of scripts to the queuing system can be found at the bottom
 of this page.
 
-[Building the computational domain:]{#Building_the_computational_domain}
-------------------------------------------------------------------------
+## Building the computational domain
 
 Once you have decided which solver will be best for your particular
 case, the first thing to do is to create the computational domain and
@@ -174,8 +132,7 @@ boundary conditions at this stage as you can perform this task once the
 mesh is in OpenFoam format. but it may be easier to set up at this
 stage.
 
-[Setting boundary conditions for export and changing filetype]{#Setting_boundary_conditions_for_export_and_changing_filetype}
------------------------------------------------------------------------------------------------------------------------------
+## Setting boundary conditions for export and changing filetype
 
 From the taskbar in ICEM, select the 'boundary conditions' option under
 x and assign each feature the appropriate condition e.g. pressureOutlet,
@@ -196,8 +153,7 @@ It is a good idea at this point to run checkMesh to ensure that the
 process has gone smoothly and there have been no errors which may affect
 the simulation. This mesh can now be viewed in paraFoam.
 
-[Control dictionary settings]{#Control_dictionary_settings}
------------------------------------------------------------
+## Control dictionary settings
 
 When the geometry has been set up, either by importing or manual
 generation, the settings for the case need attention. What solver you
@@ -240,8 +196,7 @@ where "relevant extension" leads to the correct library for the
 application e.g. libsuserRAS.so, for your own compiled RAS turbulence
 models.
 
-[RAS/LES properties and transportDict.]{#RASLES_properties_and_transportDict}
------------------------------------------------------------------------------
+## RAS/LES properties and transportDict
 
 Depending upon whether you are using a RAS or LES based models, there
 are several files which must be present in the "constant" folder. The
@@ -266,13 +221,13 @@ same job which is to identify which model should be used with the solver
 along with any required coefficients not present elsewhere in the code.
 A typical file structure will be as follows:
 
-### [RASProperties:]{#RASProperties}
+### RASProperties
 
     RASModel          kOmegaSST
     printcoeffs          off;
     turbulence          on;
 
-### [LESProperties:]{#LESProperties}
+### LESProperties
 
     LESModel            Smagornisky;
     printCoeffs           off;
@@ -288,8 +243,7 @@ the details of which chemical models/combustion properties may also be
 required for the case to be set up correctly; these are just two
 examples of the more common problems which may be encountered.
 
-[fvSchemes and fvSolutions]{#fvSchemes_and_fvSolutions}
--------------------------------------------------------
+## fvSchemes and fvSolutions
 
 Before the setting up of the boundary and initial conditions for each of
 the fields to be solved, they must be declared and assigned a solver
@@ -316,8 +270,7 @@ of thumb is that the relaxation factors for pressure and velocity (p/u)
 in SIMPLE cases should total to a value of 1, frequently this is
 (0.3/0.7).
 
-[Initial Fields and their boundary conditions]{#Initial_Fields_and_their_boundary_conditions}
----------------------------------------------------------------------------------------------
+## Initial Fields and their boundary conditions
 
 Once the mesh has been successfully created and the settings for the
 solver established along with the run-time, the initial values for all
@@ -376,12 +329,7 @@ environment) as a starting point which the simulation will quickly alter
 in further timesteps should it be required.
 
     boundaryField
-    {
-    Walls
-    {
-    type        fixedValue;
-    value      uniform 0;
-    }
+    
     }
 
 Each patch within the model must be assigned an appropriate boundary
@@ -413,8 +361,7 @@ before the simulation will run correctly. Attempting to run this with an
 incomplete setup will provoke an error message, frequently telling the
 user what is missing from the directory in question.
 
-[Running a simulation and viewing the results]{#Running_a_simulation_and_viewing_the_results}
----------------------------------------------------------------------------------------------
+## Running a simulation and viewing the results
 
 In order to begin a simulation, simply move to the directory in which
 all 3 directories relevant to the case are present and type the name of
@@ -435,8 +382,7 @@ OpenFoam, paraView. Pressing the green 'play' button on the taskbar will
 run through each set of results mapped onto the mesh, various data
 extraction tools can then be employed for analysis.
 
-[General advice and starting tips]{#General_advice_and_starting_tips}
----------------------------------------------------------------------
+## General advice and starting tips
 
 To begin with, run the tutorial cases (incompressible flow) for a few
 time steps and then examine the results. Attempt to alter the settings
@@ -482,13 +428,12 @@ An initial estimate for the length scale/turbulence intensity may be
 required before certain boundary conditions can be correctly assigned a
 value.
 
-[Running OpenFOAM]{#Running_OpenFOAM}
--------------------------------------
+## Running OpenFOAM
 
 OpenFOAM is a free, open source CFD software package; this does not
 require a license to use.
 
-### [ Setting up the environment]{#Setting_up_the_environment}
+### Setting up the environment
 
 The openfoam installed on our systems is compiled with a gnu compiler
 rather than the intel one which is the default in your environment.
@@ -507,7 +452,7 @@ then follow the command:
 
     . $FOAM_SRC_FILE
 
-### [ Launching on the front end]{#Launching_on_the_front_end}
+### Launching on the front end
 
 Visualisation of OpenFOAM results can be done using paraFoam at the
 command prompt. You need to have an openfoam case file to do this fully:
@@ -518,23 +463,22 @@ If you're visualising large data sets this should not be done on the
 login nodes, since this can use a considerable amount of RAM and CPU.
 Instead, this should be done using an interactive job with SGE.
 
-### [ Using Sun Grid Engine]{#Using_Sun_Grid_Engine}
+### Using Sun Grid Engine
 
 Sun Grid engine allows both interactive and batch jobs to be submitted
 during which users will have exclusive access to the resources they
 request.
 
-#### [ Running through an interactive shell]{#Running_through_an_interactive_shell}
+#### Running through an interactive shell
 
 The following will launch paraFoam interactively, displaying the full
 GUI:
 
     % qrsh -cwd -V -l h_rt= paraFoam
 
-In the above command, [\<hh:mm:ss\>]{.lang:default .decode:true
-.crayon-inline} is the length of real-time the shell will exist for,
-[-cwd]{.lang:default .decode:true .crayon-inline} indicated the current
-working directory and [-V]{.lang:default .decode:true .crayon-inline}
+In the above command, `<hh:mm:ss>` is the length of real-time the shell will exist for,
+`-cwd` indicated the current
+working directory and `-V`
 exports the the current environment.CHECK-code
 
 e.g. to run paraFoam for 1 hour:
@@ -543,13 +487,13 @@ e.g. to run paraFoam for 1 hour:
 
 This will run paraFoam within the terminal from which it was launched.
 
-#### [ Batch Execution]{#Batch_Execution}
+#### Batch Execution
 
 To run OpenFOAM in batch-mode you first need to setup your case.
 
 A script must then be created that will request resources from the
 queuing system and launch the desired OpenFOAM executables; script
-[runfoam.sh]{.lang:default .decode:true .crayon-inline} :
+`runfoam.sh` :
 
     #!/bin/bash
     # Run in current working directory
@@ -566,7 +510,7 @@ This can be submitted to the queuing system using:
 
     % qsub runfoam.sh
 
-#### [ Parallel Execution]{#Parallel_Execution}
+#### Parallel Execution
 
 If you've configured your OpenFOAM job to be solved in parallel, you
 need to submit it differently. It uses OpenMPI under the hood, so this
@@ -594,20 +538,3 @@ Will give 16 cores as before, but this time with 4 processes per core
 and so 4 nodes overall. The available memory per node (32GB) is
 therefore allocated across 4 cores (ie. ppn=4) and so 8GB per node will
 be allocated.
-:::
-
-::: {.entry-meta}
-:::
-:::
-:::
-:::
-
-::: {.container}
-::: {.site-info}
-::: {.footer-credit}
-Built with [Make](https://thethemefoundry.com/make/){.theme-name}. Your
-friendly WordPress page builder theme.
-:::
-:::
-:::
-:::
