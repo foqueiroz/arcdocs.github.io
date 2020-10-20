@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Troubleshooting jobs on HPC &#8212; ARC Documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/usage/troubleshooting.html" />
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Task arrays" href="taskarrays.html" />
+    <link rel="prev" title="Interactive jobs" href="interactive.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/usage/troubleshooting.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Troubleshooting jobs on HPC" />
+<meta property="og:description" content="Troubleshooting jobs on HPC  Sometimes things go wrong when we use HPC. This is a fact of life. This can be for many reasons, sometimes it can be HPC related, s" />
+<meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">ARC Documentation</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting_started/start.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="start.html">
+   Usage
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="batchjob.html">
+     Batch jobs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactive.html">
+     Interactive jobs
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Troubleshooting jobs on HPC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="taskarrays.html">
+     Task arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gpgpu.html">
+     General Purpose GPU
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/start.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../systems/start.html">
+   Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://arcleeds.github.io/training/">
+   Training
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contact/start.html">
+   Contact Us
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit the <a href="https://arcleeds.github.io/">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/usage/troubleshooting.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fusage/troubleshooting.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/usage/troubleshooting.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#failures-submitting-your-job">
+   Failures submitting your job
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#failures-during-the-job-run">
+   Failures during the job run
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#job-output-and-error-files">
+   Job output and error files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#queue-accounting-data">
+   Queue accounting data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#windows-newline-character-errors">
+   Windows newline character errors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#job-exit-status">
+   Job exit status
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#troubleshooting-job-aborted-errors">
+   Troubleshooting Job Aborted errors
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="troubleshooting-jobs-on-hpc">
+<h1>Troubleshooting jobs on HPC<a class="headerlink" href="#troubleshooting-jobs-on-hpc" title="Permalink to this headline">¶</a></h1>
+<p>Sometimes things go wrong when we use HPC. This is a fact of life. This can be for many reasons, sometimes it can be HPC related, sometimes it might be to do more specifically with the code you’re running.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Whilst the Research Computing team provide support for the HPC we can’t troubleshoot specific problems you might have with individual languages or scientific software packages. In those cases we’ll advise you to speak to your supervisor or contact the original developers for support.</p>
+</div>
+<p>This page will aim to cover some of the most common problems people encounter when using the HPC and provide you with the tools you’ll need to fix things or in some cases work out what’s going wrong.</p>
+<div class="section" id="failures-submitting-your-job">
+<h2>Failures submitting your job<a class="headerlink" href="#failures-submitting-your-job" title="Permalink to this headline">¶</a></h2>
+<p>When you submit a job to the scheduler it performs a number of quick checks to ensure it knows what you’re requesting. If you’ve provided any incorrect parameters you will recieve an error after using the <code class="docutils literal notranslate"><span class="pre">qsub</span></code> command.</p>
+<p>If this happens check the following in your submission script:</p>
+<ul class="simple">
+<li><p>Did you request an acceptable amount of time with <code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">h_rt=hh:mm:ss</span></code>? (e.g. less than 48 hours)</p></li>
+<li><p>Did you request an acceptable amount of memory for a given node? (e.g. on ARC4 192GB or less)</p></li>
+<li><p>Did you ensure there were no spaces between a scheduler parameter and value?</p></li>
+<li><p>Do you have permission to access the resource you’re requesting? (e.g. private nodes)</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">qsub</span></code> command also includes an option that allows you to verify whether your job script is acceptable to the scheduler. You can use this to check your job will submit as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qsub -w v my_job.sh
+verification: found suitable queue<span class="o">(</span>s<span class="o">)</span>
+</pre></div>
+</div>
+<p>This output tells us our job script is acceptable to the scheduler and should enter the queue.</p>
+</div>
+<div class="section" id="failures-during-the-job-run">
+<h2>Failures during the job run<a class="headerlink" href="#failures-during-the-job-run" title="Permalink to this headline">¶</a></h2>
+<p>Jobs can fail during the job run for a wide variety of reasons such as:</p>
+<ul class="simple">
+<li><p>insufficient resources, if your job tries to use more memory or run for more time than requested the job is automatically killed by the scheduler</p></li>
+<li><p>lack of space in your <a class="reference external" href="./nobackup#home-directory">home directory</a></p></li>
+<li><p>bad line ending characters in your job submission script</p></li>
+<li><p>failure to checkout software licenses</p></li>
+</ul>
+<p>Your first step to try and identify why a job has failed is to check the <a class="reference external" href="./batchjob#job-output">job output and error files</a> for any of the following:</p>
+<ul class="simple">
+<li><p>code failures and exit codes</p></li>
+<li><p>code failures because file or directory do not exist</p></li>
+<li><p>syntax errors in your submission script</p></li>
+<li><p>permission errors prevent file read or write</p></li>
+</ul>
+</div>
+<div class="section" id="job-output-and-error-files">
+<h2>Job output and error files<a class="headerlink" href="#job-output-and-error-files" title="Permalink to this headline">¶</a></h2>
+<p>Whenever a job runs on HPC a number of output files are created by default by the scheduler. These are separate to any output files you’ve programmed to be produced and should be inspected closely if your job is failing.</p>
+<p>Typically, we should expect a job to produce a output file and an error file following the naming pattern <code class="docutils literal notranslate"><span class="pre">submission_script.sh.oJOBID</span></code> and <code class="docutils literal notranslate"><span class="pre">submission_script.sh.eJOBID</span></code> respectively. Where <code class="docutils literal notranslate"><span class="pre">submission_script.sh</span></code> is the name of your job script and <code class="docutils literal notranslate"><span class="pre">JOBID</span></code> is the unique numeric ID of the job when it was submitted.</p>
+<p>If a job fails one of the first places to check for more information are these output and error files.</p>
+</div>
+<div class="section" id="queue-accounting-data">
+<h2>Queue accounting data<a class="headerlink" href="#queue-accounting-data" title="Permalink to this headline">¶</a></h2>
+<p>Another useful tool for troubleshooting problems with jobs is the accounting data captured by the scheduler during the course of a job run. You retrieve this data by using the command <code class="docutils literal notranslate"><span class="pre">qacct</span> <span class="pre">-j</span> <span class="pre">JOBID</span></code> (where <code class="docutils literal notranslate"><span class="pre">JOBID</span></code> is the unique numeric ID of your job). This can take some time to return (especially on ARC3) but will eventually return a large data table that looks as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qacct -j <span class="nv">42</span>
+<span class="o">==============================================================</span>
+qname        40core-192G.q
+hostname     d10s3b4.arc4.leeds.ac.uk
+group        iss
+owner        issev001
+project      EG
+department   defaultdepartment
+jobname      test_sub.sh
+jobnumber    <span class="m">42</span>
+taskid       undefined
+account      sge
+priority     <span class="m">0</span>
+qsub_time    Fri Aug <span class="m">21</span> <span class="m">14</span>:09:08 <span class="m">2020</span>
+start_time   Fri Aug <span class="m">21</span> <span class="m">14</span>:09:30 <span class="m">2020</span>
+end_time     Fri Aug <span class="m">21</span> <span class="m">14</span>:09:31 <span class="m">2020</span>
+granted_pe   NONE
+slots        <span class="m">1</span>
+failed       <span class="m">0</span>
+exit_status  <span class="m">0</span>
+ru_wallclock 1s
+ru_utime     <span class="m">0</span>.032s
+ru_stime     <span class="m">0</span>.046s
+ru_maxrss    <span class="m">4</span>.832KB
+ru_ixrss     <span class="m">0</span>.000B
+ru_ismrss    <span class="m">0</span>.000B
+ru_idrss     <span class="m">0</span>.000B
+ru_isrss     <span class="m">0</span>.000B
+ru_minflt    <span class="m">13994</span>
+ru_majflt    <span class="m">0</span>
+ru_nswap     <span class="m">0</span>
+ru_inblock   <span class="m">0</span>
+ru_oublock   <span class="m">32</span>
+ru_msgsnd    <span class="m">0</span>
+ru_msgrcv    <span class="m">0</span>
+ru_nsignals  <span class="m">0</span>
+ru_nvcsw     <span class="m">223</span>
+ru_nivcsw    <span class="m">43</span>
+cpu          <span class="m">0</span>.078s
+mem          <span class="m">0</span>.000Bs
+io           <span class="m">0</span>.000B
+iow          <span class="m">0</span>.000s
+maxvmem      <span class="m">0</span>.000B
+arid         undefined
+ar_sub_time  undefined
+category     -l <span class="nv">env</span><span class="o">=</span>centos7,h_rt<span class="o">=</span><span class="m">900</span>,h_vmem<span class="o">=</span>1G,node_type<span class="o">=</span>40core-192G,project<span class="o">=</span>arc
+</pre></div>
+</div>
+<p>This contains alot of informations but often the most useful rows to check are the lines <code class="docutils literal notranslate"><span class="pre">maxvmem</span></code> and <code class="docutils literal notranslate"><span class="pre">ru_wallclock</span></code>. These contain values that correspond to the amount of memory and time used by the job which can be useful for <a class="reference external" href="#troubleshooting-job-aborted-errors">troubleshooting aborted jobs</a>.</p>
+</div>
+<div class="section" id="windows-newline-character-errors">
+<h2>Windows newline character errors<a class="headerlink" href="#windows-newline-character-errors" title="Permalink to this headline">¶</a></h2>
+<p>Job scripts written on Windows computers contain different invisible line ending characters to those used on Unix systems. This can lead to job submission failures that leave the following message in your job error files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/bin/bash^M: bad interpreter: No such file or directory
+</pre></div>
+</div>
+<p>This can easily be resolved using the command line tool <code class="docutils literal notranslate"><span class="pre">dos2unix</span></code> which is pre-installed on all HPC systems. To convert a job submission script that was written on a Windows system to run on the HPC just run the command <code class="docutils literal notranslate"><span class="pre">dos2unix</span> <span class="pre">job_script.sh</span></code> to correct the line endings characters.</p>
+</div>
+<div class="section" id="job-exit-status">
+<h2>Job exit status<a class="headerlink" href="#job-exit-status" title="Permalink to this headline">¶</a></h2>
+<p>All jobs return an exit status at the end of the job. An exit status of 0 corresponds to a successful completion of the script that was run. A non-zero exit status suggests an error occured during the running of a job and so the job was not able to complete.</p>
+<p>It’s important to note that an exit status of 0 does not mean your code ran properly or that your results are correct. It simply means the code ran without an errors.</p>
+<p>You can find the exit status of your job as a value in the output of the queue accounting command <a class="reference external" href="#queue-accounting-data"><code class="docutils literal notranslate"><span class="pre">qacct</span></code></a>.</p>
+</div>
+<div class="section" id="troubleshooting-job-aborted-errors">
+<h2>Troubleshooting Job Aborted errors<a class="headerlink" href="#troubleshooting-job-aborted-errors" title="Permalink to this headline">¶</a></h2>
+<p>The most common reason a job is aborted is because the job tried to use more resources (memory or time) than was initial specified in the job submission script. If this happens you will find the following line in the job email or in the <code class="docutils literal notranslate"><span class="pre">qacct</span> <span class="pre">-j</span> <span class="pre">JOBID</span></code> output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>failed qmaster enforced h_rt, h_cpu, or h_vmem limit
+</pre></div>
+</div>
+<p>This tells us that the scheduler killed the job because it enforced a limit on either time, CPU or memory. To probe this further you should use the queue accounting command <a class="reference external" href="#queue-accounting-data"><code class="docutils literal notranslate"><span class="pre">qacct</span></code></a> to retrieve the accounting information for the job in question and check the values for <code class="docutils literal notranslate"><span class="pre">maxvmem</span></code> and <code class="docutils literal notranslate"><span class="pre">ru_wallclock</span></code> and whether those values are equal to or greater than the amount of memory or time requested. You can then update your resource request lines in your job submission script to prevent the job being aborted in the future.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./usage"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="interactive.html" title="previous page">Interactive jobs</a>
+    <a class='right-next' id="next-link" href="taskarrays.html" title="next page">Task arrays</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By University of Leeds Research Computing Team<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

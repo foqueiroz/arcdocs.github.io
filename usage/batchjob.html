@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batch jobs &#8212; ARC Documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/usage/batchjob.html" />
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Interactive jobs" href="interactive.html" />
+    <link rel="prev" title="Usage" href="start.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/usage/batchjob.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Batch jobs" />
+<meta property="og:description" content="Batch jobs  The computational power of the HPC facilities at Leeds is organised through a batch job scheduling system. This involves users submitting a script t" />
+<meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">ARC Documentation</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting_started/start.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="start.html">
+   Usage
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Batch jobs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactive.html">
+     Interactive jobs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="troubleshooting.html">
+     Troubleshooting jobs on HPC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="taskarrays.html">
+     Task arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gpgpu.html">
+     General Purpose GPU
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/start.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../systems/start.html">
+   Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://arcleeds.github.io/training/">
+   Training
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contact/start.html">
+   Contact Us
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit the <a href="https://arcleeds.github.io/">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/usage/batchjob.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fusage/batchjob.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/usage/batchjob.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#job-scripts">
+   Job scripts
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#writing-jobs-scripts-on-hpc">
+     Writing jobs scripts on HPC
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-hello-world-job-script">
+     The Hello world job script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resource-specification">
+     Resource specification
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#list-of-sge-options">
+       List of SGE options
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monitoring-jobs">
+     Monitoring jobs
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deleting-jobs">
+       Deleting jobs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#job-output">
+     Job output
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#job-holding">
+     Job holding
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fair-share-policy">
+     Fair-share policy
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="batch-jobs">
+<h1>Batch jobs<a class="headerlink" href="#batch-jobs" title="Permalink to this headline">¶</a></h1>
+<p>The computational power of the HPC facilities at Leeds is organised through a batch job scheduling system. This involves users submitting a script that outlines the resources required, and the program to be run, to the scheduler which allocates that job a position in the queue of jobs. The scheduler software that runs on both ARC3 and ARC4 is <a class="reference external" href="https://arc.liv.ac.uk/trac/SGE">Son of Grid Engine</a>, plus locally developed and implemented patches.</p>
+<div class="section" id="job-scripts">
+<h2>Job scripts<a class="headerlink" href="#job-scripts" title="Permalink to this headline">¶</a></h2>
+<p>The scripts submitted are referred to as <strong>job scripts</strong> or <strong>job submission scripts</strong>. These are shell scripts (files ending <code class="docutils literal notranslate"><span class="pre">.sh</span></code>) and at a bare minimum specify:</p>
+<ul class="simple">
+<li><p>how long the job needs to run for</p></li>
+<li><p>on how many processors to run (assumed 1 unless otherwise specified)</p></li>
+</ul>
+<p>With this information, the scheduler is able to run jobs at some point in the future when the resources become available. Crucially, the queue is <strong>not</strong> first-come-first-serve and implements a <a class="reference external" href="#fair-share-policy">fair-share policy</a> to guide the scheduler towards allocating resources fairly between different faculties and users.</p>
+<p>The common commands used on HPC to interact with batch jobs are:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#the-hello-world-job-script"><code class="docutils literal notranslate"><span class="pre">qsub</span></code></a> - submits a job script to the scheduler</p></li>
+<li><p><a class="reference external" href="#monitoring-jobs"><code class="docutils literal notranslate"><span class="pre">qstat</span></code></a> - checks the status of submitted jobs</p></li>
+<li><p><a class="reference external" href="#deleting-jobs"><code class="docutils literal notranslate"><span class="pre">qdel</span></code></a> - deletes a specified job from the queue</p></li>
+</ul>
+<div class="section" id="writing-jobs-scripts-on-hpc">
+<h3>Writing jobs scripts on HPC<a class="headerlink" href="#writing-jobs-scripts-on-hpc" title="Permalink to this headline">¶</a></h3>
+<p>We encourage users to write their job submission scripts using text editor tools available on ARC3 and ARC4 such as:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nano</span></code> (recommended for beginners)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gedit</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vim</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emacs</span></code></p></li>
+</ul>
+<p>The basic approach to create a new job submission file on HPC would be <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">job_submit.sh</span></code> or <code class="docutils literal notranslate"><span class="pre">vim</span> <span class="pre">job_submit.sh</span></code>. This opens the new empty file in the text editor ready for you to write its contents.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Job scripts written on Windows computers contain different invisible line ending characters that lead to job submission failures such as
+<code class="docutils literal notranslate"><span class="pre">/bin/bash^M:</span> <span class="pre">bad</span> <span class="pre">interpreter:</span> <span class="pre">No</span> <span class="pre">such</span> <span class="pre">file</span> <span class="pre">or</span> <span class="pre">directory</span></code> <br>
+You can use the command <code class="docutils literal notranslate"><span class="pre">dos2unix</span> <span class="pre">job_script.sh</span></code> on HPC to convert your script to the correct line endings.</p>
+</div>
+</div>
+<div class="section" id="the-hello-world-job-script">
+<h3>The Hello world job script<a class="headerlink" href="#the-hello-world-job-script" title="Permalink to this headline">¶</a></h3>
+<p>In this basic hello world job script example we’ve got a job script called <code class="docutils literal notranslate"><span class="pre">job_script1.sh</span></code> that requests a single core, 1GB of RAM, and 15 minutes of run time in order to run some R code.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1">#R single core submission script</span>
+
+<span class="c1">#Run with current environment (-V) and in the current directory (-cwd)</span>
+<span class="c1">#$ -V -cwd</span>
+
+<span class="c1">#Request some time- min 15 mins - max 48 hours</span>
+<span class="c1">#$ -l h_rt=00:15:00</span>
+
+<span class="c1">#Request some memory per core</span>
+<span class="c1">#$ -l h_vmem=1G</span>
+
+<span class="c1">#Get email at start and end of the job</span>
+<span class="c1">#$ -m be</span>
+
+<span class="c1">#Now run the job</span>
+module load R
+R CMD BATCH R.in R.out
+</pre></div>
+</div>
+<p>We can submit this script to the scheduler by using <code class="docutils literal notranslate"><span class="pre">qsub</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qsub job_script1.sh
+Your job <span class="m">42</span> <span class="o">(</span><span class="s2">&quot;job_script1.sh&quot;</span><span class="o">)</span> has been submitted
+</pre></div>
+</div>
+<p>This returns some text to confirm our job has been submitted and provides us with the jobs unique ID number (in this case 42).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Array jobs</strong> <br>
+If you intend to runs multiple similar jobs with the same resource specification, we recommend using the <a class="reference internal" href="taskarrays.html"><span class="doc std std-doc">task array system</span></a>.</p>
+</div>
+</div>
+<div class="section" id="resource-specification">
+<h3>Resource specification<a class="headerlink" href="#resource-specification" title="Permalink to this headline">¶</a></h3>
+<p>The job script specified above includes a number of lines that request some amount of compute resource for our job. This is defined by the syntax <code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">&lt;option&gt;</span></code>. These lines are commented out of the shell script but are read by the scheduler to determine how much compute resource is required and thus how to fit the job into the queue.</p>
+<p>The first things we specify in the example script above were:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -V -cwd</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">-V</span></code> tells the scheduler to use the current environment (including environment variables and loaded modules) and <code class="docutils literal notranslate"><span class="pre">-cwd</span></code> tells the scheduler to run the job within the current directory (helping ensure any paths specified are correct). These are commonly included in all job scripts.</p>
+<p>Next we have the lines requesting a time allocation and the amount of memory required per core:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -l h_rt=00:15:00</span>
+
+<span class="c1">#$ -l h_vmem=1G</span>
+</pre></div>
+</div>
+<p>Here <code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">h_rt=hh:mm:ss</span></code> is a request for a specific amount of runtime, with a maximum limit of 48h. The line <code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">h_vmem=</span></code> requests a specific amount of memory per core, in the example we request 1 GB to run on 1 core.</p>
+<p>To use multiple cores within a node using the OpenMP protocol you include the following option:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -pe smp np</span>
+</pre></div>
+</div>
+<p>Where <code class="docutils literal notranslate"><span class="pre">np</span></code> is the number of cores you wish to request. The maximum number of cores you can request using <code class="docutils literal notranslate"><span class="pre">smp</span></code> is the total number of cores available on a node (ARC4 - 40, ARC3 - 24).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If your job attempts to run for longer than the amount of time or use more memory per core than requested this will cause the scheduler to kill your job. This is one of the most common problems people encounter, read more on the <a class="reference internal" href="troubleshooting.html"><span class="doc std std-doc">troubleshooting page</span></a>.</p>
+</div>
+<p>Next we have options to request notifications about the job:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -m be</span>
+</pre></div>
+</div>
+<p>The option <code class="docutils literal notranslate"><span class="pre">-m</span></code> will specify that we wish to receive an email about the job, in this case <code class="docutils literal notranslate"><span class="pre">be</span></code> at the start and the end of the job. This will automatically be sent to your University of Leeds email address.</p>
+<div class="section" id="list-of-sge-options">
+<h4>List of SGE options<a class="headerlink" href="#list-of-sge-options" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 60%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Option</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">h_rt=hh:mm:ss</span></code></p></td>
+<td><p>The wall clock time (amount of real time needed by the job). This parameter must be specified, failure to include this parameter will result in an error message.</p></td>
+<td><p>Required</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">h_vmem=memory</span></code></p></td>
+<td><p>Sets the limit of virtual memory required per core. If you require more memory than 1GB/process you must specify this flag. e.g. <code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">h_vmem=12G</span></code> will request 12GB memory. The maximum memory that can be requested for a shared memory job is the total of the processes requested multiplied by the virtual memory requested per core, and this must be equal to or less than the amount available in a single node.</p></td>
+<td><p>1G</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-pe</span> <span class="pre">smp</span> <span class="pre">np</span></code></p></td>
+<td><p>Specifies the shared memory parallel environment for parallel programs using OpenMP/threads. <code class="docutils literal notranslate"><span class="pre">np</span></code> is the number of cores to be used by the parallel job. The maximum number of cores that can be requested for shared memory jobs is limited by the number of cores available in a single node.</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-pe</span> <span class="pre">ib</span> <span class="pre">np</span></code></p></td>
+<td><p>Specifies the parallel environment for parallel programs using MPI, <code class="docutils literal notranslate"><span class="pre">np</span></code> is the number of cores to be used by the parallel job.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">nodes=x[,ppn=y][,tpp=z]</span></code></p></td>
+<td><p>Specifies a job for parallel programs using MPI. Assigns whole compute nodes. <code class="docutils literal notranslate"><span class="pre">x</span></code> is the number of nodes, <code class="docutils literal notranslate"><span class="pre">y</span></code> is the number of processes per node, <code class="docutils literal notranslate"><span class="pre">z</span></code> is the number of threads per process.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">np=x[,ppn=y][,tpp=z]</span></code></p></td>
+<td><p>Specifies a job for parallel programs using MPI. Assigns whole compute nodes. <code class="docutils literal notranslate"><span class="pre">x</span></code> is the number of processes, <code class="docutils literal notranslate"><span class="pre">y</span></code> is the number of processes per node, <code class="docutils literal notranslate"><span class="pre">z</span></code> is the number of threads per process.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">node_type=type</span></code></p></td>
+<td><p>Specifies the type of node to be used. Where <code class="docutils literal notranslate"><span class="pre">type</span></code> can be: a standard node with the flag <code class="docutils literal notranslate"><span class="pre">40core-192G</span></code> or the high memory node with the flag <code class="docutils literal notranslate"><span class="pre">40core-768G</span></code>.</p></td>
+<td><p>40core-192G (ARC4) 24core-128G (ARC3)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">coproc=</span></code></p></td>
+<td><p>A wrapper line for requesting resources on GPGPU nodes, see <a class="reference internal" href="gpgpu.html"><span class="doc std std-doc">GPGPU page</span></a> for more details. Passing a number between 1 and 4 requests a proportion of the resources on GPGPU nodes.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-hold_jid</span> <span class="pre">prev_job_id</span></code></p></td>
+<td><p>Hold the job until the previous job (<code class="docutils literal notranslate"><span class="pre">prev_job_id</span></code>) has completed – useful for chaining runs together.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">placement=type</span></code></p></td>
+<td><p>Choose optimal for launching a process topology which minimises the number of infiniband switch hops used in the calculation, minimising latency. Choose <code class="docutils literal notranslate"><span class="pre">scatter</span></code> for running processes anywhere on the system without topology considerations.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">start-stop</span></code></p></td>
+<td><p>Produce an array of sub-tasks (loop) from <code class="docutils literal notranslate"><span class="pre">start</span></code> to <code class="docutils literal notranslate"><span class="pre">stop</span></code>, giving <code class="docutils literal notranslate"><span class="pre">$SGE_TASK_ID</span></code> variable to identify the individual sub-tasks. See <a class="reference internal" href="taskarrays.html"><span class="doc std std-doc">task array page</span></a> for more details.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-help</span></code></p></td>
+<td><p>Prints a list of options.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-cwd</span></code></p></td>
+<td><p>Execute the job from the current working directory; output files are sent to the directory form which the job was submitted, not to the user’s home directory.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-V</span></code></p></td>
+<td><p>Export all current environment variables to all spawned processes. Necessary for current module environment to be transferred to SGE shell.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-m</span> <span class="pre">be</span></code></p></td>
+<td><p>Send mail at the beginning (<code class="docutils literal notranslate"><span class="pre">b</span></code>) and at the end (<code class="docutils literal notranslate"><span class="pre">e</span></code>) of the job to the owner.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-M</span> <span class="pre">email&#64;leeds.ac.uk</span></code></p></td>
+<td><p>Specify mail address for <code class="docutils literal notranslate"><span class="pre">-m</span></code> option.</p></td>
+<td><p>Your user email address</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-j</span> <span class="pre">y</span></code></p></td>
+<td><p>Combine the standard error and standard output into one file.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-N</span> <span class="pre">name</span></code></p></td>
+<td><p>Give the job a specific name. Where <code class="docutils literal notranslate"><span class="pre">name</span></code> is the desired job name.</p></td>
+<td><p>Name of submission script</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="monitoring-jobs">
+<h3>Monitoring jobs<a class="headerlink" href="#monitoring-jobs" title="Permalink to this headline">¶</a></h3>
+<p>Once you’ve submitted a job you can monitor its progress in the queue using the command <code class="docutils literal notranslate"><span class="pre">qstat</span> <span class="pre">JOBID</span></code> where <code class="docutils literal notranslate"><span class="pre">JOBID</span></code> is the unique numeric ID of your submitted job.</p>
+<p>In the example below we’ve just submitted a job and want to check its status in the queue.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qstat <span class="m">54</span>
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+-----------------------------------------------------------------------------------------------------------------
+ <span class="m">54</span> <span class="m">0</span>.00000 test_sub.s exuser     qw    <span class="m">08</span>/21/2019 <span class="m">14</span>:09:08                                    <span class="m">1</span>        
+</pre></div>
+</div>
+<p>Using <code class="docutils literal notranslate"><span class="pre">qstat</span></code> returns a table with the following columns:</p>
+<ul class="simple">
+<li><p>the job ID</p></li>
+<li><p>the job priority determined by the scheduler <a class="reference external" href="#fair-share-policy">fair share policy</a></p></li>
+<li><p>the name of the submission script</p></li>
+<li><p>the user who submitted the job</p></li>
+<li><p>the jobs state in the queue
+(<code class="docutils literal notranslate"><span class="pre">qw</span></code> for waiting; <code class="docutils literal notranslate"><span class="pre">r</span></code> for running; <code class="docutils literal notranslate"><span class="pre">hqw</span></code> for hold waiting, <code class="docutils literal notranslate"><span class="pre">Eqw</span></code> for errored whilst queueing, <code class="docutils literal notranslate"><span class="pre">t</span></code> for transferring state)</p></li>
+<li><p>the submission time, or if the job is running the start time</p></li>
+<li><p>the number of slots (cores) requested</p></li>
+<li><p>the task ID number if the job is a <a class="reference internal" href="taskarrays.html"><span class="doc std std-doc">task array</span></a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you run <code class="docutils literal notranslate"><span class="pre">qstat</span></code> expecting an output and nothing happens and your prompt is returned it means you have no jobs currently in the queue. This suggests your job has completed.</p>
+</div>
+<p>You can also pass the <code class="docutils literal notranslate"><span class="pre">qstat</span></code> command a number of additional arguments to view the queue or other users queues.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qstat -u <span class="s1">&#39;username&#39;</span>
+<span class="c1"># where username is your own or another username</span>
+
+$ qstat -u <span class="s1">&#39;*&#39;</span>
+<span class="c1"># will return the entire queue</span>
+</pre></div>
+</div>
+<div class="section" id="deleting-jobs">
+<h4>Deleting jobs<a class="headerlink" href="#deleting-jobs" title="Permalink to this headline">¶</a></h4>
+<p>Sometimes a situation might arise where you need to delete one of your submitted jobs from the queue. You can do this with the straightforward command <code class="docutils literal notranslate"><span class="pre">qdel</span> <span class="pre">JOBID</span></code> where <code class="docutils literal notranslate"><span class="pre">JOBID</span></code> is the unique numeric ID of the job we wish to delete.</p>
+<p>When the job is successfully deleted we get the following output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qdel <span class="m">42</span>
+exuser has deleted job <span class="m">42</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can only use <code class="docutils literal notranslate"><span class="pre">qdel</span></code> to delete your own submitted jobs from the queue, so don’t try and be smart and clear the queue just for your jobs as it won’t work.</p>
+</div>
+</div>
+</div>
+<div class="section" id="job-output">
+<h3>Job output<a class="headerlink" href="#job-output" title="Permalink to this headline">¶</a></h3>
+<p>When a job runs it produces two output files by default even if you haven’t specified your code to write a results file. These contain information from the standard output and standard error produced by your job and are are named following the pattern <code class="docutils literal notranslate"><span class="pre">submission_script.sh.oJOBID</span></code> and <code class="docutils literal notranslate"><span class="pre">submission_script.sh.eJOBID</span></code>. Where <code class="docutils literal notranslate"><span class="pre">submission_script.sh</span></code> is the name of your job script and <code class="docutils literal notranslate"><span class="pre">JOBID</span></code> is the unique numeric ID of the job when it was submitted.</p>
+<p>For example, if we submitted a job called <code class="docutils literal notranslate"><span class="pre">test_run.sh</span></code> and it was given the job ID <code class="docutils literal notranslate"><span class="pre">4689</span></code> we’d expect the following files produced alongside any results files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>test_run.sh.o4689
+test_run.sh.e4689
+</pre></div>
+</div>
+<p>Both these files contain useful information about how the job progressed and are especially useful if your job encountered an error. You can read more about using these files to help troubleshoot problems in the <a class="reference internal" href="troubleshooting.html"><span class="doc std std-doc">troubleshooting section</span></a>.</p>
+</div>
+<div class="section" id="job-holding">
+<h3>Job holding<a class="headerlink" href="#job-holding" title="Permalink to this headline">¶</a></h3>
+<p>Often a workflow can involve a number of steps in a process, where each steps requires the outputs of the previous and should only start when the previous step completes. The scheduler has a system of job dependencies built into it that allows you to submit a series of jobs and specify that jobs should be on hold until another job has completed.</p>
+<p>For instance you could do this with two submission scripts <code class="docutils literal notranslate"><span class="pre">job1.sh</span></code> and <code class="docutils literal notranslate"><span class="pre">job2.sh</span></code>, where <code class="docutils literal notranslate"><span class="pre">job2.sh</span></code> should only begin once <code class="docutils literal notranslate"><span class="pre">job1.sh</span></code> has finished. You can specify this when submitting jobs as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qsub job1.sh
+Your job <span class="m">626</span> <span class="o">(</span><span class="s2">&quot;job1.sh&quot;</span><span class="o">)</span> has been submitted
+
+$ qsub -hold_jid <span class="m">626</span> job2.sh
+Your job <span class="m">627</span> <span class="o">(</span><span class="s2">&quot;job2.sh&quot;</span><span class="o">)</span> has been submitted
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">job2.sh</span></code> will then be held in the queue until <code class="docutils literal notranslate"><span class="pre">job1.sh</span></code> is completed.</p>
+<p>This allows for developing a workflow of jobs that run one after another to complete long stepwise tasks.</p>
+</div>
+<div class="section" id="fair-share-policy">
+<h3>Fair-share policy<a class="headerlink" href="#fair-share-policy" title="Permalink to this headline">¶</a></h3>
+<p>The fair-share policy is two-tiered policy that takes into account the usage of a faculty as a whole and the past usage of the user. In the first tier of the policy faculties are allocated a share of the queue space on the basis of funding, meaning that faculties do not have equal shares of system capacity. The fair-share policy then determines an initial faculty level priority based on the faculties share and the total usage by all faculty member users.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The fair-share policy and levels are set by the ARC management group and cannot be altered by the system’s support team.</p>
+</div>
+<p>Next the fair-share policy determines an individual user’s job priority. Initially, all users from a faculty have the same initial priority which then decreases based on the users usage of the HPC. Essentially, this means that a user with recent (the last 7 days) heavy usage will have their jobs reduced in priority to allow other user’s jobs to run.</p>
+<p>The fair-share policy has the following consequences:</p>
+<ul class="simple">
+<li><p>The more usage by members of your faculty, the more jobs submitted by users in the faculty, the longer you have to wait in the queue</p></li>
+<li><p>If you submit lots of jobs your subsequent jobs will have a lower priority and you will have to wait longer in the queue and so will jobs submit by other users from your faculty for the next 1 or 2 weeks</p></li>
+<li><p>Jobs submitted by people from another faculty may start before yours</p></li>
+<li><p>Jobs submitted after your job may start before yours</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no test queue on the ARC service. To help determine your most efficient usage we recommend submit small test jobs.
+The smaller the jobs the less time it will wait in the queue and the less impact it will have on your priority.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./usage"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="start.html" title="previous page">Usage</a>
+    <a class='right-next' id="next-link" href="interactive.html" title="next page">Interactive jobs</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By University of Leeds Research Computing Team<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

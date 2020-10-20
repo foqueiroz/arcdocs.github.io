@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>R &#8212; ARC Documentation</title>
+    <title>General Purpose GPU &#8212; ARC Documentation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -53,22 +53,22 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/software/R.html" />
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/usage/gpgpu.html" />
     <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Stata" href="stata.html" />
-    <link rel="prev" title="Paraview" href="paraview.html" />
+    <link rel="next" title="Software" href="../software/start.html" />
+    <link rel="prev" title="Task arrays" href="taskarrays.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/R.html" />
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/usage/gpgpu.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="R" />
-<meta property="og:description" content="R  Setting up the path and environment  All required environment variables can be set by loading the R module, to do this issue:  $ module add R   Launching on " />
+<meta property="og:title"       content="General Purpose GPU" />
+<meta property="og:description" content="General Purpose GPU  The HPC systems at Leeds also include general purpose GPU facilities for GPU-accelerated code. These differ between ARC3 and ARC4 but can b" />
 <meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -113,102 +113,42 @@
    Getting Started
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../usage/start.html">
-   Usage
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="reference internal" href="start.html">
-   Software
+   Usage
   </a>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="abaqus.html">
-     Abaqus
+    <a class="reference internal" href="batchjob.html">
+     Batch jobs
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="amber.html">
-     AMBER
+    <a class="reference internal" href="interactive.html">
+     Interactive jobs
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="ansys.html">
-     Ansys
+    <a class="reference internal" href="troubleshooting.html">
+     Troubleshooting jobs on HPC
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="comsol.html">
-     Comsol
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dl_poly.html">
-     DLpoly
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="gaussian.html">
-     DLpoly {#dlpoly .entry-title}
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="gromacs.html">
-     Gromacs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="idl.html">
-     IDL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="matlab.html">
-     Matlab
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="molpro.html">
-     Molpro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="namd.html">
-     NAMD
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="openfoam.html">
-     OpenFoam
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="paraview.html">
-     Paraview
+    <a class="reference internal" href="taskarrays.html">
+     Task arrays
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     R
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="stata.html">
-     Stata
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="visit.html">
-     Visit
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="vmd.html">
-     VMD (Visual Molecular Dynamics)
+     General Purpose GPU
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/start.html">
+   Software
+  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../systems/start.html">
@@ -269,7 +209,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/software/R.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/usage/gpgpu.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -289,10 +229,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fsoftware/R.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fusage/gpgpu.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/R.md"><button
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/usage/gpgpu.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -318,34 +258,50 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-up-the-path-and-environment">
-   Setting up the path and environment
+  <a class="reference internal nav-link" href="#cuda-module">
+   CUDA Module
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#launching-on-the-front-end">
-   Launching on the front end
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#running-through-an-interactive-shell">
-   Running through an interactive shell
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#batch-execution">
-   Batch Execution
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installing-r-packages">
-   Installing R packages
+  <a class="reference internal nav-link" href="#arc3">
+   ARC3
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#r-2-15-0-and-later">
-     R 2.15.0 and later
+    <a class="reference internal nav-link" href="#usage">
+     Usage
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#k80-gpu">
+       K80 GPU
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#p100-gpu">
+       P100 GPU
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arc4">
+   ARC4
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Usage
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#v100-gpu">
+       V100 GPU
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -360,99 +316,139 @@
         
               <div>
                 
-  <div class="section" id="r">
-<h1>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="setting-up-the-path-and-environment">
-<h2>Setting up the path and environment<a class="headerlink" href="#setting-up-the-path-and-environment" title="Permalink to this headline">¶</a></h2>
-<p>All required environment variables can be set by loading the R module,
-to do this issue:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module add R
+  <div class="section" id="general-purpose-gpu">
+<h1>General Purpose GPU<a class="headerlink" href="#general-purpose-gpu" title="Permalink to this headline">¶</a></h1>
+<p>The HPC systems at Leeds also include general purpose GPU facilities for GPU-accelerated code. These differ between <a class="reference external" href="#arc3">ARC3</a> and <a class="reference external" href="#arc4">ARC4</a> but can be requested through the job submission script process as outlined below.</p>
+<div class="section" id="cuda-module">
+<h2>CUDA Module<a class="headerlink" href="#cuda-module" title="Permalink to this headline">¶</a></h2>
+<p>To use the GPU cards you will need to ensure that the NVIDIA CUDA toolkit module is loaded into your environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module load cuda
+<span class="c1"># This needs to be done before compiling or running GPU code</span>
+</pre></div>
+</div>
+<p>Note that this version of the CUDA environment will only work with certain compiler versions:</p>
+<ul class="simple">
+<li><p>INTEL versions 15 and 16</p></li>
+<li><p>PGI versions &gt;= 16.3</p></li>
+<li><p>GNU version 4.8.2 (this is the gnu/native compiler)</p></li>
+</ul>
+<p>To confirm what cards you have been allocated use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ nvidia-smi -L
 </pre></div>
 </div>
 </div>
-<div class="section" id="launching-on-the-front-end">
-<h2>Launching on the front end<a class="headerlink" href="#launching-on-the-front-end" title="Permalink to this headline">¶</a></h2>
-<p>R can be launched by entering its name at the command prompt; i.e.:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ R
+<div class="section" id="arc3">
+<h2>ARC3<a class="headerlink" href="#arc3" title="Permalink to this headline">¶</a></h2>
+<p>The ARC3 system is the first cluster at Leeds to include GPU accelerator technologies. These include:</p>
+<ul class="simple">
+<li><p>2 nodes each with 24 cores, 128GB of system memory, a hard disk drive within the node with 800GB of storage and 2 x NVIDIA K80s.</p></li>
+<li><p>6 nodes each with 24 cores, 256GB of system memory, a hard disk drive within the node with 800GB of storage and 4 x NVIDIA P100s</p></li>
+</ul>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="k80-gpu">
+<h4>K80 GPU<a class="headerlink" href="#k80-gpu" title="Permalink to this headline">¶</a></h4>
+<p>To request K80 GPU resource you should use the flag:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -l coproc_k80=&lt;cards_per_compute_node&gt;</span>
 </pre></div>
 </div>
-<p>Please note that this method should not be used apart from for quick
-tests. Exit the R console by typing.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>q()
+<p>Where &lt;cards_per_compute_node&gt; should be set to 1 or 2.</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Job script line</p></th>
+<th class="head"><p>Requested resource</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">coproc_k80=1</span></code></p></td>
+<td><p>A single K80 card, 12 CPU cores and 64GB system memory (half the available resource on a K80 node)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">coproc_k80=2</span></code></p></td>
+<td><p>Both K80 cards, 24 CPU cores and 128GB system memory (all the available resource on a K80 node)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="p100-gpu">
+<h4>P100 GPU<a class="headerlink" href="#p100-gpu" title="Permalink to this headline">¶</a></h4>
+<p>To request P100 GPU resource you should use the flag:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -l coproc_p100=&lt;cards_per_compute_node&gt;</span>
 </pre></div>
 </div>
+<p>Where &lt;cards_per_compute_node&gt; should be set to 1, 2, 3 or 4.</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Job script line</p></th>
+<th class="head"><p>Requested resource</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">coproc_p100=1</span></code></p></td>
+<td><p>A single P100 card, 6 CPU cores and 64GB system memory (one quarter of the available resource on a P100 node)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">coproc_p100=2</span></code></p></td>
+<td><p>Two P100 cards, 12 CPU cores and 128GB system memory (half of the available resource on a P100 node)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">coproc_p100=3</span></code></p></td>
+<td><p>Three P100 cards, 18 CPU cores and 192GB system memory (three-quarters of the available resource on a P100 node)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">coproc_p100=4</span></code></p></td>
+<td><p>Four P100 cards, 24 CPU cores and 256GB system memory (all the available resource on a P100 node)</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="section" id="running-through-an-interactive-shell">
-<h2>Running through an interactive shell<a class="headerlink" href="#running-through-an-interactive-shell" title="Permalink to this headline">¶</a></h2>
-<p>The following will launch R interactively via the batch queues.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ qrsh -cwd -V -l h_rt= R 
+</div>
+</div>
+<div class="section" id="arc4">
+<h2>ARC4<a class="headerlink" href="#arc4" title="Permalink to this headline">¶</a></h2>
+<p>The ARC4 system also comes with the following GPU resources:</p>
+<ul class="simple">
+<li><p>3 nodes each with 40 cores, 192GB of system memory, a hard disk drive within the node with 800GB of storage and 4 x NVIDIA V100 GPUs.</p></li>
+</ul>
+<div class="section" id="id1">
+<h3>Usage<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="v100-gpu">
+<h4>V100 GPU<a class="headerlink" href="#v100-gpu" title="Permalink to this headline">¶</a></h4>
+<p>To request V100 GPU resource you should use the flag:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -l coproc_v100=&lt;cards_per_compute_node&gt;</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">&lt;startup_flag&gt;</span></code> can
-be <code class="docutils literal notranslate"><span class="pre">--save</span></code> ,
-<code class="docutils literal notranslate"><span class="pre">--no-save</span></code> or
-<code class="docutils literal notranslate"><span class="pre">--vanilla</span></code> . I have used
-–vanilla but information on the meaning of these flags can is
-<a class="reference external" href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Startup.html">here</a>.
-In the above command, is the length of real-time the shell will exist
-for. e.g. to run R for 6 hours:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ qrsh -cwd -V -l h_rt=6:00:00 R --vanilla
-</pre></div>
+<p>Where &lt;cards_per_compute_node&gt; should be set to 1, 2, 3 or 4.</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Job script line</p></th>
+<th class="head"><p>Requested resource</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">coproc_v100=1</span></code></p></td>
+<td><p>A single V100 card, 10 CPU cores and 48GB system memory (one quarter of the available resource on a V100 node)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">coproc_v100=2</span></code></p></td>
+<td><p>Two V100 cards, 20 CPU cores and 96GB system memory (half of the available resource on a V100 node)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">coproc_v100=3</span></code></p></td>
+<td><p>Three V100 cards, 30 CPU cores and 144GB system memory (three-quarters of the available resource on a V100 node)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">coproc_v100=4</span></code></p></td>
+<td><p>Four V100 cards, 40 CPU cores and 192GB system memory (all the available resource on a V100 node)</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>This will run R from within the terminal from which it was launched.</p>
-</div>
-<div class="section" id="batch-execution">
-<h2>Batch Execution<a class="headerlink" href="#batch-execution" title="Permalink to this headline">¶</a></h2>
-<p>To run R in batch-mode you must first generate a list of commands for R
-to process in a file, e.g. [r.in]. You needed to make sure that this file is executable.
-You can do this by running the command [chmod u+x .sh]. You can check this by running the command
-[ls -la] command and the
-information for that line will contain an x for execute like this
-[-rwxr–r–].</p>
-<p>A script must then be created that will request resources from the
-queuing system and launch the R executable; script
-[runR.sh] :</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
-# Run in current working directory and use current environment
-#$ -cwd -V
-# Set a 6 hour limit
-#$ -l h_rt=6:00:00
-#Request more memory, the default is 1Gb
-#$ -l h_vmem=1536M
-# Load R module
-module add R
-# run R using command file
-# CMD BATCH flag should be given to suppress graphics
-R CMD BATCH r.in r.out
-</pre></div>
-</div>
-<p>This can be submitted to the queuing system using:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ qsub runR.sh
-</pre></div>
-</div>
-<p>The files for a simple R test example are available to download in this
-tar
-file, <a class="reference external" href="https://arc.leeds.ac.uk/wp-content/uploads/2016/01/R.tar">R.tar</a>.</p>
-</div>
-<div class="section" id="installing-r-packages">
-<h2>Installing R packages<a class="headerlink" href="#installing-r-packages" title="Permalink to this headline">¶</a></h2>
-<p>Given the large number of R packages available and pace of development,
-it is preferable that users install the packages they need as opposed to
-using a centrally provided set of packages.</p>
-<div class="section" id="r-2-15-0-and-later">
-<h3>R 2.15.0 and later<a class="headerlink" href="#r-2-15-0-and-later" title="Permalink to this headline">¶</a></h3>
-<p>To install package <code class="docutils literal notranslate"><span class="pre">foo</span></code> ,
-start an R session by entering its name at the command prompt; i.e.:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ R
-</pre></div>
-</div>
-<p>and then from within R, install the package:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;install.packages(&#39;foo&#39;)
-</pre></div>
-</div>
-<p>This will install the package and any dependencies that are required.
-The package should then be accessible from subsequent R interactive
-sessions and batch jobs.</p>
 </div>
 </div>
 </div>
@@ -470,7 +466,7 @@ sessions and batch jobs.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./software"
+            path: "./usage"
         },
         predefinedOutput: true
     }
@@ -485,8 +481,8 @@ sessions and batch jobs.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="paraview.html" title="previous page">Paraview</a>
-    <a class='right-next' id="next-link" href="stata.html" title="next page">Stata</a>
+    <a class='left-prev' id="prev-link" href="taskarrays.html" title="previous page">Task arrays</a>
+    <a class='right-next' id="next-link" href="../software/start.html" title="next page">Software</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

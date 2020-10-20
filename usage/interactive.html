@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>R &#8212; ARC Documentation</title>
+    <title>Interactive jobs &#8212; ARC Documentation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -53,22 +53,22 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/software/R.html" />
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/usage/interactive.html" />
     <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Stata" href="stata.html" />
-    <link rel="prev" title="Paraview" href="paraview.html" />
+    <link rel="next" title="Troubleshooting jobs on HPC" href="troubleshooting.html" />
+    <link rel="prev" title="Batch jobs" href="batchjob.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/R.html" />
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/usage/interactive.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="R" />
-<meta property="og:description" content="R  Setting up the path and environment  All required environment variables can be set by loading the R module, to do this issue:  $ module add R   Launching on " />
+<meta property="og:title"       content="Interactive jobs" />
+<meta property="og:description" content="Interactive jobs  It is also possible to runs jobs in interactive mode on both ARC3 and ARC4. This means rather than queueing for your job to run on the batch s" />
 <meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -113,102 +113,42 @@
    Getting Started
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../usage/start.html">
-   Usage
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="reference internal" href="start.html">
-   Software
+   Usage
   </a>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="abaqus.html">
-     Abaqus
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="amber.html">
-     AMBER
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ansys.html">
-     Ansys
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="comsol.html">
-     Comsol
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dl_poly.html">
-     DLpoly
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="gaussian.html">
-     DLpoly {#dlpoly .entry-title}
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="gromacs.html">
-     Gromacs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="idl.html">
-     IDL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="matlab.html">
-     Matlab
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="molpro.html">
-     Molpro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="namd.html">
-     NAMD
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="openfoam.html">
-     OpenFoam
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="paraview.html">
-     Paraview
+    <a class="reference internal" href="batchjob.html">
+     Batch jobs
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     R
+     Interactive jobs
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="stata.html">
-     Stata
+    <a class="reference internal" href="troubleshooting.html">
+     Troubleshooting jobs on HPC
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="visit.html">
-     Visit
+    <a class="reference internal" href="taskarrays.html">
+     Task arrays
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="vmd.html">
-     VMD (Visual Molecular Dynamics)
+    <a class="reference internal" href="gpgpu.html">
+     General Purpose GPU
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/start.html">
+   Software
+  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../systems/start.html">
@@ -269,7 +209,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/software/R.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/usage/interactive.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -289,10 +229,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fsoftware/R.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fusage/interactive.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/R.md"><button
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/usage/interactive.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -318,36 +258,19 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setting-up-the-path-and-environment">
-   Setting up the path and environment
+  <a class="reference internal nav-link" href="#interactive-jobs-on-compute-nodes">
+   Interactive jobs on compute nodes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#launching-on-the-front-end">
-   Launching on the front end
+  <a class="reference internal nav-link" href="#interactive-mpi-jobs">
+   Interactive MPI jobs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#running-through-an-interactive-shell">
-   Running through an interactive shell
+  <a class="reference internal nav-link" href="#interactive-jobs-on-gpu-nodes">
+   Interactive jobs on GPU nodes
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#batch-execution">
-   Batch Execution
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installing-r-packages">
-   Installing R packages
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#r-2-15-0-and-later">
-     R 2.15.0 and later
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -360,100 +283,48 @@
         
               <div>
                 
-  <div class="section" id="r">
-<h1>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="setting-up-the-path-and-environment">
-<h2>Setting up the path and environment<a class="headerlink" href="#setting-up-the-path-and-environment" title="Permalink to this headline">¶</a></h2>
-<p>All required environment variables can be set by loading the R module,
-to do this issue:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module add R
+  <div class="section" id="interactive-jobs">
+<h1>Interactive jobs<a class="headerlink" href="#interactive-jobs" title="Permalink to this headline">¶</a></h1>
+<p>It is also possible to runs jobs in interactive mode on both ARC3 and ARC4. This means rather than queueing for your job to run on the batch system you request resource for an interactive sessions via the shell. When the resource becomes available an interactive shell session is created in which you can run code directly on compute resource.</p>
+<p>This process still involves requesting resource and queueing for that resource under the <a class="reference external" href="./batchjob#fair-share-policy">fair-share policy</a> so be prepared to wait if you request a significant amount of resource.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We strongly discourage users from using interactive sessions for interactive code development using platforms like jupyter, spyder or Rstudio. Code development should be done before deploying code on the HPC.</p>
+</div>
+<div class="section" id="interactive-jobs-on-compute-nodes">
+<h2>Interactive jobs on compute nodes<a class="headerlink" href="#interactive-jobs-on-compute-nodes" title="Permalink to this headline">¶</a></h2>
+<p>You can request an interactive session on a standard compute node by using the command <code class="docutils literal notranslate"><span class="pre">qrsh</span></code>. As with submitting a batch job you will also need to pass it options to specify how much resource you wish to request.</p>
+<p>For instance to request an interactive session for 15 minutes with access to 2 cores each with 4 GB of memory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qrsh -l <span class="nv">h_rt</span><span class="o">=</span><span class="m">00</span>:15:00,h_vmem<span class="o">=</span>4G -pe smp <span class="m">2</span>
+</pre></div>
+</div>
+<p>This sends the request to the queue and the prompt will wait until the session can be started. When it starts the prompt will return but appear changed from our initial prompt.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>exuser@login2.arc4 ~<span class="o">]</span>$ qrsh -l <span class="nv">h_rt</span><span class="o">=</span><span class="m">00</span>:15:00,h_vmem<span class="o">=</span>4G -pe smp <span class="m">2</span>
+
+<span class="o">[</span>exuser@d10s2b4.arc4 ~<span class="o">]</span>$
+</pre></div>
+</div>
+<p>The prompt changes to show that the interactive session is now running on a specific compute node on ARC4. From here you can now run code or an applications directly on the compute node.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have made changed to your environment on the login nodes these will <strong>not</strong> be preserved when connecting to an interactive session and you will be required to rerun <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span></code> commands. Connecting to an interactive session does create a new login shell which means any commands in your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> are executed when you connect.</p>
+</div>
+</div>
+<div class="section" id="interactive-mpi-jobs">
+<h2>Interactive MPI jobs<a class="headerlink" href="#interactive-mpi-jobs" title="Permalink to this headline">¶</a></h2>
+<p>For development and testing purposes, it might be convenient to run MPI jobs in interactive mode and have them launch fairly quickly. In this case it would be advisable to use the <code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">placement=scatter</span></code> option.</p>
+<p>This will likely get the job to launch fairly quickly at the expense of performance. For instance to run <code class="docutils literal notranslate"><span class="pre">mympiprogram</span></code> for 30 minutes on 4 cores with 1GB memory each from the currrent directory and using the current environment, use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qrsh -l <span class="nv">h_rt</span><span class="o">=</span><span class="m">0</span>:30:0,h_vmem<span class="o">=</span>1G,placement<span class="o">=</span>scatter -pe ib <span class="m">4</span> mpirun ./mympiprogram
 </pre></div>
 </div>
 </div>
-<div class="section" id="launching-on-the-front-end">
-<h2>Launching on the front end<a class="headerlink" href="#launching-on-the-front-end" title="Permalink to this headline">¶</a></h2>
-<p>R can be launched by entering its name at the command prompt; i.e.:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ R
+<div class="section" id="interactive-jobs-on-gpu-nodes">
+<h2>Interactive jobs on GPU nodes<a class="headerlink" href="#interactive-jobs-on-gpu-nodes" title="Permalink to this headline">¶</a></h2>
+<p>If you want to use a GPU interactively instead of submitting a job to the GPU nodes you need to request a coprocessor and specify your shell as part of your <code class="docutils literal notranslate"><span class="pre">qrsh</span></code>, ie:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qrsh -l <span class="nv">h_rt</span><span class="o">=</span><span class="m">2</span>:0:0,coproc_k80<span class="o">=</span><span class="m">1</span> -pty y bash
 </pre></div>
 </div>
-<p>Please note that this method should not be used apart from for quick
-tests. Exit the R console by typing.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>q()
-</pre></div>
-</div>
-</div>
-<div class="section" id="running-through-an-interactive-shell">
-<h2>Running through an interactive shell<a class="headerlink" href="#running-through-an-interactive-shell" title="Permalink to this headline">¶</a></h2>
-<p>The following will launch R interactively via the batch queues.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ qrsh -cwd -V -l h_rt= R 
-</pre></div>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">&lt;startup_flag&gt;</span></code> can
-be <code class="docutils literal notranslate"><span class="pre">--save</span></code> ,
-<code class="docutils literal notranslate"><span class="pre">--no-save</span></code> or
-<code class="docutils literal notranslate"><span class="pre">--vanilla</span></code> . I have used
-–vanilla but information on the meaning of these flags can is
-<a class="reference external" href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Startup.html">here</a>.
-In the above command, is the length of real-time the shell will exist
-for. e.g. to run R for 6 hours:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ qrsh -cwd -V -l h_rt=6:00:00 R --vanilla
-</pre></div>
-</div>
-<p>This will run R from within the terminal from which it was launched.</p>
-</div>
-<div class="section" id="batch-execution">
-<h2>Batch Execution<a class="headerlink" href="#batch-execution" title="Permalink to this headline">¶</a></h2>
-<p>To run R in batch-mode you must first generate a list of commands for R
-to process in a file, e.g. [r.in]. You needed to make sure that this file is executable.
-You can do this by running the command [chmod u+x .sh]. You can check this by running the command
-[ls -la] command and the
-information for that line will contain an x for execute like this
-[-rwxr–r–].</p>
-<p>A script must then be created that will request resources from the
-queuing system and launch the R executable; script
-[runR.sh] :</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
-# Run in current working directory and use current environment
-#$ -cwd -V
-# Set a 6 hour limit
-#$ -l h_rt=6:00:00
-#Request more memory, the default is 1Gb
-#$ -l h_vmem=1536M
-# Load R module
-module add R
-# run R using command file
-# CMD BATCH flag should be given to suppress graphics
-R CMD BATCH r.in r.out
-</pre></div>
-</div>
-<p>This can be submitted to the queuing system using:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ qsub runR.sh
-</pre></div>
-</div>
-<p>The files for a simple R test example are available to download in this
-tar
-file, <a class="reference external" href="https://arc.leeds.ac.uk/wp-content/uploads/2016/01/R.tar">R.tar</a>.</p>
-</div>
-<div class="section" id="installing-r-packages">
-<h2>Installing R packages<a class="headerlink" href="#installing-r-packages" title="Permalink to this headline">¶</a></h2>
-<p>Given the large number of R packages available and pace of development,
-it is preferable that users install the packages they need as opposed to
-using a centrally provided set of packages.</p>
-<div class="section" id="r-2-15-0-and-later">
-<h3>R 2.15.0 and later<a class="headerlink" href="#r-2-15-0-and-later" title="Permalink to this headline">¶</a></h3>
-<p>To install package <code class="docutils literal notranslate"><span class="pre">foo</span></code> ,
-start an R session by entering its name at the command prompt; i.e.:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ R
-</pre></div>
-</div>
-<p>and then from within R, install the package:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;install.packages(&#39;foo&#39;)
-</pre></div>
-</div>
-<p>This will install the package and any dependencies that are required.
-The package should then be accessible from subsequent R interactive
-sessions and batch jobs.</p>
-</div>
+<p>This will give you a bash session on a k80 GPU node for two hours, using one half of the resources on that GPU node.</p>
 </div>
 </div>
 
@@ -470,7 +341,7 @@ sessions and batch jobs.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./software"
+            path: "./usage"
         },
         predefinedOutput: true
     }
@@ -485,8 +356,8 @@ sessions and batch jobs.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="paraview.html" title="previous page">Paraview</a>
-    <a class='right-next' id="next-link" href="stata.html" title="next page">Stata</a>
+    <a class='left-prev' id="prev-link" href="batchjob.html" title="previous page">Batch jobs</a>
+    <a class='right-next' id="next-link" href="troubleshooting.html" title="next page">Troubleshooting jobs on HPC</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

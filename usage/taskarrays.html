@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task arrays &#8212; ARC Documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/usage/taskarrays.html" />
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="General Purpose GPU" href="gpgpu.html" />
+    <link rel="prev" title="Troubleshooting jobs on HPC" href="troubleshooting.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/usage/taskarrays.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Task arrays" />
+<meta property="og:description" content="Task arrays  When to use task arrays  Situations often arise when you want to run many almost identical jobs simultaneously, perhaps running the same program ma" />
+<meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">ARC Documentation</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../getting_started/start.html">
+   Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="start.html">
+   Usage
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="batchjob.html">
+     Batch jobs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactive.html">
+     Interactive jobs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="troubleshooting.html">
+     Troubleshooting jobs on HPC
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Task arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gpgpu.html">
+     General Purpose GPU
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/start.html">
+   Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../systems/start.html">
+   Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://arcleeds.github.io/training/">
+   Training
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contact/start.html">
+   Contact Us
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit the <a href="https://arcleeds.github.io/">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/usage/taskarrays.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fusage/taskarrays.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/usage/taskarrays.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-to-use-task-arrays">
+   When to use task arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-task-arrays">
+   How to use task arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-sge-loop-counter">
+   The SGE ‘loop counter’
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-examples">
+   Further examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#random-filenames">
+     Random filenames
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#restricting-the-maximum-number-of-concurrent-tasks">
+     Restricting the maximum number of concurrent tasks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-sge-environment-variables">
+   Using the SGE environment variables
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="task-arrays">
+<h1>Task arrays<a class="headerlink" href="#task-arrays" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="when-to-use-task-arrays">
+<h2>When to use task arrays<a class="headerlink" href="#when-to-use-task-arrays" title="Permalink to this headline">¶</a></h2>
+<p>Situations often arise when you want to run many almost identical jobs simultaneously, perhaps running the same program many times but changing the input data or some argument or parameter. One possible solution is to write a Python or Perl script to create all the qsub files and then write a BASH script to execute them. This is very time consuming and might end up submitting many more jobs to the queue than you actually need to. This is a typical problem suited to an SGE task array.</p>
+<ul class="simple">
+<li><p>only one qsub command is issued (and only one qdel command would be required to delete all jobs)</p></li>
+<li><p>only one entry appears in qstat</p></li>
+<li><p>the load on the SGE submit node is much less than that of submitting many separate jobs</p></li>
+<li><p>it is much easier for the user (you) to keep track of your related jobs</p></li>
+</ul>
+</div>
+<div class="section" id="how-to-use-task-arrays">
+<h2>How to use task arrays<a class="headerlink" href="#how-to-use-task-arrays" title="Permalink to this headline">¶</a></h2>
+<p>The easiest way to think of a task array is as a job script with a built-in FOR loop. It makes use of an environment variable created by Sun Grid Engine- <code class="docutils literal notranslate"><span class="pre">$SGE_TASK_ID</span></code> . Consider this simple job submission script ( my_script.sh ):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use current working directory and current modules</span>
+<span class="c1">#$ -cwd -V</span>
+<span class="c1"># Request Wallclock time of 6 hours</span>
+<span class="c1">#$ -l h_rt=06:00:00</span>
+
+<span class="c1"># Tell SGE that this is an array job, with &quot;tasks&quot; numbered from 1 to 150</span>
+<span class="c1">#$ -t 1-150</span>
+
+<span class="c1"># Run the application passing in the input and output filenames</span>
+./myprog &lt; data.<span class="nv">$SGE_TASK_ID</span> &gt; results.<span class="nv">$SGE_TASK_ID</span>
+</pre></div>
+</div>
+<p>It would be executed through the queues as normal using qsub my_script.sh .</p>
+<p>As far as SGE is concerned, this is equivalent to 150 individual queue submissions in which <code class="docutils literal notranslate"><span class="pre">$SGE_TASK_ID</span></code> takes all the
+values between 1 and 150 (inclusive), and where input and output files are indexed by the same ID.</p>
+<p>In this example, the ‘input files’ would take the form data.1 , data.2 , data.3 etc. and the program would create output files of the form results.1 , results.2 , results.3 etc. (all in the current working directory). The example would require all input
+files and put all output files into the same directory (the current working directory, defined by -cwd ).</p>
+<p>As the script executes, the variable <code class="docutils literal notranslate"><span class="pre">$SGE_TASK_ID</span></code> will be replaced by the values indicated in the #$ -t 1-150 clause. So in this case, 1,2,3…150.</p>
+<p>A small adjustment to the script would allow each job to run from a separate directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use current working directory and current modules</span>
+<span class="c1">#$ -cwd -V</span>
+<span class="c1"># Request Wallclock time of 6 hours</span>
+<span class="c1">#$ -l h_rt=06:00:00</span>
+
+<span class="c1">#$ -t 1-150</span>
+
+<span class="c1">#create directory based on jobID</span>
+mkdir myjob-<span class="nv">$SGE_TASK_ID</span>
+
+<span class="c1">#change directory into the one just created</span>
+<span class="nb">cd</span> myjob-<span class="nv">$SGE_TASK_ID</span>
+
+<span class="c1">#execute a program from the folder above this one, putting the results here</span>
+../myprog-one &gt; one.output
+
+<span class="c1">#execute a different program from the folder above this taking the file created (one.output) as input and putting the results here</span>
+../myprog-two &lt; one.output &gt; two.output
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-sge-loop-counter">
+<h2>The SGE ‘loop counter’<a class="headerlink" href="#the-sge-loop-counter" title="Permalink to this headline">¶</a></h2>
+<p>These examples use <code class="docutils literal notranslate"><span class="pre">$SGE_TASK_ID</span></code> starting at 1 and incrementing by 1 to some upper bound. It is a little more flexible than this however.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -t 200-445:5</span>
+</pre></div>
+</div>
+<p>would allow <code class="docutils literal notranslate"><span class="pre">$SGE_TASK_ID</span></code> to take values from 200 (lower bound) to 445 (upper bound), incrementing by 5.</p>
+</div>
+<div class="section" id="further-examples">
+<h2>Further examples<a class="headerlink" href="#further-examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="random-filenames">
+<h3>Random filenames<a class="headerlink" href="#random-filenames" title="Permalink to this headline">¶</a></h3>
+<p>The previous examples require all input files to be neatly indexed by number, but often this is not the case. If you have a list of randomly named files, then it is still possible to use <code class="docutils literal notranslate"><span class="pre">$SGE_TASK_ID</span></code> . Assume that you have a text file files.txt listing all of your input filenames (one per line) and that you know how many files you have (50 in the example below):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use current working directory and current modules</span>
+<span class="c1">#$ -cwd -V</span>
+<span class="c1"># Request Wallclock time of 6 hours</span>
+<span class="c1">#$ -l h_rt=06:00:00</span>
+
+<span class="c1">#$ -t 1-150</span>
+
+<span class="nv">infile</span><span class="o">=</span><span class="k">$(</span>sed -n -e <span class="s2">&quot;</span><span class="nv">$SGE_TASK_ID</span><span class="s2"> p&quot;</span> jobfile1.txt<span class="k">)</span>
+
+./myprog &lt; <span class="nv">$infile</span>
+</pre></div>
+</div>
+<p>As the ‘loop’ in the script executes, it will read the filenames one by one from files.txt , assign them to the variable $infile and direct them into your program.</p>
+</div>
+<div class="section" id="restricting-the-maximum-number-of-concurrent-tasks">
+<h3>Restricting the maximum number of concurrent tasks<a class="headerlink" href="#restricting-the-maximum-number-of-concurrent-tasks" title="Permalink to this headline">¶</a></h3>
+<p>In some situations it might be necessary to restrict the maximum number of tasks running at any point in time. This is a useful feature to ensure that your jobs don’t restrict other user jobs running.</p>
+<p>To do this, add a -tc clause to the submission script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -t 1-5000</span>
+<span class="c1">#$ -tc 50</span>
+</pre></div>
+</div>
+<p>This would run 5000 tasks but limit just 50 to run at any point in time.</p>
+</div>
+</div>
+<div class="section" id="using-the-sge-environment-variables">
+<h2>Using the SGE environment variables<a class="headerlink" href="#using-the-sge-environment-variables" title="Permalink to this headline">¶</a></h2>
+<p>The scheduler sets a number of environment variables during array jobs: <code class="docutils literal notranslate"><span class="pre">$SGE_TASK_FIRST</span></code> , <code class="docutils literal notranslate"><span class="pre">$SGE_TASK_LAST</span></code> and <code class="docutils literal notranslate"><span class="pre">$SGE_STEP_SIZE</span></code>. If you need your script to make things happen at the start or end of an array job, then this script shows how this can be done:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use current working directory and current modules</span>
+<span class="c1">#$ -cwd -V</span>
+<span class="c1"># Request Wallclock time of 6 hours</span>
+<span class="c1">#$ -l h_rt=06:00:00</span>
+
+<span class="c1">#$ -t 1-50</span>
+
+<span class="k">if</span><span class="o">[</span> <span class="nv">$SGE_TASK_ID</span> <span class="o">==</span> <span class="nv">$SGE_TASK_FIRST</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="c1"># do first-task stuff here</span>
+<span class="k">fi</span>
+
+<span class="c1"># do normal job processing tasks here</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$SGE_TASK_ID</span> <span class="o">==</span> <span class="nv">$SGE_TASK_LAST</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="c1"># do last-task stuff here</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./usage"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="troubleshooting.html" title="previous page">Troubleshooting jobs on HPC</a>
+    <a class='right-next' id="next-link" href="gpgpu.html" title="next page">General Purpose GPU</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By University of Leeds Research Computing Team<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

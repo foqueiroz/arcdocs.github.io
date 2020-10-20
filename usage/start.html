@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Useage &#8212; ARC Documentation</title>
+    <title>Usage &#8212; ARC Documentation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -53,11 +53,11 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/useage/start.html" />
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/usage/start.html" />
     <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Software" href="../software/start.html" />
+    <link rel="next" title="Batch jobs" href="batchjob.html" />
     <link rel="prev" title="File Transfer" href="../getting_started/file_transfer.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -65,10 +65,10 @@
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/useage/start.html" />
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/usage/start.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Useage" />
-<meta property="og:description" content="Useage" />
+<meta property="og:title"       content="Usage" />
+<meta property="og:description" content="Usage  This page is an overview of all pages within the Usage section. This covers topics around how to get the most out of the HPC system such as using the bat" />
 <meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -115,8 +115,35 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Useage
+   Usage
   </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="batchjob.html">
+     Batch jobs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactive.html">
+     Interactive jobs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="troubleshooting.html">
+     Troubleshooting jobs on HPC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="taskarrays.html">
+     Task arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gpgpu.html">
+     General Purpose GPU
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../software/start.html">
@@ -182,7 +209,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/useage/start.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/usage/start.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -202,10 +229,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fuseage/start.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fusage/start.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/useage/start.md"><button
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/usage/start.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -225,6 +252,20 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#find-details-on">
+   Find details on:
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -232,8 +273,21 @@
         
               <div>
                 
-  <div class="section" id="useage">
-<h1>Useage<a class="headerlink" href="#useage" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<p>This page is an overview of all pages within the Usage section. This covers topics around how to get the most out of the HPC system such as using the batch scheduling system, interactive jobs, and more on both ARC3 and ARC4 at Leeds.</p>
+<div class="section" id="find-details-on">
+<h2>Find details on:<a class="headerlink" href="#find-details-on" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="batchjob.html"><span class="doc std std-doc">Batch jobs</span></a></p></li>
+<li><p><a class="reference internal" href="interactive.html"><span class="doc std std-doc">Interactive jobs</span></a></p></li>
+<li><p><a class="reference internal" href="troubleshooting.html"><span class="doc std std-doc">Troubleshooting jobs</span></a></p></li>
+<li><p><a class="reference internal" href="taskarrays.html"><span class="doc std std-doc">Task Arrays</span></a></p></li>
+<li><p><a class="reference internal" href="gpgpu.html"><span class="doc std std-doc">General Purpose GPU</span></a></p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -249,7 +303,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./useage"
+            path: "./usage"
         },
         predefinedOutput: true
     }
@@ -265,7 +319,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="../getting_started/file_transfer.html" title="previous page">File Transfer</a>
-    <a class='right-next' id="next-link" href="../software/start.html" title="next page">Software</a>
+    <a class='right-next' id="next-link" href="batchjob.html" title="next page">Batch jobs</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
