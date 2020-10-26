@@ -30,6 +30,7 @@
     - file: usage/troubleshooting
     - file: usage/taskarrays
     - file: usage/gpgpu
+    - file: usage/acknowledgement
 
 # ===== Software ==========================================
 - file: software/start
