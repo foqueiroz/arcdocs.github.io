@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 <html>
@@ -6,26 +7,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>File Transfer &#8212; ARC Documentation</title>
-    
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
-
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    
-      
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -33,9 +17,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
-
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -44,8 +25,8 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -60,8 +41,8 @@
     <link rel="next" title="Usage" href="../usage/start.html" />
     <link rel="prev" title="Storage on HPC" href="nobackup.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
@@ -71,7 +52,7 @@
 <meta property="og:description" content="File Transfer  Moving files onto and off the HPC systems is a crucial part of any researchers workflow and on this page we’ll outline a number of approaches for" />
 <meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
 
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary">
 
 
   </head>
@@ -100,80 +81,50 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
   <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../welcome.html">
-   Welcome
-  </a>
- </li>
-</ul>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="start.html">
-   Getting Started
-  </a>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="request_hpc_acct.html">
-     Requesting an HPC Account
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="request_install.html">
-     Requesting a software install on HPC
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="logon.html">
-     Logging on
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="linuxbasics.html">
-     Linux basics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="nobackup.html">
-     Storage on HPC
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     File Transfer
-    </a>
-   </li>
+  <li class="">
+    <a href="../welcome.html">Welcome</a>
+  </li>
+  <li class="active">
+    <a href="start.html">Getting Started</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="request_hpc_acct.html">Requesting an HPC Account</a>
+    </li>
+    <li class="">
+      <a href="request_install.html">Requesting a software install on HPC</a>
+    </li>
+    <li class="">
+      <a href="logon.html">Logging on</a>
+    </li>
+    <li class="">
+      <a href="linuxbasics.html">Linux basics</a>
+    </li>
+    <li class="">
+      <a href="nobackup.html">Storage on HPC</a>
+    </li>
+    <li class="active">
+      <a href="">File Transfer</a>
+    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../usage/start.html">
-   Usage
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../software/start.html">
-   Software
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../systems/start.html">
-   Systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://arcleeds.github.io/training/">
-   Training
-   <i class="fas fa-external-link-alt">
-   </i>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../contact/start.html">
-   Contact Us
-  </a>
- </li>
+  </li>
+  <li class="">
+    <a href="../usage/start.html">Usage</a>
+  </li>
+  <li class="">
+    <a href="../software/start.html">Software</a>
+  </li>
+  <li class="">
+    <a href="../systems/start.html">Systems</a>
+  </li>
+  <li class="">
+    <a href="https://arcleeds.github.io/training/">Training<i class="fas fa-external-link-alt"></i></a>
+  </li>
+  <li class="">
+    <a href="../contact/start.html">Contact Us</a>
+  </li>
 </ul>
-
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -246,89 +197,83 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
 
     </div>
-
-    <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-mobaxterm">
-   Using MobaXTerm
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-a-terminal">
-   Using a Terminal
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-scp">
-     Using scp
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-rsync">
-     Using rsync
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#other-file-transfer-options">
-   Other file transfer options
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#smbclient">
-     smbclient
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rclone">
-     rclone
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#adding-a-new-onedrive-remote-to-rclone">
-       Adding a new OneDrive remote to Rclone
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#using-rclone-on-hpc">
-       Using rclone on HPC
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sftp">
-     SFTP
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sftp-graphical-clients">
-       SFTP graphical clients
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
-        </nav>
-        
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#using-mobaxterm" class="nav-link">Using MobaXTerm</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#using-a-terminal" class="nav-link">Using a Terminal</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#using-scp" class="nav-link">Using scp</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#using-rsync" class="nav-link">Using rsync</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#other-file-transfer-options" class="nav-link">Other file transfer options</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#smbclient" class="nav-link">smbclient</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#rclone" class="nav-link">rclone</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#adding-a-new-onedrive-remote-to-rclone" class="nav-link">Adding a new OneDrive remote to Rclone</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#using-rclone-on-hpc" class="nav-link">Using rclone on HPC</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#sftp" class="nav-link">SFTP</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#sftp-graphical-clients" class="nav-link">SFTP graphical clients</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/getting_started/file_transfer.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
     </div>
 </div>
     <div id="main-content" class="row">
@@ -864,10 +809,7 @@ Fetching /home/home01/issev001/test_sub.sh to test_sub.sh
       </div>
     </div>
 
-    
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
+    <script src="../_static/js/index.js"></script>
     
   </body>
 </html>
