@@ -9,3 +9,4 @@ This page is an overview of all pages within the Usage section. This covers topi
 - [Troubleshooting jobs](./troubleshooting)
 - [Task Arrays](./taskarrays)
 - [General Purpose GPU](./gpgpu)
+- [Acknowledging use of ARC](./acknowledgement)
