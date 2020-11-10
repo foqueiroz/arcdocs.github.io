@@ -321,13 +321,13 @@
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mdrun</span></code></p></td>
 <td><p>single precision serial executable</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mdrun\_d</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mdrun_d</span></code></p></td>
 <td><p>double precision serial executable</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mpirun</span> <span class="pre">mdrun\_mpi</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mpirun</span> <span class="pre">mdrun_mpi</span></code></p></td>
 <td><p>single precision parallel MPI executable</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mpirun</span> <span class="pre">mdrun\_mpi\_d</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mpirun</span> <span class="pre">mdrun_mpi_d</span></code></p></td>
 <td><p>double precision parallel MPI exectable</p></td>
 </tr>
 </tbody>
@@ -343,7 +343,7 @@
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mdrun.MPI</span></code></p></td>
 <td><p>single precision, parallel MPI executable</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mdrun\_d.MPI</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mdrun_d.MPI</span></code></p></td>
 <td><p>double precision, parallel MPI executable</p></td>
 </tr>
 </tbody>
@@ -357,7 +357,7 @@ at the <a class="reference external" href="http://www.gromacs.org/Documentation"
 <h2>Batch execution<a class="headerlink" href="#batch-execution" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="serial-execution">
 <h3>Serial execution<a class="headerlink" href="#serial-execution" title="Permalink to this headline">¶</a></h3>
-<p>An example script, <code class="docutils literal notranslate"><span class="pre">example\_serial.sh</span></code> , looks like:</p>
+<p>An example script, <code class="docutils literal notranslate"><span class="pre">example_serial.sh</span></code> , looks like:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 #$ -cwd -V 
 # request 10 hours of runtime
@@ -365,15 +365,13 @@ at the <a class="reference external" href="http://www.gromacs.org/Documentation"
 mdrun_d  [...]
 </pre></div>
 </div>
-<p>This requests 10 hours of runtime, to run in the current directory(
-<code class="docutils literal notranslate"><span class="pre">-cwd</span></code> ) and using the
-current environment ( <code class="docutils literal notranslate"><span class="pre">-V</span></code> ),
+<p>This requests 10 hours of runtime, to run in the current directory(<code class="docutils literal notranslate"><span class="pre">-cwd</span></code>) and using the
+current environment (<code class="docutils literal notranslate"><span class="pre">-V</span></code>),
 using the double precision version of mdrun, and where
 <code class="docutils literal notranslate"><span class="pre">[...]</span></code> represents the
 arguments to mdrun. More memory per core can be requested, 2Gb for
 instance, by adding the line <code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">h_vmem=2G</span></code> to the script. For more options look at
-<a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/qsub-qrsh-usage/">qsub
-options</a>.
+<a class="reference internal" href="../usage/batchjob.html"><span class="doc std std-doc">Batch jobs</span></a>.
 The script can be submitted with:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ qsub example_serial.sh
 </pre></div>
@@ -382,9 +380,8 @@ The script can be submitted with:</p>
 </div>
 <div class="section" id="parallel-execution">
 <h2>Parallel execution<a class="headerlink" href="#parallel-execution" title="Permalink to this headline">¶</a></h2>
-<p>For the parallel version, an example script,
-<code class="docutils literal notranslate"><span class="pre">example\parallel.sh</span></code> will
-take the form:</p>
+<p>For the parallel version, an example script, <code class="docutils literal notranslate"><span class="pre">example_parallel.sh</span></code> will take
+the form:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
 #$ -cwd -V 
 # request 10 hours of runtime
@@ -394,17 +391,11 @@ take the form:</p>
 mpirun mdrun_mpi_d 
 </pre></div>
 </div>
-<p>This requests 10 hours of runtime, to run in the current directory(
-<code class="docutils literal notranslate"><span class="pre">-cwd</span></code> ), using the current
-environment ( <code class="docutils literal notranslate"><span class="pre">-V</span></code> ), running
-on 4 cores ( <code class="docutils literal notranslate"><span class="pre">-pe</span> <span class="pre">ib</span> <span class="pre">4</span></code> ),
-using the double precision parallel version of mdrun, and where
-<code class="docutils literal notranslate"><span class="pre">&lt;options&gt;</span></code> represents the
-arguments to <code class="docutils literal notranslate"><span class="pre">mdrun</span></code> .</p>
-<p>More memory per core can be requested, 2Gb for instance, by adding the
-line <code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">h_vmem=2G</span></code> to
-the script. For more options look at <a class="reference external" href="https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/qsub-qrsh-usage/">qsub
-options</a>.
+<p>This requests 10 hours of runtime, to run in the current directory(<code class="docutils literal notranslate"><span class="pre">-cwd</span></code>),
+using the current environment (<code class="docutils literal notranslate"><span class="pre">-V</span></code>), running on 4 cores (<code class="docutils literal notranslate"><span class="pre">-pe</span> <span class="pre">ib</span> <span class="pre">4</span></code>), using
+the double precision parallel version of mdrun, and where <code class="docutils literal notranslate"><span class="pre">&lt;options&gt;</span></code>
+represents the arguments to <code class="docutils literal notranslate"><span class="pre">mdrun</span></code>.</p>
+<p>More memory per core can be requested, 2Gb for instance, by adding the line <code class="docutils literal notranslate"><span class="pre">#$</span> <span class="pre">-l</span> <span class="pre">h_vmem=2G</span></code> to the script. For more options look at <a class="reference internal" href="../usage/batchjob.html"><span class="doc std std-doc">Batch jobs</span></a>.
 The script can be submitted with:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ qsub example_parallel.sh
 </pre></div>
