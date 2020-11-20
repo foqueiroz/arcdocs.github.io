@@ -6,7 +6,7 @@ Before you are able to access AMBER, you will be asked to read and agree
 to the licence terms.
 
 These can be viewed by following [this
-link](http://ambermd.org/amber14.license.html). You are recommended to
+link](https://ambermd.org/LicenseAmber20.pdf). You are recommended to
 print out and sign a copy for your own reference.
 
 To access Amber, load its module through:
