@@ -406,7 +406,8 @@ connect a client to it!</p>
 </pre></div>
 </div>
 <p>Please take a note of &lt;hostname&gt; and &lt;number&gt; – they will be needed
-to connect the graphical interface.</p>
+to connect the graphical interface. The hostname will include the specific
+login node which the server is running from.</p>
 <div class="section" id="on-a-cluster-login-node">
 <h3>On a cluster login node<a class="headerlink" href="#on-a-cluster-login-node" title="Permalink to this headline">¶</a></h3>
 <p>Recommended for very short or undemanding pieces of work. Login to the
@@ -465,9 +466,9 @@ Port field. Note that you will not be able to save the configuration
 unless it is given a name.</p>
 <p>Configure your workstation’s SSH client to forward local port 11111 to
 the hostname and port from the output of pvserver. On a Linux
-workstation and paraview running somewhere on arc2, this can be achieved
+workstation and paraview running somewhere on arc4, this can be achieved
 via the following command:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ssh -L11111:: arc2.leeds.ac.uk
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ssh -L 11111:localhost:11111 login1.arc4.leeds.ac.uk
 </pre></div>
 </div>
 </div>
