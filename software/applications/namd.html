@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -23,8 +24,11 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -264,6 +268,10 @@
             <a href="#example-submission-script" class="nav-link">Example submission script</a>
         </li>
     
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#example-gpu-submission-script" class="nav-link">Example GPU submission script</a>
+        </li>
+    
     </ul>
 </nav>
 
@@ -292,20 +300,41 @@
 <h2>Example submission script<a class="headerlink" href="#example-submission-script" title="Permalink to this headline">¶</a></h2>
 <p>An example script, <code class="docutils literal notranslate"><span class="pre">namdexample.sh</span></code> , looks like:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># Request 8 cores anywhere on the compute nodes</span>
 <span class="c1">#$ -pe ib 8</span>
+<span class="c1"># Run for at most 12 hours</span>
 <span class="c1">#$ -l h_rt=12:0:0</span>
+<span class="c1"># Reserve 1Gbyte of RAM</span>
 <span class="c1">#$ -l h_vmem=1G</span>
+<span class="c1"># Run in the current directory</span>
 <span class="c1">#$ -cwd</span>
 
-module add namd/2.9
+module add namd/2.13
 mpirun namd2 name_of_config_file.conf &gt; output_log_file.log
 </pre></div>
 </div>
-<p>This example requests 8 cores for 12 hours, with each core limited to 1Gb of RAM. It assumes that you are submitting the job from the directory containing your input files.</p>
+<p>This example requests 8 cores for 12 hours, with each core limited to 1Gb of RAM.  It assumes that you are submitting the job from the directory containing your input files.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Prior to NAMD 2.9, the <code class="docutils literal notranslate"><span class="pre">namd2</span></code> binary was called <code class="docutils literal notranslate"><span class="pre">namd2.MPI</span></code>.</p>
+<p>Prior to NAMD 2.9, the <code class="docutils literal notranslate"><span class="pre">namd2</span></code> MPI binary was called <code class="docutils literal notranslate"><span class="pre">namd2.MPI</span></code>.</p>
 </div>
+</div>
+<div class="section" id="example-gpu-submission-script">
+<h2>Example GPU submission script<a class="headerlink" href="#example-gpu-submission-script" title="Permalink to this headline">¶</a></h2>
+<p>You may want to run using GPUs where you are likely to see a considerable speedup.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># Run for at most 12 hours</span>
+<span class="c1">#$ -l h_rt=12:0:0</span>
+<span class="c1"># Request a GPU (in this case a v100)</span>
+<span class="c1">#$ -l coproc_v100=1</span>
+<span class="c1"># Run in the current directory</span>
+<span class="c1">#$ -cwd</span>
+
+module add namd/2.13gpu
+namd2 +idlepoll +p<span class="si">${</span><span class="nv">NSLOTS</span><span class="si">}</span> name_of_config_file.conf &gt; output_log_file.log
+</pre></div>
+</div>
+<p>This example requests 1 GPU, which comes with 1/4 of the resources available on the machine - in this case that means 10 cores and 48Gbytes of RAM.  It assumes that you are submitting the job from the directory containing your input files.</p>
 </div>
 </div>
 
