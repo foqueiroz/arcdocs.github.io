@@ -1,0 +1,658 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>OpenFoam &#8212; ARC Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/software/applications/openfoam.html" />
+    <link rel="shortcut icon" href="../../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Paraview" href="paraview.html" />
+    <link rel="prev" title="NAMD" href="namd.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/applications/openfoam.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="OpenFoam" />
+<meta property="og:description" content="OpenFoam  OpenFOAM is an open-source set of C++ based command tools which can be used to perform Computational Fluid Dynamics simulations, it is entirely based " />
+<meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">ARC Documentation</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../welcome.html">Welcome</a>
+  </li>
+  <li class="">
+    <a href="../../getting_started/start.html">Getting Started</a>
+  </li>
+  <li class="">
+    <a href="../../usage/start.html">Usage</a>
+  </li>
+  <li class="active">
+    <a href="../start.html">Software</a>
+  <ul class="nav sidenav_l2">
+    <li class="active">
+      <a href="start.html">Applications</a>
+      <ul class="nav sidenav_l3">
+      <li class="">
+        <a href="abaqus.html">Abaqus</a>
+      </li>
+      <li class="">
+        <a href="amber.html">AMBER</a>
+      </li>
+      <li class="">
+        <a href="ansys.html">Ansys</a>
+      </li>
+      <li class="">
+        <a href="comsol.html">Comsol</a>
+      </li>
+      <li class="">
+        <a href="dl_poly.html">DLpoly</a>
+      </li>
+      <li class="">
+        <a href="gaussian.html">Gaussian</a>
+      </li>
+      <li class="">
+        <a href="gromacs.html">Gromacs</a>
+      </li>
+      <li class="">
+        <a href="idl.html">IDL</a>
+      </li>
+      <li class="">
+        <a href="matlab.html">Matlab</a>
+      </li>
+      <li class="">
+        <a href="molpro.html">Molpro</a>
+      </li>
+      <li class="">
+        <a href="namd.html">NAMD</a>
+      </li>
+      <li class="active">
+        <a href="">OpenFoam</a>
+      </li>
+      <li class="">
+        <a href="paraview.html">Paraview</a>
+      </li>
+      <li class="">
+        <a href="R.html">R</a>
+      </li>
+      <li class="">
+        <a href="stata.html">Stata</a>
+      </li>
+      <li class="">
+        <a href="visit.html">Visit</a>
+      </li>
+      <li class="">
+        <a href="vmd.html">VMD (Visual Molecular Dynamics)</a>
+      </li>
+    </ul>
+    </li>
+    <li class="">
+      <a href="../compilers/start.html">Compilers</a>
+    </li>
+    <li class="">
+      <a href="../infrastructure/start.html">Infrastructure</a>
+    </li>
+    <li class="">
+      <a href="../libraries/start.html">Libraries</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../../systems/start.html">Systems</a>
+  </li>
+  <li class="">
+    <a href="https://arcleeds.github.io/training/">Training<i class="fas fa-external-link-alt"></i></a>
+  </li>
+  <li class="">
+    <a href="../../contact/start.html">Contact Us</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit the <a href="https://arcleeds.github.io/">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/software/applications/openfoam.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fsoftware/applications/openfoam.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/applications/openfoam.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#overview-of-case-setup" class="nav-link">Overview of case setup</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#building-the-computational-domain" class="nav-link">Building the computational domain</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#setting-boundary-conditions-for-export-and-changing-filetype" class="nav-link">Setting boundary conditions for export and changing filetype</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#control-dictionary-settings" class="nav-link">Control dictionary settings</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#ras-les-properties-and-transportdict" class="nav-link">RAS/LES properties and transportDict</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#rasproperties" class="nav-link">RASProperties</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#lesproperties" class="nav-link">LESProperties</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#fvschemes-and-fvsolutions" class="nav-link">fvSchemes and fvSolutions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#initial-fields-and-their-boundary-conditions" class="nav-link">Initial Fields and their boundary conditions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#running-a-simulation-and-viewing-the-results" class="nav-link">Running a simulation and viewing the results</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#general-advice-and-starting-tips" class="nav-link">General advice and starting tips</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#running-openfoam" class="nav-link">Running OpenFOAM</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#setting-up-the-environment" class="nav-link">Setting up the environment</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#launching-on-the-front-end" class="nav-link">Launching on the front end</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#using-sun-grid-engine" class="nav-link">Using Sun Grid Engine</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#running-through-an-interactive-shell" class="nav-link">Running through an interactive shell</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#batch-execution" class="nav-link">Batch Execution</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#parallel-execution" class="nav-link">Parallel Execution</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/applications/openfoam.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="openfoam">
+<h1>OpenFoam<a class="headerlink" href="#openfoam" title="Permalink to this headline">¶</a></h1>
+<p>OpenFOAM is an open-source set of C++ based command tools which can be used to perform Computational Fluid Dynamics simulations, it is entirely based inside the terminal and has no direct user interface. Results from the simulations can be viewed by running the command <code class="docutils literal notranslate"><span class="pre">paraFoam</span></code> to launch an external viewing application. This wiki will run through how to set up a case for running OpenFoam, as well as listing some of the basic tips on performing a simulation without error, primarily using the software available inside Mechanical Engineering.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For users of openfoam/v1906 you will need to execute the line <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">$FOAM_SRC_FILE</span></code> before getting access to OpenFoam command line executeables.</p>
+</div>
+<div class="section" id="overview-of-case-setup">
+<h2>Overview of case setup<a class="headerlink" href="#overview-of-case-setup" title="Permalink to this headline">¶</a></h2>
+<p>An OpenFoam case will consist of 3 separate directories:</p>
+<ol class="simple">
+<li><p>The ‘0’ time folder, this is where the files which contain the boundary and initial conditions for each of the variables being calculated are stored.</p></li>
+<li><p>The ‘constant’ folder, this contains the transport properties ditionary, the settings for the particular RANS/LES model being used and the ‘polymesh’ folder which stores the blockMesh file used in the mesh creation stage.</p></li>
+<li><p>The ‘system’ folder, which contains the control dictionary which handles the time step and solver settings and the files used to control the solver schemes and tolerances of the variables.</p></li>
+</ol>
+<p>Before setting up any of the fields or solver settings, it is important to understand which type of solver your particular case will require. OpenFoam has several different types of solvers, a complete list of which can be found inside the user guide at: http://www.openfoam.com/documentation/</p>
+<p>Useful information on how to install the required modules and the submission of scripts to the queuing system can be found at the bottom of this page.</p>
+</div>
+<div class="section" id="building-the-computational-domain">
+<h2>Building the computational domain<a class="headerlink" href="#building-the-computational-domain" title="Permalink to this headline">¶</a></h2>
+<p>Once you have decided which solver will be best for your particular case, the first thing to do is to create the computational domain and mesh it. There are two ways to go about this, the first is to use OpenFoams own application, blockmesh and the second is to import a file meshed using an external piece of software which can then be converted for use with OpenFoam.</p>
+<p><strong>BlockMesh:</strong> In my personal experience with blockMesh, it is both time-consuming and difficult to understand when starting out with this software. The lack of any kind of visual interface means that even the simplest errors are difficult to spot without viewing your mesh in an application such as paraFoam, the way in which the blocks of the mesh are defined can be found in the userguide and are not too taxing for simple and small geometries, however when modelling more complex shapes with small details requires far more effort.</p>
+<p>The blockMesh file is located in the ‘polymesh’ directory of the ‘constant’ folder in the openFoam case, to build the mesh, simple type the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">blockMesh</span>
+</pre></div>
+</div>
+<p>into the terminal at the top of your case directory e.g. where you can see the 0, constant and system folders. This will automatically create your mesh which can then be viewed inside paraFoam. To check the quality of the mesh, type in the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">checkMesh</span>
+</pre></div>
+</div>
+<p>this will give you an overview of the mesh including cell numbers, types and any errors which may have occured during the building process or which may affect the simulation.</p>
+<p><strong>Importing a mesh:</strong> There are many other mesh generation applications or priograms available to choose from, some are opensource such as gmesh whilst others are part of a consumer software package such as Fluent’s ICEM. OpenFoam has a wide range of tools from which you can import meshes from many of the more well-known cfd packages available on the market. In this case, I will be following an example which can be performed using software available in Mechanical enginnering, although the process is much the same for any combination of programs.</p>
+<p>It is important to know the exact dimensions of the geometry you wish to use for your case including where the main features lie such as inlets, outlets and which faces are solid walls. Once you know this, open a new drawing file inside a conveneient CAD program, in this case it will be solidWorks. Begin by sketching the base of your computational domain, this flat plane sketch will be extruded into a 3-dimensional shape later on. If you have inlets which do not run the full width of the domain e.g. only half of a face, or a particular shape e.g. circle, these will need to be defined separately to the outer layer of the domain. Note that for features such as circular inlets on a round face, you cannot use a hole but rather define it as a cylinder and build the rest of the profile around it until the desired shape is achieved. In order for a boundary condition to be assigned later on, each feature must be a face of the geometry.</p>
+<p>Once the flat sketch has been completed, you can extrude each section to the required height, however you must <strong>not</strong> select the option to merge the extrudes together otherwise this will just create a single shape and any features such as smaller inlets or circiles will disappear entirely. From this point any more complex features such as rounding or tapering, etc can be performed until you have satisfactory representation of your geometry and all its impoertant features. Save this file as a solidworks part and close the application. Check all measurements are correct before saving the part as you will <strong>not</strong> be able to come back and alter them from this point on without some difficulty.</p>
+<p>Next open ICEM which can be found in the ANSYS-13.0 directory, select file on the top taskbar and find the ‘workbench readers’ option for importing a file; simply attempting to open/import the file by normal means will return an empty directory. Load the model through ‘workbench readers’ and selecting the file type to look for as ‘solidworks part’. This will then appear on the main screen inside ICEM. Tutorials on how to use ICEM can be found under the ‘help’ taskbar and will guide you through how to effectively mesh your model.</p>
+<p>The guidelines to ensure that your model is ready for importing to OpenFoam are as follows:</p>
+<ol class="simple">
+<li><p>Does every face have the correct name assigned to it e.g. inlet, outlet, walls, etc?</p></li>
+<li><p>Has the mesh been blocked correctly?</p></li>
+<li><p>Has sufficient density been selected for your simulation?</p></li>
+<li><p>Have all pre-mesh checks been passed including quality histograms, etc?</p></li>
+</ol>
+<p>If your geometry is meshed to the correct standard then it can be exported for use in OpenFoam, there is an optional step to set the boundary conditions at this stage as you can perform this task once the mesh is in OpenFoam format. but it may be easier to set up at this stage.</p>
+</div>
+<div class="section" id="setting-boundary-conditions-for-export-and-changing-filetype">
+<h2>Setting boundary conditions for export and changing filetype<a class="headerlink" href="#setting-boundary-conditions-for-export-and-changing-filetype" title="Permalink to this headline">¶</a></h2>
+<p>From the taskbar in ICEM, select the ‘boundary conditions’ option under x and assign each feature the appropriate condition e.g. pressureOutlet, velocityInlet, solidWall, etc, these conditions will be passed through to openFoam along with the model geometry and mesh, this means that the initial conditions files in the ‘0’ directory will be set up ready for use and should not require any alteration after this point.</p>
+<p>To save your model ready for export, it must be in the Fluent_V6 format, solver settings and the like can remain at default and there is no need to check any additional options in the save boxes. This single model file can now be transferred into your OpenFoam case directory. To convert the file for use, type the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fluent3DMeshToFoam</span>
+</pre></div>
+</div>
+<p>It is a good idea at this point to run checkMesh to ensure that the process has gone smoothly and there have been no errors which may affect the simulation. This mesh can now be viewed in paraFoam.</p>
+</div>
+<div class="section" id="control-dictionary-settings">
+<h2>Control dictionary settings<a class="headerlink" href="#control-dictionary-settings" title="Permalink to this headline">¶</a></h2>
+<p>When the geometry has been set up, either by importing or manual generation, the settings for the case need attention. What solver you are using for the case must be entered in the controlDict file located in the “system” folder. This will typically be the first line underneath the header, a practical example of this can be found in the tutorials section of the OpenFoam installation (tutorials can be viewed on your own local installation). Most of the other settings in the controlDict file can remain untouched however should you want to alter the timestep and how often the results of t your simulation are written to disk, the following options will be of interest:</p>
+<p><strong>deltaT</strong> – this controls the timestep and is how much time elapses in seconds between each set of calculations performed. A lower timestep results in far better accuracy but takes longer to run, a reasonable value to begin with is 1e-04 or 1e-05. As a rule of thumb, an estimated value can be (1/Reynolds Number of the flow).</p>
+<p><strong>writeControl</strong> – there are two settings for this option, either: runTime or timeStep. runTime means that the writeInterval is specified in seconds and the given value will be how long, in seconds, it will be between each set of results written to disk. e.g. if deltaT is set to 1e-05 and writeInterval is set to 1e-04, the results will be written to disk every 10 steps. timeStep will mean that an integer should be specified as to how many steps it will be between each recording e.g. a value of 3 will write the results every 3rd timestep.</p>
+<p><strong>writeInterval</strong> – the steps/time between each set of results being written to disk.</p>
+<p>There is one final option which may be relevant when moving into compiling your own or modifying solvers and models, in order to add your files to the directory so that they can be recognised by OpenFOAM, the following line must be added into the controlDict below the runTimeModifiable line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">libs</span> <span class="p">(</span><span class="s2">&quot;libs.so&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where “relevant extension” leads to the correct library for the application e.g. libsuserRAS.so, for your own compiled RAS turbulence models.</p>
+</div>
+<div class="section" id="ras-les-properties-and-transportdict">
+<h2>RAS/LES properties and transportDict<a class="headerlink" href="#ras-les-properties-and-transportdict" title="Permalink to this headline">¶</a></h2>
+<p>Depending upon whether you are using a RAS or LES based models, there are several files which must be present in the “constant” folder. The first of the these is general to either type of case and is called “transportDict”. This contains the properties for the type of transport model relevant to the solver and the required properties of the fluid under examination. e.g. a simple example for a newtonian model requires the kinematic viscosity property in order to run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">transportModel</span> <span class="n">Newtonian</span><span class="p">;</span>
+
+<span class="n">nu</span>                    <span class="n">nu</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">]</span> <span class="mf">15.345e-6</span>
+</pre></div>
+</div>
+<p>The type of model must be specified along with the name of the fluid property, its correct dimensionSet and a value. The dimensionSet allows OpenFOAm to determine the units of the quantity in question.</p>
+<p>The second file will either be: RASProperties or LESProperties depending upon the type of simulation required, in essence they accomplish the same job which is to identify which model should be used with the solver along with any required coefficients not present elsewhere in the code. A typical file structure will be as follows:</p>
+<div class="section" id="rasproperties">
+<h3>RASProperties<a class="headerlink" href="#rasproperties" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RASModel</span>          <span class="n">kOmegaSST</span>
+<span class="n">printcoeffs</span>          <span class="n">off</span><span class="p">;</span>
+<span class="n">turbulence</span>          <span class="n">on</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lesproperties">
+<h3>LESProperties<a class="headerlink" href="#lesproperties" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LESModel</span>            <span class="n">Smagornisky</span><span class="p">;</span>
+<span class="n">printCoeffs</span>           <span class="n">off</span><span class="p">;</span>
+<span class="n">delta</span>                    <span class="n">vanDriest</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The option to turn off turbulence is only present in the RAS Model as this will run in a laminar state disregarding all turbulent calculations within the solver. The deltas option in LES allows the user to define which settings to use with the solver, other options include: prandtl, CubeRootVol and smoothCoeffs depending upon what is necessary for the LES simulation. Note that for other types of solvers, files representing the details of which chemical models/combustion properties may also be required for the case to be set up correctly; these are just two examples of the more common problems which may be encountered.</p>
+</div>
+</div>
+<div class="section" id="fvschemes-and-fvsolutions">
+<h2>fvSchemes and fvSolutions<a class="headerlink" href="#fvschemes-and-fvsolutions" title="Permalink to this headline">¶</a></h2>
+<p>Before the setting up of the boundary and initial conditions for each of the fields to be solved, they must be declared and assigned a solver scheme along with any required model settings. The <strong>fvSchemes</strong> file contains the schemes which will be used to solve the model equations and each term present in the transport equations must be assigned a scheme. Depending upon the choice, they can improve stability or the solution so it is important to choose an appropriate scheme for the term being solved. If the name of the discretisation scheme should be entered incorrectly than error will be encountered when trying to run the simulation along with a list of the available schemes.</p>
+<p>The <strong>fvSolution</strong> file contains the solver scheme, preconditioner and tolerance for each field, alteration of these values can result in either better or worse convergence for the solution along with its accuracy, the tighter the tolerance, the more accurate the value but may take longer to solve or even fail to converge properly. The other set of commands present in the file deal with the controls relevant to the solver such as the relaxation factors (SIMPLE) or the number of correction steps (PISO), These controls must be set correctly for the solver to run, in many cases, the default values can be set to those found in the tutorials section for the relevant solver. A further rule of thumb is that the relaxation factors for pressure and velocity (p/u) in SIMPLE cases should total to a value of 1, frequently this is (0.3/0.7).</p>
+</div>
+<div class="section" id="initial-fields-and-their-boundary-conditions">
+<h2>Initial Fields and their boundary conditions<a class="headerlink" href="#initial-fields-and-their-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<p>Once the mesh has been successfully created and the settings for the solver established along with the run-time, the initial values for all the fields being solved need to be assigned to the appropriate location on the model. All values for the initial time step will be located in the time folder marked:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>A typical example of the kind of information required is presented below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dimensions</span>     <span class="p">[</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="p">];</span>
+</pre></div>
+</div>
+<p>This is the dimensionSet where the units of the value are input. The bar containing the zeroes represents each of the following criteria in turn:</p>
+<p>[ Mass, Length, Time, Temperature, Quantity, Current, Luminous Intensity ] all in their respective SI units, for example, if you wanted to set the units of velocity as metres per second (m/s) the bar would be set as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dimensions</span>  <span class="p">[</span> <span class="mi">0</span> <span class="mi">1</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>Any unit which is not required is left as a 0. A more complete list of dimensions and their respective units can be found inside the OpenFoam user guide. It is worth noting that these exist to ensure that the values are represented in the correct magnitude/units and will cause an error if there is a mis-match between units in calculations, although it does not affect the solution numerically, it identifies that there is an inconsistensy which will have an effect. This dimension checking can be turned off in the control files located in the OpenFoam installation directory inside its control Dictionary, for a more detailed description and advice with regards to this matter, see this entry on the <a class="reference external" href="http://openfoamwiki.net/index.php/Main_FAQ#How_does_one_turn_off_the_dimensional_checking.3F">OpenFoam wiki</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">internalField</span> <span class="n">uniform</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>This field assigns a value to all the cells not included in any of the boundary patches (discussed next), the keyword “uniform” means all the cells will share the identical scalar or vector value placed after it. Such examples will include:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">internalField</span> <span class="n">uniform</span> <span class="p">(</span><span class="mi">10</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Typcially used when defining a velocity, this value will assign a magnitude of 10 to the x-direction and values of 0 to the y and z directions. These values only come into play during the ‘0’ timestep, after which new values for all the internal cells and the boundary patches will be calculated. However it is still important to choose a sensible value for each variables, frequently a value of zero can be assigned (values such as kinetic energy in a stationary starting environment) as a starting point which the simulation will quickly alter in further timesteps should it be required.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">boundaryField</span>
+<span class="p">{</span>
+<span class="n">Walls</span>
+<span class="p">{</span>
+<span class="nb">type</span>    <span class="n">fixedValue</span><span class="p">;</span>
+<span class="n">value</span>   <span class="n">uniform</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Each patch within the model must be assigned an appropriate boundary condition and value, typical boundary patches will include inlet(s), outlet(s) and any solid walls on the outside of the domain. The common boundary conditions include:</p>
+<p><strong>fixedValue uniform (vector/scalar)</strong> = a single value will be assigned to all cells included within this patch but will not change with time, unlike the internalField cells. Example for velocity at the outer walls of a domain is shown above.</p>
+<p><strong>zeroGradient</strong> = no set value will be assigned to a cell and the value can change with time, typically present at an outlet or domain walls.</p>
+<p><strong>fixedValue 0</strong> = a value set at 0 which can be used to represent an impermeable surface through which no flow can occur at or through. Typically used as a setup condition for velocity at domain walls.</p>
+<p>More complex boundary conditions including functions which vary with time (e.g. pulse inlet) and gradient scales can be implemeted either through those functions desribed in the manual/tutorial cases or through the extra utility: swak4Foam, references to which can be found <a class="reference external" href="http://openfoamwiki.net/index.php/Contrib/swak4Foam">here</a></p>
+<p>It is important to note that each field which is being solved e.g. pressure, velocity, will require its own file in the ‘0’ time directory before the simulation will run correctly. Attempting to run this with an incomplete setup will provoke an error message, frequently telling the user what is missing from the directory in question.</p>
+</div>
+<div class="section" id="running-a-simulation-and-viewing-the-results">
+<h2>Running a simulation and viewing the results<a class="headerlink" href="#running-a-simulation-and-viewing-the-results" title="Permalink to this headline">¶</a></h2>
+<p>In order to begin a simulation, simply move to the directory in which all 3 directories relevant to the case are present and type the name of the solver you wish to run in the terminal e.g.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ simpleFoam
+</pre></div>
+</div>
+<p>and the case should begin to run, at the time specified in the controlDict, a set of results will be written to a folder with the title of that particular timestep. This will contain multiple files, each with the values of a variable for every cell in the model. To view this data, type in the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ paraFoam
+</pre></div>
+</div>
+<p>This will launch the viewing application recommended for use with OpenFoam, paraView. Pressing the green ‘play’ button on the taskbar will run through each set of results mapped onto the mesh, various data extraction tools can then be employed for analysis.</p>
+</div>
+<div class="section" id="general-advice-and-starting-tips">
+<h2>General advice and starting tips<a class="headerlink" href="#general-advice-and-starting-tips" title="Permalink to this headline">¶</a></h2>
+<p>To begin with, run the tutorial cases (incompressible flow) for a few time steps and then examine the results. Attempt to alter the settings in the initial conditions for velocity/pressure to get a feel what alterations provoke which errors or how they affect the flow. Do not try and code anything from scratch for either simple model setups or your own solvers, try and find a tutorial case similar to what you require, copy and paste the 3 directories over to your own folder and alter step by step.</p>
+<p>When coding your own solvers/models compile using wmake/wmake libso as necessary and make sure to add the appropriate library to controlDict file otherwise your files will not be recognised. The easiest to use incompressible flow solvers, depending upon requirements are: icoFoam, pisoFoam and SimpleFoam.</p>
+<p>Some compressible solvers may not be entirely complete/have a number of errors and may require modification before correctly working, check the <a class="reference external" href="http://www.cfd-online.com/Forums/openfoam/">CFD-online forums</a> for references/advice in
+these matters.</p>
+<p>Velocity should be set at uniform (0 0 0) for solid domain outer walls.</p>
+<p>Values at outlets should be set at zeroGradient with the exception of pressure, a special condition Inlet/Outlet may be required to eliminate reverse flow in some cases.</p>
+<p>Pressure should be zeroGradient except outlet when pressure gradient throughout domain is zero. Values for kinetic energy and epsilon should be allocated a very small value at walls (e.g. 1e-24) to improve stability.</p>
+<p>A typical value of a timestep should be around 1e-04/05 seconds.</p>
+<p>A finer mesh is a better mesh, coarse meshes can produce poor results.</p>
+<p>Ensure that when calculating values for boundary conditions that all units you use are in SI form and are declared as such in OpenFOAM. If the units do not match the scale of your domain (e.g. m/s vs a domain in mm) the results will be inaccurate.</p>
+<p>An initial estimate for the length scale/turbulence intensity may be required before certain boundary conditions can be correctly assigned a value.</p>
+</div>
+<div class="section" id="running-openfoam">
+<h2>Running OpenFOAM<a class="headerlink" href="#running-openfoam" title="Permalink to this headline">¶</a></h2>
+<p>OpenFOAM is a free, open source CFD software package; this does not require a license to use.</p>
+<div class="section" id="setting-up-the-environment">
+<h3>Setting up the environment<a class="headerlink" href="#setting-up-the-environment" title="Permalink to this headline">¶</a></h3>
+<p>The openfoam installed on our systems is compiled with a gnu compiler rather than the intel one which is the default in your environment. Before you can load the openfoam module you will need to switch compilers.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module sw intel gnu/4.8.1
+$ module load openfoam
+</pre></div>
+</div>
+<p>The environment is not yet fully loaded. To check what you need to do you can run the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module <span class="nb">help</span> openfoam
+</pre></div>
+</div>
+<p>Next run the following command to access the openFoam command line variables:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> <span class="nv">$FOAM_SRC_FILE</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="launching-on-the-front-end">
+<h3>Launching on the front end<a class="headerlink" href="#launching-on-the-front-end" title="Permalink to this headline">¶</a></h3>
+<p>Visualisation of OpenFOAM results can be done using paraFoam at the command prompt. You need to have an openfoam case file to do this fully:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ paraFoam
+</pre></div>
+</div>
+<p>If you’re visualising large data sets this should not be done on thelogin nodes, since this can use a considerable amount of RAM and CPU. Instead, this should be done using an interactive job with SGE.</p>
+</div>
+<div class="section" id="using-sun-grid-engine">
+<h3>Using Sun Grid Engine<a class="headerlink" href="#using-sun-grid-engine" title="Permalink to this headline">¶</a></h3>
+<p>Sun Grid engine allows both interactive and batch jobs to be submitted during which users will have exclusive access to the resources they request.</p>
+<div class="section" id="running-through-an-interactive-shell">
+<h4>Running through an interactive shell<a class="headerlink" href="#running-through-an-interactive-shell" title="Permalink to this headline">¶</a></h4>
+<p>The following will launch paraFoam interactively, displaying the full GUI:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qrsh -cwd -V -l <span class="nv">h_rt</span><span class="o">=</span> paraFoam
+</pre></div>
+</div>
+<p>In the above command, <code class="docutils literal notranslate"><span class="pre">&lt;hh:mm:ss&gt;</span></code> is the length of real-time the shell will exist for, <code class="docutils literal notranslate"><span class="pre">-cwd</span></code> indicated the current working directory and <code class="docutils literal notranslate"><span class="pre">-V</span></code> exports the the current environment.CHECK-code e.g. to run paraFoam for 1 hour:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qrsh -cwd -V -l <span class="nv">h_rt</span><span class="o">=</span><span class="m">1</span>:00:00 paraFoam
+</pre></div>
+</div>
+<p>This will run paraFoam within the terminal from which it was launched.</p>
+</div>
+<div class="section" id="batch-execution">
+<h4>Batch Execution<a class="headerlink" href="#batch-execution" title="Permalink to this headline">¶</a></h4>
+<p>To run OpenFOAM in batch-mode you first need to setup your case.</p>
+<p>A script must then be created that will request resources from the queuing system and launch the desired OpenFOAM executables; script <code class="docutils literal notranslate"><span class="pre">runfoam.sh</span></code> :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># Run in current working directory</span>
+<span class="c1">#$ -cwd</span>
+<span class="c1"># Set a 6 hour limit</span>
+<span class="c1">#$ -l h_rt=6:00:00</span>
+<span class="c1"># Load OpenFOAM module</span>
+module add <span class="nb">test</span> openfoam
+<span class="c1"># Run actual OpenFoam commands</span>
+blockMesh
+icoFoam
+</pre></div>
+</div>
+<p>This can be submitted to the queuing system using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qsub runfoam.sh
+</pre></div>
+</div>
+</div>
+<div class="section" id="parallel-execution">
+<h4>Parallel Execution<a class="headerlink" href="#parallel-execution" title="Permalink to this headline">¶</a></h4>
+<p>If you’ve configured your OpenFOAM job to be solved in parallel, you need to submit it differently. It uses OpenMPI under the hood, so this is an example of a suitable submission script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -l h_rt=00:10:00</span>
+<span class="c1">#$ -l h_vmem=2G</span>
+<span class="c1">#$ -l np=16</span>
+<span class="c1">#$ -cwd -V</span>
+<span class="nb">export</span> <span class="nv">MPI_BUFFER_SIZE</span><span class="o">=</span><span class="m">8192</span>
+module purge
+module add bit/64 gnu openmpi <span class="nb">test</span> openfoam
+mpirun -np <span class="nv">$NSLOTS</span> interFoam -parallel
+</pre></div>
+</div>
+<p>This will request 16 cores and exclusive access to the nodes. This results in 1 node being allocated and 2GB memory per core.</p>
+<p>If more memory per core is required, then reduce the number of processes per node to split the available memory netween those active processes. For example,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -l np=16,ppn=4</span>
+</pre></div>
+</div>
+<p>Will give 16 cores as before, but this time with 4 processes per core and so 4 nodes overall. The available memory per node (32GB) is therefore allocated across 4 cores (ie. ppn=4) and so 8GB per node will be allocated.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./software/applications"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="namd.html" title="previous page">NAMD</a>
+    <a class='right-next' id="next-link" href="paraview.html" title="next page">Paraview</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By University of Leeds Research Computing Team<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

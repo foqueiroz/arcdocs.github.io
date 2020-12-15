@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stata &#8212; ARC Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/software/applications/stata.html" />
+    <link rel="shortcut icon" href="../../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Visit" href="visit.html" />
+    <link rel="prev" title="R" href="R.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/applications/stata.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Stata" />
+<meta property="og:description" content="Stata  Access to Stata  The currently installed versions of Stata are run on multicore systems. The version installed will support Stata running on up to eight " />
+<meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">ARC Documentation</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../welcome.html">Welcome</a>
+  </li>
+  <li class="">
+    <a href="../../getting_started/start.html">Getting Started</a>
+  </li>
+  <li class="">
+    <a href="../../usage/start.html">Usage</a>
+  </li>
+  <li class="active">
+    <a href="../start.html">Software</a>
+  <ul class="nav sidenav_l2">
+    <li class="active">
+      <a href="start.html">Applications</a>
+      <ul class="nav sidenav_l3">
+      <li class="">
+        <a href="abaqus.html">Abaqus</a>
+      </li>
+      <li class="">
+        <a href="amber.html">AMBER</a>
+      </li>
+      <li class="">
+        <a href="ansys.html">Ansys</a>
+      </li>
+      <li class="">
+        <a href="comsol.html">Comsol</a>
+      </li>
+      <li class="">
+        <a href="dl_poly.html">DLpoly</a>
+      </li>
+      <li class="">
+        <a href="gaussian.html">Gaussian</a>
+      </li>
+      <li class="">
+        <a href="gromacs.html">Gromacs</a>
+      </li>
+      <li class="">
+        <a href="idl.html">IDL</a>
+      </li>
+      <li class="">
+        <a href="matlab.html">Matlab</a>
+      </li>
+      <li class="">
+        <a href="molpro.html">Molpro</a>
+      </li>
+      <li class="">
+        <a href="namd.html">NAMD</a>
+      </li>
+      <li class="">
+        <a href="openfoam.html">OpenFoam</a>
+      </li>
+      <li class="">
+        <a href="paraview.html">Paraview</a>
+      </li>
+      <li class="">
+        <a href="R.html">R</a>
+      </li>
+      <li class="active">
+        <a href="">Stata</a>
+      </li>
+      <li class="">
+        <a href="visit.html">Visit</a>
+      </li>
+      <li class="">
+        <a href="vmd.html">VMD (Visual Molecular Dynamics)</a>
+      </li>
+    </ul>
+    </li>
+    <li class="">
+      <a href="../compilers/start.html">Compilers</a>
+    </li>
+    <li class="">
+      <a href="../infrastructure/start.html">Infrastructure</a>
+    </li>
+    <li class="">
+      <a href="../libraries/start.html">Libraries</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../../systems/start.html">Systems</a>
+  </li>
+  <li class="">
+    <a href="https://arcleeds.github.io/training/">Training<i class="fas fa-external-link-alt"></i></a>
+  </li>
+  <li class="">
+    <a href="../../contact/start.html">Contact Us</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit the <a href="https://arcleeds.github.io/">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/software/applications/stata.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fsoftware/applications/stata.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/applications/stata.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#access-to-stata" class="nav-link">Access to Stata</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#setting-the-module-environment" class="nav-link">Setting the module environment</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#interactive-stata-sessions" class="nav-link">Interactive Stata sessions</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#interactive-sessions-on-the-login-nodes-for-short-tests-only" class="nav-link">Interactive sessions on the login nodes – for short tests only</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#interactive-sessions-through-interactive-shells" class="nav-link">Interactive sessions through interactive shells</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#batch-execution" class="nav-link">Batch execution</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/applications/stata.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="stata">
+<h1>Stata<a class="headerlink" href="#stata" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="access-to-stata">
+<h2>Access to Stata<a class="headerlink" href="#access-to-stata" title="Permalink to this headline">¶</a></h2>
+<p>The currently installed versions of Stata are run on multicore systems.
+The version installed will support Stata running on up to eight cores
+per job.</p>
+<p>To uses Stata, you will need to have either your own licence or to be a
+member of a research group who already have a licence. The University
+does not have a site licence for this product.</p>
+<p>Stata should be primarily run through batch queuing system, however
+short interactive runs can done on the login nodes. You can run Stata
+interactively though the batch queue system.</p>
+</div>
+<div class="section" id="setting-the-module-environment">
+<h2>Setting the module environment<a class="headerlink" href="#setting-the-module-environment" title="Permalink to this headline">¶</a></h2>
+<p>Before you can run the software you will need to load the Stata module.
+To load the module from the command line, do:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>module add stata
+</pre></div>
+</div>
+<p>To check that module is loaded you can use:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>module list
+</pre></div>
+</div>
+</div>
+<div class="section" id="interactive-stata-sessions">
+<h2>Interactive Stata sessions<a class="headerlink" href="#interactive-stata-sessions" title="Permalink to this headline">¶</a></h2>
+<p>It is anticipated that the main benefit of running Stata on the facility
+will be from running non-interactive/unattended batch sessions. However,
+it is also possible to run in interactive more for short test for
+visualisation of data for instance.</p>
+<div class="section" id="interactive-sessions-on-the-login-nodes-for-short-tests-only">
+<h3>Interactive sessions on the login nodes – for short tests only<a class="headerlink" href="#interactive-sessions-on-the-login-nodes-for-short-tests-only" title="Permalink to this headline">¶</a></h3>
+<p>Stata can be launched on the login nodes for short tests, ideally less
+than 5 minutes computation, by using the appropriate executable name at
+the command prompt. For the Stata command line interface use:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>stata-mp
+</pre></div>
+</div>
+<p>and for the full graphical interface (providing you have connected using
+<code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-X</span></code> or <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-Y</span></code> ) using:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>xstata-mp
+</pre></div>
+</div>
+</div>
+<div class="section" id="interactive-sessions-through-interactive-shells">
+<h3>Interactive sessions through interactive shells<a class="headerlink" href="#interactive-sessions-through-interactive-shells" title="Permalink to this headline">¶</a></h3>
+<p>For longer interactive sessions, it will be necessary to launch Stata
+through batch queues, using the command <code class="docutils literal notranslate"><span class="pre">qrsh</span></code> . The length of time required is specified
+as an option to the queueing system and specified in the format
+<code class="docutils literal notranslate"><span class="pre">&lt;hh:mm:ss&gt;</span></code> . For instance
+to request an interactive session for two hours, the full command takes
+the form:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>qrsh -cwd -V -pe smp 8 -l h_rt=02:00:00,h_vmem=1536M xstata-mp
+</pre></div>
+</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-cwd</span> <span class="pre">-V</span></code> : run from
+current directory and with current environment, i.e. loaded module.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-pe</span> <span class="pre">smp</span> <span class="pre">8</span></code> : request 8
+cores in shared memory environment. The requests appropriate number
+of computational cores to take advantage of the multicore nature of
+Stata.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">00:02:00</span></code> : is the
+length of time needed for the job, 2 hours in this case. Job will be
+killed when this time has elapsed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h_vmem=1536M</span></code> : Amount
+of memory requested per core. The value given here will make use of
+all available memory on the majority of the nodes.</p></li>
+</ul>
+<p>For more details about these and other available options please look at
+the page on <a class="reference internal" href="../../usage/interactive.html"><span class="doc std std-doc">Interactive jobs</span></a>.</p>
+</div>
+</div>
+<div class="section" id="batch-execution">
+<h2>Batch execution<a class="headerlink" href="#batch-execution" title="Permalink to this headline">¶</a></h2>
+<p>In oder to submit a batch job to the cluster it is necessary to use a
+submission script. An example submission script for ARC2,
+<code class="docutils literal notranslate"><span class="pre">stata_sub_example.sh</span></code> ,
+takes the form:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
+# Batch script to run a Stata/MP job
+
+# Run from current directory and environment.
+#$ -cwd -V
+# Request wallclock time. Format hh:mm:ss, for e.g 6 hours
+# maximum allowed is 48 hours.
+#$ -l h_rt=06:00:00
+
+# To get an email when the job begins and ends- fill in your 
+#$ -m be
+#$ -M @leeds.ac.uk
+
+# Request 8 cores from the machine. 
+#Current version of Stata can run on a maximum of 8 Cores
+#$ -l np=8
+
+# Load the Stata module
+module add stata
+
+# Start the Stata job, with your program in
+# a file your_do_file.do
+stata-mp -b do your_do_script.do
+</pre></div>
+</div>
+<p>The job can then be submitted to the queuing system using the command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>qsub stata_sub_example.sh
+</pre></div>
+</div>
+<p>For more details on options used above and some of the other options
+available please look at the page on <a class="reference internal" href="../../usage/batchjob.html"><span class="doc std std-doc">Batch jobs</span></a>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./software/applications"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="R.html" title="previous page">R</a>
+    <a class='right-next' id="next-link" href="visit.html" title="next page">Visit</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By University of Leeds Research Computing Team<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

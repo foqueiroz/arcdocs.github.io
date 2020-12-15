@@ -2,22 +2,20 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Software &#8212; ARC Documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -38,7 +36,7 @@
     <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Abaqus" href="abaqus.html" />
+    <link rel="next" title="Applications" href="applications/start.html" />
     <link rel="prev" title="ARC Acknowledgement" href="../usage/acknowledgement.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,7 +47,7 @@
 <meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/start.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Software" />
-<meta property="og:description" content="Software  A large number of applications are available through the module command and can be loaded with:  module add   By default this will load the latest (hi" />
+<meta property="og:description" content="Software  We have a large amount of software installed on both ARC3 and ARC4. These are available through the module system which allows users to load the speci" />
 <meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -96,55 +94,16 @@
     <a href="">Software</a>
   <ul class="nav sidenav_l2">
     <li class="">
-      <a href="abaqus.html">Abaqus</a>
+      <a href="applications/start.html">Applications</a>
     </li>
     <li class="">
-      <a href="amber.html">AMBER</a>
+      <a href="compilers/start.html">Compilers</a>
     </li>
     <li class="">
-      <a href="ansys.html">Ansys</a>
+      <a href="infrastructure/start.html">Infrastructure</a>
     </li>
     <li class="">
-      <a href="comsol.html">Comsol</a>
-    </li>
-    <li class="">
-      <a href="dl_poly.html">DLpoly</a>
-    </li>
-    <li class="">
-      <a href="gaussian.html">Gaussian</a>
-    </li>
-    <li class="">
-      <a href="gromacs.html">Gromacs</a>
-    </li>
-    <li class="">
-      <a href="idl.html">IDL</a>
-    </li>
-    <li class="">
-      <a href="matlab.html">Matlab</a>
-    </li>
-    <li class="">
-      <a href="molpro.html">Molpro</a>
-    </li>
-    <li class="">
-      <a href="namd.html">NAMD</a>
-    </li>
-    <li class="">
-      <a href="openfoam.html">OpenFoam</a>
-    </li>
-    <li class="">
-      <a href="paraview.html">Paraview</a>
-    </li>
-    <li class="">
-      <a href="R.html">R</a>
-    </li>
-    <li class="">
-      <a href="stata.html">Stata</a>
-    </li>
-    <li class="">
-      <a href="visit.html">Visit</a>
-    </li>
-    <li class="">
-      <a href="vmd.html">VMD (Visual Molecular Dynamics)</a>
+      <a href="libraries/start.html">Libraries</a>
     </li>
   </ul>
   </li>
@@ -237,9 +196,16 @@
 
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#module-system" class="nav-link">Module system</a>
+        </li>
     
     </ul>
 </nav>
@@ -261,21 +227,47 @@
                 
   <div class="section" id="software">
 <h1>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h1>
-<p>A large number of applications are available through the module command and can be loaded with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">add</span>
+<p>We have a large amount of software installed on both ARC3 and ARC4. These are available through the module system which allows users to load the specific software they need for their work.</p>
+<p>On both ARC3 and ARC4 software is broken up into 4 categories:</p>
+<ul class="simple">
+<li><p>Applications - Software applications</p></li>
+<li><p>Infrastructure - Common libraries available to your programs and applications</p></li>
+<li><p>Compilers - Compilers and interpreters for a range of languages</p></li>
+<li><p>Libraries - Useful system utilities</p></li>
+</ul>
+<div class="section" id="module-system">
+<h2>Module system<a class="headerlink" href="#module-system" title="Permalink to this headline">¶</a></h2>
+<p>A large number of applications are available through the module system and can be loaded with the <code class="docutils literal notranslate"><span class="pre">add</span></code> command, in this example where <code class="docutils literal notranslate"><span class="pre">name_of_module</span></code> is the name of the module you wish to load:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module add name_of_module
 </pre></div>
 </div>
 <p>By default this will load the latest (highest version number) of the software available. To use a specific version number, you should explicitly state this in the module statement, so to use AMBER v12, specify:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">add</span> <span class="n">amber</span><span class="o">/</span><span class="mi">12</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module add amber/12
 </pre></div>
 </div>
 <p>To see a full list of the available modules use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">avail</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module avail
 </pre></div>
 </div>
-<p>If you require additional software or applications installing, please contact us</p>
-<p>Alternatively, we can give you support in compiling or installing software yourself.</p>
+<p>You can also find the modules you currently have loaded with the module command <code class="docutils literal notranslate"><span class="pre">list</span></code>, for instance:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module list
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Loaded modules are specific to a given login session of your shell. This means you’ll find modules you’ve loaded previously are not automatically loaded when you next login. You can automatically load a module when you login by adding the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">add</span> <span class="pre">name_of_module</span></code> line to bottom of your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>.</p>
+</div>
+<p>You can also remove modules with the <code class="docutils literal notranslate"><span class="pre">remove</span></code> command, in this example <code class="docutils literal notranslate"><span class="pre">name_of_module</span></code> is the name of the module we wish to remove:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module remove name_of_module
+</pre></div>
+</div>
+<p>Sometimes we want to switch a loaded module for another, for instance we might want to swap the automatically loaded intel compiler for a gnu compiler. We can do this with the <code class="docutils literal notranslate"><span class="pre">switch</span></code> command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module switch intel gnu/6.3.0
+</pre></div>
+</div>
+<p>If you require additional software or applications installing, please <a class="reference external" href="https://leeds.service-now.com/it?id=sc_cat_item&amp;sys_id=48d5a6d70f275f00a82247ece1050ea0">contact us</a>. However, we do not install all software as modules and may provide you guidance about how to install your desired application yourself.</p>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
@@ -308,7 +300,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="../usage/acknowledgement.html" title="previous page">ARC Acknowledgement</a>
-    <a class='right-next' id="next-link" href="abaqus.html" title="next page">Abaqus</a>
+    <a class='right-next' id="next-link" href="applications/start.html" title="next page">Applications</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
