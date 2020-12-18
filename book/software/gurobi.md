@@ -4,7 +4,7 @@ The [Gurobi](https://www.gurobi.com/) mathmatical optimisation solver is availab
 
 ## Gurobi module
 
-To access the Gurobi solver you need to load the gurobi module. You can do this with the command:
+To access the Gurobi solver you need to load the `gurobi` module. You can do this with the command:
 
 ```bash
 $ module add test gurobi
@@ -73,3 +73,26 @@ $ source activate R403
 
 ### Matlab setup
 
+To configure MATLAB to use the Gurobi module you will need to have loaded the Gurobi module and within the MATLAB command window run the following commands:
+
+```matlab
+% change directory into the Gurobi matlab directory
+cd(getenv("GUROBI_HOME")+"/matlab")
+
+% run the gurobi_setup.m file to configure MATLAB
+gurobi_setup
+
+```
+
+This adds the Gurobi MATLAB directory to your MATLAB path in your current MATLAB session. To permanently save this directory to your MATLAB path you can use the following commands after performing the above:
+
+```matlab
+% change directory to home directory
+cd ~
+
+% save your current (updated) MATLAB path
+savepath
+
+```
+
+Once you have run `gurobi_setup` you should now have access to the Gurobi MATLAB API and can run Gurobi specific functions.
