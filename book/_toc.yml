@@ -49,6 +49,7 @@
       - file: software/applications/dl_poly
       - file: software/applications/gaussian
       - file: software/applications/gromacs
+      - file: software/applications/gurobi
       - file: software/applications/idl
       - file: software/applications/matlab
       - file: software/applications/molpro
