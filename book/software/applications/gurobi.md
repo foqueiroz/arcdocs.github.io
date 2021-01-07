@@ -10,7 +10,7 @@ To access the Gurobi solver you need to load the `gurobi` module. You can do thi
 $ module add test gurobi
 ```
 
-```note
+```{note}
 This module is new and currently being tested so can only be loaded by loading the test module first.
 ```
 
@@ -38,7 +38,7 @@ You can then use the Gurobi Python API by adding the line `import gurobi` to you
 
 ### R setup
 
-```note
+```{note}
 The Gurobi R package is currently only available for R version 4.0.3
 ```
 
