@@ -119,9 +119,9 @@ However, you can request an interactive session on the backend compute nodes to 
 
 Remember that each compute node has 16 compute cores and 32GB memory. If you know that your model will require more memory than this, you will need to request multiple cores.
 
-### Running through the batch queues
+### Parallel execution through the batch queues
 
-Parallel execution via the batch queues is performed by combination of the techniques mentioned above. Firstly a journal file should be created to control the parallel run, without the aid of the GUI; file test_para.jou :
+Parallel execution via the batch queues is performed by combination of the techniques mentioned above. Firstly a journal file (`test_para.jou`) should be created to control the parallel run, without the aid of the GUI file:
 
 ```
 file/read-case test_para.cas
@@ -133,9 +133,9 @@ y
 y
 ```
 
-Then a job submission script should be created, that requests resources and executes the code; e.g. file fluent_para.sh
+Then a job submission script (`fluent_para.sh`) should be created, that requests resources and executes the code:
 
-
+```bash
 #!/bin/bash
 # use current working directory
 #$ -cwd
@@ -148,28 +148,35 @@ module add ansys/12.1
 export ANSYSLMD_LICENSE_FILE=<LICENSESTRING>
 #Launch the executable
 fluent -g -i test_para.jou 3ddp -pib -sgeup
+```
 
-In this case, the 3-dimensional, double precision module is launched on 32 processors. The -g option will suppress the GUI and -i specifies the name of the input journal file. The file can be submitted to Sun Grid Engine by typing:
+In this case, the 3-dimensional, double precision module is launched on 32 processors. The `-g` option will suppress the GUI and `-i` specifies the name of the input journal file. The file can be submitted to the queue by typing:
 
-
+```bash
 $ qsub fluent_para.sh
+```
 
 The job will be run once the requested resources become available.
-Running Fluent v16 and above
+
+## Running Fluent v16 and above
 
 When running Fluent v16 or above in parallel batch mode, additional parameters need to be added to the Fluent command line in the batch submission script.
 
 Taking the script in the previous section as an example, the line:
 
-
+```bash
 fluent -g -i test_para.jou 3ddp -pib -sgeup
+```
 
-needs to be changed to:
+Should be switched to:
 
+```bash
 fluent -g -i test_para.jou 3ddp -pib -sge -rsh=ssh
+```
 
 There are also known inefficiencies when running fluent on part nodes on ARC.  For optimal performance, run fluent on whole nodes.  For example, to run on a single node:
 
+```bash
 #!/bin/bash
 # use current working directory
 #$ -cwd
@@ -182,5 +189,6 @@ module add ansys/19.2
 export ANSYSLMD_LICENSE_FILE=<LICENSESTRING>
 #Launch the executable
 fluent -g -i test_para.jou 3ddp -pib -sge -rsh=ssh
+```
 
 You will wait slightly longer for a whole node than for the previous allocation method, but your code will run significantly faster.
