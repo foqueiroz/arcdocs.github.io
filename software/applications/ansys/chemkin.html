@@ -47,7 +47,7 @@
 <meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/applications/ansys/chemkin.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Chemkin" />
-<meta property="og:description" content="Chemkin" />
+<meta property="og:description" content="Chemkin  Running Chemkin (ARC4 only)  ANSYS Chemkin provides all the tools for fast, accurate combustion and reaction flow simulations.  Developer Website  More" />
 <meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -252,9 +252,26 @@
 
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#running-chemkin-arc4-only" class="nav-link">Running Chemkin (ARC4 only)</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#developer-website" class="nav-link">Developer Website</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#getting-started" class="nav-link">Getting started</a>
+        </li>
+    
+            </ul>
+        </li>
     
     </ul>
 </nav>
@@ -276,6 +293,28 @@
                 
   <div class="section" id="chemkin">
 <h1>Chemkin<a class="headerlink" href="#chemkin" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="running-chemkin-arc4-only">
+<h2>Running Chemkin (ARC4 only)<a class="headerlink" href="#running-chemkin-arc4-only" title="Permalink to this headline">¶</a></h2>
+<p>ANSYS Chemkin provides all the tools for fast, accurate combustion and reaction flow simulations.</p>
+<div class="section" id="developer-website">
+<h3>Developer Website<a class="headerlink" href="#developer-website" title="Permalink to this headline">¶</a></h3>
+<p>More information about Chemkin can be found on the <a class="reference external" href="https://www.ansys.com/en-gb/products/fluids/ansys-chemkin-pro">Ansys Website</a>.</p>
+</div>
+<div class="section" id="getting-started">
+<h3>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h3>
+<p>To use Chemkin, you must have connected to ARC using <a class="reference external" href="../../../getting_started/logon.md#Graphics-forwarding-(X11)">X graphical forwarding</a>, loaded ansys/19.2 and assigned licence server information.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>More details about using Ansys for the first time and setting license server details can be found on the <a class="reference external" href="../ansys.md#Additional-Step-for-Using-Ansys-the-First-Time">Ansys page</a>.</p>
+</div>
+<p>Then run the <code class="docutils literal notranslate"><span class="pre">run_chemkin.sh</span></code> script passing it the argument Pro to start up Chemkin.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module load ansys
+
+$ run_chemkin.sh Pro
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
