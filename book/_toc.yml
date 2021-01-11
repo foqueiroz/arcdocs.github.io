@@ -62,6 +62,17 @@
       - file: software/applications/visit
       - file: software/applications/vmd
     - file: software/compilers/start
+      sections:
+      - file: software/compilers/anaconda
+      - file: software/compilers/cuda
+      - file: software/compilers/gnu
+      - file: software/compilers/go
+      - file: software/compilers/intel
+      - file: software/compilers/java
+      - file: software/compilers/julia
+      - file: software/compilers/llvm
+      - file: software/compilers/python
+      - file: software/compilers/yasm
     - file: software/infrastructure/start
     - file: software/libraries/start
 
