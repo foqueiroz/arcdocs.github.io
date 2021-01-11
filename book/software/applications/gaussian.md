@@ -56,7 +56,7 @@ to your submission script before running g09:
     export GAUSS_SCRDIR=$TMPDIR
 
 For details on how you request more local storage, see our page on
-[local storage](https://arc-old.leeds.ac.uk/using-the-systems/why-have-a-scheduler/tmp-and-scratch/).
+[local storage](../../usage/scratch).
 
 Sometimes, the Gausssian temporary files can be large and the
 \$TMPDIR directory will not be large enough.\ In this case we advise setting
