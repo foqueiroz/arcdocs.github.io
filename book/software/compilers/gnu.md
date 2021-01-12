@@ -4,7 +4,7 @@ The GNU compiler is a compiler system produced by the GNU Project supporting var
 
 ## The GNU module on the HPC
 
-By default when users log into the HPC the [intel compiler](./intel) is loaded. You can switch compilers to use the GNU compiler with the following command:
+By default when users log into the HPC the [Intel compiler](./intel) is loaded. You can switch compilers to use the GNU compiler with the following command:
 
 ```bash
 $ module switch intel gnu

@@ -1,10 +1,10 @@
 # Java
 
-The Intel compiler toolkit provides a number of compilers for different languages to help build software.
+The Java is a class-based, object-oriented programming language developed by the Oracle Corporation. You can read more about it at [java.com](https://www.java.com/en/).
 
 ## The Java module on the HPC
 
-You can load the java module into your environment with the following command:
+You can load the Java module into your environment with the following command:
 
 ```bash
 $ module add java

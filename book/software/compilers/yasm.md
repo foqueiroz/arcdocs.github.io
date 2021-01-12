@@ -1,6 +1,6 @@
 # YASM
 
-Yasm is an assembler for x86 and AMD64 instruction sets. You can find out more about the assembler on the [project web page](https://yasm.tortall.net/).
+Yasm is an assembler for x86 and AMD64 instruction sets. You can find out more about the assembler on the [YASM project web page](https://yasm.tortall.net/).
 
 ## YASM on the HPC
 

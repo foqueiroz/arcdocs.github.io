@@ -2,13 +2,13 @@
 
 Python is an interpreted, high-level and general-purpose programming language managed by the Python Software Foundation. You can read more at [Python.org](https://www.python.org/).
 
-```{warning} Important
+```{warning} 
 We actively recommend users use the [anaconda](./anaconda) module to manage their python environments.
 ```
 
 ## Python on HPC
 
-You can load python modules on the HPC with the command:
+You can load Python modules on the HPC with the command:
 
 ```bash
 $ module add python

@@ -2,7 +2,7 @@
 
 The Intel compiler toolkit provides a number of compilers for different languages to help build software.
 
-```{note} Important
+```{note}
 The Intel module is loaded by default when a user logs in to ARC3 and ARC4.
 ```
 
