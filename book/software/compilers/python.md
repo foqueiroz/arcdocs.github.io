@@ -1,36 +1,51 @@
-# Python 
+# Python
 
-Introduction
+Python is an interpreted, high-level and general-purpose programming language managed by the Python Software Foundation. You can read more at [Python.org](https://www.python.org/).
+
+```{warning} Important
+We actively recommend users use the [anaconda](./anaconda) module to manage their python environments.
+```
+
+## Python on HPC
+
+You can load python modules on the HPC with the command:
+
+```bash
+$ module add python
+```
 
 A number of different versions of Python are available on our systems.
 
-We also provide a library of some of the most common Python packages for numerical work; if you wish to use it, please load the module python-libs . Documentation can be found here.
-Usage
-Setting the module environment
+```{list-table}
+:header-rows: 1
+:widths: 10 20 10
 
-When you log in, load the appropriate module for the version of Python you wish to use e.g. python/native (for the version supplied by the operating system (2.7.5 on arc3, 2.6.6 on arc2/marc1/polaris)
+* - System
+  - Version
+  - Command
+* - ARC4
+  - Python 3.7.4
+  - `module add python/3.7.4`
+* - ARC4
+  - Python 2.7.16
+  - `module add python/2.7.16`
+* - ARC4
+  - Python 2.7.5
+  - `module add python/native`
+* - ARC3
+  - Python 3.6.5
+  - `module add python/3.6.5`
+* - ARC3
+  - Python 3.6.0 (default)
+  - `module add python/3.6.0`
+* - ARC3
+  - Python 2.7.13
+  - `module add python/2.7.13`
+* - ARC3
+  - Python 2.7.5
+  - `module add python/native`
+```
 
-e.g.
+### Python build modules
 
-
-module add python/3.6.0
-
-Python programs/scripts
-
-We recommend that python programs begin with the following line:
-
-
-#!/bin/env python
-
-This will cause it to be automatically run under the first version of python found in your PATH . e.g. the loaded python module.
-Compilers
-
-Those who wish to build their own Python libraries on top of this module may want to use the same compiler for compatibility and so avoid build issues.
-
-The
-
-python
-
-module now sets environment variable PYTHON_BUILD_MODULES . The modules used to build a particular python version can be shown by loading the appropriate module and executing echo $PYTHON_BUILD_MODULES
-
-Please note that, although we previously used the version of GCC bundled with the operating system, this is no longer the case for more recent pythons.
+Adding the Python module also sets an environment variable `PYTHON_BUILD_MODULES`. This specifies the other HPC modules used to build the loaded python version and can be inspected by loading the appropriate module and running `echo $PYTHON_BUILD_MODULES`.
