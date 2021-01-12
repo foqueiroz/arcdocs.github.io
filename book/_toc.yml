@@ -31,6 +31,7 @@
     - file: usage/troubleshooting
     - file: usage/taskarrays
     - file: usage/gpgpu
+    - file: usage/scratch
     - file: usage/acknowledgement
 
 # ===== Software ==========================================
