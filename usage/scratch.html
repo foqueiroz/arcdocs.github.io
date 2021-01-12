@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Temporary/Scratch Storage on Compute nodes &#8212; ARC Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/usage/scratch.html" />
+    <link rel="shortcut icon" href="../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ARC Acknowledgement" href="acknowledgement.html" />
+    <link rel="prev" title="General Purpose GPU" href="gpgpu.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/usage/scratch.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Temporary/Scratch Storage on Compute nodes" />
+<meta property="og:description" content="Temporary/Scratch Storage on Compute nodes  Each HPC compute node contains a limited amount of dedicated storage and its capacity and performance is different f" />
+<meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">ARC Documentation</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../welcome.html">Welcome</a>
+  </li>
+  <li class="">
+    <a href="../getting_started/start.html">Getting Started</a>
+  </li>
+  <li class="active">
+    <a href="start.html">Usage</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="batchjob.html">Batch jobs</a>
+    </li>
+    <li class="">
+      <a href="interactive.html">Interactive jobs</a>
+    </li>
+    <li class="">
+      <a href="troubleshooting.html">Troubleshooting jobs on HPC</a>
+    </li>
+    <li class="">
+      <a href="taskarrays.html">Task arrays</a>
+    </li>
+    <li class="">
+      <a href="gpgpu.html">General Purpose GPU</a>
+    </li>
+    <li class="active">
+      <a href="">Temporary/Scratch Storage on Compute nodes</a>
+    </li>
+    <li class="">
+      <a href="acknowledgement.html">ARC Acknowledgement</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../software/start.html">Software</a>
+  </li>
+  <li class="">
+    <a href="../systems/start.html">Systems</a>
+  </li>
+  <li class="">
+    <a href="https://arcleeds.github.io/training/">Training<i class="fas fa-external-link-alt"></i></a>
+  </li>
+  <li class="">
+    <a href="../contact/start.html">Contact Us</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit the <a href="https://arcleeds.github.io/">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/usage/scratch.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fusage/scratch.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/usage/scratch.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#usage" class="nav-link">Usage</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#arc3-local-disk-specifications" class="nav-link">ARC3 local disk specifications</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#arc4-local-disk-specifications" class="nav-link">ARC4 local disk specifications</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#requesting-local-disk" class="nav-link">Requesting local disk</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/usage/scratch.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="temporary-scratch-storage-on-compute-nodes">
+<h1>Temporary/Scratch Storage on Compute nodes<a class="headerlink" href="#temporary-scratch-storage-on-compute-nodes" title="Permalink to this headline">¶</a></h1>
+<p>Each HPC compute node contains a limited amount of dedicated storage and its capacity and performance is different for each type of node. As this storage is local to the compute node, it can offer more predictable performance than writing to the high performance filesystem, <a class="reference internal" href="../getting_started/nobackup.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">/nobackup</span></code></span></a> , which is shared between all compute nodes</p>
+<p>On our previous clusters, such storage is available for use by jobs – mostly under <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> and via the directory name contained in the <code class="docutils literal notranslate"><span class="pre">$TMPDIR</span></code> environment variable, but also a small amount under <code class="docutils literal notranslate"><span class="pre">/tmp</span></code>. However, jobs could not reserve the local space they need and so could fail unexpectedly if another job running on the same node was also writing to local disk.</p>
+<p>On ARC3 and ARC4, if a job wishes to use the compute node disk, this should be explicitly requested by the job.</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Summary:</p>
+<ul class="simple">
+<li><p>Use of <code class="docutils literal notranslate"><span class="pre">/tmp</span></code> should be <strong>avoided</strong>, as it is relatively small and space usage is uncontrolled</p></li>
+<li><p>Use of <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> should be <strong>avoided</strong>, as this is now the same storage as <code class="docutils literal notranslate"><span class="pre">/tmp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$TMPDIR</span></code> within a job refers to a per-job directory which has been assigned dedicated storage for the job</p></li>
+</ul>
+<div class="section" id="arc3-local-disk-specifications">
+<h3>ARC3 local disk specifications<a class="headerlink" href="#arc3-local-disk-specifications" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ssd - refers to a solid state disk, which has excellent performance characteristics for reading and writing <br>
+hdd - refers to a mechanical hard disk with a spinning platter, which has good performance characteristics for large sequential reads or writes only</p>
+</div>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Node Type</p></th>
+<th class="head"><p>Number of nodes</p></th>
+<th class="head"><p>Memory</p></th>
+<th class="head"><p>Local Disk Capacity</p></th>
+<th class="head"><p>Local Disk Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Standard</p></td>
+<td><p>165</p></td>
+<td><p>128GB</p></td>
+<td><p>100GB</p></td>
+<td><p>ssd</p></td>
+</tr>
+<tr class="row-odd"><td><p>High Memory</p></td>
+<td><p>2</p></td>
+<td><p>768GB</p></td>
+<td><p>800GB</p></td>
+<td><p>hdd</p></td>
+</tr>
+<tr class="row-even"><td><p>GPGPU K80</p></td>
+<td><p>2 – each with 2 NVIDIA K80 GPUs</p></td>
+<td><p>128GB</p></td>
+<td><p>800GB</p></td>
+<td><p>hdd</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPGPU P100</p></td>
+<td><p>6 – each with 4 NVIDIA P100 GPUs</p></td>
+<td><p>256GB</p></td>
+<td><p>800GB</p></td>
+<td><p>hdd</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="arc4-local-disk-specifications">
+<h3>ARC4 local disk specifications<a class="headerlink" href="#arc4-local-disk-specifications" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Guide to the Nodes on ARC4 Node Type</p></th>
+<th class="head"><p>Number of nodes</p></th>
+<th class="head"><p>Memory</p></th>
+<th class="head"><p>Local Disk Capacity</p></th>
+<th class="head"><p>Local Disk Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Standard</p></td>
+<td><p>149</p></td>
+<td><p>192GB</p></td>
+<td><p>170GB</p></td>
+<td><p>ssd</p></td>
+</tr>
+<tr class="row-odd"><td><p>High Memory</p></td>
+<td><p>2</p></td>
+<td><p>768GB</p></td>
+<td><p>800GB</p></td>
+<td><p>hdd</p></td>
+</tr>
+<tr class="row-even"><td><p>GPGPU</p></td>
+<td><p>3 – each with 4 NVIDIA V100 GPUs</p></td>
+<td><p>192GB</p></td>
+<td><p>800GB</p></td>
+<td><p>hdd</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="requesting-local-disk">
+<h3>Requesting local disk<a class="headerlink" href="#requesting-local-disk" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="batchjob.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">qsub</span></code></span></a> options for requesting local disk on ARC3 and ARC4:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 60%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Option</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">disk=&lt;bytes&gt;</span></code></p></td>
+<td><p>Sets the limit of the local disk available under <code class="docutils literal notranslate"><span class="pre">$TMPDIR</span></code> (per core)</p></td>
+<td><p>1G per core</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">disk_type=*|ssd|hdd</span></code></p></td>
+<td><p>Specifies the type of local disk that files under <code class="docutils literal notranslate"><span class="pre">$TMPDIR</span></code> will be written to. There are 3 options:</p>
+<ol class="simple">
+<li><p>* which is the default and specifies any type of disk</p></li>
+<li><p>ssd – which explicitly specifies solid state disk</p></li>
+<li><p>hdd – which explicitly specifies hard disk drive.</p></li>
+</ol>
+<p>Reading and writing will be much quicker to a solid state drive and this option should be used if you have lots of read and write operations.</p>
+</td>
+<td><p>*</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">disk_out=&lt;directory&gt;</span></code></p></td>
+<td><p>Specifies the directory to which the contents of <code class="docutils literal notranslate"><span class="pre">$TMPDIR</span></code> will be copied to at the end of a job. As <code class="docutils literal notranslate"><span class="pre">$TMPDIR</span></code> will be deleted at the end of the job, this could be useful if you need to keep its contents, for example if you are check pointing.</p>
+<p>The files will be copied to directory <code class="docutils literal notranslate"><span class="pre">&lt;directory&gt;/&lt;job_id&gt;.&lt;task_id&gt;</span></code>
+(where task_id = 1 if the job is not part of a task array.)</p>
+<p>Please note that, for distributed parallel jobs, only the <code class="docutils literal notranslate"><span class="pre">$TMPDIR</span></code> on the compute node where the job script runs is saved.</p>
+</td>
+<td><p>No copy by default.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">disk_usejobname</span></code></p></td>
+<td><p>When used in conjunction with the <code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">disk_out=&lt;directory&gt;</span></code> option, the directory name that <code class="docutils literal notranslate"><span class="pre">$TMPDIR</span></code> is copied to at the end of the job is changed to <code class="docutils literal notranslate"><span class="pre">&lt;directory&gt;/&lt;job_name&gt;</span></code> , where <code class="docutils literal notranslate"><span class="pre">&lt;job_name&gt;</span></code> can be specified with the <code class="docutils literal notranslate"><span class="pre">-N</span> <span class="pre">&lt;job_name&gt;</span></code> option.</p></td>
+<td><p>false</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./usage"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="gpgpu.html" title="previous page">General Purpose GPU</a>
+    <a class='right-next' id="next-link" href="acknowledgement.html" title="next page">ARC Acknowledgement</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By University of Leeds Research Computing Team<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
