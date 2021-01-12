@@ -2,7 +2,10 @@
 
 Anaconda is a distribution of Python and R for scientific computing that includes the conda package manager system which aids with reproducibility. You can read more about Anaconda on their [website](https://www.anaconda.com/products/individual).
 
+```{admonition} Tip
+:class: tip
 Anaconda is our actively supported Python distribution on both ARC3 and ARC4.
+```
 
 ## Usage
 
@@ -121,121 +124,61 @@ $ conda env list
 
 For the full conda documentation please consult their [website](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
+### Conda channels
+
+Conda provides packages via channels. Channels are hosted locations where packages are sorted and maintained. Packages you install are downloaded from these remote channels which are URLs to directories containing conda packages. The `conda` command searches the channels you have configured for the packages you have requested and by default it searches the anaconda channel.
+
+You can specify a channel to use in your `conda install` command using the `--channel/-c` option, for instance:
+
+```bash
+$ conda install -c conda-forge r
+```
+
+This install command will install the R language using the [`conda-forge`](https://conda-forge.org/) channel.
+
+You can also add channels to your conda configuration, so they are always searched whenever you attempt to install packages.
+
+```bash
+# in this example adding the bioconda channel
+$ conda config --add channels bioconda
+```
 
 ## Example conda environments
 
 Below we cover some examples of more generic conda environments HPC users might wish to create depending on their research.
 
-### Conda channels
-
-Conda 
-
-Add the a number of channels. This step is required so that the conda installer knows where to get the installation files for your applications from. Again, at the command prompt:
-
-conda config --add channels r
-conda config --add channels bioconda
-conda config --add channels conda-forge
-
- 
-
-That’s it. You can now use Conda to automatically install a range of applications and libraries.
-
-### Bioconda
-
-A number of research domains have repositories that allow the installation of applications and libraries. One example is Bioconda for the Computational Biology community.
-
-The full list of applications that Bioconda is currently able to install is available on the Bioconda Web site:
-
-https://bioconda.github.io
-Installing Python packages
-Creating environments with Conda
-
-Environments can be though of as standalone, isolated working copies of Python and other packages. They are usually created for specific projects or tasks where a certain configuration is needed that is different than for other projects.
-
-For example, to replicate a workflow used by another researcher in your team you might create an environment with specific applications and versions or you might have a particular part of your workflow that requires a package built for an older version of Python.
-
-Environments can be created, switched on and switched off as required.
-Example 1: Environment with older versions of packages
-
-Create an environment with bowtie2 version=2.2.5 and bamhash version=1.0 :
-
-conda create -n project1 bowtie2=2.2.5
-
- 
-
-This creates the environment with the first of the packages, you will see the environment being built.
-
-The next step is to activate this package:
-
-source activate project1
-
- 
-
-The command prompt will change, with the name of the environment in parentheses before the regular prompt:
-
-(project1) [issev001@login2.marc1 ~]$
-
- 
-
-This environment is isolated from the main Bioconda installation. You will need to install the specific applications and packages you need directly into this environment. In our case we still need to install bamhash.
-
-conda install bamhash=1.0
-
- 
-
-You can continue to install packages into this environment and run your scripts and analyses as normal. All your drives, directories and files can be accessed as normal.
-
-When you have finished working in the environment and want to return to the regular prompt and the main Bioconda system:
-
-source deactivate
-
- 
-
-and the command prompt will return to normal:
-
-[issev001@login2.marc1 ~]$
-
- 
 ### Creating a Python 2 environment
 
-Originally, we downloaded and installed Bioconda built around Python 3 (which is the version of Python we should now be using). Sometimes though, we need to work with a legacy Python 2 package (htseq is an example of a legacy Python 2 package) that has not been updated to work with Python 3, or we need to temporarily revert to Python 2 in order to collaborate with a colleague who has not made the transition.
+Whilst Python 2 is no longer supported by the [Python Software Foundation](https://www.python.org/doc/sunset-python-2/) we occasionally come across code that still requires Python 2.
 
-In these cases, we can create a Python 2 environment:
+You can use `conda` to create a specific python 2.7 environment with the example below:
 
-conda create -n project2 python=2.7
+```bash
+$ conda create -n project2 python=2.7
+```
 
- 
-
-activate it as before:
-
-source activate project2
-
- 
-
-and then install the packages we need:
-
-conda install htseq
-
- 
-
-When finished using the environment, as before:
-
-source deactivate
-
-### Example 3: Creating an R environment
+### Creating an R environment
 
 Although Conda was originally designed to manage Python, it’s just as happy dealing with R. If you need to have multiple different versions of R available for testing purposes you can create separate R environments for each one.
 
-For example, to create an R environment called r_env (with the latest version of R available):
+```{note}
+The r conda channel currently only has R versions up to 3.6.1. For more recent versions please see below for installing R using the conda-forge channel.
+```
 
-conda create -n r_env r-base r-essentials
+```bash
+# this will use the r conda channel
+$ conda create -n r_env r-base r-essentials
+```
 
-activate as before:
+You are able to install R packages directly through conda rather than using CRAN. However, not all R packages on CRAN are available on conda and so you will need to be aware of this when configuring your environment. You are still able to install CRAN packages into conda-installed R and it will install these R packages within your conda environment.
 
-source activate r_env
+#### Installing R with conda-forge
 
-and deactivate
+If you wish to use R versions later than 3.6.1 you will need to use the `conda-forge` channel for installing R.
 
-source deactivate
+For example installing R 4.0.3:
 
-More information on using R with Conda can be found on the Anaconda documentation site.
+```bash
+# create a conda environment in which we install R 4.0.3 from the conda forge channel
+$ conda create -n r403 -c conda-forge r-base=4.0.3
+```
