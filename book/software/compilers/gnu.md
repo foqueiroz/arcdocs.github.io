@@ -2,7 +2,7 @@
 
 The GNU compiler is a compiler system produced by the GNU Project supporting various programming languages, you can read more about it at the [GNU project web page](https://gcc.gnu.org/).
 
-## The GNU compiler on the HPC
+## The GNU module on the HPC
 
 By default when users log into the HPC the [intel compiler](./intel) is loaded. You can switch compilers to use the GNU compiler with the following command:
 
