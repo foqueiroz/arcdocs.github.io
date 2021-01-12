@@ -97,12 +97,12 @@ hdd - refers to a mechanical hard disk with a spinning platter, which has good p
 * - `-l disk_type=*|ssd|hdd`
   - Specifies the type of local disk that files under `$TMPDIR` will be written to. There are 3 options:
 
-    1. which is the default and specifies any type of disk
+    1. \* which is the default and specifies any type of disk
     2. ssd – which explicitly specifies solid state disk
     3. hdd – which explicitly specifies hard disk drive.
 
-    Reading a writing will be much quicker to a solid state drive and this option should be used if you have lots of read and write operations.
-  - 1
+    Reading and writing will be much quicker to a solid state drive and this option should be used if you have lots of read and write operations.
+  - \*
 * - `-l disk_out=<directory>`
   - Specifies the directory to which the contents of `$TMPDIR` will be copied to at the end of a job. As `$TMPDIR` will be deleted at the end of the job, this could be useful if you need to keep its contents, for example if you are check pointing.
 
