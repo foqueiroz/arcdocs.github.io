@@ -12,5 +12,7 @@ This page is an overview of the compilers section of software available on the H
 - [Java](./java)
 - [Julia](./julia)
 - [LLVM compiler](./llvm)
+- [Lua](./lua)
+- [PGI](./pgi)
 - [Python](./python)
 - [YASM Assembler](./yasm)
