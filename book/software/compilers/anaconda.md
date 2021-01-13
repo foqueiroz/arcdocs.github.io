@@ -88,38 +88,30 @@ and to deactivate it after use:
 conda deactivate
 ```
 
-```{note}
-As your home directory has limited storage space you may wish to specify that new environment are built and stored in your [/nobackup directory](../../getting_started/nobackup) instead.
-```
-
-To create an environment named `example_env_2` in [`/nobackup`](../../getting_started/nobackup) (here as user issev001 - you should replace this with your own named user directory) then:
-
-```bash
-$ conda create -p /nobackup/issev001/example_env_2 python=3 matplotlib pandas numpy
-```
-
-Here we've used the `conda create` command but included the `--prefix/-p` option which lets us specify the prefix for the environment (the location where we want the environment files to live).
-
-This time, you’ll note that Conda will install the environment and it’s constituent packages in the directory you specified:
-
-```bash
-## Package Plan ##
-
-environment location: /nobackup/issev001/example_env_2
-
-To load this new environment:
-
-source activate /nobackup/issmcal/example_env_2
-
-and to deactivate after use:
-
-conda deactivate
-```
-
 At any time, you can list your Conda environments (whether in your home directory or elsewhere):
 
 ```bash
 $ conda env list
+```
+
+#### First time .conda setup
+
+By default conda stores files relating to environments in the `.conda` directory which lives in your home directory. This `.conda` directory can often get quite large with all the different packages installed for different environments which can fill up a users [home directory quota](../../getting_started/nobackup#HOME-directory).
+
+To avoid this you can use the following steps to move your `.conda` directory to your [/nobackup directory](../../getting_started/nobackup) instead.
+
+```bash
+$ cd ~
+
+# create this directory if it doesn't already exist
+$ mkdir .conda
+
+# move the .conda directory to your nobackup directory (here represented as $USER)
+$ mv ~/.conda /nobackup/$USER
+
+# create a symlink between your .conda directory you've just moved
+# back into your home directory
+$ ln -s /nobackup/$USER/.conda ~/.conda
 ```
 
 For the full conda documentation please consult their [website](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
