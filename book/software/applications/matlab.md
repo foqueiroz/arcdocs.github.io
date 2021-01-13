@@ -1,4 +1,4 @@
-# Matlab
+# MATLAB
 
 Matlab is installed on the HPC clusters and is licensed for academic use only.
 
