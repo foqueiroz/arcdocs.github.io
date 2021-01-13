@@ -5,21 +5,12 @@ This page is an overview of the compilers section of software available on the H
 ## Compilers Index
 
 - [Anaconda Python](./anaconda)
-
 - [CUDA](./cuda)
-
 - [GNU Compiler tools](./gnu)
-
 - [Go](./go)
-
 - [Intel Compiler tools](./intel)
-
 - [Java](./java)
-
 - [Julia](./julia)
-
 - [LLVM compiler](./llvm)
-
 - [Python](./python)
-
 - [YASM Assembler](./yasm)
