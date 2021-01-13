@@ -48,6 +48,8 @@
         - file: software/applications/ansys/chemkin
       - file: software/applications/comsol
       - file: software/applications/dl_poly
+        sections:
+        - file: software/applications/dlpoly/license
       - file: software/applications/gaussian
       - file: software/applications/gromacs
       - file: software/applications/gurobi
