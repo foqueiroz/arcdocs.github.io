@@ -1,4 +1,4 @@
-# AMBER
+# Amber
 
 ## Introduction
 
