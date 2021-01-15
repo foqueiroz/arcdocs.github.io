@@ -73,6 +73,8 @@
       - file: software/compilers/java
       - file: software/compilers/julia
       - file: software/compilers/llvm
+      - file: software/compilers/lua
+      - file: software/compilers/pgi
       - file: software/compilers/python
       - file: software/compilers/yasm
     - file: software/infrastructure/start
