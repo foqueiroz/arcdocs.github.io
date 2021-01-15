@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -23,8 +24,11 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -465,7 +469,7 @@ n/s/q&gt; n
 <p>After pressing <code class="docutils literal notranslate"><span class="pre">Enter</span></code>, a list of supported storage types is shown. You should select the Microsoft OneDrive option (currently 19 but may change in the future):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Type of storage to configure.
 Enter a string value. Press Enter <span class="k">for</span> the default <span class="o">(</span><span class="s2">&quot;&quot;</span><span class="o">)</span>.
-Choose a number from below, or <span class="nb">type</span> in your own value
+Choose a number from below, or <span class="nb">type</span> <span class="k">in</span> your own value
  <span class="m">1</span> / A stackable unification remote, which can appear to merge the contents of several remotes
    <span class="se">\ </span><span class="s2">&quot;union&quot;</span>
  <span class="m">2</span> / Alias <span class="k">for</span> a existing remote

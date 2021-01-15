@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -23,8 +24,11 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -47,7 +51,7 @@
 <meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/applications/start.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Applications" />
-<meta property="og:description" content="Applications  " />
+<meta property="og:description" content="Applications  This page is an overview of the applications section of software available on the HPC. It includes intructions for loading and using these modules" />
 <meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -100,7 +104,7 @@
         <a href="abaqus.html">Abaqus</a>
       </li>
       <li class="">
-        <a href="amber.html">AMBER</a>
+        <a href="amber.html">Amber</a>
       </li>
       <li class="">
         <a href="ansys.html">Ansys</a>
@@ -109,7 +113,7 @@
         <a href="comsol.html">Comsol</a>
       </li>
       <li class="">
-        <a href="dl_poly.html">DLpoly</a>
+        <a href="dl_poly.html">DL_POLY</a>
       </li>
       <li class="">
         <a href="gaussian.html">Gaussian</a>
@@ -124,7 +128,7 @@
         <a href="idl.html">IDL</a>
       </li>
       <li class="">
-        <a href="matlab.html">Matlab</a>
+        <a href="matlab.html">MATLAB</a>
       </li>
       <li class="">
         <a href="molpro.html">Molpro</a>
@@ -252,9 +256,16 @@
 
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#applications-index" class="nav-link">Applications Index</a>
+        </li>
     
     </ul>
 </nav>
@@ -276,7 +287,31 @@
                 
   <div class="section" id="applications">
 <h1>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h1>
+<p>This page is an overview of the applications section of software available on the HPC. It includes intructions for loading and using these modules on the HPC and advice on submitting jobs for these specific pieces of software.</p>
+<div class="section" id="applications-index">
+<h2>Applications Index<a class="headerlink" href="#applications-index" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="abaqus.html"><span class="doc std std-doc">Abaqus</span></a></p></li>
+<li><p><a class="reference internal" href="amber.html"><span class="doc std std-doc">Amber</span></a></p></li>
+<li><p><a class="reference internal" href="ansys.html"><span class="doc std std-doc">Ansys</span></a></p></li>
+<li><p><a class="reference internal" href="comsol.html"><span class="doc std std-doc">Comsol</span></a></p></li>
+<li><p><a class="reference internal" href="dl_poly.html"><span class="doc std std-doc">DL_POLY</span></a></p></li>
+<li><p><a class="reference internal" href="gaussian.html"><span class="doc std std-doc">Gaussian</span></a></p></li>
+<li><p><a class="reference internal" href="gromacs.html"><span class="doc std std-doc">Gromacs</span></a></p></li>
+<li><p><a class="reference internal" href="gurobi.html"><span class="doc std std-doc">Gurobi</span></a></p></li>
+<li><p><a class="reference internal" href="idl.html"><span class="doc std std-doc">IDL</span></a></p></li>
+<li><p><a class="reference internal" href="matlab.html"><span class="doc std std-doc">MATLAB</span></a></p></li>
+<li><p><a class="reference internal" href="molpro.html"><span class="doc std std-doc">Molpro</span></a></p></li>
+<li><p><a class="reference internal" href="namd.html"><span class="doc std std-doc">NAMD</span></a></p></li>
+<li><p><a class="reference internal" href="openfoam.html"><span class="doc std std-doc">OpenFoam</span></a></p></li>
+<li><p><a class="reference internal" href="paraview.html"><span class="doc std std-doc">Paraview</span></a></p></li>
+<li><p><a class="reference internal" href="R.html"><span class="doc std std-doc">R</span></a></p></li>
+<li><p><a class="reference internal" href="stata.html"><span class="doc std std-doc">Stata</span></a></p></li>
+<li><p><a class="reference internal" href="visit.html"><span class="doc std std-doc">Visit</span></a></p></li>
+<li><p><a class="reference internal" href="vmd.html"><span class="doc std std-doc">VMD</span></a></p></li>
+</ul>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 

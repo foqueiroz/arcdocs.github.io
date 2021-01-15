@@ -1,4 +1,4 @@
-# DLpoly
+# DL_POLY
 
 ## Introduction
 

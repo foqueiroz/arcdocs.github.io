@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>DLpoly &#8212; ARC Documentation</title>
+    <title>DL_POLY &#8212; ARC Documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -23,8 +24,11 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -36,7 +40,7 @@
     <link rel="shortcut icon" href="../../_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Gaussian" href="gaussian.html" />
+    <link rel="next" title="DLpoly license terms" href="dlpoly/license.html" />
     <link rel="prev" title="Comsol" href="comsol.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,8 +50,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/applications/dl_poly.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="DLpoly" />
-<meta property="og:description" content="DLpoly  Introduction  To access this software you need to be a member of the DLPOLY group, please submit a request to the research computing team via our contac" />
+<meta property="og:title"       content="DL_POLY" />
+<meta property="og:description" content="DL_POLY  Introduction  To access this software you need to be a member of the DLPOLY group, please submit a request to the research computing team via our conta" />
 <meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -100,7 +104,7 @@
         <a href="abaqus.html">Abaqus</a>
       </li>
       <li class="">
-        <a href="amber.html">AMBER</a>
+        <a href="amber.html">Amber</a>
       </li>
       <li class="">
         <a href="ansys.html">Ansys</a>
@@ -109,7 +113,7 @@
         <a href="comsol.html">Comsol</a>
       </li>
       <li class="active">
-        <a href="">DLpoly</a>
+        <a href="">DL_POLY</a>
       </li>
       <li class="">
         <a href="gaussian.html">Gaussian</a>
@@ -124,7 +128,7 @@
         <a href="idl.html">IDL</a>
       </li>
       <li class="">
-        <a href="matlab.html">Matlab</a>
+        <a href="matlab.html">MATLAB</a>
       </li>
       <li class="">
         <a href="molpro.html">Molpro</a>
@@ -299,8 +303,8 @@
         
               <div>
                 
-  <div class="section" id="dlpoly">
-<h1>DLpoly<a class="headerlink" href="#dlpoly" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="dl-poly">
+<h1>DL_POLY<a class="headerlink" href="#dl-poly" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>To access this software you need to be a member of the DLPOLY group, please submit a request to the research computing team via our <a class="reference external" href="https://leeds.service-now.com/it?id=sc_cat_item&amp;sys_id=7587b2530f675f00a82247ece1050eda">contact form</a> if you wish to be added to this group.</p>
@@ -344,6 +348,8 @@ DLPOLY.X
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qsub dlpoly_serial.sh
 </pre></div>
 </div>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 </div>
@@ -377,7 +383,7 @@ DLPOLY.X
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="comsol.html" title="previous page">Comsol</a>
-    <a class='right-next' id="next-link" href="gaussian.html" title="next page">Gaussian</a>
+    <a class='right-next' id="next-link" href="dlpoly/license.html" title="next page">DLpoly license terms</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

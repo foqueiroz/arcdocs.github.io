@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Anaconda &#8212; ARC Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://arcdocs.github.io/arcdocs-jupyterbook/software/compilers/anaconda.html" />
+    <link rel="shortcut icon" href="../../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Cuda" href="cuda.html" />
+    <link rel="prev" title="Compilers" href="start.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://arcdocs.github.io/arcdocs-jupyterbook/software/compilers/anaconda.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Anaconda" />
+<meta property="og:description" content="Anaconda  Anaconda is a distribution of Python and R for scientific computing that includes the conda package manager system which aids with reproducibility. Yo" />
+<meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">ARC Documentation</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../welcome.html">Welcome</a>
+  </li>
+  <li class="">
+    <a href="../../getting_started/start.html">Getting Started</a>
+  </li>
+  <li class="">
+    <a href="../../usage/start.html">Usage</a>
+  </li>
+  <li class="active">
+    <a href="../start.html">Software</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../applications/start.html">Applications</a>
+    </li>
+    <li class="active">
+      <a href="start.html">Compilers</a>
+      <ul class="nav sidenav_l3">
+      <li class="active">
+        <a href="">Anaconda</a>
+      </li>
+      <li class="">
+        <a href="cuda.html">Cuda</a>
+      </li>
+      <li class="">
+        <a href="gnu.html">GNU</a>
+      </li>
+      <li class="">
+        <a href="go.html">Go</a>
+      </li>
+      <li class="">
+        <a href="intel.html">Intel</a>
+      </li>
+      <li class="">
+        <a href="java.html">Java</a>
+      </li>
+      <li class="">
+        <a href="julia.html">Julia</a>
+      </li>
+      <li class="">
+        <a href="llvm.html">LLVM</a>
+      </li>
+      <li class="">
+        <a href="python.html">Python</a>
+      </li>
+      <li class="">
+        <a href="yasm.html">YASM</a>
+      </li>
+    </ul>
+    </li>
+    <li class="">
+      <a href="../infrastructure/start.html">Infrastructure</a>
+    </li>
+    <li class="">
+      <a href="../libraries/start.html">Libraries</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../../systems/start.html">Systems</a>
+  </li>
+  <li class="">
+    <a href="https://arcleeds.github.io/training/">Training<i class="fas fa-external-link-alt"></i></a>
+  </li>
+  <li class="">
+    <a href="../../contact/start.html">Contact Us</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit the <a href="https://arcleeds.github.io/">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/software/compilers/anaconda.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fsoftware/compilers/anaconda.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/compilers/anaconda.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#usage" class="nav-link">Usage</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#what-is-a-conda-environment" class="nav-link">What is a conda environment?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#creating-custom-environments" class="nav-link">Creating custom environments</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#first-time-conda-setup" class="nav-link">First time .conda setup</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#conda-channels" class="nav-link">Conda channels</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#example-conda-environments" class="nav-link">Example conda environments</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#creating-a-python-2-environment" class="nav-link">Creating a Python 2 environment</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#creating-an-r-environment" class="nav-link">Creating an R environment</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#installing-r-with-conda-forge" class="nav-link">Installing R with conda-forge</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/compilers/anaconda.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="anaconda">
+<h1>Anaconda<a class="headerlink" href="#anaconda" title="Permalink to this headline">¶</a></h1>
+<p>Anaconda is a distribution of Python and R for scientific computing that includes the conda package manager system which aids with reproducibility. You can read more about Anaconda on their <a class="reference external" href="https://www.anaconda.com/products/individual">website</a>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>Anaconda is our actively supported Python distribution on both ARC3 and ARC4.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>To access the anaconda module use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module load anaconda
+</pre></div>
+</div>
+<p>This will make available the <a class="reference external" href="https://docs.conda.io/en/latest/">Conda package management tool</a>, but it will not load any environment. You may wish to load and use the <code class="docutils literal notranslate"><span class="pre">base</span></code> environment which has the default Python 3.7.4 and the Python packages made available in the <a class="reference external" href="https://docs.anaconda.com/anaconda/reference/release-notes/#anaconda-2019-10-october-15-2019">Anaconda 2019.10 release</a>.</p>
+<p>To enter the <code class="docutils literal notranslate"><span class="pre">base</span></code> environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> activate base
+</pre></div>
+</div>
+<p>This will adjust your prompt and add a prefix with the environments name surrounded by parentheses e.g. (base).</p>
+<p>You can see the packages and versions available in the base environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda list
+</pre></div>
+</div>
+<p>You can exit an environment after use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda deactivate
+</pre></div>
+</div>
+<p>To delete an environment (and all associated files) you no longer need:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda remove --name my_env --all
+</pre></div>
+</div>
+<p>To view all available environments:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda env list
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We recommend, however, that you do not use the base environment but create and activate custom environments built to the specifications you need for your projects.</p>
+</div>
+<div class="section" id="what-is-a-conda-environment">
+<h3>What is a conda environment?<a class="headerlink" href="#what-is-a-conda-environment" title="Permalink to this headline">¶</a></h3>
+<p>Conda environments are a form of python virtual environments, a self contained directory that contains a particular version of python plus a number of specific python packages. Conda allows us to create and manage several of these separate environments at the same time.</p>
+<p><img alt="Conda environment graphic" src="../../_images/conda-env2.jpg" />
+Image Copyright © <a class="reference external" href="https://geohackweek.github.io/datasharing/01-conda-tutorial/">geohackweek</a></p>
+<p>Each environments packages and installed python versions are isolated from one another preventing notorious package ‘dependency hell’ situations. Conda also allows us to share environment specifications through the creation of simple text files, aiding reproducibility.</p>
+</div>
+<div class="section" id="creating-custom-environments">
+<h3>Creating custom environments<a class="headerlink" href="#creating-custom-environments" title="Permalink to this headline">¶</a></h3>
+<p>To create a new Python 3 environment with the Pandas, Numpy and Scipy libraries named example_env_1, use the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create --name example_env_1 <span class="nv">python</span><span class="o">=</span><span class="m">3</span> numpy scipy pandas
+</pre></div>
+</div>
+<p>Here we have used the <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/commands/create.html"><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span></code></a> command, we specify a name for our environment using the <code class="docutils literal notranslate"><span class="pre">--name/-n</span></code> option and then the packages we want to be installed, and if we require specific versions we include that in the pattern <code class="docutils literal notranslate"><span class="pre">&lt;package&gt;=&lt;versionNumber&gt;</span></code>.</p>
+<p>You’ll note that during the installation process that Conda will attempt to install the enviroment and it’s constituent packages in your home directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">## Package Plan ##</span>
+
+environment location: /home/home02/issev001/.conda/envs/example_env_1
+
+To load this environment:
+
+<span class="nb">source</span> activate example_env_1
+
+and to deactivate it after use:
+
+conda deactivate
+</pre></div>
+</div>
+<p>At any time, you can list your Conda environments (whether in your home directory or elsewhere):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda env list
+</pre></div>
+</div>
+<div class="section" id="first-time-conda-setup">
+<h4>First time .conda setup<a class="headerlink" href="#first-time-conda-setup" title="Permalink to this headline">¶</a></h4>
+<p>By default conda stores files relating to environments in the <code class="docutils literal notranslate"><span class="pre">.conda</span></code> directory which lives in your home directory. This <code class="docutils literal notranslate"><span class="pre">.conda</span></code> directory can often get quite large with all the different packages installed for different environments which can fill up a users <a class="reference external" href="../../getting_started/nobackup#HOME-directory">home directory quota</a>.</p>
+<p>To avoid this you can use the following steps to move your <code class="docutils literal notranslate"><span class="pre">.conda</span></code> directory to your <a class="reference internal" href="../../getting_started/nobackup.html"><span class="doc std std-doc">/nobackup directory</span></a> instead.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~
+
+<span class="c1"># create this directory if it doesn&#39;t already exist</span>
+$ mkdir .conda
+
+<span class="c1"># move the .conda directory to your nobackup directory (here represented as $USER)</span>
+$ mv ~/.conda /nobackup/<span class="nv">$USER</span>
+
+<span class="c1"># create a symlink between your .conda directory you&#39;ve just moved</span>
+<span class="c1"># back into your home directory</span>
+$ ln -s /nobackup/<span class="nv">$USER</span>/.conda ~/.conda
+</pre></div>
+</div>
+<p>For the full conda documentation please consult their <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">website</a>.</p>
+</div>
+</div>
+<div class="section" id="conda-channels">
+<h3>Conda channels<a class="headerlink" href="#conda-channels" title="Permalink to this headline">¶</a></h3>
+<p>Conda provides packages via channels. Channels are hosted locations where packages are sorted and maintained. Packages you install are downloaded from these remote channels which are URLs to directories containing conda packages. The <code class="docutils literal notranslate"><span class="pre">conda</span></code> command searches the channels you have configured for the packages you have requested and by default it searches the anaconda channel.</p>
+<p>You can specify a channel to use in your <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> command using the <code class="docutils literal notranslate"><span class="pre">--channel/-c</span></code> option, for instance:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda install -c conda-forge r
+</pre></div>
+</div>
+<p>This install command will install the R language using the <a class="reference external" href="https://conda-forge.org/"><code class="docutils literal notranslate"><span class="pre">conda-forge</span></code></a> channel.</p>
+<p>You can also add channels to your conda configuration, so they are always searched whenever you attempt to install packages.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># in this example adding the bioconda channel</span>
+$ conda config --add channels bioconda
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="example-conda-environments">
+<h2>Example conda environments<a class="headerlink" href="#example-conda-environments" title="Permalink to this headline">¶</a></h2>
+<p>Below we cover some examples of more generic conda environments HPC users might wish to create depending on their research.</p>
+<div class="section" id="creating-a-python-2-environment">
+<h3>Creating a Python 2 environment<a class="headerlink" href="#creating-a-python-2-environment" title="Permalink to this headline">¶</a></h3>
+<p>Whilst Python 2 is no longer supported by the <a class="reference external" href="https://www.python.org/doc/sunset-python-2/">Python Software Foundation</a> we occasionally come across code that still requires Python 2.</p>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">conda</span></code> to create a specific python 2.7 environment with the example below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n project2 <span class="nv">python</span><span class="o">=</span><span class="m">2</span>.7
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-an-r-environment">
+<h3>Creating an R environment<a class="headerlink" href="#creating-an-r-environment" title="Permalink to this headline">¶</a></h3>
+<p>Although Conda was originally designed to manage Python, it’s just as happy dealing with R. If you need to have multiple different versions of R available for testing purposes you can create separate R environments for each one.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The r conda channel currently only has R versions up to 3.6.1. For more recent versions please see below for installing R using the conda-forge channel.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># this will use the r conda channel</span>
+$ conda create -n r_env r-base r-essentials
+</pre></div>
+</div>
+<p>You are able to install R packages directly through conda rather than using CRAN. However, not all R packages on CRAN are available on conda and so you will need to be aware of this when configuring your environment. You are still able to install CRAN packages into conda-installed R and it will install these R packages within your conda environment.</p>
+<div class="section" id="installing-r-with-conda-forge">
+<h4>Installing R with conda-forge<a class="headerlink" href="#installing-r-with-conda-forge" title="Permalink to this headline">¶</a></h4>
+<p>If you wish to use R versions later than 3.6.1 you will need to use the <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> channel for installing R.</p>
+<p>For example installing R 4.0.3:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a conda environment in which we install R 4.0.3 from the conda forge channel</span>
+$ conda create -n r403 -c conda-forge r-base<span class="o">=</span><span class="m">4</span>.0.3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./software/compilers"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="start.html" title="previous page">Compilers</a>
+    <a class='right-next' id="next-link" href="cuda.html" title="next page">Cuda</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By University of Leeds Research Computing Team<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
