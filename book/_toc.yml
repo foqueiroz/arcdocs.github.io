@@ -78,6 +78,27 @@
       - file: software/compilers/python
       - file: software/compilers/yasm
     - file: software/infrastructure/start
+      sections:
+      - file: software/infrastructure/advisor.md
+      - file: software/infrastructure/allinea.md
+      - file: software/infrastructure/arm-forge.md
+      - file: software/infrastructure/bazel.md
+      - file: software/infrastructure/cmake.md
+      - file: software/infrastructure/gdb.md
+      - file: software/infrastructure/git.md
+      - file: software/infrastructure/inspector.md
+      - file: software/infrastructure/licenses.md
+      - file: software/infrastructure/parallel.md
+      - file: software/infrastructure/sge.md
+      - file: software/infrastructure/singularity.md
+      - file: software/infrastructure/subversion.md
+      - file: software/infrastructure/system.md
+      - file: software/infrastructure/test.md
+      - file: software/infrastructure/unison.md
+      - file: software/infrastructure/user.md
+      - file: software/infrastructure/virtualgl.md
+      - file: software/infrastructure/vtune.md
+
     - file: software/libraries/start
 
 # ===== Systems ==========================================
