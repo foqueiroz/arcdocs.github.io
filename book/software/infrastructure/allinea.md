@@ -2,6 +2,10 @@
 
 Allinea is a debugging tool for C, C++ and Fortran 90 produced by Allinea Software Ltd. who are now owned by ARM.
 
+```{note}
+You can also use the [Arm Forge module](./arm-forge) for a more recent version of the Allinea tool
+```
+
 ## Allinea – serial and parallel debugging and profiling
 
 Allinea’s DDT and MAP applications are installed: these are primarily provided to help parallel application writers to debug or profile their applications (that is, to correct or to discover how the application is performing). They are useful for serial, MPI, OpenMP and CUDA codes.
