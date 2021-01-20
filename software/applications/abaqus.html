@@ -440,7 +440,7 @@ abaqus <span class="nv">memory</span><span class="o">=</span>12000mb <span class
 </div>
 <div class="section" id="user-defined-fortran-subroutines">
 <h2>User Defined Fortran subroutines<a class="headerlink" href="#user-defined-fortran-subroutines" title="Permalink to this headline">¶</a></h2>
-<p>To include user defined Fortran subroutines, e.g. <code class="docutils literal notranslate"><span class="pre">exampleroutine.f</span></code> , you will need to prepend the licence for the compiler to the licence path, <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">LM_LICENSE_FILE=&lt;license_port&gt;&#64;license_server&gt;:$LM_LICENSE_FILE</span></code> .</p>
+<p>To include user defined Fortran subroutines, e.g. <code class="docutils literal notranslate"><span class="pre">exampleroutine.f</span></code> , you will need to prepend the licence for the compiler to the licence path, <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">LM_LICENSE_FILE=&lt;license_port&gt;&#64;&lt;license_server&gt;:$LM_LICENSE_FILE</span></code> .</p>
 <p>For example:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -l h_rt=4:00:00</span>
 <span class="c1">#$ -l h_vmem=1500M</span>
