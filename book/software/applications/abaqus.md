@@ -120,7 +120,7 @@ abaqus memory=12000mb cpus=$NSLOTS input=input.inp job=input mp_mode=threads scr
 
 ## User Defined Fortran subroutines
 
-To include user defined Fortran subroutines, e.g. `exampleroutine.f` , you will need to prepend the licence for the compiler to the licence path, `export LM_LICENSE_FILE=<license_port>@license_server>:$LM_LICENSE_FILE` .
+To include user defined Fortran subroutines, e.g. `exampleroutine.f` , you will need to prepend the licence for the compiler to the licence path, `export LM_LICENSE_FILE=<license_port>@<license_server>:$LM_LICENSE_FILE` .
 
 For example:
 
