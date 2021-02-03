@@ -1,34 +1,50 @@
 
-
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Batch jobs &#8212; ARC Documentation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/mystnb.js"></script>
-    <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -43,8 +59,8 @@
     <link rel="next" title="Interactive jobs" href="interactive.html" />
     <link rel="prev" title="Usage" href="start.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
@@ -54,7 +70,7 @@
 <meta property="og:description" content="Batch jobs  The computational power of the HPC facilities at Leeds is organised through a batch job scheduling system. This involves users submitting a script t" />
 <meta property="og:image"       content="https://arcdocs.github.io/arcdocs-jupyterbook/_static/logo.png" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -75,64 +91,356 @@
   <h1 class="site-logo" id="site-title">ARC Documentation</h1>
   
 </a>
-</div>
-
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
-
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
-  <ul class="nav sidenav_l1">
-  <li class="">
-    <a href="../welcome.html">Welcome</a>
-  </li>
-  <li class="">
-    <a href="../getting_started/start.html">Getting Started</a>
-  </li>
-  <li class="active">
-    <a href="start.html">Usage</a>
-  <ul class="nav sidenav_l2">
-    <li class="active">
-      <a href="">Batch jobs</a>
-    </li>
-    <li class="">
-      <a href="interactive.html">Interactive jobs</a>
-    </li>
-    <li class="">
-      <a href="troubleshooting.html">Troubleshooting jobs on HPC</a>
-    </li>
-    <li class="">
-      <a href="taskarrays.html">Task arrays</a>
-    </li>
-    <li class="">
-      <a href="gpgpu.html">General Purpose GPU</a>
-    </li>
-    <li class="">
-      <a href="scratch.html">Temporary/Scratch Storage on Compute nodes</a>
-    </li>
-    <li class="">
-      <a href="acknowledgement.html">ARC Acknowledgement</a>
-    </li>
-  </ul>
-  </li>
-  <li class="">
-    <a href="../software/start.html">Software</a>
-  </li>
-  <li class="">
-    <a href="../systems/start.html">Systems</a>
-  </li>
-  <li class="">
-    <a href="https://arcleeds.github.io/training/">Training<i class="fas fa-external-link-alt"></i></a>
-  </li>
-  <li class="">
-    <a href="../contact/start.html">Contact Us</a>
-  </li>
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../welcome.html">
+   Welcome
+  </a>
+ </li>
 </ul>
-</nav>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../getting_started/start.html">
+   Getting Started
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting_started/request_hpc_acct.html">
+     Requesting an HPC Account
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting_started/request_install.html">
+     Requesting a software install on HPC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting_started/logon.html">
+     Logging on
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting_started/linuxbasics.html">
+     Linux basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting_started/nobackup.html">
+     Storage on HPC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting_started/file_transfer.html">
+     File Transfer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../getting_started/x2go.html">
+     Remote Graphics – X2GO
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="start.html">
+   Usage
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Batch jobs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactive.html">
+     Interactive jobs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="troubleshooting.html">
+     Troubleshooting jobs on HPC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="taskarrays.html">
+     Task arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gpgpu.html">
+     General Purpose GPU
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scratch.html">
+     Temporary/Scratch Storage on Compute nodes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="acknowledgement.html">
+     ARC Acknowledgement
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../software/start.html">
+   Software
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../software/applications/start.html">
+     Applications
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/abaqus.html">
+       Abaqus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/amber.html">
+       Amber
+      </a>
+     </li>
+     <li class="toctree-l3 collapsible-parent">
+      <a class="reference internal" href="../software/applications/ansys.html">
+       Ansys
+      </a>
+      <ul class="collapse-ul">
+       <li class="toctree-l4">
+        <a class="reference internal" href="../software/applications/ansys/cfx.html">
+         Cfx
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../software/applications/ansys/fluent.html">
+         Fluent
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../software/applications/ansys/chemkin.html">
+         Chemkin
+        </a>
+       </li>
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/comsol.html">
+       Comsol
+      </a>
+     </li>
+     <li class="toctree-l3 collapsible-parent">
+      <a class="reference internal" href="../software/applications/dl_poly.html">
+       DL_POLY
+      </a>
+      <ul class="collapse-ul">
+       <li class="toctree-l4">
+        <a class="reference internal" href="../software/applications/dlpoly/license.html">
+         DLpoly license terms
+        </a>
+       </li>
+      </ul>
+      <i class="fas fa-chevron-down">
+      </i>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/gaussian.html">
+       Gaussian
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/gromacs.html">
+       Gromacs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/gurobi.html">
+       Gurobi
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/idl.html">
+       IDL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/matlab.html">
+       MATLAB
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/molpro.html">
+       Molpro
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/namd.html">
+       NAMD
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/openfoam.html">
+       OpenFoam
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/paraview.html">
+       Paraview
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/R.html">
+       R
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/stata.html">
+       Stata
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/visit.html">
+       Visit
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/applications/vmd.html">
+       VMD (Visual Molecular Dynamics)
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../software/compilers/start.html">
+     Compilers
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/compilers/anaconda.html">
+       Anaconda
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/compilers/cuda.html">
+       Cuda
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/compilers/gnu.html">
+       GNU
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/compilers/go.html">
+       Go
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/compilers/intel.html">
+       Intel
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/compilers/java.html">
+       Java
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/compilers/julia.html">
+       Julia
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/compilers/llvm.html">
+       LLVM
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/compilers/lua.html">
+       Lua
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/compilers/pgi.html">
+       PGI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/compilers/python.html">
+       Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../software/compilers/yasm.html">
+       YASM
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/infrastructure/start.html">
+     Infrastructure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/libraries/start.html">
+     Libraries
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../systems/start.html">
+   Systems
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../systems/arc4.html">
+     ARC4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../systems/arc3.html">
+     ARC3
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://arcleeds.github.io/training/">
+   Training
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contact/start.html">
+   Contact Us
+  </a>
+ </li>
+</ul>
 
- <!-- To handle the deprecated key -->
+</nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
   Visit the <a href="https://arcleeds.github.io/">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
@@ -161,11 +469,11 @@
             <i class="fas fa-arrow-up"></i>
         </button>
         
-        <div class="dropdown-buttons-trigger">
+        
+<div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
-    
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
@@ -177,8 +485,8 @@
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
-    
 </div>
+
         <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -202,77 +510,82 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
 
     </div>
+
+    <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
-
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#job-scripts" class="nav-link">Job scripts</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#writing-jobs-scripts-on-hpc" class="nav-link">Writing jobs scripts on HPC</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#the-hello-world-job-script" class="nav-link">The Hello world job script</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#resource-specification" class="nav-link">Resource specification</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#list-of-sge-options" class="nav-link">List of SGE options</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#monitoring-jobs" class="nav-link">Monitoring jobs</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h4">
-            <a href="#deleting-jobs" class="nav-link">Deleting jobs</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#job-output" class="nav-link">Job output</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#job-holding" class="nav-link">Job holding</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#fair-share-policy" class="nav-link">Fair-share policy</a>
-        </li>
-    
-            </ul>
-        </li>
-    
-    </ul>
-</nav>
-
-
-
-<div class="tocsection editthispage">
-    <a href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/usage/batchjob.md">
-        <i class="fas fa-pencil-alt"></i> Edit this page
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#job-scripts">
+   Job scripts
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#writing-jobs-scripts-on-hpc">
+     Writing jobs scripts on HPC
     </a>
-</div>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-hello-world-job-script">
+     The Hello world job script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resource-specification">
+     Resource specification
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#list-of-sge-options">
+       List of SGE options
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monitoring-jobs">
+     Monitoring jobs
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deleting-jobs">
+       Deleting jobs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#job-output">
+     Job output
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#job-holding">
+     Job holding
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fair-share-policy">
+     Fair-share policy
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -612,7 +925,10 @@ The smaller the jobs the less time it will wait in the queue and the less impact
       </div>
     </div>
 
-    <script src="../_static/js/index.js"></script>
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
     
   </body>
 </html>
