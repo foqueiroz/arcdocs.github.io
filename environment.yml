@@ -6,6 +6,4 @@ dependencies:
   - jupyterlab
   - pip=20
   - pip:
-    - jupyter-book
-    - sphinx-book-theme==0.0.30
-    - sphinxcontrib-bibtex<2.0.0
+    - jupyter-book==0.9.1
