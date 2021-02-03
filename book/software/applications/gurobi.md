@@ -87,11 +87,8 @@ gurobi_setup
 This adds the Gurobi MATLAB directory to your MATLAB path in your current MATLAB session. To permanently save this directory to your MATLAB path you can use the following commands after performing the above:
 
 ```matlab
-% change directory to home directory
-cd ~
-
-% save your current (updated) MATLAB path
-savepath
+% save your current (updated) MATLAB path in your home directory
+savepath(getenv("HOME")+"/pathdef.m")
 
 ```
 
