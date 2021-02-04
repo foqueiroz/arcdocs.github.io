@@ -104,7 +104,7 @@ You can create an SSH session to connect to ARC using the following steps:
 | ----------------------------------------------------- |
 | ![Select the Network Settings tab within the Session Settings window](../assets/img/logon/mobaXTerm4.png) |
 
-| 5. Select the "Connect through SSH gateway (jump host) option and input details for connecting to remote-access.leeds.ac.uk (Gateway SSH server) and specify your username |
+| 5. Click on the large button labelled "SSH gateway (jump host)" and input details for connecting to remote-access.leeds.ac.uk (Gateway SSH server) and specify your username |
 | ----------------------------------------------------- |
 | ![Select the "Connect through SSH gateway (jump host) option](../assets/img/logon/mobaXTerm5.png) |
 
