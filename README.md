@@ -30,7 +30,7 @@ $ jupyter-book build book/
 ```
 ### Windows
 
-An important note is that there are currently know issues running JupyterBook on Windows ([see here for more (including workarounds)](https://jupyterbook.org/advanced/advanced.html#working-on-windows)).
+An important note is that there are currently known issues running JupyterBook on Windows ([see here for more (including workarounds)](https://jupyterbook.org/advanced/advanced.html#working-on-windows)).
 
 To aid with this we have created a `Vagrantfile` that can allow Windows users who have a virtualisation provider installed (such as [VirtualBox](https://www.virtualbox.org/)) and [Vagrant](https://www.vagrantup.com/) installed to create a headless virtual Linux machine that will build the jupyter book. You can do this with the following steps once you've installed a virtualisation provider and vagrant:
 ```
