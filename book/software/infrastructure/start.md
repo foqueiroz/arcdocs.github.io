@@ -16,7 +16,7 @@ This page is an overview of the infrastructure section of software available on 
 - [GNU Parallel](./parallel)
 - [SGE](./sge)
 - [Singularity](./singularity)
-- [Subversion](.subversion)
+- [Subversion](./subversion)
 - [System](./system)
 - [Test](./test)
 - [Unison](./unison)
