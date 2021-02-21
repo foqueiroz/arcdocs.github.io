@@ -393,10 +393,109 @@
     <i class="fas fa-chevron-down">
     </i>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../infrastructure/start.html">
      Infrastructure
     </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/advisor.html">
+       Advisor
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/allinea.html">
+       Allinea
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/arm-forge.html">
+       Arm Forge
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/bazel.html">
+       Bazel
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/cmake.html">
+       Cmake
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/gdb.html">
+       GDB
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/git.html">
+       Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/inspector.html">
+       Inspector
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/licenses.html">
+       Licenses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/parallel.html">
+       GNU Parallel
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/sge.html">
+       SGE
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/singularity.html">
+       Singularity
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/subversion.html">
+       Subversion
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/system.html">
+       System
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/test.html">
+       Test
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/unison.html">
+       Unison
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/user.html">
+       User
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/virtualgl.html">
+       Virtual GL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vtune.html">
+       Vtune
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../libraries/start.html">
@@ -631,16 +730,16 @@ $ <span class="nb">source</span> activate R403
 <div class="section" id="matlab-setup">
 <h3>Matlab setup<a class="headerlink" href="#matlab-setup" title="Permalink to this headline">¶</a></h3>
 <p>To configure MATLAB to use the Gurobi module you will need to have loaded the Gurobi module and within the MATLAB command window run the following commands:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% change directory into the Gurobi matlab directory</span>
-<span class="n">cd</span><span class="p">(</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;GUROBI_HOME&quot;</span><span class="p">)</span><span class="o">+</span><span class="s">&quot;/matlab&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% change directory into the Gurobi matlab directory</span><span class="w"></span>
+<span class="nb">cd</span><span class="p">(</span><span class="nb">getenv</span><span class="p">(</span><span class="s">&quot;GUROBI_HOME&quot;</span><span class="p">)</span><span class="o">+</span><span class="s">&quot;/matlab&quot;</span><span class="p">)</span><span class="w"></span>
 
-<span class="c">% run the gurobi_setup.m file to configure MATLAB</span>
-<span class="n">gurobi_setup</span>
+<span class="c">% run the gurobi_setup.m file to configure MATLAB</span><span class="w"></span>
+<span class="n">gurobi_setup</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This adds the Gurobi MATLAB directory to your MATLAB path in your current MATLAB session. To permanently save this directory to your MATLAB path you can use the following commands after performing the above:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% save your current (updated) MATLAB path in your home directory</span>
-<span class="n">savepath</span><span class="p">(</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;HOME&quot;</span><span class="p">)</span><span class="o">+</span><span class="s">&quot;/pathdef.m&quot;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% save your current (updated) MATLAB path in your home directory</span><span class="w"></span>
+<span class="nb">savepath</span><span class="p">(</span><span class="nb">getenv</span><span class="p">(</span><span class="s">&quot;HOME&quot;</span><span class="p">)</span><span class="o">+</span><span class="s">&quot;/pathdef.m&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Once you have run <code class="docutils literal notranslate"><span class="pre">gurobi_setup</span></code> you should now have access to the Gurobi MATLAB API and can run Gurobi specific functions.</p>

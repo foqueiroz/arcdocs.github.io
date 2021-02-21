@@ -393,10 +393,109 @@
     <i class="fas fa-chevron-down">
     </i>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 collapsible-parent">
     <a class="reference internal" href="../infrastructure/start.html">
      Infrastructure
     </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/advisor.html">
+       Advisor
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/allinea.html">
+       Allinea
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/arm-forge.html">
+       Arm Forge
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/bazel.html">
+       Bazel
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/cmake.html">
+       Cmake
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/gdb.html">
+       GDB
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/git.html">
+       Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/inspector.html">
+       Inspector
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/licenses.html">
+       Licenses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/parallel.html">
+       GNU Parallel
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/sge.html">
+       SGE
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/singularity.html">
+       Singularity
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/subversion.html">
+       Subversion
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/system.html">
+       System
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/test.html">
+       Test
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/unison.html">
+       Unison
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/user.html">
+       User
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/virtualgl.html">
+       Virtual GL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../infrastructure/vtune.html">
+       Vtune
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../libraries/start.html">
@@ -664,20 +763,20 @@
 <div class="section" id="batch-execution">
 <h3>Batch Execution<a class="headerlink" href="#batch-execution" title="Permalink to this headline">¶</a></h3>
 <p>To run matlab in batch-mode you must first generate a list of commands for matlab to process in a <code class="docutils literal notranslate"><span class="pre">.m</span></code> file.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% MATLAB M-file example to approximate a sawtooth</span>
-<span class="c">% with a truncated Fourier expansion.</span>
-<span class="n">nterms</span><span class="p">=</span><span class="mi">5</span><span class="p">;</span>
-<span class="n">fourbypi</span><span class="p">=</span><span class="mf">4.0</span><span class="o">/</span><span class="nb">pi</span><span class="p">;</span>
-<span class="n">np</span><span class="p">=</span><span class="mi">100</span><span class="p">;</span>
-<span class="n">y</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">np</span><span class="p">)=</span><span class="nb">pi</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span>
-<span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">np</span><span class="p">)=</span><span class="nb">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span><span class="o">*</span><span class="nb">pi</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="p">,</span><span class="n">np</span><span class="p">);</span>
-<span class="n">for</span> <span class="s">k=1:nterms</span>
-<span class="n">twokm</span><span class="p">=</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<span class="n">y</span><span class="p">=</span><span class="n">y</span><span class="o">-</span><span class="n">fourbypi</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">twokm</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">twokm</span>^<span class="mi">2</span><span class="p">;</span>
-<span class="k">end</span><span class="p">;</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
-<span class="n">print</span> <span class="o">-</span><span class="n">deps</span> <span class="n">matlab_test_plot</span><span class="p">.</span><span class="n">ps</span><span class="p">;</span>
-<span class="n">quit</span><span class="p">;</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% MATLAB M-file example to approximate a sawtooth</span><span class="w"></span>
+<span class="c">% with a truncated Fourier expansion.</span><span class="w"></span>
+<span class="n">nterms</span><span class="p">=</span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="n">fourbypi</span><span class="p">=</span><span class="mf">4.0</span><span class="o">/</span><span class="nb">pi</span><span class="p">;</span><span class="w"></span>
+<span class="n">np</span><span class="p">=</span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
+<span class="n">y</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">np</span><span class="p">)=</span><span class="nb">pi</span><span class="o">/</span><span class="mf">2.0</span><span class="p">;</span><span class="w"></span>
+<span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">np</span><span class="p">)=</span><span class="nb">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span><span class="o">*</span><span class="nb">pi</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="p">,</span><span class="n">np</span><span class="p">);</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="n">nterms</span><span class="w"></span>
+<span class="n">twokm</span><span class="p">=</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="n">y</span><span class="p">=</span><span class="n">y</span><span class="o">-</span><span class="n">fourbypi</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">twokm</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">twokm</span>^<span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="k">end</span><span class="p">;</span><span class="w"></span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span><span class="w"></span>
+<span class="nb">print</span><span class="w"> </span><span class="o">-</span><span class="n">deps</span><span class="w"> </span><span class="n">matlab_test_plot</span><span class="p">.</span><span class="n">ps</span><span class="p">;</span><span class="w"></span>
+<span class="nb">quit</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Please note that the last line must be: <code class="docutils literal notranslate"><span class="pre">quit;</span></code>.</p>
@@ -785,33 +884,33 @@ on ARC)</em></p>
 <h2>GPU Matlab jobs<a class="headerlink" href="#gpu-matlab-jobs" title="Permalink to this headline">¶</a></h2>
 <p>Matlab can take advantage of GPU hardware. To do this, first launch Matlab inside a job where GPU resources have been requested (see
 <a class="reference internal" href="../../usage/gpgpu.html"><span class="doc std std-doc">here</span></a>). Within Matlab, the <code class="docutils literal notranslate"><span class="pre">gpuDevices</span></code> command will provide details of the available GPU(s):</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span>    <span class="o">&gt;&gt;</span> <span class="n">gpuDevice</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">gpuDevice</span><span class="w"></span>
 
-    <span class="n">ans</span> <span class="p">=</span> 
+<span class="w">    </span><span class="nb">ans</span><span class="w"> </span><span class="p">=</span><span class="w"> </span>
 
-      <span class="n">CUDADevice</span> <span class="s">with</span> <span class="s">properties:</span>
+<span class="w">      </span><span class="n">CUDADevice</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="nb">properties</span><span class="p">:</span><span class="w"></span>
 
-                          <span class="n">Name</span><span class="p">:</span> <span class="s">&#39;Tesla P100-PCIE-12GB&#39;</span>
-                         <span class="n">Index</span><span class="p">:</span> <span class="mi">1</span>
-             <span class="n">ComputeCapability</span><span class="p">:</span> <span class="s">&#39;6.0&#39;</span>
-                <span class="n">SupportsDouble</span><span class="p">:</span> <span class="mi">1</span>
-                 <span class="n">DriverVersion</span><span class="p">:</span> <span class="mi">9</span>
-                <span class="n">ToolkitVersion</span><span class="p">:</span> <span class="mi">8</span>
-            <span class="n">MaxThreadsPerBlock</span><span class="p">:</span> <span class="mi">1024</span>
-              <span class="n">MaxShmemPerBlock</span><span class="p">:</span> <span class="mi">49152</span>
-            <span class="n">MaxThreadBlockSize</span><span class="p">:</span> <span class="p">[</span><span class="mi">1024</span> <span class="mi">1024</span> <span class="mi">64</span><span class="p">]</span>
-                   <span class="n">MaxGridSize</span><span class="p">:</span> <span class="p">[</span><span class="mf">2.1475e+09</span> <span class="mi">65535</span> <span class="mi">65535</span><span class="p">]</span>
-                     <span class="n">SIMDWidth</span><span class="p">:</span> <span class="mi">32</span>
-                   <span class="n">TotalMemory</span><span class="p">:</span> <span class="mf">1.2786e+10</span>
-               <span class="n">AvailableMemory</span><span class="p">:</span> <span class="mf">1.2401e+10</span>
-           <span class="n">MultiprocessorCount</span><span class="p">:</span> <span class="mi">56</span>
-                  <span class="n">ClockRateKHz</span><span class="p">:</span> <span class="mi">1328500</span>
-                   <span class="n">ComputeMode</span><span class="p">:</span> <span class="s">&#39;Default&#39;</span>
-          <span class="n">GPUOverlapsTransfers</span><span class="p">:</span> <span class="mi">1</span>
-        <span class="n">KernelExecutionTimeout</span><span class="p">:</span> <span class="mi">0</span>
-              <span class="n">CanMapHostMemory</span><span class="p">:</span> <span class="mi">1</span>
-               <span class="n">DeviceSupported</span><span class="p">:</span> <span class="mi">1</span>
-                <span class="n">DeviceSelected</span><span class="p">:</span> <span class="mi">1</span>
+<span class="w">                          </span><span class="n">Name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Tesla P100-PCIE-12GB&#39;</span><span class="w"></span>
+<span class="w">                         </span><span class="n">Index</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">             </span><span class="n">ComputeCapability</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;6.0&#39;</span><span class="w"></span>
+<span class="w">                </span><span class="n">SupportsDouble</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">                 </span><span class="n">DriverVersion</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w"></span>
+<span class="w">                </span><span class="n">ToolkitVersion</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w"></span>
+<span class="w">            </span><span class="n">MaxThreadsPerBlock</span><span class="p">:</span><span class="w"> </span><span class="mi">1024</span><span class="w"></span>
+<span class="w">              </span><span class="n">MaxShmemPerBlock</span><span class="p">:</span><span class="w"> </span><span class="mi">49152</span><span class="w"></span>
+<span class="w">            </span><span class="n">MaxThreadBlockSize</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1024</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="mi">64</span><span class="p">]</span><span class="w"></span>
+<span class="w">                   </span><span class="n">MaxGridSize</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.1475e+09</span><span class="w"> </span><span class="mi">65535</span><span class="w"> </span><span class="mi">65535</span><span class="p">]</span><span class="w"></span>
+<span class="w">                     </span><span class="n">SIMDWidth</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="w"></span>
+<span class="w">                   </span><span class="n">TotalMemory</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2786e+10</span><span class="w"></span>
+<span class="w">               </span><span class="n">AvailableMemory</span><span class="p">:</span><span class="w"> </span><span class="mf">1.2401e+10</span><span class="w"></span>
+<span class="w">           </span><span class="n">MultiprocessorCount</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="w"></span>
+<span class="w">                  </span><span class="n">ClockRateKHz</span><span class="p">:</span><span class="w"> </span><span class="mi">1328500</span><span class="w"></span>
+<span class="w">                   </span><span class="n">ComputeMode</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Default&#39;</span><span class="w"></span>
+<span class="w">          </span><span class="n">GPUOverlapsTransfers</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">        </span><span class="n">KernelExecutionTimeout</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">              </span><span class="n">CanMapHostMemory</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">               </span><span class="n">DeviceSupported</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">                </span><span class="n">DeviceSelected</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Please see the main Matlab product documentation for writing code to use GPUs.</p>

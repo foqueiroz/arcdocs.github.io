@@ -4,10 +4,10 @@ We have a large amount of software installed on both ARC3 and ARC4. These are av
 
 On both ARC3 and ARC4 software is broken up into 4 categories:
 
-- Applications - Software applications
-- Infrastructure - Common libraries available to your programs and applications
-- Compilers - Compilers and interpreters for a range of languages
-- Libraries - Useful system utilities
+- [Applications](./applications/start) - Software applications
+- [Infrastructure](./infrastructure/start) - Common libraries available to your programs and applications
+- [Compilers](./compilers/start) - Compilers and interpreters for a range of languages
+- [Libraries](./libraries/start) - Useful system utilities
 
 ## Module system
 
