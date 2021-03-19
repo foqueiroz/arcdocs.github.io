@@ -22,3 +22,4 @@ This page is an overview of the applications section of software available on th
 - [Stata](./stata)
 - [Visit](./visit)
 - [VMD](./vmd)
+- [XPLOR-NIH](./xplor-nih)

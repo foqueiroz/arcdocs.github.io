@@ -63,6 +63,7 @@
       - file: software/applications/stata
       - file: software/applications/visit
       - file: software/applications/vmd
+      - file: software/applications/xplor-nih
     - file: software/compilers/start
       sections:
       - file: software/compilers/anaconda
