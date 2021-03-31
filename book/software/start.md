@@ -9,9 +9,18 @@ On both ARC3 and ARC4 software is broken up into 4 categories:
 - [Compilers](./compilers/start) - Compilers and interpreters for a range of languages
 - [Libraries](./libraries/start) - Useful system utilities
 
+## Currently installed modules
+
+We regularly update the list of installed modules. You can view these by either following the links below:
+
+- [ARC3 modules](./arc3.md)
+- [ARC4 modules](./arc4.md)
+
+or logging into each system and using the `module avail` command.
+
 ## Module system
 
-A large number of applications are available through the module system and can be loaded with the `add` command, in this example where `name_of_module` is the name of the module you wish to load:
+A large number of applications are available through the module system and can be loaded with the `module add` command, in this example where `name_of_module` is the name of the module you wish to load:
 
 ```bash
 module add name_of_module
