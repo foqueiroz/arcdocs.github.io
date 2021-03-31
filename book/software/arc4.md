@@ -1,7 +1,7 @@
 # ARC4 modules
 Date: 2021-03-31
 
-```{bash}
+```bash
 ------------------------- /apps/Modules/infrastructure -------------------------
 arm-forge/20.0.3  gdb/8.3.1         sge               unison/2.40.128
 cmake/3.10.0      git/2.9.5         singularity/3.6.4 user
