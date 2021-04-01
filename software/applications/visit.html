@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visit &#8212; ARC Documentation</title>
+    <title>VisIt &#8212; ARC Documentation</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -66,8 +66,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://arcdocs.leeds.ac.uk/software/applications/visit.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Visit" />
-<meta property="og:description" content="Visit  Introduction  VisIt is a data analysis and visualisation application, developed to be able to analyse large datasets. We show here how to start the progr" />
+<meta property="og:title"       content="VisIt" />
+<meta property="og:description" content="VisIt  Introduction  VisIt is a data analysis and visualisation application, developed to be able to analyse large datasets. We show here how to start the progr" />
 <meta property="og:image"       content="https://arcdocs.leeds.ac.uk/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -312,7 +312,7 @@
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Visit
+       VisIt
       </a>
      </li>
      <li class="toctree-l3">
@@ -683,10 +683,10 @@
               <div>
                 
   <div class="section" id="visit">
-<h1>Visit<a class="headerlink" href="#visit" title="Permalink to this headline">¶</a></h1>
+<h1>VisIt<a class="headerlink" href="#visit" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://visit.llnl.gov/">VisIt</a> is a data analysis and visualisation
+<p><a class="reference external" href="https://visit.llnl.gov">VisIt</a> is a data analysis and visualisation
 application, developed to be able to analyse large datasets. We show
 here how to start the program on our facilities; however, please refer
 to the project documentation for details on how to use the application
@@ -726,18 +726,17 @@ not to tackle large pieces of work on the login nodes.</p>
 <h3>On the cluster compute nodes<a class="headerlink" href="#on-the-cluster-compute-nodes" title="Permalink to this headline">¶</a></h3>
 <p>Recommended for larger pieces of work:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load visit
-$ qrsh -cwd -V -l h_rt= -l h_vmem= visit
+$ qrsh -cwd -V -l h_rt=&lt;hh:mm:ss&gt; -l h_vmem=&lt;vmem&gt; visit
 </pre></div>
 </div>
-<p>Or, where using more than one cpu is useful, to launch visit in parallel
-(<em>note: unavailable for version 2.6.3</em>):</p>
+<p>Or, where using more than one cpu is useful, to launch visit in parallel</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load visit
-$ qrsh -cwd -V -l h_rt= -l h_vmem= -pe ib  visit -np 
+$ qrsh -cwd -V -l h_rt=&lt;hh:mm:ss&gt; -l h_vmem=&lt;vmem&gt; -pe ib &lt;num&gt; visit -np &lt;num&gt;
 </pre></div>
 </div>
-<p>In the above commands, hh:mm:ss is the length of real time the program
-will be run for, vmem is the amount of memory required per core (e.g.
-“1G” for 1 GB RAM), and num is the number of cores required (please note
+<p>In the above commands, <a class="reference external" href="hh:mm:ss">hh:mm:ss</a> is the length of real time the program
+will be run for, <vmem> is the amount of memory required per core (e.g.
+“1G” for 1 GB RAM), and <num> is the number of cores required (please note
 it appears twice in the command).</p>
 </div>
 </div>
@@ -747,7 +746,7 @@ it appears twice in the command).</p>
 sluggish, or where the best possible performance is required.</p>
 <p>Select a version number from the list of installed versions of visit,
 then download and install a copy of that version appropriate to your
-machine from <a class="reference external" href="https://visit.llnl.gov/">https://visit.llnl.gov/</a>. The list of installed versions
+machine from <a class="reference external" href="https://visit.llnl.gov">https://visit.llnl.gov</a>. The list of installed versions
 is provided by executing the following command on the cluster:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module avail visit
 </pre></div>
@@ -760,9 +759,8 @@ institutions. Please select <code class="docutils literal notranslate"><span cla
 <p>Once installed, start the program and then exit it: this will create a
 number of directories.</p>
 <p>Then, download the files corresponding to the cluster you wish to use:</p>
-<p><a class="reference download internal" download="" href="../../_downloads/0627b1a454008f3f0875f057b9919f4d/host_arc2.xml"><code class="xref download docutils literal notranslate"><span class="pre">host_arc2</span></code></a></p>
-<p><a class="reference download internal" download="" href="../../_downloads/d2ee48aeb24edc964a013329fbbdf868/host_polaris.xml"><code class="xref download docutils literal notranslate"><span class="pre">host_polaris</span></code></a></p>
-<p><a class="reference download internal" download="" href="../../_downloads/4d6cbabd4e4ee3882705efde283c487a/host_marc1.xml"><code class="xref download docutils literal notranslate"><span class="pre">host_marc1</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/f8ecf58d2564e72f0dbaee370e759d89/host_arc3.xml"><code class="xref download docutils literal notranslate"><span class="pre">host_arc3</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/f25d31ad71177826dfee0126add2c9af/host_arc4.xml"><code class="xref download docutils literal notranslate"><span class="pre">host_arc4</span></code></a></p>
 <p>On a Linux, Unix or Mac platform, please save these files to your
 <code class="docutils literal notranslate"><span class="pre">.visit/hosts/</span></code> directory,
 found within your home directory.</p>
@@ -774,39 +772,42 @@ for all users or just for your account, this may be found under
 <p>Start VisIt once again and select the menu item <code class="docutils literal notranslate"><span class="pre">Options-&gt;Host</span> <span class="pre">Profiles...</span></code> This will open a
 window, which should contain an entry on the left hand side for each of
 the host files saved earlier. For each host in turn:</p>
-<p>1. Log into the cluster. Find the location of VisIT by loading the
+<ol>
+<li><p>Log into the cluster. Find the location of VisIT by loading the
 module for the version you want and examining a variable.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>module load visit/
-echo $VISIT_HOME
-</pre></div>
-</div>
-<p>2. Highlight the hostname by clicking on it. On the right hand side,<br />
+<p>module load visit/
+echo $VISIT_HOME</p>
+</li>
+<li><p>Highlight the hostname by clicking on it. On the right hand side,<br />
 look for the configuration item <code class="docutils literal notranslate"><span class="pre">Path</span> <span class="pre">to</span> <span class="pre">VisIt</span> <span class="pre">installation</span></code> . If you cannot
-see it, click on the <code class="docutils literal notranslate"><span class="pre">Machines</span></code> and <code class="docutils literal notranslate"><span class="pre">Host</span> <span class="pre">Settings</span></code> tabs. Enter the location string found in step (1) above.</p>
-<p>3. Close the window with the <code class="docutils literal notranslate"><span class="pre">Dismiss</span></code> button</p>
-<p>4. Save settings with the <code class="docutils literal notranslate"><span class="pre">Options-&gt;Save</span> <span class="pre">Settings</span></code> menu item</p>
+see it, click on the <code class="docutils literal notranslate"><span class="pre">Machines</span></code> and <code class="docutils literal notranslate"><span class="pre">Host</span> <span class="pre">Settings</span></code> tabs. Enter the location string found in step (1) above.</p></li>
+<li><p>Close the window with the <code class="docutils literal notranslate"><span class="pre">Dismiss</span></code> button</p></li>
+<li><p>Save settings with the <code class="docutils literal notranslate"><span class="pre">Options-&gt;Save</span> <span class="pre">Settings</span></code> menu item</p></li>
+</ol>
 </div>
 <div class="section" id="launch-remote-execution">
 <h3>Launch remote execution<a class="headerlink" href="#launch-remote-execution" title="Permalink to this headline">¶</a></h3>
-<p>1. With VisIt running on your workstation, select menu item <code class="docutils literal notranslate"><span class="pre">File-&gt;Open</span> <span class="pre">file...</span></code> to open the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">open</span></code> window.</p>
-<p>2. There will be a drop-down text box marked <code class="docutils literal notranslate"><span class="pre">Host</span></code> . Click on its arrow, which should show a
+<ol class="simple">
+<li><p>With VisIt running on your workstation, select menu item <code class="docutils literal notranslate"><span class="pre">File-&gt;Open</span> <span class="pre">file...</span></code> to open the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">open</span></code> window.</p></li>
+<li><p>There will be a drop-down text box marked <code class="docutils literal notranslate"><span class="pre">Host</span></code> . Click on its arrow, which should show a
 list including <code class="docutils literal notranslate"><span class="pre">localhost</span></code>
 (your workstation) and each of the clusters you configured in the steps
-above. Select the cluster you wish to use.</p>
-<p>3. The <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">open</span></code> window
+above. Select the cluster you wish to use.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">open</span></code> window
 should now show files on the cluster. Select a file visit understands
-and press <code class="docutils literal notranslate"><span class="pre">OK</span></code></p>
-<p>4. A Select options for <code class="docutils literal notranslate"><span class="pre">&lt;clustername&gt;</span></code> should appear. Select <code class="docutils literal notranslate"><span class="pre">serial</span> <span class="pre">(login</span> <span class="pre">node)</span></code>S for a single process
+and press <code class="docutils literal notranslate"><span class="pre">OK</span></code></p></li>
+<li><p>A Select options for <code class="docutils literal notranslate"><span class="pre">&lt;clustername&gt;</span></code> should appear. Select <code class="docutils literal notranslate"><span class="pre">serial</span> <span class="pre">(login</span> <span class="pre">node)</span></code>S for a single process
 on a login node (please note that login nodes are shared between all
 users of the cluster – it should only be used for short or undemanding
 pieces of work), or <code class="docutils literal notranslate"><span class="pre">mpi</span> <span class="pre">(batch</span> <span class="pre">queue)</span></code> to launch visit on the cluster’s compute nodes through
-the batch queue system (<em>note: unavailable for version 2.6.3</em>). When
+the batch queue system. When
 launching through the batch queues, specify the number of cores required
 into <code class="docutils literal notranslate"><span class="pre">Num</span> <span class="pre">procs</span></code> , the length
 of time the resources are required into [Time limit] and any other batch queue options into
 <code class="docutils literal notranslate"><span class="pre">Bank</span></code> (the default value,
 <code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">h_vmem=1G</span></code> requests 1G
-RAM per requested process).</p>
+RAM per requested process).</p></li>
+</ol>
 <p>Once VisIt has launched onto the login node or the batch queue has
 started running, use VisIt normally.</p>
 <p>To double-check what resources are in use, select the menu item
@@ -825,7 +826,7 @@ environment variable <code class="docutils literal notranslate"><span class="pre
 example:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load visit
 $ echo $VISIT_BUILD_MODULES
-bit/64 gnu/4.9.1 openmpi/1.6.5 mkl/11.2
+gnu/native openmpi mkl qt
 </pre></div>
 </div>
 </div>
