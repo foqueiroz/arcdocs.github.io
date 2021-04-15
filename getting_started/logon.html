@@ -762,10 +762,19 @@ $ nano ~/.ssh/config
 </div>
 </li>
 <li><p>Within this file include the following contents where <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code> is replaced by your university username</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Host *.leeds.ac.uk !remote-access.leeds.ac.uk
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Host *.leeds.ac.uk !remote-access.leeds.ac.uk
 ProxyJump USERNAME@remote-access.leeds.ac.uk
 User USERNAME
 </pre></div>
+</div>
+<div class="admonition-old-version-of-ssh admonition">
+<p class="admonition-title">Old version of SSH</p>
+<p>If you’re using an old version of OpenSSH, you may get an error: <code class="docutils literal notranslate"><span class="pre">Bad</span> <span class="pre">configuration</span> <span class="pre">option:</span> <span class="pre">ProxyJump</span></code>.  In this case you’ll want to use this instead:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Host *.leeds.ac.uk !remote-access.leeds.ac.uk
+ProxyCommand ssh -W %h:%p USERNAME@remote-access.leeds.ac.uk
+User USERNAME
+</pre></div>
+</div>
 </div>
 </li>
 <li><p>Save this file and your configuration is all set up!</p></li>
