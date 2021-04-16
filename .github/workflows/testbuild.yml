@@ -2,13 +2,13 @@
 
 name: test-build
 
-# Only run this when the master branch changes
+# Only run this when a PR suggests changes to working-master
 on:
   pull_request:
     branches:
       - working-master
 
-# This job installs dependencies, build the book, and pushes it to `gh-pages`
+# This job installs dependencies and builds the book
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
