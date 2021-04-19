@@ -106,6 +106,8 @@
   sections:
     - file: systems/arc4
     - file: systems/arc3
+    - file: systems/cloud-computing
+    - file: systems/secure-systems
 
 # ===== Training ==========================================
 - url: https://arc.leeds.ac.uk/training/
