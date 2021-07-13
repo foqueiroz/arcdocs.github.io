@@ -1,4 +1,4 @@
-# Advanced 
+# Advanced Job Examples
 
 ## Submitting Mixed Mode Jobs
 The ‘mixed mode’ (MPI+OpenMP) programming model is currently only supported on ARC2. This typically involves MPI processes running across nodes and OpenMP threads upon each node with the total number of processes (MPI*OpenMP) equalling the number of physical processor cores.
