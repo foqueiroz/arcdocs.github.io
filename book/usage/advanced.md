@@ -29,28 +29,27 @@ or
 #$ -l np=<np>, ppn=<ppn>, tpp=<tpp> 
 mpirun ./a.out
 ```
-Given there are 16 cores per node, you would typically ensure `ppn`*`tpp`=16
+There are 24 cores per node on ARC3 , you would typically ensure `ppn`*`tpp`=24.
+There are 40 cores per node on ARC4 , you would typically ensure `ppn`*`tpp`=40.
 
 ### Example
-To run an MPI+OpenMP executable mixed.exe with 64 MPI processes each launching 4 OpenMP threads, the following submission script would be needed:
+Using ARC4, To run an MPI+OpenMP executable mixed.exe with 80 MPI processes each launching 4 OpenMP threads, the following submission script would be needed:
 ```bash
 #$ -V 
-#$ -cwd 
-#$ -b y 
+#$ -cwd
 #$ -l hr_t=01:00:00 
-#$ -l np=64, ppn=4, tpp=4 
+#$ -l np=80, ppn=10, tpp=4 
 mpirun ./mixed.exe
 ```
-This will allocate 16 nodes (=16*16=256 cores).
-Each node will have 4 MPI processes, each of which will have 4 OpenMP threads (so 4\*4=16 processes per node in total, and 16\*16=256 (=64MPI\*4OpenMP) processes in total.
+This will allocate 8 nodes (=8*40=320 cores).
+Each node will have 10 MPI processes, each of which will have 4 OpenMP threads (so 10\*4=40 processes per node in total, and 8\*140=320 (=80MPI\*4OpenMP) processes in total.
 
 Alternatively, the same effect can be achieved by:
 ```bash
 #$ -V 
-#$ -cwd 
-#$ -b y 
+#$ -cwd
 #$ -l hr_t=01:00:00 
-#$ -l nodes=16, ppn=4, tpp=4 
+#$ -l nodes=8, ppn=10, tpp=4 
 mpirun ./mixed.exe
 ```
 Note that the `OMP_NUM_THREADS` environment variable is automatically set by the batch system and so you do not need to set this in your environment.
