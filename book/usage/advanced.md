@@ -29,8 +29,8 @@ or
 #$ -l np=<np>, ppn=<ppn>, tpp=<tpp> 
 mpirun ./a.out
 ```
-There are 24 cores per node on ARC3 , you would typically ensure `ppn`*`tpp`=24.
-There are 40 cores per node on ARC4 , you would typically ensure `ppn`*`tpp`=40.
+There are 24 cores per node on ARC3 , you would typically ensure `ppn`\*`tpp`=24.    
+There are 40 cores per node on ARC4 , you would typically ensure `ppn`\*`tpp`=40.
 
 ### Example
 Using ARC4, To run an MPI+OpenMP executable mixed.exe with 80 MPI processes each launching 4 OpenMP threads, the following submission script would be needed:
