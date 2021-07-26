@@ -42,6 +42,11 @@ The latest versions of macOS do not have an X11 client installed so this will ne
 
 ### Configuring SSH for off-campus connections
 
+```{warning}
+**As of July 2021 the University is using 2-factor authentication for password-based access to remote-access.**
+You will need to make sure you have [enrolled with Duo with your University account](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014659) and will be required to [use Duo to authenticate](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014641) after submitting your password to remote-access.
+```
+
 In order to connect to ARC when you're off campus you'll need to do some extra configuration so that your SSH connection goes via our `remote-access` server. The following steps outline how to setup this configuration:
 
 1. Open a Terminal on your Linux/macOS machine
@@ -122,7 +127,11 @@ You can create an SSH session to connect to ARC using the following steps:
 | ----------------------------------------------------- |
 | ![You will immediately be prompted for your password to connect to the remote-access server](../assets/img/logon/mobaXTerm6.png) |
 
-| 7. After it accepts your password it will request your password again, this time to log into ARC4 |
+| 7. You will immediately be prompted for to enter your [Duo two-factor code](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014641) which can be found on your Duo App |
+| ----------------------------------------------------- |
+| ![You will immediately be prompted for to enter your Duo two-factor login code which can be found on your Duo App](../assets/img/logon/mobaXTerm6-5.png) |
+
+| 8. After it accepts your password it will request your password again, this time to log into ARC4 (This may not happen automatically and you may need to double click on session name that appears on the right hand User sessions section) |
 | ----------------------------------------------------- |
 | ![After it accepts your password it will request your password again, this time to log into ARC4](../assets/img/logon/mobaXTerm7.png) |
 
@@ -130,11 +139,11 @@ You can create an SSH session to connect to ARC using the following steps:
 will not appear as you type your password. Your keystrokes are recorded so please type carefully!
 ```
 
-| 8. Once successful you will see the ARC4 message of the day and the ARC prompt |
+| 9. Once successful you will see the ARC4 message of the day and the ARC prompt |
 | ----------------------------------------------------- |
 | ![Once successful you will see the ARC4 message of the day and the ARC prompt](../assets/img/logon/mobaXTerm8.png) |
 
-| 9. You can restart an existing session after it has closed by double-clicking the session under the User sessions folder on the left-hand panel of the main MobaXTerm menu |
+| 10. You can restart an existing session after it has closed by double-clicking the session under the User sessions folder on the left-hand panel of the main MobaXTerm menu |
 | ----------------------------------------------------- |
 | ![You can restart an existing session after it has closed by double-clicking the session under the User sessions](../assets/img/logon/mobaXTerm9.png) |
 
@@ -205,6 +214,10 @@ In order to successfully connect off-campus you are required to adjust some sett
 And now MobaXTerm should be configured so we can SSH to ARC using the MobaXTerm Terminal.
 
 ##### SSHing via the MobaXTerm Terminal
+
+```{warning}
+**As of July 2021 users have experienced difficulties using the MobaXTerm terminal to connect to HPC facilities via remote-access** due to compatibility issues between versions of MobaXTerm and our 2 factor authentication provider. Therefore, it is highly recommended you use the [Sessions feature to connect](#creating-an-ssh-session)
+```
 
 We can use the MobaXTerm Terminal like a standard unix shell to navigate around our local computer and also to SSH onto remote hosts including ARC. In order to connect to ARC we need to make sure we have configured MobaXTerm as described in [the above section](#configuring-mobaxterm-terminal)
 
