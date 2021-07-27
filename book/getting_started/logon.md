@@ -149,6 +149,11 @@ will not appear as you type your password. Your keystrokes are recorded so pleas
 
 #### Using the MobaXTerm Terminal
 
+```{warning}
+**As of July 2021 the University is using 2-factor authentication for password-based access to remote-access.**
+You will need to make sure you have [enrolled with Duo with your University account](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014659) and will be required to [use Duo to authenticate](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014641) after submitting your password to remote-access.
+```
+
 Alternatively, you can connect to ARC using the builtin Terminal within MobaXTerm and use the `ssh` command. 
 
 ##### Configuring MobaXTerm Terminal
@@ -196,7 +201,7 @@ In order to successfully connect off-campus you are required to adjust some sett
 
 | 10. Type the contents of the file as follows where `USERNAME` is your university username |
 | ----------------------------------------------------- |
-| <pre id="codecell0"> Host *.leeds.ac.uk !remote-access.leeds.ac.uk <br> ProxyJump USERNAME@remote-access.leeds.ac.uk <br> User USERNAME </pre> |
+| <pre id="codecell0"> Host *.leeds.ac.uk !remote-access.leeds.ac.uk <br> ProxyJump USERNAME@remote-access.leeds.ac.uk <br> User USERNAME <br> <br> Host remote-access.leeds.ac.uk <br> PreferredAuthentications publickey,keyboard-interactive </pre> |
 | ![This takes you to the MobaXTerm terminal view](../assets/img/logon/mobaSSH10.png) |
 
 | 11. Once complete go to File > Save As  |
@@ -215,10 +220,6 @@ And now MobaXTerm should be configured so we can SSH to ARC using the MobaXTerm 
 
 ##### SSHing via the MobaXTerm Terminal
 
-```{warning}
-**As of July 2021 users have experienced difficulties using the MobaXTerm terminal to connect to HPC facilities via remote-access** due to compatibility issues between versions of MobaXTerm and our 2 factor authentication provider. Therefore, it is highly recommended you use the [Sessions feature to connect](#creating-an-ssh-session)
-```
-
 We can use the MobaXTerm Terminal like a standard unix shell to navigate around our local computer and also to SSH onto remote hosts including ARC. In order to connect to ARC we need to make sure we have configured MobaXTerm as described in [the above section](#configuring-mobaxterm-terminal)
 
 | 1. Within a local Terminal on MobaXTerm we use the `ssh` command to connect to ARC |
@@ -229,10 +230,14 @@ We can use the MobaXTerm Terminal like a standard unix shell to navigate around 
 | ----------------------------------------------------- |
 | ![We are then prompted to submit our password to connect to remote-access](../assets/img/logon/mobaSSH_2.png) |
 
-| 3. We are then prompted to submit our password to connect to `arc4.leeds.ac.uk` |
+| 3. We are then prompted select how to receive a Duo 2 factor authentication prompt either via the app or as a text message. Select your preferred option and either approve the push or input a passcode that is sent to you via SMS |
 | ----------------------------------------------------- |
 | ![We are then prompted to submit our password to connect to arc4](../assets/img/logon/mobaSSH_3.png) |
 
+| 3. We are then prompted to submit our password to connect to `arc4.leeds.ac.uk` |
+| ----------------------------------------------------- |
+| ![We are then prompted to submit our password to connect to arc4](../assets/img/logon/mobaSSH_4.png) |
+
 | 4. Once we have successfully submitted our passwords our prompt will change and the message of the day for ARC4 will be displayed |
 | ----------------------------------------------------- |
-| ![ARC4 message of the day on MobaXTerm](../assets/img/logon/mobaSSH_4.png) |
+| ![ARC4 message of the day on MobaXTerm](../assets/img/logon/mobaSSH_5.png) |
