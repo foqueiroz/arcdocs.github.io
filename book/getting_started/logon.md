@@ -97,6 +97,11 @@ To get started you need to install MobaXTerm. You can do this by downloading the
 
 ### Connecting via MobaXTerm
 
+```{warning}
+**As of July 2021 the University is using 2-factor authentication for password-based access to remote-access.**
+You will need to make sure you have [enrolled with Duo with your University account](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014659) and will be required to [use Duo to authenticate](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014641) after submitting your password to remote-access.
+```
+
 Once you have MobaXTerm downloaded you can connect to ARC via two mechanisms: using the builtin local terminal to connect using SSH commands; or creating an SSH session via the GUI.
 
 #### Creating an SSH session
@@ -148,11 +153,6 @@ will not appear as you type your password. Your keystrokes are recorded so pleas
 | ![You can restart an existing session after it has closed by double-clicking the session under the User sessions](../assets/img/logon/mobaXTerm9.png) |
 
 #### Using the MobaXTerm Terminal
-
-```{warning}
-**As of July 2021 the University is using 2-factor authentication for password-based access to remote-access.**
-You will need to make sure you have [enrolled with Duo with your University account](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014659) and will be required to [use Duo to authenticate](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014641) after submitting your password to remote-access.
-```
 
 Alternatively, you can connect to ARC using the builtin Terminal within MobaXTerm and use the `ssh` command. 
 
