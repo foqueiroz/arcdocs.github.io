@@ -76,7 +76,7 @@ In order to connect to ARC when you're off campus you'll need to do some extra c
 
     ```
     Host *.leeds.ac.uk !remote-access.leeds.ac.uk
-    ProxyCommand ssh -W %h:%p USERNAME@remote-access.leeds.ac.uk
+    ProxyCommand ssh -o PreferredAuthentications=keyboard-interactive -W %h:%p USERNAME@remote-access.leeds.ac.uk
     User USERNAME
     ```
     ````
