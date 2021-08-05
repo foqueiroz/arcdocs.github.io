@@ -803,7 +803,7 @@ User USERNAME
 <p class="admonition-title">Old version of SSH</p>
 <p>If you’re using an old version of OpenSSH, you may get an error: <code class="docutils literal notranslate"><span class="pre">Bad</span> <span class="pre">configuration</span> <span class="pre">option:</span> <span class="pre">ProxyJump</span></code>.  In this case you’ll want to use this instead:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Host *.leeds.ac.uk !remote-access.leeds.ac.uk
-ProxyCommand ssh -W %h:%p USERNAME@remote-access.leeds.ac.uk
+ProxyCommand ssh -o PreferredAuthentications=keyboard-interactive -W %h:%p USERNAME@remote-access.leeds.ac.uk
 User USERNAME
 </pre></div>
 </div>
