@@ -21,11 +21,13 @@ $ module add dl_poly/4.09
 
 This adds the DL_POLY executable files to your environment and must be included in your job submission script to ensure your jobs can also access DL_POLY.
 
+## Usage
+
 ### DL_POLY 4.09
 
 DL_POLY 4.09 is built with to both run in serial and in parallel depending on the resources available using the single executable `DLPOLY.Z`.
 
-### Parallel execution
+#### Parallel execution
 
 An example job submission script that calls DLpoly is shown below:
 
@@ -42,7 +44,7 @@ This requests 48 hours of runtime on 16 processes spread over Infiniband. It can
 $ qsub dlpoly.sh
 ```
 
-### Serial execution
+#### Serial execution
 
 DL_POLY can be run in serial using the same executeable without prepending the call with `mpirun`.
 
@@ -62,7 +64,7 @@ $ qsub dlpoly_serial.sh
 
 Version 4.08 is built on ARC3 and has a slightly different executable that can be used as follows:
 
-### Usage
+#### Job submission example
 
 An example job submission script that calls to the `DL_POLY.Z.parallel` executable and requests multiple cores over Infiniband.
 
