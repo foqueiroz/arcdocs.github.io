@@ -4,7 +4,7 @@ Both ARC3 and ARC4 have Schrodinger Suite 2020-1, Build 12 installed.
 
 ## Description
 
-The [Schrodinger suite](https://www.schrodinger.com/platform), developed by [Schrodinger Inc](https://www.schrodinger.com/), is computational chemistry programme with a number of different tools for evaluating compounds in silico, with experimental accuracy on properties such as binding affinity and solubility.
+The [Schrodinger suite](https://www.schrodinger.com/platform), developed by [Schrodinger Inc](https://www.schrodinger.com/), is a computational chemistry program with a number of different tools for evaluating compounds in silico, with experimental accuracy on properties such as binding affinity and solubility.
 
 ## Licensing
 
@@ -37,7 +37,7 @@ To access some of the Schrodinger suite of tools you can load the module with th
 $ module add schrodinger/2020-1
 ```
 
-This allows you to access a number of executeables from the command line and adds a new environment variable `$SCHRODINGER_HOME` from which it is possible to access more executeables via the `$SCHRODINGER_HOME/utilities` directory.
+This allows you to access a number of executables from the command line and adds a new environment variable `$SCHRODINGER_HOME` from which it is possible to access more executables via the `$SCHRODINGER_HOME/utilities` directory.
 ## Maestro
 
 ```{warning}
