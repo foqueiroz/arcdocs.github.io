@@ -1,5 +1,7 @@
 # Welcome
 
+<h2 style="color: #B33A3A;font-weight: bold;"> 1st October 2021: ARC3 and ARC4 are currently unavailable due to a major incident </h2> 
+
 Welcome to the Documentation site for the High Performance Computing facilities (ARC3 and ARC4) provided by the [Research Computing Team](https://arc.leeds.ac.uk) at the [University of Leeds](https://www.leeds.ac.uk).
 
 You can find information on this site about how to use these services, request training and support, information about installed applications and documentation around are system specification.
