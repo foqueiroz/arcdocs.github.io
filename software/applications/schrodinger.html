@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VisIt &#8212; ARC Documentation</title>
+    <title>Schrodinger &#8212; ARC Documentation</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,12 +49,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://arcdocs.leeds.ac.uk/software/applications/visit.html" />
+    <link rel="canonical" href="https://arcdocs.leeds.ac.uk/software/applications/schrodinger.html" />
     <link rel="shortcut icon" href="../../_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="VMD (Visual Molecular Dynamics)" href="vmd.html" />
-    <link rel="prev" title="Stata" href="stata.html" />
+    <link rel="next" title="Stata" href="stata.html" />
+    <link rel="prev" title="R" href="R.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -324,8 +324,8 @@
        R
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="schrodinger.html">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
        Schrodinger
       </a>
      </li>
@@ -334,8 +334,8 @@
        Stata
       </a>
      </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+     <li class="toctree-l3">
+      <a class="reference internal" href="visit.html">
        VisIt
       </a>
      </li>
@@ -615,7 +615,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/software/applications/visit.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/software/applications/schrodinger.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -635,10 +635,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fsoftware/applications/visit.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fsoftware/applications/schrodinger.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/applications/visit.md"><button
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/software/applications/schrodinger.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -664,48 +664,65 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
+  <a class="reference internal nav-link" href="#description">
+   Description
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#running-visit-on-the-arc-systems">
-   Running VisIt on the ARC Systems
+  <a class="reference internal nav-link" href="#licensing">
+   Licensing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation">
+   Documentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-usage">
+   Basic Usage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maestro">
+   Maestro
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#glide">
+   Glide
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#on-a-cluster-login-node-quick-start">
-     On a cluster login node (quick start)
+    <a class="reference internal nav-link" href="#usage-through-command-line">
+     Usage through command line
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#preparing-files">
+       Preparing files
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creating-a-job-submission-file">
+       Creating a job submission file
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#retrieving-tabular-scoring-data-optional">
+         Retrieving tabular scoring data (optional)
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#on-the-cluster-compute-nodes">
-     On the cluster compute nodes
+    <a class="reference internal nav-link" href="#usage-through-maestro">
+     Usage through Maestro
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#running-visit-on-your-workstation-offload-storage-and-processing-to-the-arc-systems">
-   Running VisIT on your workstation, offload storage and processing to the ARC systems
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#configure-for-remote-execution">
-     Configure for remote execution
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#launch-remote-execution">
-     Launch remote execution
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#developing-plugins-with-visit">
-   Developing plugins with VisIt
-  </a>
  </li>
 </ul>
 
@@ -718,152 +735,113 @@
         
               <div>
                 
-  <div class="section" id="visit">
-<h1>VisIt<a class="headerlink" href="#visit" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://visit.llnl.gov">VisIt</a> is a data analysis and visualisation
-application, developed to be able to analyse large datasets. We show
-here how to start the program on our facilities; however, please refer
-to the project documentation for details on how to use the application
-itself.</p>
-<p>Although VisIt is flexible in the way it is deployed, the simplest
-method of invoking it is to run these commands on a login node:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load visit
-$ visit
+  <div class="section" id="schrodinger">
+<h1>Schrodinger<a class="headerlink" href="#schrodinger" title="Permalink to this headline">¶</a></h1>
+<p>Both ARC3 and ARC4 have Schrodinger Suite 2020-1, Build 12 installed.</p>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://www.schrodinger.com/platform">Schrodinger suite</a>, developed by <a class="reference external" href="https://www.schrodinger.com/">Schrodinger Inc</a>, is a computational chemistry program with a number of different tools for evaluating compounds in silico, with experimental accuracy on properties such as binding affinity and solubility.</p>
+</div>
+<div class="section" id="licensing">
+<h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
+<p>To run Schrodinger suite programs a license is required and limits the number of cores available. You will be unable to load any schrodinger suite tools until you have specified the relevant license server information which you should request from your supervisor or department.</p>
+<p>You will then need to set an environment variable when logged into ARC3/ARC4 that specifies the license host address and port number as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is an example</span>
+$ <span class="nb">export</span> <span class="nv">SCHROD_LICENSE_FILE</span><span class="o">=</span>&lt;port&gt;@&lt;host&gt;
 </pre></div>
 </div>
-<p>This will provide the core functionality. More complicated methods are
-described below, offering different levels of performance. For example,
-the graphical interface can be run locally on a low-end workstation or
-laptop, while the rendering takes place in parallel on the cluster –
-taking advantage of the CPU, memory and storage resources available.
-Although not making use of the acceleration that graphics cards provide,
-it can allow larger datasets that cannot fit onto a graphics card to be
-analysed.</p>
+<p>You will also need to include this within any job submission scripts to ensure your jobs don’t terminate early because they haven’t got the license server configured.</p>
 </div>
-<div class="section" id="running-visit-on-the-arc-systems">
-<h2>Running VisIt on the ARC Systems<a class="headerlink" href="#running-visit-on-the-arc-systems" title="Permalink to this headline">¶</a></h2>
-<p>Please note that these methods depend on your workstation having an X
-server running and for you to have enabled X11 forwarding through your
-SSH client.</p>
-<div class="section" id="on-a-cluster-login-node-quick-start">
-<h3>On a cluster login node (quick start)<a class="headerlink" href="#on-a-cluster-login-node-quick-start" title="Permalink to this headline">¶</a></h3>
-<p>Recommended for very short or undemanding pieces of work. Login to the
-cluster and execute:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load visit
-$ visit
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>Documentation is available for Schrodinger on ARC3/ARC4. It is possible to load this directly on ARC3/ARC4 when connecting with <a class="reference external" href="../../getting_started/logon#graphics-forwarding-x11">X11 graphical forwarding</a>, using FireFox to open the HTML documentation pages with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module add schrodinger/2020-1
+
+$ firefox <span class="nv">$SCHRODINGER_HOME</span>/docs/Documentation.htm
 </pre></div>
 </div>
-<p>Please note that, as they are shared between all users, it is important
-not to tackle large pieces of work on the login nodes.</p>
 </div>
-<div class="section" id="on-the-cluster-compute-nodes">
-<h3>On the cluster compute nodes<a class="headerlink" href="#on-the-cluster-compute-nodes" title="Permalink to this headline">¶</a></h3>
-<p>Recommended for larger pieces of work:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load visit
-$ qrsh -cwd -V -l h_rt=&lt;hh:mm:ss&gt; -l h_vmem=&lt;vmem&gt; visit
+<div class="section" id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h2>
+<p>To access some of the Schrodinger suite of tools you can load the module with the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module add schrodinger/2020-1
 </pre></div>
 </div>
-<p>Or, where using more than one cpu is useful, to launch visit in parallel</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load visit
-$ qrsh -cwd -V -l h_rt=&lt;hh:mm:ss&gt; -l h_vmem=&lt;vmem&gt; -pe ib &lt;num&gt; visit -np &lt;num&gt;
+<p>This allows you to access a number of executables from the command line and adds a new environment variable <code class="docutils literal notranslate"><span class="pre">$SCHRODINGER_HOME</span></code> from which it is possible to access more executables via the <code class="docutils literal notranslate"><span class="pre">$SCHRODINGER_HOME/utilities</span></code> directory.</p>
+</div>
+<div class="section" id="maestro">
+<h2>Maestro<a class="headerlink" href="#maestro" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To use maestro from ARC3/ARC4 you will need to connect with <a class="reference external" href="../../getting_started/logon#graphics-forwarding-x11">X11 graphical forwarding</a> enabled</p>
+</div>
+<p>Maestro is the primary graphic user interface to the Schrodinger suite of tools and can be used to submit jobs directly to the scheduling system.</p>
+<p>To start maestro you will need to have added the schrodinger module and set the license server environment variable, after which you can run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ maestro 
 </pre></div>
 </div>
-<p>In the above commands, <a class="reference external" href="hh:mm:ss">hh:mm:ss</a> is the length of real time the program
-will be run for, <vmem> is the amount of memory required per core (e.g.
-“1G” for 1 GB RAM), and <num> is the number of cores required (please note
-it appears twice in the command).</p>
+<p>This will load up a separate window containing the maestro GUI.</p>
+<p><img alt="Maestro GUI loaded up from ARC4" src="../../_images/maestro-window.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is not recommended to use maestro for developing your workflows via this method as the user experience can be quite laggy. It is <strong>recommended</strong> workflow files are produced on your local machine using Schrodinger 2020-1 and uploaded to ARC4 for use on the batch queuing system.</p>
 </div>
 </div>
-<div class="section" id="running-visit-on-your-workstation-offload-storage-and-processing-to-the-arc-systems">
-<h2>Running VisIT on your workstation, offload storage and processing to the ARC systems<a class="headerlink" href="#running-visit-on-your-workstation-offload-storage-and-processing-to-the-arc-systems" title="Permalink to this headline">¶</a></h2>
-<p>Recommended where the graphical interface (menu items, etc.) feels
-sluggish, or where the best possible performance is required.</p>
-<p>Select a version number from the list of installed versions of visit,
-then download and install a copy of that version appropriate to your
-machine from <a class="reference external" href="https://visit.llnl.gov">https://visit.llnl.gov</a>. The list of installed versions
-is provided by executing the following command on the cluster:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module avail visit
+<div class="section" id="glide">
+<h2>Glide<a class="headerlink" href="#glide" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Current licensing restrictions mean glide is only able to run on one core at any one time.</p>
+</div>
+<p>Glide is a tool that allows for high speed computation docking for screening large numbers of compounds. It is available from the command line or can be specified from within the Maestro GUI.</p>
+<div class="section" id="usage-through-command-line">
+<h3>Usage through command line<a class="headerlink" href="#usage-through-command-line" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="preparing-files">
+<h4>Preparing files<a class="headerlink" href="#preparing-files" title="Permalink to this headline">¶</a></h4>
+<p>You should prepare your files on maestro in advance of running glide on the command line to perform computational docking. This will produce a number of files that you should transfer to the HPC system and will serve as the template for your job submission file, this includes:</p>
+<ul class="simple">
+<li><p>A .sh file, this shell file contains a generic glide command to use to run this workflow</p></li>
+<li><p>A .zip file containing receptor grid data</p></li>
+<li><p>An .sdf file (structure data file) containing data about input chemical structures</p></li>
+<li><p>A .in file, the input file for glide containing configuration settings</p></li>
+</ul>
+<p>These files should be <a class="reference internal" href="../../getting_started/file_transfer.html"><span class="doc std std-doc">transferred to the HPC</span></a> where we’ll write an additional file to submit them as a <a class="reference internal" href="../../usage/batchjob.html"><span class="doc std std-doc">batch job</span></a>.</p>
+</div>
+<div class="section" id="creating-a-job-submission-file">
+<h4>Creating a job submission file<a class="headerlink" href="#creating-a-job-submission-file" title="Permalink to this headline">¶</a></h4>
+<p>Now that we’ve transferred our files onto the HPC we’re ready to start creating a job submission file to submit our glide job to the scheduler. Maestro helps make this relatively easy by creating the <code class="docutils literal notranslate"><span class="pre">.sh</span></code> file we encountered earlier that contains most of the command we need to include in our job submission file.</p>
+<p>Take this example <code class="docutils literal notranslate"><span class="pre">maestro.sh</span></code> for the input file <code class="docutils literal notranslate"><span class="pre">glide-dock_SP_1.in</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SCHRODINGER</span><span class="si">}</span><span class="s2">/glide&quot;</span> glide-dock_SP_1.in -OVERWRITE -adjust -HOST localhost:2 -TMPLAUNCHDIR
 </pre></div>
 </div>
-<p>If installing on a Windows platform, you will be asked to select the
-desired network configuration and given a choice of a number of
-institutions. Please select <code class="docutils literal notranslate"><span class="pre">None</span></code> .</p>
-<div class="section" id="configure-for-remote-execution">
-<h3>Configure for remote execution<a class="headerlink" href="#configure-for-remote-execution" title="Permalink to this headline">¶</a></h3>
-<p>Once installed, start the program and then exit it: this will create a
-number of directories.</p>
-<p>Then, download the files corresponding to the cluster you wish to use:</p>
-<p><a class="reference download internal" download="" href="../../_downloads/f8ecf58d2564e72f0dbaee370e759d89/host_arc3.xml"><code class="xref download docutils literal notranslate"><span class="pre">host_arc3</span></code></a></p>
-<p><a class="reference download internal" download="" href="../../_downloads/f25d31ad71177826dfee0126add2c9af/host_arc4.xml"><code class="xref download docutils literal notranslate"><span class="pre">host_arc4</span></code></a></p>
-<p>On a Linux, Unix or Mac platform, please save these files to your
-<code class="docutils literal notranslate"><span class="pre">.visit/hosts/</span></code> directory,
-found within your home directory.</p>
-<p>On a Windows platform, please save these files to the application
-directory. Depending on whether VisIT was installed by an administrator
-for all users or just for your account, this may be found under
-<code class="docutils literal notranslate"><span class="pre">Computer-&gt;C:-&gt;Profile</span> <span class="pre">Files/LLNL/VisIt</span> <span class="pre">&lt;ver&gt;/hosts</span></code> or
-<code class="docutils literal notranslate"><span class="pre">Computer-&gt;C:-&gt;Users-&gt;YourUsername-&gt;AppData-&gt;Local-&gt;Programs-&gt;LLNL-&gt;VisIT</span> <span class="pre">&lt;ver&gt;-&gt;hosts</span></code></p>
-<p>Start VisIt once again and select the menu item <code class="docutils literal notranslate"><span class="pre">Options-&gt;Host</span> <span class="pre">Profiles...</span></code> This will open a
-window, which should contain an entry on the left hand side for each of
-the host files saved earlier. For each host in turn:</p>
-<ol>
-<li><p>Log into the cluster. Find the location of VisIT by loading the
-module for the version you want and examining a variable.</p>
-<p>module load visit/
-echo $VISIT_HOME</p>
-</li>
-<li><p>Highlight the hostname by clicking on it. On the right hand side,<br />
-look for the configuration item <code class="docutils literal notranslate"><span class="pre">Path</span> <span class="pre">to</span> <span class="pre">VisIt</span> <span class="pre">installation</span></code> . If you cannot
-see it, click on the <code class="docutils literal notranslate"><span class="pre">Machines</span></code> and <code class="docutils literal notranslate"><span class="pre">Host</span> <span class="pre">Settings</span></code> tabs. Enter the location string found in step (1) above.</p></li>
-<li><p>Close the window with the <code class="docutils literal notranslate"><span class="pre">Dismiss</span></code> button</p></li>
-<li><p>Save settings with the <code class="docutils literal notranslate"><span class="pre">Options-&gt;Save</span> <span class="pre">Settings</span></code> menu item</p></li>
-</ol>
-</div>
-<div class="section" id="launch-remote-execution">
-<h3>Launch remote execution<a class="headerlink" href="#launch-remote-execution" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
-<li><p>With VisIt running on your workstation, select menu item <code class="docutils literal notranslate"><span class="pre">File-&gt;Open</span> <span class="pre">file...</span></code> to open the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">open</span></code> window.</p></li>
-<li><p>There will be a drop-down text box marked <code class="docutils literal notranslate"><span class="pre">Host</span></code> . Click on its arrow, which should show a
-list including <code class="docutils literal notranslate"><span class="pre">localhost</span></code>
-(your workstation) and each of the clusters you configured in the steps
-above. Select the cluster you wish to use.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">open</span></code> window
-should now show files on the cluster. Select a file visit understands
-and press <code class="docutils literal notranslate"><span class="pre">OK</span></code></p></li>
-<li><p>A Select options for <code class="docutils literal notranslate"><span class="pre">&lt;clustername&gt;</span></code> should appear. Select <code class="docutils literal notranslate"><span class="pre">serial</span> <span class="pre">(login</span> <span class="pre">node)</span></code>S for a single process
-on a login node (please note that login nodes are shared between all
-users of the cluster – it should only be used for short or undemanding
-pieces of work), or <code class="docutils literal notranslate"><span class="pre">mpi</span> <span class="pre">(batch</span> <span class="pre">queue)</span></code> to launch visit on the cluster’s compute nodes through
-the batch queue system. When
-launching through the batch queues, specify the number of cores required
-into <code class="docutils literal notranslate"><span class="pre">Num</span> <span class="pre">procs</span></code> , the length
-of time the resources are required into [Time limit] and any other batch queue options into
-<code class="docutils literal notranslate"><span class="pre">Bank</span></code> (the default value,
-<code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">h_vmem=1G</span></code> requests 1G
-RAM per requested process).</p></li>
-</ol>
-<p>Once VisIt has launched onto the login node or the batch queue has
-started running, use VisIt normally.</p>
-<p>To double-check what resources are in use, select the menu item
-<code class="docutils literal notranslate"><span class="pre">File-&gt;Compute</span> <span class="pre">Engines...</span></code></p>
-</div>
-</div>
-<div class="section" id="developing-plugins-with-visit">
-<h2>Developing plugins with VisIt<a class="headerlink" href="#developing-plugins-with-visit" title="Permalink to this headline">¶</a></h2>
-<p>When developing plugins to extend the software it is probably useful to
-use the same development environment used to build VisIt, in order to
-minimise compatibility problems between different C++ compilers, etc. If
-we have compiled a particular version of VisIt ourselves instead of
-using the version from the VisIt website, loading the
-<code class="docutils literal notranslate"><span class="pre">visit</span></code> module will set
-environment variable <code class="docutils literal notranslate"><span class="pre">VISIT_BUILD_MODULES</span></code> to contain the list of modules used build it. For
-example:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load visit
-$ echo $VISIT_BUILD_MODULES
-gnu/native openmpi mkl qt
+<p>This gives us the barebones of what we need to include in our job submission file with some slight changes outlined below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#$ -cwd</span>
+<span class="c1">#$ -l h_rt=00:15:00</span>
+<span class="c1">#$ -l h_vmem=1G</span>
+
+module add schrodinger/2020-1
+<span class="nb">export</span> <span class="nv">SCHROD_LICENSE_FILE</span><span class="o">=</span>&lt;port&gt;@&lt;host&gt;
+
+<span class="s2">&quot;</span><span class="si">${</span><span class="nv">SCHRODINGER_HOME</span><span class="si">}</span><span class="s2">/glide&quot;</span> -OVERWRITE -adjust -LOCAL -WAIT -DEBUG glide-dock_SP_1.in
 </pre></div>
+</div>
+<p>Here we’ve specified to use the glide executable that exists within the <code class="docutils literal notranslate"><span class="pre">$SCHRODINGER_HOME</span></code> directory, we set the job to overwrite (<code class="docutils literal notranslate"><span class="pre">-OVERWRITE</span></code>) any previous job files, we set <code class="docutils literal notranslate"><span class="pre">-adjust</span></code> to allow the job to determine the size of subjobs automatically, <code class="docutils literal notranslate"><span class="pre">-LOCAL</span></code> means the job writes any output files to the current directory rather than a temporary directory, <code class="docutils literal notranslate"><span class="pre">-WAIT</span></code> means the job does not return the prompt until the job completes (this <strong>must</strong> be set when submitting a job to the scheduler), <code class="docutils literal notranslate"><span class="pre">-DEBUG</span></code> includes details of the job control operation in the log file that is produced during the run.</p>
+<div class="section" id="retrieving-tabular-scoring-data-optional">
+<h5>Retrieving tabular scoring data (optional)<a class="headerlink" href="#retrieving-tabular-scoring-data-optional" title="Permalink to this headline">¶</a></h5>
+<p>By default <code class="docutils literal notranslate"><span class="pre">glide</span></code> outputs data in the poseviewer format (_pv.maegz) which can be opened by Maestro. You can also output a .csv file containing a selection of properties of all ligands by adding the following line to your <code class="docutils literal notranslate"><span class="pre">.in</span></code> file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WRITE_CSV</span>   <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="usage-through-maestro">
+<h3>Usage through Maestro<a class="headerlink" href="#usage-through-maestro" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Help wanted!</strong> <br>
+This is something we aren’t familiar with, maybe you are and can contribute to this help page! <a class="reference external" href="https://github.com/arcdocs/arcdocs.github.io/issues/new?title=Issue%20on%20page%20%2Fsoftware/applications/schrodinger.html&amp;body=Your%20issue%20content%20here.">Open an issue via GitHub</a> or contact us via https://bit.ly/arc-help</p>
+</div>
 </div>
 </div>
 </div>
@@ -898,19 +876,19 @@ gnu/native openmpi mkl qt
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="stata.html" title="previous page">
+        <a class="left-prev" href="R.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Stata</p>
+                <p class="prevnext-title">R</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="vmd.html" title="next page">
+        <a class="right-next" href="stata.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">VMD (Visual Molecular Dynamics)</p>
+                <p class="prevnext-title">Stata</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
