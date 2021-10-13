@@ -69,7 +69,7 @@ Current licensing restrictions mean glide is only able to run on one core at any
 Glide is a tool that allows for high speed computation docking for screening large numbers of compounds. It is available from the command line or can be specified from within the Maestro GUI. You can access the glide documentation on ARC4 using the following command (if you are connected with [X11 graphical forwarding](../../getting_started/logon#graphics-forwarding-x11)).
 
 ```bash
-$ firefox $SCHRODINGER_HOME/docs/glide_user_manual/glide_intro.htm
+$ xdg-open $SCHRODINGER_HOME/docs/glide_user_manual/glide_intro.htm
 ```
 
 ### Usage through command line
@@ -133,7 +133,7 @@ Covalent docking is a functionality within the glide tool within Schrodinger tha
 You can read more about using covalent docking from the Schrodinger documentation that can be read directly on ARC4 using the following command (if you are connected with [X11 graphical forwarding](../../getting_started/logon#graphics-forwarding-x11)).
 
 ```bash
-$ firefox $SCHRODINGER_HOME/docs/covalent_docking_user_manual/covalent_docking.htm
+$ xdg-open $SCHRODINGER_HOME/docs/covalent_docking_user_manual/covalent_docking.htm
 ```
 
 ### Requirements
@@ -145,18 +145,12 @@ In order to run a covalent docking simulation you need to configure passwordless
 You can configure passwordless ssh between compute and login nodes with the following steps on ARC3:
 
 ```bash
- # this should not require a password
-$ ssh dc1s0b1a.arc3
 
-# you'll be prompted to press enter to specify a file location to save the key
-# press enter again to specify no passphrase
-$ ssh-keygen 
+# create an RSA key with no passphrase
+$ ssh-keygen -N "" -t rsa -f ~/.ssh/id_rsa
 
- # this will prompt you for your password, use your regular university password
-$ ssh-copy-id -i ~/.ssh/id_rsa login1.arc3
-
-# this should now work without a password
-$ ssh login1.arc3 
+# copy this key to your authorized_keys file
+$ ssh-copy-id login1.arc3
 ```
 
 Once these steps are complete and you can ssh from `dc1s0b1a.arc3` to `login1.arc3` without inputting a password you have correctly configured your account and can submit covalent docking issues without the `timeout` errors.
