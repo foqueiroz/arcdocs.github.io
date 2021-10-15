@@ -66,7 +66,11 @@ It is not recommended to use maestro for developing your workflows via this meth
 Current licensing restrictions mean glide is only able to run on one core at any one time.
 ```
 
-Glide is a tool that allows for high speed computation docking for screening large numbers of compounds. It is available from the command line or can be specified from within the Maestro GUI.
+Glide is a tool that allows for high speed computation docking for screening large numbers of compounds. It is available from the command line or can be specified from within the Maestro GUI. You can access the glide documentation on ARC4 using the following command (if you are connected with [X11 graphical forwarding](../../getting_started/logon#graphics-forwarding-x11)).
+
+```bash
+$ xdg-open $SCHRODINGER_HOME/docs/glide_user_manual/glide_intro.htm
+```
 
 ### Usage through command line
 
@@ -119,3 +123,34 @@ WRITE_CSV   1
 ```{note} **Help wanted!** <br>
 This is something we aren't familiar with, maybe you are and can contribute to this help page! [Open an issue via GitHub](https://github.com/arcdocs/arcdocs.github.io/issues/new?title=Issue%20on%20page%20%2Fsoftware/applications/schrodinger.html&body=Your%20issue%20content%20here.) or contact us via https://bit.ly/arc-help 
 ```
+
+## Covalent Docking
+
+Covalent docking is a functionality within the glide tool within Schrodinger that allows for simulating screening the docking of ligands to a receptor covalently. It is described in the documentation as follows:
+
+> The Covalent Docking protocol addresses the process as follows. First, it determines whether ligands can associate with the receptor in a suitable pose. This is done by mutating the reactive residue on the receptor to glycine, so that the pose of the side chain does not unduly influence the association of the ligand, then docking the ligands with Glide, with constraints between the reactive residue and the reactive group on the ligand. Once suitable poses are found, the receptor is restored, and the poses of the side chain on the reactive residue are explored in the presence of the associated ligand, to find the best poses for reaction. The covalent bond is formed, and the ligand and reactive residue are minimized to relieve strain. The poses for a given ligand are clustered, and a representative pose is chosen from each cluster. These poses undergo a full minimization, and the representatives are ranked by their Prime energy.
+
+You can read more about using covalent docking from the Schrodinger documentation that can be read directly on ARC4 using the following command (if you are connected with [X11 graphical forwarding](../../getting_started/logon#graphics-forwarding-x11)).
+
+```bash
+$ xdg-open $SCHRODINGER_HOME/docs/covalent_docking_user_manual/covalent_docking.htm
+```
+
+### Requirements
+
+In order to run a covalent docking simulation you need to configure passwordless ssh access between compute nodes and the login nodes. This is required otherwise your job will write errors in your .log file that look like this:
+
+> FATAL: Error: in replying to 'JPROXYPORT login1:65000-65256 chmche "/apps/applications/schrodinger/2020-1/1/default"' - timeout
+
+You can configure passwordless ssh between compute and login nodes with the following steps on ARC3:
+
+```bash
+
+# create an RSA key with no passphrase
+$ ssh-keygen -N "" -t rsa -f ~/.ssh/id_rsa
+
+# copy this key to your authorized_keys file
+$ ssh-copy-id login1.arc3
+```
+
+Once these steps are complete and you can ssh from `dc1s0b1a.arc3` to `login1.arc3` without inputting a password you have correctly configured your account and can submit covalent docking issues without the `timeout` errors.
