@@ -724,6 +724,18 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#covalent-docking">
+   Covalent Docking
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#requirements">
+     Requirements
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -793,7 +805,10 @@ $ firefox <span class="nv">$SCHRODINGER_HOME</span>/docs/Documentation.htm
 <p class="admonition-title">Warning</p>
 <p>Current licensing restrictions mean glide is only able to run on one core at any one time.</p>
 </div>
-<p>Glide is a tool that allows for high speed computation docking for screening large numbers of compounds. It is available from the command line or can be specified from within the Maestro GUI.</p>
+<p>Glide is a tool that allows for high speed computation docking for screening large numbers of compounds. It is available from the command line or can be specified from within the Maestro GUI. You can access the glide documentation on ARC4 using the following command (if you are connected with <a class="reference external" href="../../getting_started/logon#graphics-forwarding-x11">X11 graphical forwarding</a>).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ xdg-open <span class="nv">$SCHRODINGER_HOME</span>/docs/glide_user_manual/glide_intro.htm
+</pre></div>
+</div>
 <div class="section" id="usage-through-command-line">
 <h3>Usage through command line<a class="headerlink" href="#usage-through-command-line" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="preparing-files">
@@ -842,6 +857,33 @@ module add schrodinger/2020-1
 <p><strong>Help wanted!</strong> <br>
 This is something we aren’t familiar with, maybe you are and can contribute to this help page! <a class="reference external" href="https://github.com/arcdocs/arcdocs.github.io/issues/new?title=Issue%20on%20page%20%2Fsoftware/applications/schrodinger.html&amp;body=Your%20issue%20content%20here.">Open an issue via GitHub</a> or contact us via https://bit.ly/arc-help</p>
 </div>
+</div>
+</div>
+<div class="section" id="covalent-docking">
+<h2>Covalent Docking<a class="headerlink" href="#covalent-docking" title="Permalink to this headline">¶</a></h2>
+<p>Covalent docking is a functionality within the glide tool within Schrodinger that allows for simulating screening the docking of ligands to a receptor covalently. It is described in the documentation as follows:</p>
+<blockquote>
+<div><p>The Covalent Docking protocol addresses the process as follows. First, it determines whether ligands can associate with the receptor in a suitable pose. This is done by mutating the reactive residue on the receptor to glycine, so that the pose of the side chain does not unduly influence the association of the ligand, then docking the ligands with Glide, with constraints between the reactive residue and the reactive group on the ligand. Once suitable poses are found, the receptor is restored, and the poses of the side chain on the reactive residue are explored in the presence of the associated ligand, to find the best poses for reaction. The covalent bond is formed, and the ligand and reactive residue are minimized to relieve strain. The poses for a given ligand are clustered, and a representative pose is chosen from each cluster. These poses undergo a full minimization, and the representatives are ranked by their Prime energy.</p>
+</div></blockquote>
+<p>You can read more about using covalent docking from the Schrodinger documentation that can be read directly on ARC4 using the following command (if you are connected with <a class="reference external" href="../../getting_started/logon#graphics-forwarding-x11">X11 graphical forwarding</a>).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ xdg-open <span class="nv">$SCHRODINGER_HOME</span>/docs/covalent_docking_user_manual/covalent_docking.htm
+</pre></div>
+</div>
+<div class="section" id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<p>In order to run a covalent docking simulation you need to configure passwordless ssh access between compute nodes and the login nodes. This is required otherwise your job will write errors in your .log file that look like this:</p>
+<blockquote>
+<div><p>FATAL: Error: in replying to ‘JPROXYPORT login1:65000-65256 chmche “/apps/applications/schrodinger/2020-1/1/default”’ - timeout</p>
+</div></blockquote>
+<p>You can configure passwordless ssh between compute and login nodes with the following steps on ARC3:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create an RSA key with no passphrase</span>
+$ ssh-keygen -N <span class="s2">&quot;&quot;</span> -t rsa -f ~/.ssh/id_rsa
+
+<span class="c1"># copy this key to your authorized_keys file</span>
+$ ssh-copy-id login1.arc3
+</pre></div>
+</div>
+<p>Once these steps are complete and you can ssh from <code class="docutils literal notranslate"><span class="pre">dc1s0b1a.arc3</span></code> to <code class="docutils literal notranslate"><span class="pre">login1.arc3</span></code> without inputting a password you have correctly configured your account and can submit covalent docking issues without the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> errors.</p>
 </div>
 </div>
 </div>
