@@ -2,13 +2,10 @@
 
 ## Access to Stata
 
-The currently installed versions of Stata are run on multicore systems.
-The version installed will support Stata running on up to eight cores
-per job.
+### ARC 4
 
-To uses Stata, you will need to have either your own licence or to be a
-member of a research group who already have a licence. The University
-does not have a site licence for this product.
+Stata 15 and Stata 16 are currently available on ARC4 for all users
+via our site wide license that supports jobs running on up to 2 cores.
 
 Stata should be primarily run through batch queuing system, however
 short interactive runs can done on the login nodes. You can run Stata
