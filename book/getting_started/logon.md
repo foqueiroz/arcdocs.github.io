@@ -6,6 +6,25 @@ This is a big article that covers lots of important details about logging in esp
 
 Once you have an account you'll be able to connect to the University HPC systems using a secure shell (SSH). In the page below we'll cover how to make sure you can SSH from your machine (installing any prerequired software) and how to configure your SSH to connect from off-campus.
 
+## Setup
+
+Before you can begin connecting to the University HPC systems you'll need to complete the following setup:
+
+- Have requested and had confirmation that your HPC account has been created. You out more on our [Requesting a HPC Account page](./request_hpc_acct)
+- Have an SSH client installed on your device. See below for different details depending on your operating system ([MacOS/Linux](#macos-linux-terminal) or [Windows](#installing-mobaxterm))
+
+### MacOS/Linux Terminal
+
+If you are a MacOS or Linux user you will probably have an SSH client already installed that can be used via the Terminal application on your device.
+
+Open the Terminal application and you're ready to to connect. Next you'll need to read more about [Connecting on campus](#Connecting-on-campus) or [Connecting from off campus](#Connecting-from-off-campus) depending on your circumstances.
+
+### Installing MobaXTerm
+
+To get started you need to install MobaXTerm. You can do this by downloading the **Portable Home edition** [(Click here to go to the download page)](https://mobaxterm.mobatek.net/download-home-edition.html) which is a .zip file containing the software. You can follow the steps in the below video to help walkthrough getting set up.
+
+<iframe src="https://mymedia.leeds.ac.uk/Mediasite/Play/7c25b8af4c7f43f7898efeba0ec6dd311d" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" scrolling="auto" allowfullscreen="allowfullscreen" style="display:block;"> </iframe>
+
 ## **Connecting from Linux/MacOS systems**
 
 ### SSH via Terminal
