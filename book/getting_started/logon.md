@@ -25,9 +25,9 @@ To get started you need to install MobaXTerm. You can do this by downloading the
 
 <iframe src="https://mymedia.leeds.ac.uk/Mediasite/Play/7c25b8af4c7f43f7898efeba0ec6dd311d" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" scrolling="auto" allowfullscreen="allowfullscreen" style="display:block;"> </iframe>
 
-## **Connecting from Linux/MacOS systems**
+## Connecting on campus
 
-### SSH via Terminal
+### SSH via Terminal app (MacOS/Linux)
 
 Linux and MacOS systems all come with a Terminal application that opens a command-line shell. In the following example code snippets we'll be connecting with the username `exuser`. When you come to log in to a system you'll need to use your own university username in place of `exuser`.
 
@@ -35,13 +35,43 @@ To log in from your Terminal use the following command:
 
 ```bash
 # to log into ARC4
-$ ssh exuser@arc4.leeds.ac.uk
+$ ssh exuser@arc4
 
 # to log into ARC3
-$ ssh exuser@arc3.leeds.ac.uk
+$ ssh exuser@arc3
 ```
 
+The first time you SSH to either ARC4 or ARC3 you will be prompted with the following message:
+ARC4:
+
+```
+The authenticity of host 'arc4 (129.11.26.163)' can't be established.
+ECDSA key fingerprint is SHA256:lPkw/7SrBqqQkS7lUm+tBN9JIGX9B8Gw7FdkK3MrpLM.
+ECDSA key fingerprint is MD5:4f:d8:bc:ad:16:8b:ab:54:cf:29:04:c7:cc:20:5b:fc.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+ARC3:
+
+```
+The authenticity of host 'arc3 (129.11.26.153)' can't be established.
+ECDSA key fingerprint is SHA256:cOA3zaJLawry0uVQ3VPveyxcrUJ+/8hRcr59xSbYRNI.
+ECDSA key fingerprint is MD5:c2:b1:9a:c1:44:aa:ba:a1:db:c6:b7:d4:48:9d:74:89.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+You should confirm the key fingerprints match the finger prints here and type `yes` and press Enter to proceed.
+If the keys do not match do **not** continue and contact Research Computing immediately via [https://bit.ly/arc-help](https://bit.ly/arc-help)
+
 You will then be prompted for your password which you should enter.
+
+```bash
+exuser@arc4's password:
+
+# if you type your password wrong you will get the following error
+Permission denied, please try again.
+# re enter your password but be extra careful!
+```
 
 ```{note} For security placeholder characters
 will not appear as you type your password. Your keystrokes are recorded so please type carefully!
