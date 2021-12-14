@@ -117,17 +117,9 @@ Please give the configuration a memorable name, and leave Server Type as Client/
 
 Please give the configuration a memorable name, leave Server Type as Client/Server, enter localhost into the Host field and 11111 into the Port field. Note that you will not be able to save the configuration unless it is given a name.
 
-<<<<<<< HEAD
 Configure your workstation's SSH client to forward local port 11111 to
 the hostname and port from the output of pvserver. On a Linux
 workstation and paraview running somewhere on arc4, this can be achieved
 via the following command:
 
     $ ssh -L 11111:localhost:11111 login1.arc4.leeds.ac.uk
-=======
-Configure your workstation's SSH client to forward local port 11111 to the hostname and port from the output of pvserver. On a Linux workstation and paraview running somewhere on arc2, this can be achieved via the following command:
-
-```bash
-$ ssh -L11111:: arc2.leeds.ac.uk
-```
->>>>>>> reformatted paraview
