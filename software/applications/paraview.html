@@ -749,13 +749,13 @@
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.paraview.org/">Paraview</a> is a data analysis and visualisation application, developed to be able to analyse large datasets. We show here how to start the program on our facilities; however, please refer to the project documentation for details on how to use the application itself.  You can also use <a class="reference internal" href="../../getting_started/x2go.html"><span class="doc std std-doc">X2GO</span></a> when you login and the images will render better and you will get rid of the OpenGL warnings that may appear.</p>
 <p>Although paraview is flexible in the way it is deployed, the simplest method of invoking it is to run these commands on a login node:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module load paraview
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module add paraview
 $ paraview --mesa-llvm <span class="p">&amp;</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module load paraview
-$ paraview --mesa-llvm  <span class="p">&amp;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module add mesa paraview
+$ paraview <span class="p">&amp;</span>
 </pre></div>
 </div>
 <p>This will provide the core functionality. More complicated methods are described below, offering different levels of performance. For example, the graphical interface can be run locally on a low-end workstation/laptop, while the rendering takes place in parallel on the cluster – taking advantage of the CPU, memory and storage resources available. Although not making use of the acceleration that graphics cards provide, it can allow larger datasets that cannot fit onto a graphics card to be analysed.</p>
@@ -767,20 +767,25 @@ $ paraview --mesa-llvm  <span class="p">&amp;</span>
 <div class="section" id="on-a-cluster-login-node-quick-start">
 <h3>On a cluster login node (quick start)<a class="headerlink" href="#on-a-cluster-login-node-quick-start" title="Permalink to this headline">¶</a></h3>
 <p>Recommended for very short or undemanding pieces of work. Login to the cluster and execute:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module load paraview
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module add paraview
 $ paraview --mesa-llvm
 </pre></div>
 </div>
-<p>Please note that, as they are shared between all users, it is important not to tackle large pieces of work on the login nodes.</p>
+<p>If you’re not using X2Go, then depending on your own local machine, you may find that doesn’t work.  Try this instead:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module add mesa paraview
+$ paraview <span class="p">&amp;</span>
+</pre></div>
+</div>
+<p>Please note that, as they are shared between all users, it is important not to tackle very large pieces of work on the login nodes.</p>
 </div>
 <div class="section" id="on-a-cluster-compute-node">
 <h3>On a cluster compute node<a class="headerlink" href="#on-a-cluster-compute-node" title="Permalink to this headline">¶</a></h3>
 <p>Recommended for larger pieces of work:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module load paraview
-$ qrsh -cwd -V -l <span class="nv">h_rt</span><span class="o">=</span> -l <span class="nv">h_vmem</span><span class="o">=</span> paraview --mesa-llvm
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ module add paraview
+$ qrsh -cwd -V -l h_rt=&lt;hh:mm:ss&gt; -l h_vmem=&lt;vmem&gt; paraview --mesa-llvm
 </pre></div>
 </div>
-<p>In the above command, hh:mm:ss is the length of real time the program will be run for and vmem is the amount of memory required.</p>
+<p>In the above command, <code class="docutils literal notranslate"><span class="pre">&lt;hh:mm:ss&gt;</span></code> is the length of real time the program will be run for and <code class="docutils literal notranslate"><span class="pre">&lt;vmem&gt;</span></code> is the amount of memory required.</p>
 </div>
 <div class="section" id="on-your-local-workstation">
 <h3>On your local workstation<a class="headerlink" href="#on-your-local-workstation" title="Permalink to this headline">¶</a></h3>
@@ -796,36 +801,34 @@ $ qrsh -cwd -V -l <span class="nv">h_rt</span><span class="o">=</span> -l <span 
 <h2>Running the paraview server<a class="headerlink" href="#running-the-paraview-server" title="Permalink to this headline">¶</a></h2>
 <p>The paraview server does not need to be run on the same computer as the graphical interface and takes on the role of file access and graphics rendering. Warning – there is no authentication step when connecting to a paraview server! Between the time of start of the server and the time at which a client is connected to it, anyone logged into the cluster can connect a client to it!</p>
 <p>Once started, it will print a line of the form:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Accepting connection<span class="o">(</span>s<span class="o">)</span>: :
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Accepting connection<span class="o">(</span>s<span class="o">)</span>: hostname:port
 </pre></div>
 </div>
-<p>Please take a note of &lt;hostname&gt; and &lt;number&gt; – they will be needed
-to connect the graphical interface. The hostname will include the specific
-login node which the server is running from.</p>
+<p>Please take a note of <code class="docutils literal notranslate"><span class="pre">hostname</span></code> and <code class="docutils literal notranslate"><span class="pre">port</span></code> – they will be needed to connect the graphical interface. The hostname will include the specific login node which the server is running on.</p>
 <div class="section" id="on-a-cluster-login-node">
 <h3>On a cluster login node<a class="headerlink" href="#on-a-cluster-login-node" title="Permalink to this headline">¶</a></h3>
 <p>Recommended for very short or undemanding pieces of work. Login to the cluster and execute:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module load paraview-osmesa
-$ pvserver --server-port<span class="o">=</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module add paraview-osmesa
+$ pvserver --server-port<span class="o">=</span>&lt;port&gt;
 </pre></div>
 </div>
-<p>For port, please select a number between 10000 and 20000.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">&lt;port&gt;</span></code>, please select a number between 10000 and 20000.</p>
 </div>
 <div class="section" id="on-a-cluster-compute-node-serial">
 <h3>On a cluster compute node (serial)<a class="headerlink" href="#on-a-cluster-compute-node-serial" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module load paraview-osmesa
-$ qrsh -cwd -V -l <span class="nv">h_rt</span><span class="o">=</span> -l <span class="nv">h_vmem</span><span class="o">=</span> pvserver --server-port<span class="o">=</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ module add paraview-osmesa
+$ qrsh -cwd -V -l h_rt=&lt;hh:mm:ss&gt; -l h_vmem=&lt;vmem&gt; pvserver --server-port=&lt;port&gt;
 </pre></div>
 </div>
-<p>In the above command, hh:mm:ss is the length of real time the program will be run for and vmem is the amount of memory required. For port, please select a number between 10000 and 20000.</p>
+<p>In the above command, <code class="docutils literal notranslate"><span class="pre">&lt;hh:mm:ss&gt;</span></code> is the length of real time the program will be run for and <code class="docutils literal notranslate"><span class="pre">&lt;vmem&gt;</span></code> is the amount of memory required. For <code class="docutils literal notranslate"><span class="pre">&lt;port&gt;</span></code>, please select a number between 10000 and 20000.</p>
 </div>
 <div class="section" id="on-a-cluster-compute-node-parallel">
 <h3>On a cluster compute node (parallel)<a class="headerlink" href="#on-a-cluster-compute-node-parallel" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ module load paraview-osmesa
-$ qrsh -cwd -V -l <span class="nv">h_rt</span><span class="o">=</span> -l <span class="nv">nodes</span><span class="o">=</span> pvserver --server-port<span class="o">=</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ module add paraview-osmesa
+$ qrsh -cwd -V -l h_rt=&lt;hh:mm:ss&gt; -l nodes=&lt;nodes&gt; pvserver --server-port=&lt;port&gt;
 </pre></div>
 </div>
-<p>In the above command, hh:mm:ss is the length of real time the program will be run for and num is the number of compute nodes required. Recommended to start with 1 node. For port, please select a number between 10000 and 20000.</p>
+<p>In the above command, <code class="docutils literal notranslate"><span class="pre">&lt;hh:mm:ss&gt;</span></code> is the length of real time the program will be run for and <code class="docutils literal notranslate"><span class="pre">&lt;nodes&gt;</span></code> is the number of compute nodes required. Recommended to start with 1 node. For <code class="docutils literal notranslate"><span class="pre">&lt;port&gt;</span></code>, please select a number between 10000 and 20000.</p>
 </div>
 </div>
 <div class="section" id="connecting-to-a-paraview-server-with-the-graphical-interface">
@@ -839,11 +842,16 @@ $ qrsh -cwd -V -l <span class="nv">h_rt</span><span class="o">=</span> -l <span 
 <div class="section" id="graphical-interface-running-on-your-local-workstation">
 <h3>Graphical interface running on your local workstation<a class="headerlink" href="#graphical-interface-running-on-your-local-workstation" title="Permalink to this headline">¶</a></h3>
 <p>Please give the configuration a memorable name, leave Server Type as Client/Server, enter localhost into the Host field and 11111 into the Port field. Note that you will not be able to save the configuration unless it is given a name.</p>
-<p>Configure your workstation’s SSH client to forward local port 11111 to
-the hostname and port from the output of pvserver. On a Linux
-workstation and paraview running somewhere on arc4, this can be achieved
-via the following command:</p>
+<p>Configure your workstation’s SSH client to forward local port 11111 to the hostname and port from the output of pvserver. On a Linux workstation and paraview running somewhere on ARC4, this can be achieved via the following command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ssh -L 11111:localhost:11111 login1.arc4.leeds.ac.uk
+</pre></div>
+</div>
+<p>If you’re needing to connect to a compute node, after you have run your qrsh command, you’ll get a string telling you which host it’s running on e.g.:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Accepting connection(s): d10s7b1.arc4.leeds.ac.uk:11111
+</pre></div>
+</div>
+<p>You use the hostname provided there when you setup your port forward line, e.g.:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ssh -L 11111:d10s7b1:11111 arc4.leeds.ac.uk
 </pre></div>
 </div>
 </div>
