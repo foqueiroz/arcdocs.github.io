@@ -104,9 +104,9 @@ Connecting from Windows requires the installation of an SSH client. We recommend
 You will need to make sure you have [enrolled with Duo with your University account](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014659) and will be required to [use Duo to authenticate](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014641) after submitting your password to remote-access.
 ```
 
-Once you have MobaXTerm downloaded you can connect to ARC via two mechanisms: using the [builtin local terminal to connect using SSH commands](#using-the-mobaxterm-terminal); or creating an [SSH session via the GUI](#creating-an-ssh-session-off-campus).
+Once you have MobaXTerm downloaded you can connect to ARC via two mechanisms: using the [builtin local terminal to connect using SSH commands](#using-the-mobaxterm-terminal); or creating an [SSH session via the GUI](#creating-an-ssh-session).
 
-#### Creating an SSH session (off-campus)
+#### Creating an SSH session
 
 You can create an SSH session to connect to ARC using the following steps:
 
