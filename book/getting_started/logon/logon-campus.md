@@ -62,72 +62,50 @@ Once you have MobaXTerm downloaded you can connect to ARC via two mechanisms: us
 
 You can create an SSH session to connect to ARC using the following steps:
 
-| 1. Open the initial MobaXTerm Menu and select Session                                        |
-| -------------------------------------------------------------------------------------------- |
-| ![Open the initial MobaXTerm Menu and select Session](../../assets/img/logon/mobaXTerm1.png) |
+| 1. Open the initial MobaXTerm Menu and select Session                                                  |
+| ------------------------------------------------------------------------------------------------------ |
+| ![Open the initial MobaXTerm Menu and select Session](../../assets/img/logon/offcampus/mobaXTerm1.png) |
 
-| 2. In the Session Wizard Window select SSH                                        |
-| --------------------------------------------------------------------------------- |
-| ![In the Session Wizard Window select SSH](../../assets/img/logon/mobaXTerm2.png) |
+| 2. In the Session Wizard Window select SSH                                                  |
+| ------------------------------------------------------------------------------------------- |
+| ![In the Session Wizard Window select SSH](../../assets/img/logon/offcampus/mobaXTerm2.png) |
 
-| 3. Input the basic setting details for SSH session: the host (address of ARC), the username (your university username)                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Input the basic setting details for SSH session: the host (address of ARC), the username (your university username)](../../assets/img/logon/mobaXTerm3.png) |
+| 3. Input the basic setting details for SSH session: the host (address of ARC), the username (your university username). Then click OK.                                  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Input the basic setting details for SSH session: the host (address of ARC), the username (your university username)](../../assets/img/logon/offcampus/mobaXTerm3.png) |
 
-| 4. Select the Network Settings tab within the Session Settings window                                        |
-| ------------------------------------------------------------------------------------------------------------ |
-| ![Select the Network Settings tab within the Session Settings window](../../assets/img/logon/mobaXTerm4.png) |
-
-| 5. Click on the large button labelled "SSH gateway (jump host)" and input details for connecting to remote-access.leeds.ac.uk (Gateway SSH server) and specify your username |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Select the "Connect through SSH gateway (jump host) option](../../assets/img/logon/mobaXTerm5.png)                                                                         |
-
-| 6. You will immediately be prompted for your password to connect to the remote-access server                                        |
-| ----------------------------------------------------------------------------------------------------------------------------------- |
-| ![You will immediately be prompted for your password to connect to the remote-access server](../../assets/img/logon/mobaXTerm6.png) |
-
-| 7. You will immediately be prompted for to enter your [Duo two-factor code](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0014641) which can be found on your Duo App |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![You will immediately be prompted for to enter your Duo two-factor login code which can be found on your Duo App](../../assets/img/logon/mobaXTerm6-5.png)                       |
-
-| 8. After it accepts your password it will request your password again, this time to log into ARC4 (This may not happen automatically and you may need to double click on session name that appears on the right hand User sessions section) |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![After it accepts your password it will request your password again, this time to log into ARC4](../../assets/img/logon/mobaXTerm7.png)                                                                                                    |
+| 4. You will immediately be prompted for your password to connect to ARC4 (use your standard university password)                       |
+| -------------------------------------------------------------------------------------------------------------------------------------- |
+| ![You will immediately be prompted for your password to connect to ARC4](../../assets/img/logon/campus/mobaXTerm-session-password.png) |
 
 ```{note} For security placeholder characters
 will not appear as you type your password. Your keystrokes are recorded so please type carefully!
 ```
 
-| 9. Once successful you will see the ARC4 message of the day and the ARC prompt                                        |
-| --------------------------------------------------------------------------------------------------------------------- |
-| ![Once successful you will see the ARC4 message of the day and the ARC prompt](../../assets/img/logon/mobaXTerm8.png) |
+| 5. If you submit the correct password you will receive a new prompt and will see the ARC4 message of the day                                                            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![If you submit the correct password you will receive a new prompt and will see the ARC4 message of the day ](../../assets/img/logon/campus/mobaXTerm-session-motd.png) |
 
-| 10. You can restart an existing session after it has closed by double-clicking the session under the User sessions folder on the left-hand panel of the main MobaXTerm menu |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-
-| ![You can restart an existing session after it has closed by double-clicking the session under the User sessions](../../assets/img/logon/mobaXTerm9.png)
+| 6. You can restart an existing session after it has closed by double-clicking the session under the User sessions folder on the left-hand panel of the main MobaXTerm menu |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![You can restart an existing session after it has closed by double-clicking the session under the User sessions](../../assets/img/logon/offcampus/mobaXTerm9.png)         |
 
 #### SSHing via the MobaXTerm Terminal
 
 We can use the MobaXTerm Terminal like a standard unix shell to navigate around our local computer and also to SSH onto remote hosts including ARC.
 
-| 1. Within a local Terminal on MobaXTerm we use the `ssh` command to connect to ARC                                       |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| ![Within a local Terminal on MobaXTerm we use the `ssh` command to connect to ARC](../../assets/img/logon/mobaSSH_1.png) |
+| 1. Select the local terminal button on MobaXTerm to start the local terminal                                                |
+| --------------------------------------------------------------------------------------------------------------------------- |
+| ![Select the local terminal button on MobaXTerm to start the local terminal](../../assets/img/logon/offcampus/mobaSSH6.png) |
 
-| 2. We are then prompted to submit our password to connect to `remote-access.leeds.ac.uk`                         |
-| ---------------------------------------------------------------------------------------------------------------- |
-| ![We are then prompted to submit our password to connect to remote-access](../../assets/img/logon/mobaSSH_2.png) |
+| 2. Within a local Terminal on MobaXTerm we use the `ssh` command to connect to ARC. We use `-Y` here to [enable graphical forwarding](./x11-graphics) |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Within a local Terminal on MobaXTerm we use the `ssh` command to connect to ARC](../../assets/img/logon/campus/mobaSSH-ssh-cmd.png)                 |
 
-| 3. We are then prompted select how to receive a Duo 2 factor authentication prompt either via the app or as a text message. Select your preferred option and either approve the push or input a passcode that is sent to you via SMS |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![We are then prompted to submit our password to connect to arc4](../../assets/img/logon/mobaSSH_3.png)                                                                                                                              |
+| 3. Next we are prompted to enter the account password (this will be your standard University password) to connect to `arc4.leeds.ac.uk` |
+| --------------------------------------------------------------------------------------------------------------------------------------- |
+| ![We are then prompted to submit our password to connect to arc4](../../assets/img/logon/campus/mobaSSH-ssh-password.png)               |
 
-| 3. We are then prompted to submit our password to connect to `arc4.leeds.ac.uk`                         |
-| ------------------------------------------------------------------------------------------------------- |
-| ![We are then prompted to submit our password to connect to arc4](../../assets/img/logon/mobaSSH_4.png) |
-
-| 4. Once we have successfully submitted our passwords our prompt will change and the message of the day for ARC4 will be displayed |
-| --------------------------------------------------------------------------------------------------------------------------------- |
-
-| ![ARC4 message of the day on MobaXTerm](../../assets/img/logon/mobaSSH_5.png)
+| 4. Once we have entered the correct password your prompt will change and the message of the day for ARC4 will be displayed |
+| -------------------------------------------------------------------------------------------------------------------------- |
+| ![ARC4 message of the day on MobaXTerm](../../assets/img/logon/campus/mobaSSH-ssh-motd.png)                                |
