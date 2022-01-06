@@ -21,7 +21,7 @@ Before you can begin connecting to the University HPC systems you'll need to com
 
 If you are a MacOS or Linux user you will probably have an SSH client already installed that can be used via the Terminal application on your device.
 
-Open the Terminal application and you're ready to to connect. Next you'll need to read more about [Connecting on campus](./logon/logon-campus.html#ssh-via-terminal-app-macos-linux) or [Connecting from off campus](./logon/logon-off-campus.html#connecting-from-linux-macos-systems) depending on your circumstances.
+Open the Terminal application and you're ready to to connect. Next you'll need to read more about [Connecting on campus](./logon/logon-campus.html#connecting-from-linux-macos-systems) or [Connecting from off campus](./logon/logon-off-campus.html#connecting-from-linux-macos-systems) depending on your circumstances.
 
 ### Installing MobaXTerm
 
@@ -29,4 +29,4 @@ To get started you need to install MobaXTerm. You can do this by downloading the
 
 <iframe src="https://mymedia.leeds.ac.uk/Mediasite/Play/7c25b8af4c7f43f7898efeba0ec6dd311d" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" scrolling="auto" allowfullscreen="allowfullscreen" style="display:block;"> </iframe>
 
-Once you've got MobaXTerm on your computer you're ready to learn about how to connect to the HPC systems. Next you'll need to read more about [Connecting on campus](./logon/logon-campus) or [Connecting from off campus](./logon/logon-off-campus) depending on your circumstances.
+Once you've got MobaXTerm on your computer you're ready to learn about how to connect to the HPC systems. Next you'll need to read more about [Connecting on campus](./logon/logon-campus.html#connecting-from-windows) or [Connecting from off campus](./logon/logon-off-campus.html#connecting-from-windows) depending on your circumstances.
