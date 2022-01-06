@@ -5,10 +5,10 @@ Once you have an account you'll be able to connect to the University HPC systems
 The rest of this page covers setting your machine up with the appropriate software for connecting.
 Other pages in this section are outlined below.
 
-- [Connecting from campus](./logon-campus)
-- [Connecting from off-campus](./logon-off-campus)
-- [Setting up X11 graphical forwarding for graphical applications](./x11-graphics)
-- [Details on host fingerprints when connecting](./fingerprint-details)
+- [Connecting from campus](./logon/logon-campus)
+- [Connecting from off-campus](./logon/logon-off-campus)
+- [Setting up X11 graphical forwarding for graphical applications](./logon/x11-graphics)
+- [Details on host fingerprints when connecting](./logon/fingerprint-details)
 
 ## Setup
 
