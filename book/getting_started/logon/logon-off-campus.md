@@ -93,7 +93,22 @@ Passcode or option (1-2): 1
 exuser@arc4.leeds.ac.uk's password:
 ```
 
-Again carefully enter your password and if you've entered it correctly you'll see the ARC4 message of the day and have successfully connected.
+Again carefully enter your password and if you've entered it correctly you'll see the ARC4 message of the day (shown below) and have successfully connected.
+
+```bash
+
+              Advanced Research Computing Node 4 (arc4)
+________________________________________________________________________
+
+Information on using this facility may be obtained at the following URL:
+http://www.arc.leeds.ac.uk
+
+    Please remember to acknowledge the use of ARC facilities in your
+    papers; details are on the website above.
+________________________________________________________________________
+
+[exuser@login1.arc4 ~]$
+```
 
 ## Connecting from Windows
 

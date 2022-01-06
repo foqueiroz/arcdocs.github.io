@@ -49,6 +49,23 @@ If this happens re-enter your password but be extra careful!
 will not appear as you type your password. Your keystrokes are recorded so please type carefully!
 ```
 
+When you enter your correct password you'll see the ARC4 message of the day (shown below) and have successfully connected.
+
+```bash
+
+              Advanced Research Computing Node 4 (arc4)
+________________________________________________________________________
+
+Information on using this facility may be obtained at the following URL:
+http://www.arc.leeds.ac.uk
+
+    Please remember to acknowledge the use of ARC facilities in your
+    papers; details are on the website above.
+________________________________________________________________________
+
+[exuser@login1.arc4 ~]$
+```
+
 ## Connecting from Windows
 
 Connecting from Windows requires the installation of an SSH client. We recommend and support users using MobaXTerm, please consult the [setup section](../logon.html#installing-mobaxterm) about installing this application.
