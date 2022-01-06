@@ -1,5 +1,7 @@
 # Connecting from off campus
 
+When connecting from off campus additional steps are required to enable you to connect as the University HPC systems are only reachable from within the University network.
+
 ## Connecting from Linux/MacOS systems
 
 ```{warning}
