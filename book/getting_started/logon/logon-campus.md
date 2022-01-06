@@ -1,6 +1,6 @@
-## Connecting on campus
+# Connecting from campus
 
-### SSH via Terminal app (MacOS/Linux)
+## Connecting from Linux/MacOS systems
 
 Linux and MacOS systems all come with a Terminal application that opens a command-line shell. In the following example code snippets we'll be connecting with the username `exuser`. When you come to log in to a system you'll need to use your own university username in place of `exuser`.
 
