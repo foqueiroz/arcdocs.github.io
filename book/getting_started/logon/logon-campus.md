@@ -14,7 +14,7 @@ $ ssh exuser@arc4
 $ ssh exuser@arc3
 ```
 
-The first time you SSH to either ARC4 or ARC3 you will be prompted to confirm the fingerprint of the host you're connecting to. You can check the unique fingerprints for ARC3 and ARC4 in the [fingerprint details](#fingerprint-details) below.
+The first time you SSH to either ARC4 or ARC3 you will be prompted to confirm the fingerprint of the host you're connecting to. You can check the unique fingerprints for ARC3 and ARC4 in the [fingerprint details](./fingerprint-details).
 
 ```
 The authenticity of host 'arc4 (129.11.26.163)' can't be established.
@@ -32,7 +32,7 @@ ECDSA key fingerprint is MD5:c2:b1:9a:c1:44:aa:ba:a1:db:c6:b7:d4:48:9d:74:89.
 Are you sure you want to continue connecting (yes/no)?
 ```
 
-You should confirm the key fingerprints match from fingerprints shown in the [fingerprint details](#fingerprint-details) section and type `yes` and press Enter to proceed.
+You should confirm the key fingerprints match from fingerprints shown in the [fingerprint details](./fingerprint-details) section and type `yes` and press Enter to proceed.
 If the keys do not match do **not** continue and contact Research Computing immediately via [https://bit.ly/arc-help](https://bit.ly/arc-help)
 
 You will then be prompted for your password.
