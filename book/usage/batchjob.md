@@ -155,6 +155,9 @@ The option `-m` will specify that we wish to receive an email about the job, in 
 * - `-t start-stop`
   - Produce an array of sub-tasks (loop) from `start` to `stop`, giving `$SGE_TASK_ID` variable to identify the individual sub-tasks. See [task array page](./taskarrays) for more details.
   -
+* - `-P project_name`
+  - Submit the job to a specific private node queue. Where `project_name` is the name of a private queue you have permission to submit to.
+  - 
 * - `-help`
   - Prints a list of options.
   -
