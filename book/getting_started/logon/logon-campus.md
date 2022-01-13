@@ -4,7 +4,7 @@
 
 Linux and MacOS systems all come with a Terminal application that opens a command-line shell. In the following example code snippets we'll be connecting with the username `exuser`. When you come to log in to a system you'll need to use your own university username in place of `exuser`.
 
-To log in from your Terminal use the following command:
+To log in from your Terminal use the following commands:
 
 ```bash
 # to log into ARC4
@@ -15,6 +15,8 @@ $ ssh exuser@arc3
 ```
 
 The first time you SSH to either ARC4 or ARC3 you will be prompted to confirm the fingerprint of the host you're connecting to. You can check the unique fingerprints for ARC3 and ARC4 in the [fingerprint details](./fingerprint-details).
+
+ARC4:
 
 ```
 The authenticity of host 'arc4 (129.11.26.163)' can't be established.
@@ -103,7 +105,7 @@ You can create an SSH session to connect to ARC using the following steps:
 will not appear as you type your password. Your keystrokes are recorded so please type carefully!
 ```
 
-| 5. If you submit the correct password you will receive a new prompt and will see the ARC4 message of the day                                                            |
+| 5. If you submit the correct password you will receive a new prompt and will see the ARC3/ARC4 message of the day                                                            |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![If you submit the correct password you will receive a new prompt and will see the ARC4 message of the day ](../../assets/img/logon/campus/mobaXTerm-session-motd.png) |
 

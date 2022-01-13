@@ -14,7 +14,7 @@ Other pages in this section are outlined below.
 
 Before you can begin connecting to the University HPC systems you'll need to complete the following setup:
 
-- Have requested and had confirmation that your HPC account has been created. You out more on our [Requesting a HPC Account page](./request_hpc_acct)
+- Have requested and had confirmation that your HPC account has been created. You can find out more on our [Requesting a HPC Account page](./request_hpc_acct)
 - Have an SSH client installed on your device. See below for different details depending on your operating system ([MacOS/Linux](#macos-linux-terminal) or [Windows](#installing-mobaxterm))
 
 ### MacOS/Linux Terminal

@@ -155,7 +155,7 @@ You can create an SSH session to connect to ARC using the following steps:
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![You will immediately be prompted for to enter your Duo two-factor login code which can be found on your Duo App](../../assets/img/logon/offcampus/mobaXTerm6-5.png)             |
 
-| 8. After it accepts your password it will request your password again, this time to log into ARC4 (This may not happen automatically and you may need to double click on session name that appears on the right hand User sessions section) |
+| 8. After it accepts your password it will request your password again, this time to log into ARC4 (This may not happen automatically and you may need to double click on session name that appears on the left hand User sessions section) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![After it accepts your password it will request your password again, this time to log into ARC4](../../assets/img/logon/offcampus/mobaXTerm7.png)                                                                                          |
 
