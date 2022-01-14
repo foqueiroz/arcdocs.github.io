@@ -1,0 +1,796 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fingerprint details &#8212; ARC Documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://arcdocs.leeds.ac.uk/getting_started/logon/fingerprint-details.html" />
+    <link rel="shortcut icon" href="../../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Linux basics" href="../linuxbasics.html" />
+    <link rel="prev" title="Graphics forwarding (X11) from a Terminal" href="x11-graphics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ARC Documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../welcome.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../start.html">
+   Getting Started
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../request_hpc_acct.html">
+     Requesting an HPC Account
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../request_install.html">
+     Requesting a software install on HPC
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="../logon.html">
+     Logging on
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="logon-campus.html">
+       Connecting from campus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="logon-off-campus.html">
+       Connecting from off campus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="x11-graphics.html">
+       Graphics forwarding (X11) from a Terminal
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Fingerprint details
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../linuxbasics.html">
+     Linux basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../nobackup.html">
+     Storage on HPC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../file_transfer.html">
+     File Transfer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../x2go.html">
+     Remote Graphics – X2GO
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../usage/start.html">
+   Usage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../usage/batchjob.html">
+     Batch jobs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../usage/interactive.html">
+     Interactive jobs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../usage/troubleshooting.html">
+     Troubleshooting jobs on HPC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../usage/taskarrays.html">
+     Task arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../usage/gpgpu.html">
+     General Purpose GPU
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../usage/scratch.html">
+     Temporary/Scratch Storage on Compute nodes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../usage/advanced.html">
+     Advanced Job Examples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../usage/acknowledgement.html">
+     ARC Acknowledgement
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../software/start.html">
+   Software
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../software/applications/start.html">
+     Applications
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/abaqus.html">
+       Abaqus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/amber.html">
+       Amber
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../software/applications/ansys.html">
+       Ansys
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../software/applications/ansys/cfx.html">
+         Cfx
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../software/applications/ansys/fluent.html">
+         Fluent
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../software/applications/ansys/chemkin.html">
+         Chemkin
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/comsol.html">
+       Comsol
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../software/applications/dl_poly.html">
+       DL_POLY
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../software/applications/dlpoly/license.html">
+         DLpoly license terms
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/gaussian.html">
+       Gaussian
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/gromacs.html">
+       Gromacs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/gurobi.html">
+       Gurobi
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/idl.html">
+       IDL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/matlab.html">
+       MATLAB
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/molpro.html">
+       Molpro
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/namd.html">
+       NAMD
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/openfoam.html">
+       OpenFoam
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/paraview.html">
+       Paraview
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/R.html">
+       R
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/schrodinger.html">
+       Schrodinger
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/stata.html">
+       Stata
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/visit.html">
+       VisIt
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/applications/vmd.html">
+       VMD (Visual Molecular Dynamics)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../software/compilers/start.html">
+     Compilers
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/compilers/anaconda.html">
+       Anaconda
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/compilers/cuda.html">
+       Cuda
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/compilers/gnu.html">
+       GNU
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/compilers/go.html">
+       Go
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/compilers/intel.html">
+       Intel
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/compilers/java.html">
+       Java
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/compilers/julia.html">
+       Julia
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/compilers/llvm.html">
+       LLVM
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/compilers/lua.html">
+       Lua
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/compilers/pgi.html">
+       PGI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/compilers/python.html">
+       Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/compilers/yasm.html">
+       YASM
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../software/infrastructure/start.html">
+     Infrastructure
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/advisor.html">
+       Advisor
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/allinea.html">
+       Allinea
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/arm-forge.html">
+       Arm Forge
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/bazel.html">
+       Bazel
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/cmake.html">
+       Cmake
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/gdb.html">
+       GDB
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/git.html">
+       Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/inspector.html">
+       Inspector
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/licenses.html">
+       Licenses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/parallel.html">
+       GNU Parallel
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/sge.html">
+       SGE
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/singularity.html">
+       Singularity
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/subversion.html">
+       Subversion
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/system.html">
+       System
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/test.html">
+       Test
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/unison.html">
+       Unison
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/user.html">
+       User
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/virtualgl.html">
+       Virtual GL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software/infrastructure/vtune.html">
+       Vtune
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../software/libraries/start.html">
+     Libraries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../systems/start.html">
+   Systems
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../systems/arc4.html">
+     ARC4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../systems/arc3.html">
+     ARC3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../systems/cloud-computing.html">
+     Cloud Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../systems/secure-systems.html">
+     Secure Research Infrastructure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://arc.leeds.ac.uk/training/">
+   Training
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../contact/start.html">
+   Contact Us
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit the <a href="https://arc.leeds.ac.uk">Research Computing Home Site</a> <div> This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a> </div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/getting_started/logon/fingerprint-details.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/arcdocs/arcdocs-jupyterbook/issues/new?title=Issue%20on%20page%20%2Fgetting_started/logon/fingerprint-details.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/arcdocs/arcdocs-jupyterbook/edit/working-master/book/getting_started/logon/fingerprint-details.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Fingerprint details</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="fingerprint-details">
+<h1>Fingerprint details<a class="headerlink" href="#fingerprint-details" title="Permalink to this headline">¶</a></h1>
+<p>These are the important ssh fingerprint details for connecting to the hosts referenced in this article. On first connection to these hosts, you should verify that the fingerprint reported in your client matches one of those listed here.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SHA256</span><span class="p">:</span><span class="n">SZN1IZ9rL0mhpnxhVG5uxbtVFMZAISg98X9ovHlh8Fg</span> <span class="n">remote</span><span class="o">-</span><span class="n">access</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">RSA</span><span class="p">)</span>
+<span class="n">SHA256</span><span class="p">:</span><span class="n">RoIHn1BDSlh</span><span class="o">/</span><span class="n">WjGHEG73OFISe6H3q3iLuM4z6tGu29Q</span> <span class="n">remote</span><span class="o">-</span><span class="n">access</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">ECDSA</span><span class="p">)</span>
+<span class="n">SHA256</span><span class="p">:</span><span class="n">D2c29ZoFFDlwo0Ou</span><span class="o">/</span><span class="mi">1</span><span class="n">erlSJwpI5bQQEPvarVVhShL5E</span> <span class="n">remote</span><span class="o">-</span><span class="n">access</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">ED25519</span><span class="p">)</span>
+<span class="n">MD5</span><span class="p">:</span><span class="n">a3</span><span class="p">:</span><span class="n">ed</span><span class="p">:</span><span class="n">e5</span><span class="p">:</span><span class="n">ef</span><span class="p">:</span><span class="mi">85</span><span class="p">:</span><span class="mi">2</span><span class="n">f</span><span class="p">:</span><span class="mi">5</span><span class="n">c</span><span class="p">:</span><span class="mi">67</span><span class="p">:</span><span class="n">f4</span><span class="p">:</span><span class="mi">6</span><span class="n">a</span><span class="p">:</span><span class="mi">75</span><span class="p">:</span><span class="mi">8</span><span class="n">a</span><span class="p">:</span><span class="mi">6</span><span class="n">b</span><span class="p">:</span><span class="n">df</span><span class="p">:</span><span class="n">be</span><span class="p">:</span><span class="mi">7</span><span class="n">c</span> <span class="n">remote</span><span class="o">-</span><span class="n">access</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">RSA</span><span class="p">)</span>
+<span class="n">MD5</span><span class="p">:</span><span class="n">a2</span><span class="p">:</span><span class="n">eb</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="n">f3</span><span class="p">:</span><span class="n">a6</span><span class="p">:</span><span class="mi">4</span><span class="n">e</span><span class="p">:</span><span class="n">af</span><span class="p">:</span><span class="n">e3</span><span class="p">:</span><span class="n">ca</span><span class="p">:</span><span class="n">b2</span><span class="p">:</span><span class="mi">91</span><span class="p">:</span><span class="mi">80</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">77</span><span class="p">:</span><span class="mi">62</span><span class="p">:</span><span class="n">aa</span> <span class="n">remote</span><span class="o">-</span><span class="n">access</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">ECDSA</span><span class="p">)</span>
+<span class="n">MD5</span><span class="p">:</span><span class="mi">67</span><span class="p">:</span><span class="n">e4</span><span class="p">:</span><span class="n">aa</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="n">bf</span><span class="p">:</span><span class="n">de</span><span class="p">:</span><span class="mi">7</span><span class="n">a</span><span class="p">:</span><span class="n">cb</span><span class="p">:</span><span class="mi">41</span><span class="p">:</span><span class="mi">1</span><span class="n">f</span><span class="p">:</span><span class="mi">89</span><span class="p">:</span><span class="mi">1</span><span class="n">f</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="n">aa</span><span class="p">:</span><span class="n">a9</span><span class="p">:</span><span class="n">c0</span> <span class="n">remote</span><span class="o">-</span><span class="n">access</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">ED25519</span><span class="p">)</span>
+
+<span class="n">SHA256</span><span class="p">:</span><span class="n">sGkFPzE909xWfNOT4nK</span><span class="o">+/</span><span class="n">RGY2kVOc7loksdUSBO6mLg</span> <span class="n">arc4</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">RSA</span><span class="p">)</span>
+<span class="n">SHA256</span><span class="p">:</span><span class="n">lPkw</span><span class="o">/</span><span class="mi">7</span><span class="n">SrBqqQkS7lUm</span><span class="o">+</span><span class="n">tBN9JIGX9B8Gw7FdkK3MrpLM</span> <span class="n">arc4</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">ECDSA</span><span class="p">)</span>
+<span class="n">SHA256</span><span class="p">:</span><span class="n">BkElel9biuGN</span><span class="o">/</span><span class="n">k</span><span class="o">+</span><span class="n">bKh6u6GJ6rmbHo8bQxzUwTpjkr1w</span> <span class="n">arc4</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">ED25519</span><span class="p">)</span>
+<span class="n">MD5</span><span class="p">:</span><span class="n">e0</span><span class="p">:</span><span class="mi">3</span><span class="n">d</span><span class="p">:</span><span class="mi">65</span><span class="p">:</span><span class="n">ec</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="n">a0</span><span class="p">:</span><span class="n">e8</span><span class="p">:</span><span class="mi">71</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="n">ea</span><span class="p">:</span><span class="mi">49</span><span class="p">:</span><span class="n">a6</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">6</span><span class="n">b</span><span class="p">:</span><span class="n">c1</span> <span class="n">arc4</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">RSA</span><span class="p">)</span>
+<span class="n">MD5</span><span class="p">:</span><span class="mi">4</span><span class="n">f</span><span class="p">:</span><span class="n">d8</span><span class="p">:</span><span class="n">bc</span><span class="p">:</span><span class="n">ad</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">8</span><span class="n">b</span><span class="p">:</span><span class="n">ab</span><span class="p">:</span><span class="mi">54</span><span class="p">:</span><span class="n">cf</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="n">c7</span><span class="p">:</span><span class="n">cc</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">5</span><span class="n">b</span><span class="p">:</span><span class="n">fc</span> <span class="n">arc4</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">ECDSA</span><span class="p">)</span>
+<span class="n">MD5</span><span class="p">:</span><span class="mi">27</span><span class="p">:</span><span class="mi">2</span><span class="n">f</span><span class="p">:</span><span class="n">a4</span><span class="p">:</span><span class="n">fe</span><span class="p">:</span><span class="n">e3</span><span class="p">:</span><span class="mi">91</span><span class="p">:</span><span class="n">af</span><span class="p">:</span><span class="mi">5</span><span class="n">c</span><span class="p">:</span><span class="n">a5</span><span class="p">:</span><span class="mi">54</span><span class="p">:</span><span class="mi">5</span><span class="n">a</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">7</span><span class="n">f</span><span class="p">:</span><span class="n">ad</span><span class="p">:</span><span class="mi">61</span> <span class="n">arc4</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">ED25519</span><span class="p">)</span>
+
+<span class="n">SHA256</span><span class="p">:</span><span class="n">lSrebEoCB31fZzKPlw2jO05P7bNi0ewUQPD</span><span class="o">/</span><span class="n">I9</span><span class="o">+</span><span class="mi">0</span><span class="n">Ntg</span> <span class="n">arc3</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">RSA</span><span class="p">)</span>
+<span class="n">SHA256</span><span class="p">:</span><span class="n">cOA3zaJLawry0uVQ3VPveyxcrUJ</span><span class="o">+/</span><span class="mi">8</span><span class="n">hRcr59xSbYRNI</span> <span class="n">arc3</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">ECDSA</span><span class="p">)</span>
+<span class="n">SHA256</span><span class="p">:</span><span class="n">qOUEf22sKATCVhcVDTJTt</span><span class="o">++</span><span class="n">Rihwo</span><span class="o">/</span><span class="n">QOpQKPjxchMuP8</span> <span class="n">arc3</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">ED25519</span><span class="p">)</span>
+<span class="n">MD5</span><span class="p">:</span><span class="mi">9</span><span class="n">d</span><span class="p">:</span><span class="mi">1</span><span class="n">e</span><span class="p">:</span><span class="n">f0</span><span class="p">:</span><span class="mi">4</span><span class="n">e</span><span class="p">:</span><span class="n">f6</span><span class="p">:</span><span class="n">ea</span><span class="p">:</span><span class="mi">3</span><span class="n">e</span><span class="p">:</span><span class="mi">1</span><span class="n">e</span><span class="p">:</span><span class="mi">62</span><span class="p">:</span><span class="mi">7</span><span class="n">d</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">61</span><span class="p">:</span><span class="n">e4</span><span class="p">:</span><span class="n">ff</span><span class="p">:</span><span class="n">c3</span><span class="p">:</span><span class="mi">3</span><span class="n">d</span> <span class="n">arc3</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">RSA</span><span class="p">)</span>
+<span class="n">MD5</span><span class="p">:</span><span class="n">c2</span><span class="p">:</span><span class="n">b1</span><span class="p">:</span><span class="mi">9</span><span class="n">a</span><span class="p">:</span><span class="n">c1</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="n">aa</span><span class="p">:</span><span class="n">ba</span><span class="p">:</span><span class="n">a1</span><span class="p">:</span><span class="n">db</span><span class="p">:</span><span class="n">c6</span><span class="p">:</span><span class="n">b7</span><span class="p">:</span><span class="n">d4</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">9</span><span class="n">d</span><span class="p">:</span><span class="mi">74</span><span class="p">:</span><span class="mi">89</span> <span class="n">arc3</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">ECDSA</span><span class="p">)</span>
+<span class="n">MD5</span><span class="p">:</span><span class="mi">27</span><span class="p">:</span><span class="mi">1</span><span class="n">a</span><span class="p">:</span><span class="mi">96</span><span class="p">:</span><span class="mi">81</span><span class="p">:</span><span class="n">ab</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">1</span><span class="n">f</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="n">ca</span><span class="p">:</span><span class="mi">08</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">3</span><span class="n">f</span><span class="p">:</span><span class="mi">09</span><span class="p">:</span><span class="mi">09</span><span class="p">:</span><span class="mi">65</span><span class="p">:</span><span class="mi">06</span> <span class="n">arc3</span><span class="o">.</span><span class="n">leeds</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span> <span class="p">(</span><span class="n">ED25519</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./getting_started/logon"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="x11-graphics.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Graphics forwarding (X11) from a Terminal</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../linuxbasics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Linux basics</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By University of Leeds Research Computing Team<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
