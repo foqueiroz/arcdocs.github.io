@@ -4,7 +4,7 @@ The HPC systems at Leeds run on a variant of the Linux operating system and we i
 The command line allows you to interact with the operating system through a series of commands that we type in and are executed after we hit the Enter key.
 | The ARC4 command line after logging in |
 | ----------------------------------------------------- |
-| ![ARC4 command line after logging in with MobaXTerm](../assets/img/logon/mobaSSH_4.png) |
+| ![ARC4 command line after logging in with MobaXTerm](../assets/img/logon/offcampus/mobaSSH_5.png) |
 
 ## Linux Tutorial
 
