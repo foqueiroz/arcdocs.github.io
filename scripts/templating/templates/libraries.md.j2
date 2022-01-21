@@ -2,7 +2,11 @@
 
 {{ module_description }}
 
+{% if module_url | length %}
+
 Read more about {{ module_name }} on their [website]({{module_url}}).
+
+{% endif %}
 
 {% if license | length %}
 
