@@ -1,5 +1,7 @@
 # Eigen
 
+Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
+
 
 
 Read more about eigen on their [website](https://eigen.tuxfamily.org/index.php?title=Main_Page).
