@@ -2,7 +2,11 @@
 
 Paraver was developed to respond to the need to have a qualitative global perception of the application behavior by visual inspection and then to be able to focus on the detailed quantitative analysis of the problems. Expressive power, flexibility and the capability of efficiently handling large traces are key features addressed in the design of Paraver. The clear and modular structure of Paraver plays a significant role towards achieving these targets.
 
+
+
 Read more about paraver on their [website](https://tools.bsc.es/paraver).
+
+
 
 
 

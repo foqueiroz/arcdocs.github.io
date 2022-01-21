@@ -2,7 +2,11 @@
 
 CGAL is a software project that provides easy access to efficient and reliable geometric algorithms in the form of a C++ library. CGAL is used in various areas needing geometric computation, such as geographic information systems, computer aided design, molecular biology, medical imaging, computer graphics, and robotics.
 
+
+
 Read more about CGAL on their [website](https://www.cgal.org/).
+
+
 
 
 

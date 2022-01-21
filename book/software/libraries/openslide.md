@@ -2,7 +2,11 @@
 
 OpenSlide is a C library that provides a simple interface to read whole-slide images (also known as virtual slides). The current version is 3.4.1, released 2015-04-20.
 
+
+
 Read more about openslide on their [website](https://openslide.org/).
+
+
 
 
 

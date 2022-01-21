@@ -2,7 +2,11 @@
 
 Intel Trace Analyzer and Collector helps explore message passing interface (MPI) usage efficiency and identify communication hotspots, synchronization bottlenecks, and load balancing.
 
+
+
 Read more about itac on their [website](https://www.intel.com/content/www/us/en/develop/documentation/get-started-with-itac/top/get-started-with-itac-for-oneapi-on-linux.html).
+
+
 
 
 

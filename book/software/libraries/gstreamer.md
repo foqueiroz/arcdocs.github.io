@@ -2,7 +2,11 @@
 
 GStreamer is a library for constructing graphs of media-handling components. The applications it supports range from simple Ogg/Vorbis playback, audio/video streaming to complex audio (mixing) and video (non-linear editing) processing.
 
+
+
 Read more about gstreamer on their [website](https://gstreamer.freedesktop.org/).
+
+
 
 
 

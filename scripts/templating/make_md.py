@@ -59,7 +59,7 @@ def main(data_file, output_path):
         file_path = render_md(row_dict, output_path)
 
         # print out to let us know where it wrote too
-        print(f"Blog post written to {file_path}")
+        print(f"Template rendered to {file_path}")
 
 
 if __name__ == "__main__":

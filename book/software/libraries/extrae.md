@@ -2,7 +2,11 @@
 
 Extrae is the package devoted to generate Paraver trace-files for a post-mortem analysis. Extrae is a tool that uses different interposition mechanisms to inject probes into the target application so as to gather information regarding the application performance.
 
+
+
 Read more about extrae on their [website](https://tools.bsc.es/extrae).
+
+
 
 
 

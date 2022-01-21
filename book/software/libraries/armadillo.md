@@ -2,7 +2,11 @@
 
 Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use.
 
+
+
 Read more about armadillo on their [website](http://arma.sourceforge.net/).
+
+
 
 
 

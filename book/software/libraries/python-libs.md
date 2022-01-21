@@ -2,7 +2,7 @@
 
 Python-libs is a archive module on ARC3 and ARC4 containing a number of python packages installed using the python package index.
 
-Read more about python-libs on their [website](https://arcdocs.leeds.ac.uk/software/libraries/python-libs).
+
 
 
 

@@ -2,7 +2,11 @@
 
 GEOS is a C/C++ library for spatial computational geometry of the sort generally used by "geographic information systems" software.
 
+
+
 Read more about GEOS on their [website](https://libgeos.org/).
+
+
 
 
 

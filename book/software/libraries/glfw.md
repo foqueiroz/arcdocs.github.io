@@ -2,7 +2,11 @@
 
 GLFW is an Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan development on the desktop. It provides a simple API for creating windows, contexts and surfaces, receiving input and events.
 
+
+
 Read more about glfw on their [website](http://www.glfw.org/).
+
+
 
 
 
