@@ -1,6 +1,6 @@
 # Tau
 
-TAU Performance System® is a portable profiling and tracing toolkit for performance analysis of parallel programs written in Fortran, C, C++, UPC, Java, Python.
+TAU Performance System&reg; is a portable profiling and tracing toolkit for performance analysis of parallel programs written in Fortran, C, C++, UPC, Java, Python.
 
 Read more about tau on their [website](https://www.cs.uoregon.edu/research/tau/home.php).
 

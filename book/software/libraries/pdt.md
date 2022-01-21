@@ -1,6 +1,6 @@
 # Pdt
 
-Program database toolkit, part of the TAU Performance System® is a portable profiling and tracing toolkit for performance analysis of parallel programs written in Fortran, C, C++, UPC, Java, Python.
+Program database toolkit, part of the TAU Performance System&reg; is a portable profiling and tracing toolkit for performance analysis of parallel programs written in Fortran, C, C++, UPC, Java, Python.
 
 Read more about pdt on their [website](https://www.cs.uoregon.edu/research/tau/home.php).
 

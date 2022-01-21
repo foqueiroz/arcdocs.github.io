@@ -1,6 +1,6 @@
 # Nag-Matlab
 
-The NAG Toolbox for MATLAB provides a solid numerical foundation and serves diverse mathematical areas. It is expertly documented, maintained and supported, and is regularly updated with cutting edge algorithmic capabilities.
+The NAG Toolbox for MATLAB provides a solid numerical foundation and serves diverse mathematical areas. It is expertly documented, maintained and supported, and is regularly updated with cutting edge algorithmic capabilities.
 
 Read more about nag-matlab on their [website](https://www.nag.co.uk/nag-toolbox-matlab).
 
