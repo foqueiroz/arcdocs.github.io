@@ -38,7 +38,7 @@ def main(data_file, output_path):
     """
     # open data file from csv
     # expects csv file containing windows encoding from forms
-    working_file = pd.read_csv(data_file, encoding="cp1252")
+    working_file = pd.read_csv(data_file, encoding="utf-8")
 
     # fill blank entries (which default to nan)
     # to empty string, we use this in jinja2 template to test for length of variable
