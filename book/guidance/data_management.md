@@ -46,7 +46,7 @@ This guide asks a range of questions to consider when planning your data managem
   - [Documentation](https://lida-data-analytics-team.github.io/laserdocs/)
 - [Data Privacy Impact Assessment template (Data Protection)](https://dataprotection.leeds.ac.uk/wp-content/uploads/sites/48/2019/06/Data-Protection-Impact-Assessment-Template-2.docx)
 
-#### Is encyrption needed?
+#### Is encryption needed?
 
 - [Encryption (UK Data Service)](https://ukdataservice.ac.uk/learning-hub/research-data-management/store-your-data/encryption/)
 
