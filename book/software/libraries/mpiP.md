@@ -1,4 +1,4 @@
-# Mpip
+# mpiP
 
 A light-weight MPI profiler.
 
@@ -24,7 +24,7 @@ The mpiP module can be loaded into your environment with the following command:
 $ module add mpiP
 ```
 
-The mpiP module is available on ARC3 and ARC4:
+The mpiP module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

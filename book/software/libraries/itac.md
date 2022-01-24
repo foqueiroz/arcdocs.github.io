@@ -1,24 +1,24 @@
-# Itac
+# ITAC
 
 Intel Trace Analyzer and Collector helps explore message passing interface (MPI) usage efficiency and identify communication hotspots, synchronization bottlenecks, and load balancing.
 
 
 
-Read more about itac on their [website](https://www.intel.com/content/www/us/en/develop/documentation/get-started-with-itac/top/get-started-with-itac-for-oneapi-on-linux.html).
+Read more about ITAC on their [website](https://www.intel.com/content/www/us/en/develop/documentation/get-started-with-itac/top/get-started-with-itac-for-oneapi-on-linux.html).
 
 
 
 
 
-## The itac module on the HPC
+## The ITAC module on the HPC
 
-The itac module can be loaded into your environment with the following command:
+The ITAC module can be loaded into your environment with the following command:
 
 ```bash
 $ module add itac
 ```
 
-The itac module is available on ARC3 and ARC4:
+The ITAC module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

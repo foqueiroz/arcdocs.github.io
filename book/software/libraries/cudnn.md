@@ -1,10 +1,10 @@
-# Cudnn
+# cuDNN
 
 The NVIDIA CUDA&reg; Deep Neural Network library (cuDNN) is a GPU-accelerated library of primitives for deep neural networks. cuDNN provides highly tuned implementations for standard routines such as forward and backward convolution, pooling, normalization, and activation layers.
 
 
 
-Read more about CUDNN on their [website](https://developer.nvidia.com/cudnn).
+Read more about cuDNN on their [website](https://developer.nvidia.com/cudnn).
 
 
 
@@ -12,19 +12,19 @@ Read more about CUDNN on their [website](https://developer.nvidia.com/cudnn).
 
 ## Licensing 
 
-The CUDNN license is available to read on the [NVIDIA website](https://docs.nvidia.com/deeplearning/cudnn/sla/index.html)
+The cuDNN license is available to read on the [NVIDIA website](https://docs.nvidia.com/deeplearning/cudnn/sla/index.html)
 
 
 
-## The CUDNN module on the HPC
+## The cuDNN module on the HPC
 
-The CUDNN module can be loaded into your environment with the following command:
+The cuDNN module can be loaded into your environment with the following command:
 
 ```bash
-$ module add CUDNN
+$ module add cudnn
 ```
 
-The CUDNN module is available on ARC3 and ARC4:
+The cuDNN module is available on ARC4:
 
 ```{list-table}
 :header-rows: 1

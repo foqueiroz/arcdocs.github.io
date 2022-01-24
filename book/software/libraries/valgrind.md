@@ -4,7 +4,7 @@ Valgrind is an instrumentation framework for building dynamic analysis tools. Th
 
 
 
-Read more about valgrind on their [website](https://valgrind.org/).
+Read more about Valgrind on their [website](https://valgrind.org/).
 
 
 
@@ -16,15 +16,15 @@ Valgrind is Open Source / Free Software, and is freely available under the GNU G
 
 
 
-## The valgrind module on the HPC
+## The Valgrind module on the HPC
 
-The valgrind module can be loaded into your environment with the following command:
+The Valgrind module can be loaded into your environment with the following command:
 
 ```bash
 $ module add valgrind
 ```
 
-The valgrind module is available on ARC3 and ARC4:
+The Valgrind module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

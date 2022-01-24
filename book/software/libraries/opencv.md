@@ -1,4 +1,4 @@
-# Opencv
+# OpenCV
 
 OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. OpenCV was built to provide a common infrastructure for computer vision applications and to accelerate the use of machine perception in the commercial products. Being a BSD-licensed product, OpenCV makes it easy for businesses to utilize and modify the code.
 
@@ -16,15 +16,15 @@ Distributed under a BSD license.
 
 
 
-## The opencv module on the HPC
+## The OpenCV module on the HPC
 
-The opencv module can be loaded into your environment with the following command:
+The OpenCV module can be loaded into your environment with the following command:
 
 ```bash
 $ module add opencv
 ```
 
-The opencv module is available on ARC3 and ARC4:
+The OpenCV module is available on ARC3 and ARC4:
 
 ```{list-table}
 :header-rows: 1
@@ -35,16 +35,20 @@ The opencv module is available on ARC3 and ARC4:
   - Version
   - Command
 
+* - ARC4
+  - opencv 3.4.1
+  - `module add opencv/3.4.1`
+
+* - ARC3
+  - opencv 3.4.1
+  - `module add opencv/3.4.1`
+
 * - ARC3
   - opencv 3.2.0(default)
   - `module add opencv/3.2.0(default)`
 
-* - ARC3
-  - opencv 3.4.1
-  - `module add opencv/3.4.1`
 
-* - ARC4
-  - opencv 3.4.1
-  - `module add opencv/3.4.1`
+
+
 
 ```

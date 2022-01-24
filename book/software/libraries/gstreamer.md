@@ -1,10 +1,10 @@
-# Gstreamer
+# GStreamer
 
 GStreamer is a library for constructing graphs of media-handling components. The applications it supports range from simple Ogg/Vorbis playback, audio/video streaming to complex audio (mixing) and video (non-linear editing) processing.
 
 
 
-Read more about gstreamer on their [website](https://gstreamer.freedesktop.org/).
+Read more about GStreamer on their [website](https://gstreamer.freedesktop.org/).
 
 
 
@@ -16,15 +16,15 @@ Distributed under a GNU Lesser General Public License.
 
 
 
-## The gstreamer module on the HPC
+## The GStreamer module on the HPC
 
-The gstreamer module can be loaded into your environment with the following command:
+The GStreamer module can be loaded into your environment with the following command:
 
 ```bash
 $ module add gstreamer
 ```
 
-The gstreamer module is available on ARC3 and ARC4:
+The GStreamer module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

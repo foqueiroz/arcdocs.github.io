@@ -24,7 +24,7 @@ The dyninst module can be loaded into your environment with the following comman
 $ module add dyninst
 ```
 
-The dyninst module is available on ARC3 and ARC4:
+The dyninst module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

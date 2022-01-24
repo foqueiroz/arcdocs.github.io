@@ -1,10 +1,10 @@
-# Scorep
+# Score-P
 
 The Score-P measurement infrastructure is a highly scalable and easy-to-use tool suite for profiling, event trace recording, and online analysis of HPC applications. Score-P offers the user a maximum of convenience by supporting a number of analysis tools. Currently, it works with Periscope, Scalasca, Vampir, and Tau and is open for other tools. Score-P comes together with the new Open Trace Format Version 2, the CUBE4 profiling format and the Opari2 instrumenter.
 
 
 
-Read more about scorep on their [website](http://www.vi-hps.org/tools/score-p.html).
+Read more about Score-P on their [website](http://www.vi-hps.org/tools/score-p.html).
 
 
 
@@ -16,15 +16,15 @@ Distributed under a BSD license.
 
 
 
-## The scorep module on the HPC
+## The Score-P module on the HPC
 
-The scorep module can be loaded into your environment with the following command:
+The Score-P module can be loaded into your environment with the following command:
 
 ```bash
 $ module add scorep
 ```
 
-The scorep module is available on ARC3 and ARC4:
+The Score-P module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

@@ -1,10 +1,10 @@
-# Root
+# ROOT
 
 An open-source data analysis framework used by high energy physics and others.
 
 
 
-Read more about root on their [website](https://root.cern/).
+Read more about ROOT on their [website](https://root.cern/).
 
 
 
@@ -16,15 +16,15 @@ The ROOT system is being made available under the LGPL 2.1 or (at your option) a
 
 
 
-## The root module on the HPC
+## The ROOT module on the HPC
 
-The root module can be loaded into your environment with the following command:
+The ROOT module can be loaded into your environment with the following command:
 
 ```bash
 $ module add root
 ```
 
-The root module is available on ARC3 and ARC4:
+The ROOT module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

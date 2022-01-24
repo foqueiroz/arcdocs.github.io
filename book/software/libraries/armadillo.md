@@ -24,7 +24,7 @@ The armadillo module can be loaded into your environment with the following comm
 $ module add armadillo
 ```
 
-The armadillo module is available on ARC3 and ARC4:
+The armadillo module is available on ARC4:
 
 ```{list-table}
 :header-rows: 1

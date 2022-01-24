@@ -35,11 +35,11 @@ The libx264 module is available on ARC3 and ARC4:
   - Version
   - Command
 
-* - ARC3
+* - ARC4
   - libx264 20161130-2245
   - `module add libx264/20161130-2245`
 
-* - ARC4
+* - ARC3
   - libx264 20161130-2245
   - `module add libx264/20161130-2245`
 

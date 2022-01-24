@@ -1,24 +1,24 @@
-# Pdt
+# PDT
 
 Program database toolkit, part of the TAU Performance System&reg; is a portable profiling and tracing toolkit for performance analysis of parallel programs written in Fortran, C, C++, UPC, Java, Python.
 
 
 
-Read more about pdt on their [website](https://www.cs.uoregon.edu/research/tau/home.php).
+Read more about PDT on their [website](https://www.cs.uoregon.edu/research/tau/home.php).
 
 
 
 
 
-## The pdt module on the HPC
+## The PDT module on the HPC
 
-The pdt module can be loaded into your environment with the following command:
+The PDT module can be loaded into your environment with the following command:
 
 ```bash
 $ module add pdt
 ```
 
-The pdt module is available on ARC3 and ARC4:
+The PDT module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

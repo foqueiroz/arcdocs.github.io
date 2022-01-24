@@ -1,10 +1,10 @@
-# Mdbtools
+# MDBTools
 
 MDB Tools is a set of programs to help you extract data from Microsoft Access files in various settings.
 
 
 
-Read more about mdbtools on their [website](https://github.com/brianb/mdbtools/).
+Read more about MDBTools on their [website](https://github.com/brianb/mdbtools/).
 
 
 
@@ -16,15 +16,15 @@ Distributed under a GNU GPL license.
 
 
 
-## The mdbtools module on the HPC
+## The MDBTools module on the HPC
 
-The mdbtools module can be loaded into your environment with the following command:
+The MDBTools module can be loaded into your environment with the following command:
 
 ```bash
 $ module add mdbtools
 ```
 
-The mdbtools module is available on ARC3 and ARC4:
+The MDBTools module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

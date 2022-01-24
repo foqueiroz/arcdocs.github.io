@@ -24,7 +24,7 @@ The libxmlplusplus module can be loaded into your environment with the following
 $ module add libxmlplusplus
 ```
 
-The libxmlplusplus module is available on ARC3 and ARC4:
+The libxmlplusplus module is available on ARC4:
 
 ```{list-table}
 :header-rows: 1

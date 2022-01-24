@@ -40,11 +40,12 @@ The osmesa module is available on ARC3 and ARC4:
   - `module add osmesa/18.3.6`
 
 * - ARC3
+  - osmesa 17.0.1
+  - `module add osmesa/17.0.1`
+
+* - ARC3
   - osmesa 13.0.4
   - `module add osmesa/13.0.4`
 
-* - ARC3
-  - osmesa 17.0.1
-  - `module add osmesa/17.0.1`
 
 ```

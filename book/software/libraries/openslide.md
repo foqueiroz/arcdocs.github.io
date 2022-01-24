@@ -1,10 +1,10 @@
-# Openslide
+# OpenSlide
 
 OpenSlide is a C library that provides a simple interface to read whole-slide images (also known as virtual slides). The current version is 3.4.1, released 2015-04-20.
 
 
 
-Read more about openslide on their [website](https://openslide.org/).
+Read more about OpenSlide on their [website](https://openslide.org/).
 
 
 
@@ -16,15 +16,15 @@ Distributed under a GNU Lesser General Public License v2.
 
 
 
-## The openslide module on the HPC
+## The OpenSlide module on the HPC
 
-The openslide module can be loaded into your environment with the following command:
+The OpenSlide module can be loaded into your environment with the following command:
 
 ```bash
 $ module add openslide
 ```
 
-The openslide module is available on ARC3 and ARC4:
+The OpenSlide module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

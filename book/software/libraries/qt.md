@@ -4,7 +4,7 @@ Qt is a cross-platform application development framework for desktop, embedded a
 
 
 
-Read more about qt on their [website](https://www.qt.io/).
+Read more about Qt on their [website](https://www.qt.io/).
 
 
 
@@ -18,13 +18,13 @@ Qt is available under various licenses: The Qt Company sells commercial licenses
 
 ## The qt module on the HPC
 
-The qt module can be loaded into your environment with the following command:
+The Qt module can be loaded into your environment with the following command:
 
 ```bash
 $ module add qt
 ```
 
-The qt module is available on ARC3 and ARC4:
+The Qt module is available on ARC3 and ARC4:
 
 ```{list-table}
 :header-rows: 1
@@ -35,20 +35,21 @@ The qt module is available on ARC3 and ARC4:
   - Version
   - Command
 
+* - ARC4
+  - qt 5.9.7
+  - `module add qt/5.9.7`
+
 * - ARC3
-  - qt 4.8.6
-  - `module add qt/4.8.6`
+  - qt 5.9.7
+  - `module add qt/5.9.7`
 
 * - ARC4
   - qt 4.8.7
   - `module add qt/4.8.7`
 
 * - ARC3
-  - qt 5.9.7
-  - `module add qt/5.9.7`
+  - qt 4.8.6
+  - `module add qt/4.8.6`
 
-* - ARC4
-  - qt 5.9.7
-  - `module add qt/5.9.7`
 
 ```

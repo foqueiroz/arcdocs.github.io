@@ -24,7 +24,7 @@ The libdwarf module can be loaded into your environment with the following comma
 $ module add libdwarf
 ```
 
-The libdwarf module is available on ARC3 and ARC4:
+The libdwarf module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

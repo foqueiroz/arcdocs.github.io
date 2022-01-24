@@ -1,10 +1,10 @@
-# Papi
+# PAPI
 
 PAPI provides the tool designer and application engineer with a consistent interface and methodology for use of the performance counter hardware found in most major microprocessors. PAPI enables software engineers to see, in near real time, the relation between software performance and processor events.
 
 
 
-Read more about papi on their [website](http://icl.cs.utk.edu/papi/).
+Read more about PAPI on their [website](http://icl.cs.utk.edu/papi/).
 
 
 
@@ -16,15 +16,15 @@ Distributed with a permissive license on the [Bitbucket project page](https://bi
 
 
 
-## The papi module on the HPC
+## The PAPI module on the HPC
 
-The papi module can be loaded into your environment with the following command:
+The PAPI module can be loaded into your environment with the following command:
 
 ```bash
 $ module add papi
 ```
 
-The papi module is available on ARC3 and ARC4:
+The PAPI module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

@@ -1,10 +1,10 @@
-# Glew
+# GLEW
 
 The OpenGL Extension Wrangler Library (GLEW) is a cross-platform open-source C/C++ extension loading library. GLEW provides efficient run-time mechanisms for determining which OpenGL extensions are supported on the target platform.
 
 
 
-Read more about glew on their [website](http://glew.sourceforge.net/).
+Read more about GLEW on their [website](http://glew.sourceforge.net/).
 
 
 
@@ -12,11 +12,11 @@ Read more about glew on their [website](http://glew.sourceforge.net/).
 
 ## Licensing 
 
-Licensing arrangements for glew are described on their [GitHub page](https://github.com/nigels-com/glew#copyright-and-licensing).
+Licensing arrangements for GLEW are described on their [GitHub page](https://github.com/nigels-com/glew#copyright-and-licensing).
 
 
 
-## The glew module on the HPC
+## The GLEW module on the HPC
 
 The glew module can be loaded into your environment with the following command:
 
@@ -24,7 +24,7 @@ The glew module can be loaded into your environment with the following command:
 $ module add glew
 ```
 
-The glew module is available on ARC3 and ARC4:
+The GLEW module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

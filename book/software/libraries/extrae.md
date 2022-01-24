@@ -24,7 +24,7 @@ The extrae module can be loaded into your environment with the following command
 $ module add extrae
 ```
 
-The extrae module is available on ARC3 and ARC4:
+The extrae module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

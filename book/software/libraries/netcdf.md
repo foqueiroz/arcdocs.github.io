@@ -40,11 +40,13 @@ The netcdf module is available on ARC3 and ARC4:
   - `module add netcdf/4.6.3`
 
 * - ARC3
+  - netcdf 4.6.1
+  - `module add netcdf/4.6.1`
+
+* - ARC3
   - netcdf 4.4.1(default)
   - `module add netcdf/4.4.1(default)`
 
-* - ARC3
-  - netcdf 4.6.1
-  - `module add netcdf/4.6.1`
+
 
 ```

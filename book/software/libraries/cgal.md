@@ -1,4 +1,4 @@
-# Cgal
+# CGAL
 
 CGAL is a software project that provides easy access to efficient and reliable geometric algorithms in the form of a C++ library. CGAL is used in various areas needing geometric computation, such as geographic information systems, computer aided design, molecular biology, medical imaging, computer graphics, and robotics.
 
@@ -21,10 +21,10 @@ Releases 3.x were distributed under the Q Public License (QPL) and GNU Lesser Ge
 The CGAL module can be loaded into your environment with the following command:
 
 ```bash
-$ module add CGAL
+$ module add cgal
 ```
 
-The CGAL module is available on ARC3 and ARC4:
+The CGAL module is available on ARC4:
 
 ```{list-table}
 :header-rows: 1
@@ -36,11 +36,11 @@ The CGAL module is available on ARC3 and ARC4:
   - Command
 
 * - ARC4
-  - CGAL 4.12.2
-  - `module add cgal/4.12.2`
-
-* - ARC4
   - CGAL 5.1
   - `module add cgal/5.1`
+
+* - ARC4
+  - CGAL 4.12.2
+  - `module add cgal/4.12.2`
 
 ```

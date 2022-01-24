@@ -1,4 +1,4 @@
-# Atlas
+# ATLAS
 
 The ATLAS (Automatically Tuned Linear Algebra Software) project is an ongoing research effort focusing on applying empirical techniques in order to provide portable performance. At present, it provides C and Fortran77 interfaces to a portably efficient BLAS implementation, as well as a few routines from LAPACK.
 
@@ -16,15 +16,15 @@ ATLAS uses a BSD-style license, without the advertising clause. [Read it here](h
 
 
 
-## The atlas module on the HPC
+## The ATLAS module on the HPC
 
-The atlas module can be loaded into your environment with the following command:
+The ATLAS module can be loaded into your environment with the following command:
 
 ```bash
 $ module add atlas
 ```
 
-The atlas module is available on ARC3 and ARC4:
+The ATLAS module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

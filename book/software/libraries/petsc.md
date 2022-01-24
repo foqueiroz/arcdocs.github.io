@@ -1,10 +1,10 @@
-# Petsc
+# PETSc
 
 PETSc, the Portable, Extensible Toolkit for Scientific Computation, pronounced PET-see (/?p?t-si?/), is a suite of data structures and routines for the scalable (parallel) solution of scientific applications modeled by partial differential equations. It supports MPI, and GPUs through CUDA, HIP or OpenCL, as well as hybrid MPI-GPU parallelism; it also supports the NEC-SX Tsubasa Vector Engine. PETSc (sometimes called PETSc/TAO) also contains the TAO, the Toolkit for Advanced Optimization, software library.
 
 
 
-Read more about petsc on their [website](https://petsc.org/release/).
+Read more about PETSc on their [website](https://petsc.org/release/).
 
 
 
@@ -16,15 +16,15 @@ Distributed under a BSD license.
 
 
 
-## The petsc module on the HPC
+## The PETSc module on the HPC
 
-The petsc module can be loaded into your environment with the following command:
+The PETSc module can be loaded into your environment with the following command:
 
 ```bash
 $ module add petsc
 ```
 
-The petsc module is available on ARC3 and ARC4:
+The PETSc module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

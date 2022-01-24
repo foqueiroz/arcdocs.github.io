@@ -4,7 +4,7 @@ Scalasca is a software tool that supports the performance optimization of parall
 
 
 
-Read more about scalasca on their [website](http://www.scalasca.org/).
+Read more about Scalasca on their [website](http://www.scalasca.org/).
 
 
 
@@ -16,15 +16,15 @@ The entire code of Scalasca v2 is licensed under the [BSD-style license agreemen
 
 
 
-## The scalasca module on the HPC
+## The Scalasca module on the HPC
 
-The scalasca module can be loaded into your environment with the following command:
+The Scalasca module can be loaded into your environment with the following command:
 
 ```bash
 $ module add scalasca
 ```
 
-The scalasca module is available on ARC3 and ARC4:
+The Scalasca module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

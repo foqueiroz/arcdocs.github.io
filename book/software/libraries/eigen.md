@@ -24,7 +24,7 @@ The eigen module can be loaded into your environment with the following command:
 $ module add eigen
 ```
 
-The eigen module is available on ARC3 and ARC4:
+The eigen module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

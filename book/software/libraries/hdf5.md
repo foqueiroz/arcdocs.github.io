@@ -1,4 +1,4 @@
-# Hdf5
+# HDF5
 
 Hierarchical Data Format (HDF) is a set of file formats (HDF4, HDF5) designed to store and organize large amounts of data.
 
@@ -21,7 +21,7 @@ The HDF5 license is available to read on their [GitHub](https://github.com/HDFGr
 The HDF5 module can be loaded into your environment with the following command:
 
 ```bash
-$ module add HDF5
+$ module add hdf5
 ```
 
 The HDF5 module is available on ARC3 and ARC4:
@@ -36,6 +36,10 @@ The HDF5 module is available on ARC3 and ARC4:
   - Command
 
 * - ARC4
+  - HDF5 1.10.5
+  - `module add hdf5/1.10.5`
+
+* - ARC4
   - HDF5 1.8.21
   - `module add hdf5/1.8.21`
 
@@ -46,9 +50,5 @@ The HDF5 module is available on ARC3 and ARC4:
 * - ARC3
   - HDF5 1.8.17(default)
   - `module add hdf5/1.8.17(default)`
-
-* - ARC4
-  - HDF5 1.10.5
-  - `module add hdf5/1.10.5`
 
 ```

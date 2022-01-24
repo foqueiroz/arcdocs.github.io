@@ -1,4 +1,4 @@
-# Geos
+# GEOS
 
 GEOS is a C/C++ library for spatial computational geometry of the sort generally used by "geographic information systems" software.
 
@@ -21,7 +21,7 @@ GEOS is open source software available under the terms of GNU Lesser General Pub
 The GEOS module can be loaded into your environment with the following command:
 
 ```bash
-$ module add GEOS
+$ module add geos
 ```
 
 The GEOS module is available on ARC3 and ARC4:

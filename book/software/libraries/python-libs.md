@@ -20,7 +20,7 @@ The python-libs module can be loaded into your environment with the following co
 $ module add python-libs
 ```
 
-The python-libs module is available on ARC3 and ARC4:
+The python-libs module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1
@@ -32,15 +32,15 @@ The python-libs module is available on ARC3 and ARC4:
   - Command
 
 * - ARC3
-  - python-libs 3.0.0
-  - `module add python-libs/3.0.0`
+  - python-libs 3.1.0(default)
+  - `module add python-libs/3.1.0(default)`
 
 * - ARC3
   - python-libs 3.0.1
   - `module add python-libs/3.0.1`
 
 * - ARC3
-  - python-libs 3.1.0(default)
-  - `module add python-libs/3.1.0(default)`
+  - python-libs 3.0.0
+  - `module add python-libs/3.0.0`
 
 ```

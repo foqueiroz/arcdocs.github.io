@@ -1,10 +1,10 @@
-# Pgplot
+# PGPLOT
 
 The PGPLOT Graphics Subroutine Library is a Fortran- or C-callable, device-independent graphics package for making simple scientific graphs. It is intended for making graphical images of publication quality with minimum effort on the part of the user. For most applications, the program can be device-independent, and the output can be directed to the appropriate device at run time.
 
 
 
-Read more about pgplot on their [website](https://sites.astro.caltech.edu/~tjp/pgplot/).
+Read more about PGPLOT on their [website](https://sites.astro.caltech.edu/~tjp/pgplot/).
 
 
 
@@ -16,15 +16,15 @@ PGPLOT is not public-domain software. However, it is freely available for non-co
 
 
 
-## The pgplot module on the HPC
+## The PGPLOT module on the HPC
 
-The pgplot module can be loaded into your environment with the following command:
+The PGPLOT module can be loaded into your environment with the following command:
 
 ```bash
 $ module add pgplot
 ```
 
-The pgplot module is available on ARC3 and ARC4:
+The PGPLOT module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

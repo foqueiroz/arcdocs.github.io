@@ -1,10 +1,10 @@
-# Mvapich2
+# MVAPICH2
 
 The MVAPICH2 software, based on MPI 3.1 standard, delivers the best performance, scalability and fault tolerance for high-end computing systems and servers using InfiniBand, Omni-Path, Ethernet/iWARP, and RoCE networking technologies.
 
 
 
-Read more about mvapich2 on their [website](http://mvapich.cse.ohio-state.edu/).
+Read more about MVAPICH2 on their [website](http://mvapich.cse.ohio-state.edu/).
 
 
 
@@ -16,15 +16,15 @@ Distributed under a BSD license.
 
 
 
-## The mvapich2 module on the HPC
+## The MVAPICH2 module on the HPC
 
-The mvapich2 module can be loaded into your environment with the following command:
+The MVAPICH2 module can be loaded into your environment with the following command:
 
 ```bash
 $ module add mvapich2
 ```
 
-The mvapich2 module is available on ARC3 and ARC4:
+The MVAPICH2 module is available on ARC3 and ARC4:
 
 ```{list-table}
 :header-rows: 1

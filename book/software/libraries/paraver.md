@@ -4,7 +4,7 @@ Paraver was developed to respond to the need to have a qualitative global percep
 
 
 
-Read more about paraver on their [website](https://tools.bsc.es/paraver).
+Read more about Paraver on their [website](https://tools.bsc.es/paraver).
 
 
 
@@ -16,15 +16,15 @@ Distributed under a GNU Lesser General Public License v2.
 
 
 
-## The paraver module on the HPC
+## The Paraver module on the HPC
 
-The paraver module can be loaded into your environment with the following command:
+The Paraver module can be loaded into your environment with the following command:
 
 ```bash
 $ module add paraver
 ```
 
-The paraver module is available on ARC3 and ARC4:
+The Paraver module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

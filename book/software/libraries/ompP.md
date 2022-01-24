@@ -1,4 +1,4 @@
-# Ompp
+# ompP
 
 ompP is a profiling tool for OpenMP applications. ompP's profiling report becomes available immediately after program termination in a human-readable ASCII format. ompP supports the measurement of hardware performance counters using PAPI and it supports productivity features such as overhead analysis and detection of common inefficiency situations (called performance properties).
 

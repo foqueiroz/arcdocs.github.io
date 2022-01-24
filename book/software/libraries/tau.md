@@ -1,24 +1,24 @@
-# Tau
+# TAU
 
 TAU Performance System&reg; is a portable profiling and tracing toolkit for performance analysis of parallel programs written in Fortran, C, C++, UPC, Java, Python.
 
 
 
-Read more about tau on their [website](https://www.cs.uoregon.edu/research/tau/home.php).
+Read more about TAU on their [website](https://www.cs.uoregon.edu/research/tau/home.php).
 
 
 
 
 
-## The tau module on the HPC
+## The TAU module on the HPC
 
-The tau module can be loaded into your environment with the following command:
+The TAU module can be loaded into your environment with the following command:
 
 ```bash
 $ module add tau
 ```
 
-The tau module is available on ARC3 and ARC4:
+The TAU module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1

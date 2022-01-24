@@ -35,21 +35,21 @@ The boost module is available on ARC3 and ARC4:
   - Version
   - Command
 
+* - ARC4
+  - boost 1.67.0
+  - `module add boost/1.67.0`
+
 * - ARC3
-  - boost 1.63.0
-  - `module add boost/1.63.0`
+  - boost 1.67.0
+  - `module add boost/1.67.0`
 
 * - ARC3
   - boost 1.65.1
   - `module add boost/1.65.1`
 
 * - ARC3
-  - boost 1.67.0
-  - `module add boost/1.67.0`
-
-* - ARC4
-  - boost 1.67.0
-  - `module add boost/1.67.0`
+  - boost 1.63.0
+  - `module add boost/1.63.0`
 
 * - ARC3
   - boost 1.60.0

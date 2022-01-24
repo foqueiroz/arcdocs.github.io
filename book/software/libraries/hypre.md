@@ -1,10 +1,10 @@
-# Hypre
+# HYPRE
 
 Livermore's HYPRE library of linear solvers makes possible larger, more detailed simulations by solving problems faster than traditional methods at large scales. It offers a comprehensive suite of scalable solvers for large-scale scientific simulation, featuring parallel multigrid methods for both structured and unstructured grid problems. The HYPRE library is highly portable and supports a number of languages.
 
 
 
-Read more about hypre on their [website](http://www.llnl.gov/CASC/hypre).
+Read more about HYPRE on their [website](http://www.llnl.gov/CASC/hypre).
 
 
 
@@ -16,15 +16,15 @@ HYPRE is distributed under the terms of both the MIT license and the Apache Lice
 
 
 
-## The hypre module on the HPC
+## The HYPRE module on the HPC
 
-The hypre module can be loaded into your environment with the following command:
+The HYPRE module can be loaded into your environment with the following command:
 
 ```bash
 $ module add hypre
 ```
 
-The hypre module is available on ARC3 and ARC4:
+The HYPRE module is available on ARC3:
 
 ```{list-table}
 :header-rows: 1
@@ -36,11 +36,11 @@ The hypre module is available on ARC3 and ARC4:
   - Command
 
 * - ARC3
-  - hypre 2.11.2
-  - `module add hypre/2.11.2`
-
-* - ARC3
   - hypre 2.14.0
   - `module add hypre/2.14.0`
+
+* - ARC3
+  - hypre 2.11.2
+  - `module add hypre/2.11.2`
 
 ```
