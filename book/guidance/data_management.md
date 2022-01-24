@@ -107,6 +107,10 @@ This guide asks a range of questions to consider when planning your data managem
 
 #### What size is the data?
 
+- [University OneDrive (IT)](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0012306)
+- [Research Data Storage (IT)](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0013189)
+- [Azure storage buckets (Microsoft)](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)
+
 #### How will the data be used?
 
 - [Data Processing Agreement (Data Protection)](https://dataprotection.leeds.ac.uk/wp-content/uploads/sites/48/2021/01/DATA-PROCESSING-AGREEMENT.docx)
