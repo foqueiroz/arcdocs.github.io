@@ -38,6 +38,10 @@ CFX specific information can be found by clicking the link above.
 
 Chemkin specific information can be found by clicking the link above.
 
+### [Running Ansys CLI](./ansys/ansyscli)
+
+Ansys CLI specificic information can be found by clicking the link above.
+
 ## Additional Step for Using Ansys the First Time
 
 Before running the Ansys module for the first time, there is a per-user setting that chooses whether commercial (default) or academic licenses should be used.
