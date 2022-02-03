@@ -50,7 +50,7 @@ _Examples are not an exhaustive list of possible options and many are Python-spe
 
 ##### Workflow management
 
-- e.g., [SnakeMake](https://snakemake.readthedocs.io/en/stable/), [Luigi](https://luigi.readthedocs.io/en/stable/), [Nextflow](https://www.nextflow.io/docs/latest/singularity.html) (with Singularity), [Make](https://the-turing-way.netlify.app/reproducible-research/make.html), [Research Compendium](https://the-turing-way.netlify.app/reproducible-research/compendia.html#), [protocols.io](https://www.protocols.io/)
+- e.g., [SnakeMake](https://snakemake.readthedocs.io/en/stable/), [Luigi](https://luigi.readthedocs.io/en/stable/), [Nextflow](https://www.nextflow.io/docs/latest/singularity.html) (with Singularity), [Make](https://the-turing-way.netlify.app/reproducible-research/make.html), [Research Compendium](https://the-turing-way.netlify.app/reproducible-research/compendia.html#), [protocols.io](https://www.protocols.io/), [Ploomber](https://ploomber.io/)
 
 ##### Resources
 
