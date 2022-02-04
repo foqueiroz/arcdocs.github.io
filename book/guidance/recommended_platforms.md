@@ -20,14 +20,15 @@ This guide asks a range of questions to consider when deciding which platform to
     - Standard 192 GB
     - High-memory 768 GB
 - Cloud computing
-  - Microsoft Azure
-    - ...
+  - [Microsoft Azure - Memory optimised](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-memory)
 
 ### Does the work need a lot of storage?
 
 - For example, a local laptop / workstation may have 0.25-2 TB
+- Network storage is [available from IT](https://it.leeds.ac.uk/it?id=kb_article&sysparm_article=KB0013189)
 - Onedrive
   - 5 TB each, for all users
+  - Quota increase is available on request to IT services
 - HPC
   - [ARC3](https://arcdocs.leeds.ac.uk/systems/arc3.html#lustre-storage)
     - 836 TB Lustre storage, at 4GB/s (/nobackup)
@@ -45,8 +46,7 @@ This guide asks a range of questions to consider when deciding which platform to
     - 149 standard nodes, each with 40 cores
     - 2 high-memory nodes, each with 40 cores
 - Cloud computing
-  - Microsoft Azure
-    - ...
+  - [Microsoft Azure - Compute optimised](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-compute)
 
 ### Do you need to use GPUs?
 
@@ -65,8 +65,7 @@ This guide asks a range of questions to consider when deciding which platform to
   - [JADE-2](http://docs.jade.ac.uk/en/latest/index.html)
     - 63 x [DGX-MAX-Q](https://www.nvidia.com/en-gb/data-center/dgx-systems/dgx-1/) Nodes, each with 8 x [NVIDIA Tesla V100](https://www.nvidia.com/en-gb/data-center/tesla-v100/)
 - Cloud computing
-  - Microsoft Azure
-    - ...
+  - [Microsoft Azure - GPU optimised](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-gpu)
 
 ## Cost
 
