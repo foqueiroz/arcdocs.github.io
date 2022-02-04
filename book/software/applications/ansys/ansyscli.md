@@ -107,4 +107,6 @@ The file can be submitted to the queue by typing this (assuming you'd written th
 $ qsub ansys.sh
 ```
 
-You'd really want to make sure that this gave you a significant performance advantage, and please do let us know how you get on with this if you do experiment with GPU acceleration.
+````{admonition} GPU performance
+You really want to make sure that this gives you a significant performance advantage by using a GPU compared with running a standard CPU job.  Please do let us know how you get on with this if you do experiment with GPU acceleration, as this is currently untested.
+````
