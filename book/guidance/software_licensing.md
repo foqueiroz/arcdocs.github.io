@@ -20,6 +20,7 @@ _This guide aims to highlight resources which may be useful for developing resea
 
 - [Software licensing overview (The Turing Way)](https://the-turing-way.netlify.app/reproducible-research/licensing.html)
 - [Copyright (UK Data Service)](https://ukdataservice.ac.uk/learning-hub/research-data-management/rights-in-data/copyright/)
+- [Choosing an open-source licence (Software Sustainability Institute)](https://www.software.ac.uk/resources/guides/choosing-open-source-licence)
 
 ### What are the options?
 
@@ -56,7 +57,7 @@ _This guide aims to highlight resources which may be useful for developing resea
 
 ### Training
 
-- ...
+- [SWD3: Software development practices for Research](https://arc.leeds.ac.uk/training/courses/swd3/)
 
 ## Other general resources
 
