@@ -49,6 +49,7 @@
       - file: software/applications/amber
       - file: software/applications/ansys
         sections:
+        - file: software/applications/ansys/ansyscli
         - file: software/applications/ansys/cfx
         - file: software/applications/ansys/fluent
         - file: software/applications/ansys/chemkin
