@@ -1,10 +1,10 @@
-# GLFW
+# GLPK
 
 The GLPK (GNU Linear Programming Kit) package is intended for solving large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. It is a set of routines written in ANSI C and organized in the form of a callable library.
 
 
 
-Read more about GLFW on their [website](https://www.gnu.org/software/glpk/).
+Read more about GLPK on their [website](https://www.gnu.org/software/glpk/).
 
 
 
@@ -16,9 +16,9 @@ Distributed under a GNU General Public License.
 
 
 
-## The GLFW module on the HPC
+## The GLPK module on the HPC
 
-The GLFW module can be loaded into your environment with the following command:
+The GLPK module can be loaded into your environment with the following command:
 
 ```bash
 $ module add glpk
