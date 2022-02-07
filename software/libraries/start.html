@@ -42,18 +42,17 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://arcdocs.leeds.ac.uk/software/libraries/start.html" />
     <link rel="shortcut icon" href="../../_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Systems" href="../../systems/start.html" />
+    <link rel="next" title="Armadillo" href="armadillo.html" />
     <link rel="prev" title="Vtune" href="../infrastructure/vtune.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -565,10 +564,332 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 current active">
+   <li class="toctree-l2 current active has-children">
     <a class="current reference internal" href="#">
      Libraries
     </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="armadillo.html">
+       Armadillo
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="atlas.html">
+       ATLAS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="boost.html">
+       Boost
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="cgal.html">
+       CGAL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="cube.html">
+       Cube
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="cudnn.html">
+       cuDNN
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="darshan.html">
+       Darshan
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="dyninst.html">
+       Dyninst
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="eigen.html">
+       Eigen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="extrae.html">
+       Extrae
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ffmpeg.html">
+       FFmpeg
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="fftw.html">
+       FFTW
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="gdal.html">
+       GDAL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="geos.html">
+       GEOS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="glew.html">
+       GLEW
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="glfw.html">
+       GLFW
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="glpk.html">
+       GLFW
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="gsl.html">
+       GSL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="gstreamer.html">
+       GStreamer
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="hdf5.html">
+       HDF5
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="hpctoolkit.html">
+       HPCToolkit
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="hypre.html">
+       HYPRE
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="intelmpi.html">
+       IntelMPI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="itac.html">
+       ITAC
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="libdwarf.html">
+       Libdwarf
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="libx264.html">
+       Libx264
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="libxmlplusplus.html">
+       Libxmlplusplus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="matlab-runtime.html">
+       MATLAB-Runtime
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mdbtools.html">
+       MDBTools
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mesa.html">
+       Mesa
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mkl.html">
+       MKL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mpe2.html">
+       MPE2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mpiP.html">
+       mpiP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="must.html">
+       MUST
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mvapich2.html">
+       MVAPICH2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nag-matlab.html">
+       NAG-MATLAB
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netcdf.html">
+       Netcdf
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="netlib.html">
+       Netlib
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="ompP.html">
+       ompP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="opencv.html">
+       OpenCV
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openmpi.html">
+       OpenMPI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openslide.html">
+       OpenSlide
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openspeedshop.html">
+       Open|SpeedShop
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="osmesa.html">
+       Osmesa
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="otf2.html">
+       OTF2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="papi.html">
+       PAPI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="paraver.html">
+       Paraver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pdt.html">
+       PDT
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="petsc.html">
+       PETSc
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pgplot.html">
+       PGPLOT
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="python-libs.html">
+       Python-Libs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="qt.html">
+       Qt
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="root.html">
+       ROOT
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="scalasca.html">
+       Scalasca
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="scorep.html">
+       Score-P
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="silo.html">
+       Silo
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="suitesparse.html">
+       Suitesparse
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="superlu.html">
+       SuperLU
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="tau.html">
+       TAU
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="udunits.html">
+       UDUNITS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="valgrind.html">
+       Valgrind
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="vtk.html">
+       VTK
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="zeromq.html">
+       ZeroMQ
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -576,8 +897,8 @@
   <a class="reference internal" href="../../systems/start.html">
    Systems
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -698,6 +1019,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#libraries-index">
+   Libraries Index
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -710,6 +1044,19 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#libraries-index">
+   Libraries Index
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -718,6 +1065,77 @@
                 
   <div class="section" id="libraries">
 <h1>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h1>
+<p>This page is an overview of the libraries section of software available on the HPC.</p>
+<div class="section" id="libraries-index">
+<h2>Libraries Index<a class="headerlink" href="#libraries-index" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="armadillo.html"><span class="doc std std-doc">Armadillo</span></a></p></li>
+<li><p><a class="reference internal" href="atlas.html"><span class="doc std std-doc">ATLAS</span></a></p></li>
+<li><p><a class="reference internal" href="boost.html"><span class="doc std std-doc">Boost</span></a></p></li>
+<li><p><a class="reference internal" href="cgal.html"><span class="doc std std-doc">CGAL</span></a></p></li>
+<li><p><a class="reference internal" href="cube.html"><span class="doc std std-doc">Cube</span></a></p></li>
+<li><p><a class="reference internal" href="cudnn.html"><span class="doc std std-doc">cuDNN</span></a></p></li>
+<li><p><a class="reference internal" href="darshan.html"><span class="doc std std-doc">Darshan</span></a></p></li>
+<li><p><a class="reference internal" href="dyninst.html"><span class="doc std std-doc">Dyninst</span></a></p></li>
+<li><p><a class="reference internal" href="eigen.html"><span class="doc std std-doc">Eigen</span></a></p></li>
+<li><p><a class="reference internal" href="extrae.html"><span class="doc std std-doc">Extrae</span></a></p></li>
+<li><p><a class="reference internal" href="ffmpeg.html"><span class="doc std std-doc">FFmpeg</span></a></p></li>
+<li><p><a class="reference internal" href="fftw.html"><span class="doc std std-doc">FFTW</span></a></p></li>
+<li><p><a class="reference internal" href="gdal.html"><span class="doc std std-doc">GDAL</span></a></p></li>
+<li><p><a class="reference internal" href="geos.html"><span class="doc std std-doc">GEOS</span></a></p></li>
+<li><p><a class="reference internal" href="glew.html"><span class="doc std std-doc">GLEW</span></a></p></li>
+<li><p><a class="reference internal" href="glfw.html"><span class="doc std std-doc">GLFW</span></a></p></li>
+<li><p><a class="reference internal" href="glpk.html"><span class="doc std std-doc">GLPK</span></a></p></li>
+<li><p><a class="reference internal" href="gsl.html"><span class="doc std std-doc">GSL</span></a></p></li>
+<li><p><a class="reference internal" href="gstreamer.html"><span class="doc std std-doc">GStreamer</span></a></p></li>
+<li><p><a class="reference internal" href="hdf5.html"><span class="doc std std-doc">HDF5</span></a></p></li>
+<li><p><a class="reference internal" href="hpctoolkit.html"><span class="doc std std-doc">HPCtoolkit</span></a></p></li>
+<li><p><a class="reference internal" href="hypre.html"><span class="doc std std-doc">HYPRE</span></a></p></li>
+<li><p><a class="reference internal" href="intelmpi.html"><span class="doc std std-doc">IntelMPI</span></a></p></li>
+<li><p><a class="reference internal" href="itac.html"><span class="doc std std-doc">ITAC</span></a></p></li>
+<li><p><a class="reference internal" href="libdwarf.html"><span class="doc std std-doc">Libdwarf</span></a></p></li>
+<li><p><a class="reference internal" href="libx264.html"><span class="doc std std-doc">Libx264</span></a></p></li>
+<li><p><a class="reference internal" href="libxmlplusplus.html"><span class="doc std std-doc">Libxmlplusplus</span></a></p></li>
+<li><p><a class="reference internal" href="matlab-runtime.html"><span class="doc std std-doc">MATLAB-runtime</span></a></p></li>
+<li><p><a class="reference internal" href="mdbtools.html"><span class="doc std std-doc">MDBtools</span></a></p></li>
+<li><p><a class="reference internal" href="mesa.html"><span class="doc std std-doc">Mesa</span></a></p></li>
+<li><p><a class="reference internal" href="mkl.html"><span class="doc std std-doc">MKL</span></a></p></li>
+<li><p><a class="reference internal" href="mpe2.html"><span class="doc std std-doc">MPE2</span></a></p></li>
+<li><p><a class="reference internal" href="mpiP.html"><span class="doc std std-doc">MpiP</span></a></p></li>
+<li><p><a class="reference internal" href="must.html"><span class="doc std std-doc">MUST</span></a></p></li>
+<li><p><a class="reference internal" href="mvapich2.html"><span class="doc std std-doc">MVAPICH2</span></a></p></li>
+<li><p><a class="reference internal" href="nag-matlab.html"><span class="doc std std-doc">NAG-MATLAB</span></a></p></li>
+<li><p><a class="reference internal" href="netcdf.html"><span class="doc std std-doc">NetCDF</span></a></p></li>
+<li><p><a class="reference internal" href="netlib.html"><span class="doc std std-doc">Netlib</span></a></p></li>
+<li><p><a class="reference internal" href="ompP.html"><span class="doc std std-doc">OmpP</span></a></p></li>
+<li><p><a class="reference internal" href="opencv.html"><span class="doc std std-doc">OpenCV</span></a></p></li>
+<li><p><a class="reference internal" href="openmpi.html"><span class="doc std std-doc">OpenMPI</span></a></p></li>
+<li><p><a class="reference internal" href="openslide.html"><span class="doc std std-doc">OpenSlide</span></a></p></li>
+<li><p><a class="reference internal" href="openspeedshop.html"><span class="doc std std-doc">Open|SpeedShop</span></a></p></li>
+<li><p><a class="reference internal" href="osmesa.html"><span class="doc std std-doc">Osmesa</span></a></p></li>
+<li><p><a class="reference internal" href="otf2.html"><span class="doc std std-doc">OTF2</span></a></p></li>
+<li><p><a class="reference internal" href="papi.html"><span class="doc std std-doc">PAPI</span></a></p></li>
+<li><p><a class="reference internal" href="paraver.html"><span class="doc std std-doc">Paraver</span></a></p></li>
+<li><p><a class="reference internal" href="pdt.html"><span class="doc std std-doc">PDT</span></a></p></li>
+<li><p><a class="reference internal" href="petsc.html"><span class="doc std std-doc">Petsc</span></a></p></li>
+<li><p><a class="reference internal" href="pgplot.html"><span class="doc std std-doc">PGPLOT</span></a></p></li>
+<li><p><a class="reference internal" href="python-libs.html"><span class="doc std std-doc">Python-libs</span></a></p></li>
+<li><p><a class="reference internal" href="qt.html"><span class="doc std std-doc">Qt</span></a></p></li>
+<li><p><a class="reference internal" href="root.html"><span class="doc std std-doc">ROOT</span></a></p></li>
+<li><p><a class="reference internal" href="scalasca.html"><span class="doc std std-doc">Scalasca</span></a></p></li>
+<li><p><a class="reference internal" href="scorep.html"><span class="doc std std-doc">Score-P</span></a></p></li>
+<li><p><a class="reference internal" href="silo.html"><span class="doc std std-doc">Silo</span></a></p></li>
+<li><p><a class="reference internal" href="suitesparse.html"><span class="doc std std-doc">Suitesparse</span></a></p></li>
+<li><p><a class="reference internal" href="superlu.html"><span class="doc std std-doc">SuperLU</span></a></p></li>
+<li><p><a class="reference internal" href="tau.html"><span class="doc std std-doc">TAU</span></a></p></li>
+<li><p><a class="reference internal" href="udunits.html"><span class="doc std std-doc">UDUNITS</span></a></p></li>
+<li><p><a class="reference internal" href="valgrind.html"><span class="doc std std-doc">Valgrind</span></a></p></li>
+<li><p><a class="reference internal" href="vtk.html"><span class="doc std std-doc">VTK</span></a></p></li>
+<li><p><a class="reference internal" href="zeromq.html"><span class="doc std std-doc">ZeroMQ</span></a></p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -752,10 +1170,10 @@
             <p class="prev-next-title">Vtune</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../systems/start.html" title="next page">
+    <a class='right-next' id="next-link" href="armadillo.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Systems</p>
+        <p class="prev-next-title">Armadillo</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

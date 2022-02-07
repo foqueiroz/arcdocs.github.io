@@ -43,6 +43,12 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <link rel="canonical" href="https://arcdocs.leeds.ac.uk/search.html" />
@@ -562,10 +568,332 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="software/libraries/start.html">
      Libraries
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/armadillo.html">
+       Armadillo
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/atlas.html">
+       ATLAS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/boost.html">
+       Boost
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/cgal.html">
+       CGAL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/cube.html">
+       Cube
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/cudnn.html">
+       cuDNN
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/darshan.html">
+       Darshan
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/dyninst.html">
+       Dyninst
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/eigen.html">
+       Eigen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/extrae.html">
+       Extrae
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/ffmpeg.html">
+       FFmpeg
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/fftw.html">
+       FFTW
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/gdal.html">
+       GDAL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/geos.html">
+       GEOS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/glew.html">
+       GLEW
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/glfw.html">
+       GLFW
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/glpk.html">
+       GLFW
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/gsl.html">
+       GSL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/gstreamer.html">
+       GStreamer
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/hdf5.html">
+       HDF5
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/hpctoolkit.html">
+       HPCToolkit
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/hypre.html">
+       HYPRE
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/intelmpi.html">
+       IntelMPI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/itac.html">
+       ITAC
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/libdwarf.html">
+       Libdwarf
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/libx264.html">
+       Libx264
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/libxmlplusplus.html">
+       Libxmlplusplus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/matlab-runtime.html">
+       MATLAB-Runtime
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/mdbtools.html">
+       MDBTools
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/mesa.html">
+       Mesa
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/mkl.html">
+       MKL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/mpe2.html">
+       MPE2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/mpiP.html">
+       mpiP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/must.html">
+       MUST
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/mvapich2.html">
+       MVAPICH2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/nag-matlab.html">
+       NAG-MATLAB
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/netcdf.html">
+       Netcdf
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/netlib.html">
+       Netlib
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/ompP.html">
+       ompP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/opencv.html">
+       OpenCV
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/openmpi.html">
+       OpenMPI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/openslide.html">
+       OpenSlide
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/openspeedshop.html">
+       Open|SpeedShop
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/osmesa.html">
+       Osmesa
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/otf2.html">
+       OTF2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/papi.html">
+       PAPI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/paraver.html">
+       Paraver
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/pdt.html">
+       PDT
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/petsc.html">
+       PETSc
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/pgplot.html">
+       PGPLOT
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/python-libs.html">
+       Python-Libs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/qt.html">
+       Qt
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/root.html">
+       ROOT
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/scalasca.html">
+       Scalasca
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/scorep.html">
+       Score-P
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/silo.html">
+       Silo
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/suitesparse.html">
+       Suitesparse
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/superlu.html">
+       SuperLU
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/tau.html">
+       TAU
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/udunits.html">
+       UDUNITS
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/valgrind.html">
+       Valgrind
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/vtk.html">
+       VTK
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="software/libraries/zeromq.html">
+       ZeroMQ
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -573,8 +901,8 @@
   <a class="reference internal" href="systems/start.html">
    Systems
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
    <i class="fas fa-chevron-down">
    </i>
   </label>
