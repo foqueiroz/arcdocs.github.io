@@ -105,6 +105,7 @@ _Examples are not an exhaustive list of possible options and many are Python-spe
     - e.g., [Binder](https://mybinder.readthedocs.io/en/latest/), [BinderHub](https://binderhub.readthedocs.io/en/latest/index.html)
 - [Documentation](https://www.software.ac.uk/blog/2019-06-21-what-are-best-practices-research-software-documentation)
   - e.g., [Jupyter Book](https://jupyterbook.org/intro.html), [Read the Docs](https://readthedocs.org/), [Sphinx](https://www.sphinx-doc.org/en/master/), [nbdev](https://nbdev.fast.ai/), [fastdoc](https://fastai.github.io/fastdoc/)
+  - Publish online using [GitHub Pages](https://pages.github.com/) (for a [Jupyter Book](https://jupyterbook.org/start/publish.html))
 - {ref}`Licensing <software_licensing>`
 - [Issue tracking](https://carpentries-incubator.github.io/python-intermediate-development/43-assessing-software-suitability-improvement/index.html)
 - Security
