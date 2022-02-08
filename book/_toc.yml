@@ -49,6 +49,7 @@
       - file: software/applications/amber
       - file: software/applications/ansys
         sections:
+        - file: software/applications/ansys/ansyscli
         - file: software/applications/ansys/cfx
         - file: software/applications/ansys/fluent
         - file: software/applications/ansys/chemkin
@@ -105,8 +106,71 @@
       - file: software/infrastructure/user.md
       - file: software/infrastructure/virtualgl.md
       - file: software/infrastructure/vtune.md
-
     - file: software/libraries/start
+      sections:
+      - file: software/libraries/armadillo.md
+      - file: software/libraries/atlas.md
+      - file: software/libraries/boost.md
+      - file: software/libraries/cgal.md
+      - file: software/libraries/cube.md
+      - file: software/libraries/cudnn.md
+      - file: software/libraries/darshan.md
+      - file: software/libraries/dyninst.md
+      - file: software/libraries/eigen.md
+      - file: software/libraries/extrae.md
+      - file: software/libraries/ffmpeg.md
+      - file: software/libraries/fftw.md
+      - file: software/libraries/gdal.md
+      - file: software/libraries/geos.md
+      - file: software/libraries/glew.md
+      - file: software/libraries/glfw.md
+      - file: software/libraries/glpk.md
+      - file: software/libraries/gsl.md
+      - file: software/libraries/gstreamer.md
+      - file: software/libraries/hdf5.md
+      - file: software/libraries/hpctoolkit.md
+      - file: software/libraries/hypre.md
+      - file: software/libraries/intelmpi.md
+      - file: software/libraries/itac.md
+      - file: software/libraries/libdwarf.md
+      - file: software/libraries/libx264.md
+      - file: software/libraries/libxmlplusplus.md
+      - file: software/libraries/matlab-runtime.md
+      - file: software/libraries/mdbtools.md
+      - file: software/libraries/mesa.md
+      - file: software/libraries/mkl.md
+      - file: software/libraries/mpe2.md
+      - file: software/libraries/mpiP.md
+      - file: software/libraries/must.md
+      - file: software/libraries/mvapich2.md
+      - file: software/libraries/nag-matlab.md
+      - file: software/libraries/netcdf.md
+      - file: software/libraries/netlib.md
+      - file: software/libraries/ompP.md
+      - file: software/libraries/opencv.md
+      - file: software/libraries/openmpi.md
+      - file: software/libraries/openslide.md
+      - file: software/libraries/openspeedshop.md
+      - file: software/libraries/osmesa.md
+      - file: software/libraries/otf2.md
+      - file: software/libraries/papi.md
+      - file: software/libraries/paraver.md
+      - file: software/libraries/pdt.md
+      - file: software/libraries/petsc.md
+      - file: software/libraries/pgplot.md
+      - file: software/libraries/python-libs.md
+      - file: software/libraries/qt.md
+      - file: software/libraries/root.md
+      - file: software/libraries/scalasca.md
+      - file: software/libraries/scorep.md
+      - file: software/libraries/silo.md
+      - file: software/libraries/suitesparse.md
+      - file: software/libraries/superlu.md
+      - file: software/libraries/tau.md
+      - file: software/libraries/udunits.md
+      - file: software/libraries/valgrind.md
+      - file: software/libraries/vtk.md
+      - file: software/libraries/zeromq.md
 
 # ===== Systems ==========================================
 - file: systems/start
