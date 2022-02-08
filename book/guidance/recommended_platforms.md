@@ -94,7 +94,6 @@ This guide asks a range of questions to consider when deciding which platform to
     - Backups for both shared and VM storage.
     - Additional cost for time to build and destroy the VMs.
     - 2.5% FTE cost for support from the DAT team.
-        
 
 ## Access
 

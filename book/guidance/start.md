@@ -1,3 +1,3 @@
 # Guidance
 
-Guidance documents for data management, software management, licensing, and platforms at the Unversity of Leeds. These include questions to consider, resources, and worked examples.  
+Guidance documents for data management, software management, software licensing, and recommended platforms at the Unversity of Leeds. These include questions to consider, resources, and examples.  
