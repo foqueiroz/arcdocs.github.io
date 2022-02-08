@@ -69,7 +69,32 @@ This guide asks a range of questions to consider when deciding which platform to
 
 ## Cost
 
-- ...
+- *Azure*  
+  - When considering costs relating to research platforms it's important to think of cloud resources differently to on-campus hardware.  
+  - Cloud resources are typically not designed to be on all the time and all aspects of a cloud computational setup have costs associated i.e., you'll pay for your virtual machine (VM) whilst it's on, but you'll also need to pay for it's storage, virtual network, and associated public IP address.  
+  - Therefore, when using cloud resources it's important to consider them as throwaway resources that you want to spin up to use, and after your experiments are complete, destroy the instance and its associated resources.  
+  - Below are some suggestions for how to initially scope costs on Azure, how to minimise your spending, and tips for monitoring spending on Azure.
+  - *Scoping costs for Azure resources*
+    - Pre-determine your cloud work schedule. Cloud costs are on a usage basis, so planning (even approximately) how many hours of compute you'll need will make scoping your costs easier.
+    - Use the [Azure Price Calculator](https://azure.microsoft.com/en-gb/pricing/calculator/) to generate an approximate monthly budget for your cloud spend.  
+  - *Tips for minimising spending on Azure*
+    - Always turn off your VMs when you're not using them.
+    - When tidying up a VM setup, make sure you also delete other associated resources such as Managed Disks, public IP address, and virtual network.
+  - *Tips for monitoring spending on Azure*
+    - You can monitor your projected spend on Azure by checking the `Cost analysis` menu under `Cost Management` section on the left-hand menu when viewing a specific resource group. We encourage users to monitor this closely as especially initial costs can deviate until your setup stabilises.
+    - You can configure specific cost alert emails be sent to you by using the `Cost alerts` menu under `Cost Management` section on the left-hand menu when viewing a specific resource group. This allows you to create a budget for a given period and once your resources uses a percentage of the specified budget you will receive an email alert.
+- *LASER*
+  - LASER runs using Azure for the provision of virtual machines with some additional assumptions factored in.
+  - A cost estimate is available from the [DAT team](https://lida-data-analytics-team.github.io/laserdocs/docs/lida_services/dat.html) on request and a brief walkthrough of a basic LASER VM is detailed below.
+  - *LASER Standard VM*
+    - The basic assumption for usage of a LASER VM is 104 hours a month which takes into account full time usage during office hours (with adjustment for weekends, leave, and sickness).
+    - The entry grade VM is a VMs D4s_v4 (4 vCPUs, 16 GB RAM) with 128GB of E10 Managed Disk storage.
+    - 10GB of shared storage.
+    - Azure private link services for shared storage.
+    - Backups for both shared and VM storage.
+    - Additional cost for time to build and destroy the VMs.
+    - 2.5% FTE cost for support from the DAT team.
+        
 
 ## Access
 
