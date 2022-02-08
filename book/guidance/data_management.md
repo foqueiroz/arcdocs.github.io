@@ -152,3 +152,27 @@ This guide asks a range of questions to consider when planning your data managem
 - [Individual Rights (Data Protection)](https://dataprotection.leeds.ac.uk/individual-rights/)
 - [Reporting a Data Security Incident (Data Protection)](https://dataprotection.leeds.ac.uk/reporting-a-data-security-incident/)
 - [Further information (The Turing Way)](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-dmp.html#further-reading-recommendations)
+
+## Examples
+
+```{admonition} PhD: ...
+
+- Data handling
+  - ...
+- The data management plan
+  - ...
+- Personal data
+  - ...
+
+```
+
+```{admonition} Fellowship: ...
+
+- Data handling
+  - ...
+- The data management plan
+  - ...
+- Personal data
+  - ...
+
+```
