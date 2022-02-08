@@ -85,7 +85,7 @@ This guide asks a range of questions to consider when deciding which platform to
     - You can configure specific cost alert emails be sent to you by using the `Cost alerts` menu under `Cost Management` section on the left-hand menu when viewing a specific resource group. This allows you to create a budget for a given period and once your resources uses a percentage of the specified budget you will receive an email alert.
 - *LASER*
   - LASER runs using Azure for the provision of virtual machines with some additional assumptions factored in.
-  - A cost estimate is available from the [DAT team](https://lida-data-analytics-team.github.io/laserdocs/docs/lida_services/dat.html) on request and a brief walkthrough of a basic LASER VM is detailed below.
+  - A cost estimate is available from the [DAT team](https://lida-data-analytics-team.github.io/laserdocs/docs/lida_services/dat.html) on request and a brief walkthrough of a basic LASER VM is detailed below. Below is an example of costs, other storage and compute specification are available and best discussed with the [DAT team](https://lida-data-analytics-team.github.io/laserdocs/docs/lida_services/dat.html)
   - *LASER Standard VM*
     - The basic assumption for usage of a LASER VM is 104 hours a month which takes into account full time usage during office hours (with adjustment for weekends, leave, and sickness).
     - The entry grade VM is a VMs D4s_v4 (4 vCPUs, 16 GB RAM) with 128GB of E10 Managed Disk storage.
