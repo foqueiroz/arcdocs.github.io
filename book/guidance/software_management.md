@@ -37,8 +37,11 @@ _Examples are not an exhaustive list of possible options and many are Python-spe
 
 ##### Package management
 
+- User-level package management systems
+    - e.g., [conda](https://docs.conda.io/projects/conda/en/latest/index.html), [spack](https://spack.readthedocs.io/en/latest/)
 - [Virtual environments](https://carpentries-incubator.github.io/python-intermediate-development/12-virtual-environments/index.html)
-  - e.g., [conda](https://docs.conda.io/projects/conda/en/latest/index.html), [pip](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#installing-packages-using-pip-and-virtual-environments) and [venv](https://docs.python.org/3/library/venv.html) (Python), [virtualenv](https://virtualenv.pypa.io/en/latest/) (Python), [pipenv](https://pipenv.pypa.io/en/latest/) (Python), [poetry](https://python-poetry.org/) (Python), [spack](https://spack.readthedocs.io/en/latest/) (High Performance Computers), [binder](https://mybinder.readthedocs.io/en/latest/index.html) ([guide](https://the-turing-way.netlify.app/reproducible-research/renv/renv-binder.html)), [conda-store](https://conda-store.readthedocs.io/en/latest/)
+  - e.g., Python: [pip](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#installing-packages-using-pip-and-virtual-environments) and [venv](https://docs.python.org/3/library/venv.html), [virtualenv](https://virtualenv.pypa.io/en/latest/), [pipenv](https://pipenv.pypa.io/en/latest/), [poetry](https://python-poetry.org/)
+  - [binder](https://mybinder.readthedocs.io/en/latest/index.html) ([guide](https://the-turing-way.netlify.app/reproducible-research/renv/renv-binder.html)), [conda-store](https://conda-store.readthedocs.io/en/latest/)
 
 ##### Entire computational environment
 
