@@ -27,7 +27,7 @@ This guide asks a range of questions to consider when planning your data managem
 - [Classification categories (Data Protection)](https://dataprotection.leeds.ac.uk/managing-electronic-data/#classifying-data)
 - [LASER (Leeds Analytic Secure Environment for Research): Data Risk Tiering](https://lida-data-analytics-team.github.io/laserdocs/docs/laser_info/tiering.html)
 - [Information Management Guide (Data Protection)](https://dataprotection.leeds.ac.uk/wp-content/uploads/sites/48/2019/05/Information-Management-Guide.pdf)
-- [Information Protection Policy (Data Protection)](https://leeds.service-now.com/it?id=kb_article&sys_id=6038bfbc0fae728089d7f55be1050e9d)
+- [Information Protection Policy (Data Protection)](https://it.leeds.ac.uk/it?id=kb_article&sys_id=6038bfbc0fae728089d7f55be1050e9d)
 - [Turing Tiers, Figure 3 - Arenas, et al., (2019)](https://arxiv.org/pdf/1908.08737.pdf)
 
 #### Does the data source provide requirements and conditional use?

@@ -51,7 +51,7 @@ This guide asks a range of questions to consider when deciding which platform to
 ### Do you need to use GPUs?
 
 - Buy a local laptop / workstation with a GPU
-  - [Purchase form](https://leeds.service-now.com/it?id=sc_cat_item&sys_id=a649379c0f2f9b40a82247ece1050e25)
+  - [Purchase form](https://it.leeds.ac.uk/it?id=sc_cat_item&sys_id=a649379c0f2f9b40a82247ece1050e25)
 - HPC (multiple / more powerful GPUs)
   - [ARC3](https://arcdocs.leeds.ac.uk/systems/arc3.html#gpgpu-nodes)
     - 2 x [general purpose GPU](https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units) nodes, each with 2 x [NVIDIA Tesla K80](https://www.nvidia.com/en-gb/data-center/tesla-k80/)
@@ -62,7 +62,7 @@ This guide asks a range of questions to consider when deciding which platform to
     - 2 x login GPU nodes each with 4 x [NVIDIA Tesla V100](https://www.nvidia.com/en-gb/data-center/tesla-v100/)
     - 32 x GPU nodes each with 4 x [NVIDIA Tesla V100](https://www.nvidia.com/en-gb/data-center/tesla-v100/)
     - 4 x "inference" GPU nodes each with 4 x [NVIDIA Tesla T4](https://www.nvidia.com/en-gb/data-center/tesla-t4/)
-  - [JADE-2](http://docs.jade.ac.uk/en/latest/index.html)
+  - [JADE-2](https://docs.jade.ac.uk/en/latest/)
     - 63 x [DGX-MAX-Q](https://www.nvidia.com/en-gb/data-center/dgx-systems/dgx-1/) Nodes, each with 8 x [NVIDIA Tesla V100](https://www.nvidia.com/en-gb/data-center/tesla-v100/)
 - Cloud computing
   - [Microsoft Azure - GPU optimised](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-gpu)
@@ -71,7 +71,7 @@ This guide asks a range of questions to consider when deciding which platform to
 
 - *Azure*  
   - When considering costs relating to research platforms it's important to think of cloud resources differently to on-campus hardware.  
-  - Cloud resources are typically not designed to be on all the time and all aspects of a cloud computational setup have costs associated i.e., you'll pay for your virtual machine (VM) whilst it's on, but you'll also need to pay for it's storage, virtual network, and associated public IP address.  
+  - Cloud resources are typically not designed to be on all the time and all aspects of a cloud computational setup have costs associated i.e., you'll pay for your virtual machine (VM) whilst it's on, but you'll also need to pay for its storage, virtual network, and associated public IP address.  
   - Therefore, when using cloud resources it's important to consider them as throwaway resources that you want to spin up to use, and after your experiments are complete, destroy the instance and its associated resources.  
   - Below are some suggestions for how to initially scope costs on Azure, how to minimise your spending, and tips for monitoring spending on Azure.
   - *Scoping costs for Azure resources*
@@ -84,7 +84,8 @@ This guide asks a range of questions to consider when deciding which platform to
     - You can monitor your projected spend on Azure by checking the `Cost analysis` menu under `Cost Management` section on the left-hand menu when viewing a specific resource group. We encourage users to monitor this closely as especially initial costs can deviate until your setup stabilises.
     - You can configure specific cost alert emails be sent to you by using the `Cost alerts` menu under `Cost Management` section on the left-hand menu when viewing a specific resource group. This allows you to create a budget for a given period and once your resources uses a percentage of the specified budget you will receive an email alert.
 - *LASER*
-  - LASER runs using Azure for the provision of virtual machines with some additional assumptions factored in.
+  - LASER runs using Azure for the provision of virtual machines but with some heavy technical controls in place to enable the analysis of high sensitive data in a research setting
+  - Therefore LASER VMs or Virtual Research Environments (VREs) tend to be more permanent than a standard Azure VM which incurs more persistent costs. More details on this can be found on the [LASER website](https://lida-data-analytics-team.github.io/laserdocs/docs/laser_info/laser.html)
   - A cost estimate is available from the [DAT team](https://lida-data-analytics-team.github.io/laserdocs/docs/lida_services/dat.html) on request and a brief walkthrough of a basic LASER VM is detailed below. Below is an example of costs, other storage and compute specification are available and best discussed with the [DAT team](https://lida-data-analytics-team.github.io/laserdocs/docs/lida_services/dat.html)
   - *LASER Standard VM*
     - The basic assumption for usage of a LASER VM is 104 hours a month which takes into account full time usage during office hours (with adjustment for weekends, leave, and sickness).
