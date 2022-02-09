@@ -35,6 +35,10 @@ The HYPRE module is available on ARC3:
   - Version
   - Command
 
+* - ARC4
+  - hypre 2.14.0
+  - `module add hypre/2.14.0`
+
 * - ARC3
   - hypre 2.14.0
   - `module add hypre/2.14.0`
