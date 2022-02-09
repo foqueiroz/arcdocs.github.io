@@ -84,7 +84,8 @@ This guide asks a range of questions to consider when deciding which platform to
     - You can monitor your projected spend on Azure by checking the `Cost analysis` menu under `Cost Management` section on the left-hand menu when viewing a specific resource group. We encourage users to monitor this closely as especially initial costs can deviate until your setup stabilises.
     - You can configure specific cost alert emails be sent to you by using the `Cost alerts` menu under `Cost Management` section on the left-hand menu when viewing a specific resource group. This allows you to create a budget for a given period and once your resources uses a percentage of the specified budget you will receive an email alert.
 - *LASER*
-  - LASER runs using Azure for the provision of virtual machines with some additional assumptions factored in.
+  - LASER runs using Azure for the provision of virtual machines but with some heavy technical controls in place to enable the analysis of high sensitive data in a research setting
+  - Therefore LASER VMs or Virtual Research Environments (VREs) tend to be more permanent than a standard Azure VM which incurs more persistent costs. More details on this can be found on the [LASER website](https://lida-data-analytics-team.github.io/laserdocs/docs/laser_info/laser.html)
   - A cost estimate is available from the [DAT team](https://lida-data-analytics-team.github.io/laserdocs/docs/lida_services/dat.html) on request and a brief walkthrough of a basic LASER VM is detailed below. Below is an example of costs, other storage and compute specification are available and best discussed with the [DAT team](https://lida-data-analytics-team.github.io/laserdocs/docs/lida_services/dat.html)
   - *LASER Standard VM*
     - The basic assumption for usage of a LASER VM is 104 hours a month which takes into account full time usage during office hours (with adjustment for weekends, leave, and sickness).
