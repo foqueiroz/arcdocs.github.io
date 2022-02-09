@@ -1,6 +1,7 @@
 # Connecting from off campus
 
 When connecting from off campus additional steps are required to enable you to connect as the University HPC systems are only reachable from within the University network.
+In the following example code snippets we'll be connecting with the username `exuser`. When you come to log in to a system you'll need to use your own university username in place of `exuser`.
 
 ## Connecting from Linux/MacOS systems
 
@@ -25,12 +26,12 @@ In order to connect to ARC when you're off campus you'll need to do some extra c
    $ nano ~/.ssh/config
    ```
 
-4. Within this file include the following contents where `USERNAME` is replaced by your university username
+4. Within this file include the following contents where `exuser` is replaced by your university username
 
    ```
    Host *.leeds.ac.uk !remote-access.leeds.ac.uk
-   ProxyJump USERNAME@remote-access.leeds.ac.uk
-   User USERNAME
+   ProxyJump exuser@remote-access.leeds.ac.uk
+   User exuser
    ```
 
    ````{admonition} Old version of SSH
@@ -38,8 +39,8 @@ In order to connect to ARC when you're off campus you'll need to do some extra c
 
    ```
    Host *.leeds.ac.uk !remote-access.leeds.ac.uk
-   ProxyCommand ssh -o PreferredAuthentications=keyboard-interactive -W %h:%p USERNAME@remote-access.leeds.ac.uk
-   User USERNAME
+   ProxyCommand ssh -o PreferredAuthentications=keyboard-interactive -W %h:%p exuser@remote-access.leeds.ac.uk
+   User exuser
    ```
    ````
 
@@ -219,9 +220,9 @@ In order to successfully connect off-campus you are required to adjust some sett
 | ----------------------------------------------------------------------------------------------- |
 | ![This takes you to the MobaXTerm terminal view](../../assets/img/logon/offcampus/mobaSSH9.png) |
 
-| 10. Type the contents of the file as follows where `USERNAME` is your university username                                                                                                                                                             |
+| 10. Type the contents of the file as follows where `exuser` is your university username                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <pre id="codecell0"> Host \*.leeds.ac.uk !remote-access.leeds.ac.uk <br> ProxyJump USERNAME@remote-access.leeds.ac.uk <br> User USERNAME <br> <br> Host remote-access.leeds.ac.uk <br> PreferredAuthentications publickey,keyboard-interactive </pre> |
+| <pre id="codecell0"> Host \*.leeds.ac.uk !remote-access.leeds.ac.uk <br> ProxyJump exuser@remote-access.leeds.ac.uk <br> User exuser <br> <br> Host remote-access.leeds.ac.uk <br> PreferredAuthentications publickey,keyboard-interactive </pre> |
 | ![This takes you to the MobaXTerm terminal view](../../assets/img/logon/offcampus/mobaSSH10.png)                                                                                                                                                      |
 
 | 11. Once complete go to File > Save As                                                |
