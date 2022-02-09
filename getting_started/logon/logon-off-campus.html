@@ -1137,7 +1137,8 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="section" id="connecting-from-off-campus">
 <h1>Connecting from off campus<a class="headerlink" href="#connecting-from-off-campus" title="Permalink to this headline">¶</a></h1>
-<p>When connecting from off campus additional steps are required to enable you to connect as the University HPC systems are only reachable from within the University network.</p>
+<p>When connecting from off campus additional steps are required to enable you to connect as the University HPC systems are only reachable from within the University network.
+In the following example code snippets we’ll be connecting with the username <code class="docutils literal notranslate"><span class="pre">exuser</span></code>. When you come to log in to a system you’ll need to use your own university username in place of <code class="docutils literal notranslate"><span class="pre">exuser</span></code>.</p>
 <div class="section" id="connecting-from-linux-macos-systems">
 <h2>Connecting from Linux/MacOS systems<a class="headerlink" href="#connecting-from-linux-macos-systems" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
@@ -1159,18 +1160,18 @@ $ nano ~/.ssh/config
 </pre></div>
 </div>
 </li>
-<li><p>Within this file include the following contents where <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code> is replaced by your university username</p>
+<li><p>Within this file include the following contents where <code class="docutils literal notranslate"><span class="pre">exuser</span></code> is replaced by your university username</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Host *.leeds.ac.uk !remote-access.leeds.ac.uk
-ProxyJump USERNAME@remote-access.leeds.ac.uk
-User USERNAME
+ProxyJump exuser@remote-access.leeds.ac.uk
+User exuser
 </pre></div>
 </div>
 <div class="admonition-old-version-of-ssh admonition">
 <p class="admonition-title">Old version of SSH</p>
 <p>If you’re using an old version of OpenSSH, you may get an error: <code class="docutils literal notranslate"><span class="pre">Bad</span> <span class="pre">configuration</span> <span class="pre">option:</span> <span class="pre">ProxyJump</span></code>.  In this case you’ll want to use this instead:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Host *.leeds.ac.uk !remote-access.leeds.ac.uk
-ProxyCommand ssh -o PreferredAuthentications=keyboard-interactive -W %h:%p USERNAME@remote-access.leeds.ac.uk
-User USERNAME
+ProxyCommand ssh -o PreferredAuthentications=keyboard-interactive -W %h:%p exuser@remote-access.leeds.ac.uk
+User exuser
 </pre></div>
 </div>
 </div>
@@ -1454,11 +1455,11 @@ will not appear as you type your password. Your keystrokes are recorded so pleas
 </table>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>10. Type the contents of the file as follows where <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code> is your university username</p></th>
+<tr class="row-odd"><th class="head"><p>10. Type the contents of the file as follows where <code class="docutils literal notranslate"><span class="pre">exuser</span></code> is your university username</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><pre id="codecell0"> Host *.leeds.ac.uk !remote-access.leeds.ac.uk <br> ProxyJump USERNAME&#64;remote-access.leeds.ac.uk <br> User USERNAME <br> <br> Host remote-access.leeds.ac.uk <br> PreferredAuthentications publickey,keyboard-interactive </pre></p></td>
+<tr class="row-even"><td><p><pre id="codecell0"> Host *.leeds.ac.uk !remote-access.leeds.ac.uk <br> ProxyJump exuser&#64;remote-access.leeds.ac.uk <br> User exuser <br> <br> Host remote-access.leeds.ac.uk <br> PreferredAuthentications publickey,keyboard-interactive </pre></p></td>
 </tr>
 <tr class="row-odd"><td><p><img alt="This takes you to the MobaXTerm terminal view" src="../../_images/mobaSSH10.png" /></p></td>
 </tr>
