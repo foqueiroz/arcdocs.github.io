@@ -180,6 +180,14 @@
     - file: systems/cloud-computing
     - file: systems/secure-systems
 
+# ===== Guidance =========================================
+- file: guidance/start
+  sections:
+    - file: guidance/data_management
+    - file: guidance/software_management
+    - file: guidance/software_licensing
+    - file: guidance/recommended_platforms
+
 # ===== Training ==========================================
 - url: https://arc.leeds.ac.uk/training/
   title: Training
