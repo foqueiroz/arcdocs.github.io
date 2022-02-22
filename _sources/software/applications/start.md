@@ -7,6 +7,7 @@ This page is an overview of the applications section of software available on th
 - [Abaqus](./abaqus)
 - [Amber](./amber)
 - [Ansys](./ansys.md)
+- [CESM](./cesm)
 - [Comsol](./comsol)
 - [DL_POLY](./dl_poly)
 - [Gaussian](./gaussian)
