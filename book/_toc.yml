@@ -53,6 +53,7 @@
         - file: software/applications/ansys/cfx
         - file: software/applications/ansys/fluent
         - file: software/applications/ansys/chemkin
+      - file: software/applications/cesm
       - file: software/applications/comsol
       - file: software/applications/dl_poly
         sections:
