@@ -155,24 +155,6 @@ This guide asks a range of questions to consider when planning your data managem
 
 ## Examples
 
-```{admonition} PhD: ...
-
-- Data handling
-  - ...
-- The data management plan
-  - ...
-- Personal data
-  - ...
-
-```
-
-```{admonition} Fellowship: ...
-
-- Data handling
-  - ...
-- The data management plan
-  - ...
-- Personal data
-  - ...
-
-```
+- [DMPOnline](https://dmponline.dcc.ac.uk/public_plans)
+- [Published DMPs](https://riojournal.com/browse_journal_articles.php?section_type%5B%5D=231)
+- [Digital Curation Centre](http://www.dcc.ac.uk/resources/data-management-plans/guidance-examples)
