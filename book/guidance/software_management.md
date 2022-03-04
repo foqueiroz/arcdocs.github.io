@@ -130,36 +130,36 @@ _Examples are not an exhaustive list of possible options and many are Python-spe
 
 ## Examples
 
-```{admonition} [PhD: Medical Statistics](https://the-turing-way.netlify.app/reproducible-research/case-studies/case-study-statistical.html)
-
-- Version control
-  - [GitHub](https://github.com/kkmann/sample-size-calculation-under-uncertainty)
-  - Continuous integration with [GitHub Actions](https://github.com/kkmann/sample-size-calculation-under-uncertainty/actions)
-- Capture project environment
-  - Docker (using with [repo2docker](https://github.com/jupyterhub/repo2docker))
-- Share project environment
-  - Citable DOI through [Zenodo](https://zenodo.org/record/4293865)
-  - [MIT license](https://github.com/kkmann/sample-size-calculation-under-uncertainty/blob/master/LICENSE)
-  - Recreate the results using [BinderHub](https://mybinder.org/v2/gh/kkmann/sample-size-calculation-under-uncertainty/master?urlpath=lab/tree/sample-size-calculation-under-uncertainty.ipynb) 
-  - Interact with the results using a [Shiny app](https://mybinder.org/v2/gh/kkmann/sample-size-calculation-under-uncertainty/master?urlpath=shiny/shiny-app/)
-- Tests
-  - Unknown
-- Documentation
-  - Unknown
-
-```
-
-```{admonition} Fellowship: ...
-
-- Version control
-  - ...
-- Capture project environment
-  - ...
-- Share project environment
-  - ...
-- Tests
-  - ...
-- Documentation
-  - ...
-
-```
+- [SHAP (SHapley Additive exPlanations)](https://github.com/slundberg/shap)
+    - Version control with GitHub
+    - Continuous integration with GitHub Actions, Travis CI
+    - Capture and share project environment via conda or pip
+    - MIT license
+    - Documentation with examples
+    - Tests with pytest
+    - Reproducible via Binder
+- [TPOT (Tree-based Pipeline Optimization Tool)](https://github.com/EpistasisLab/tpot)
+    - Version control with GitHub
+    - Continuous integration with GitHub Actions, Travis CI, AppVeyor
+    - Capture and share project environment via conda or pip
+    - LGPL-3.0 license
+    - Documentation with examples
+    - Tests with pytest
+    - Citable DOI through Zenodo
+    - Code coverage with Coveralls
+- [PyHealth (A Python Library for Health Predictive Models)](https://github.com/zzachw/PyHealth)
+    - Version control with GitHub
+    - Continuous integration with Circle CI, Travis CI, AppVeyor
+    - Capture and share project environment via pip
+    - BSD-2-Clause license
+    - Documentation with examples
+    - Tests with pytest
+    - Reproducible via Binder
+- [VEROS (versatile ocean simulator Python / JAX)](https://github.com/team-ocean/veros)
+    - Version control with GitHub
+    - Continuous integration with GitHub Actions
+    - Capture and share project environment via conda or pip
+    - MIT license
+    - Documentation with examples
+    - Tests with pytest
+    - Code coverage with codecov
