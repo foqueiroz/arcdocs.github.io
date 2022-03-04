@@ -71,15 +71,18 @@ Please note that the last line must be: `quit;`.
 A script must then be created that will request resources from the queuing system and launch the matlab executable. Below is an example submission script (`runmatlab.sh`) for this matlab job:
 
 ```bash
-# Export current environment  
-#$ -V
 # Set a 10 min limit
 #$ -l h_rt=0:10:00
 # Load matlab module
+module add user
 module add matlab
 # run matlab using command file
 # -nodisplay flag should be given to suppress graphics
 matlab -nodisplay < cosplot.m
+```
+
+```{note}
+To ensure the correct license variables are set we include `module add user` within the job submission script.
 ```
 
 This can be submitted to the batch scheduler system using:
