@@ -127,3 +127,39 @@ _Examples are not an exhaustive list of possible options and many are Python-spe
 - [CodeRefinery](https://coderefinery.org/)
 - [UK Reproducibility Network](https://www.ukrn.org/)
 - [Versioning (UK Data Service)](https://ukdataservice.ac.uk/learning-hub/research-data-management/format-your-data/versioning/)
+
+## Examples
+
+- [SHAP (SHapley Additive exPlanations)](https://github.com/slundberg/shap)
+    - Version control with GitHub
+    - Continuous integration with GitHub Actions, Travis CI
+    - Capture and share project environment via conda or pip
+    - MIT license
+    - Documentation with examples
+    - Tests with pytest
+    - Reproducible via Binder
+- [TPOT (Tree-based Pipeline Optimization Tool)](https://github.com/EpistasisLab/tpot)
+    - Version control with GitHub
+    - Continuous integration with GitHub Actions, Travis CI, AppVeyor
+    - Capture and share project environment via conda or pip
+    - LGPL-3.0 license
+    - Documentation with examples
+    - Tests with pytest
+    - Citable DOI through Zenodo
+    - Code coverage with Coveralls
+- [PyHealth (A Python Library for Health Predictive Models)](https://github.com/zzachw/PyHealth)
+    - Version control with GitHub
+    - Continuous integration with Circle CI, Travis CI, AppVeyor
+    - Capture and share project environment via pip
+    - BSD-2-Clause license
+    - Documentation with examples
+    - Tests with pytest
+    - Reproducible via Binder
+- [VEROS (versatile ocean simulator Python / JAX)](https://github.com/team-ocean/veros)
+    - Version control with GitHub
+    - Continuous integration with GitHub Actions
+    - Capture and share project environment via conda or pip
+    - MIT license
+    - Documentation with examples
+    - Tests with pytest
+    - Code coverage with codecov

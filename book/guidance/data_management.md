@@ -152,3 +152,9 @@ This guide asks a range of questions to consider when planning your data managem
 - [Individual Rights (Data Protection)](https://dataprotection.leeds.ac.uk/individual-rights/)
 - [Reporting a Data Security Incident (Data Protection)](https://dataprotection.leeds.ac.uk/reporting-a-data-security-incident/)
 - [Further information (The Turing Way)](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-dmp.html#further-reading-recommendations)
+
+## Examples
+
+- [DMPOnline](https://dmponline.dcc.ac.uk/public_plans)
+- [Published DMPs](https://riojournal.com/browse_journal_articles.php?section_type%5B%5D=231)
+- [Digital Curation Centre](https://www.dcc.ac.uk/resources/data-management-plans/guidance-examples)
