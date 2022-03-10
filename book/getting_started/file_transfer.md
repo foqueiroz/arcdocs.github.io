@@ -518,7 +518,7 @@ Use "rclone help backends" for a list of supported services.
 ```
 #### Using shared folders
 
-If you want to access a folder that has been shared with you on one drive you can add the folder to "My Files" in the OneDrive web interface and it will then be available through your rclone connection:
+If you want to access a folder that has been shared with you on OneDrive you can add the folder to "My Files" in the OneDrive web interface and it will then be available through your rclone connection:
 
 Go to your OneDrive home page and click on Shared
 
