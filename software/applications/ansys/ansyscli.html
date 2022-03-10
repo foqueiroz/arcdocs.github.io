@@ -1249,8 +1249,10 @@ ansys202 -np <span class="nv">$NSLOTS</span> -p ANSYS -b -i example.inp -o examp
 <span class="c1"># define license and load module</span>
 module add ansys/2020R2
 <span class="nb">export</span> <span class="nv">ANSYSLMD_LICENSE_FILE</span><span class="o">=</span>&lt;LICENSESTRING&gt;
+<span class="c1"># Fix to make it launch correctly</span>
+<span class="nb">unset</span> PE_HOSTFILE
 <span class="c1">#Launch the executable</span>
-ansys202 -np <span class="nv">$NSLOTS</span> -acc nvidia -p ANSYS -b -i example.inp -o example.out
+ansys202 -np <span class="nv">$NSLOTS</span> -acc nvidia -na <span class="nv">$ARC_SGE_RESOURCE_COPROC_V100</span> -p ANSYS -b -i example.inp -o example.out
 </pre></div>
 </div>
 <p>The file can be submitted to the queue by typing this (assuming you’d written the above into a file called ansys.sh):</p>

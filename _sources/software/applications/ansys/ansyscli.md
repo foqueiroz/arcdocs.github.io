@@ -97,8 +97,10 @@ Ansys supports the use of GPUs, although we have no data on the performance spee
 # define license and load module
 module add ansys/2020R2
 export ANSYSLMD_LICENSE_FILE=<LICENSESTRING>
+# Fix to make it launch correctly
+unset PE_HOSTFILE
 #Launch the executable
-ansys202 -np $NSLOTS -acc nvidia -p ANSYS -b -i example.inp -o example.out
+ansys202 -np $NSLOTS -acc nvidia -na $ARC_SGE_RESOURCE_COPROC_V100 -p ANSYS -b -i example.inp -o example.out
 ```
 
 The file can be submitted to the queue by typing this (assuming you'd written the above into a file called ansys.sh):
