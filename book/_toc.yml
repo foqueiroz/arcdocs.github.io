@@ -188,6 +188,7 @@
     - file: guidance/software_management
     - file: guidance/software_licensing
     - file: guidance/recommended_platforms
+    - file: guidance/recommended_courses
 
 # ===== Training ==========================================
 - url: https://arc.leeds.ac.uk/training/
