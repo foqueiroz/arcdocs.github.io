@@ -40,7 +40,7 @@ They are useful complements to your studies and the various [Training Courses](h
 
 - [Composing Programs](https://composingprograms.com/), John DeNero, 61A course, UC Berkeley.
     - [Video lectures](https://www.youtube.com/c/JohnDeNero/playlists).
-- [Python Distilled](http://www.dabeaz.com/python-distilled/), David Beazley, 2021.
+- [Python Distilled](https://www.dabeaz.com/python-distilled/), David Beazley, 2021.
     - [Course](https://dabeaz-course.github.io/practical-python/)
 
 (algorithms_and_data_structure)=
@@ -118,7 +118,7 @@ They are useful complements to your studies and the various [Training Courses](h
 
 - [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning), Coursera, [DeepLearning.AI](https://deeplearning.ai/).
     - [Video lectures](https://www.youtube.com/playlist?list=PLoROMvodv4rOABXSygHTsbvUz4G_YQhOb), CS230, Stanford University.
-    - [Syllabus](http://cs230.stanford.edu/syllabus/), CS230, Stanford University.
+    - [Syllabus](https://cs230.stanford.edu/syllabus/), CS230, Stanford University.
 - [NYU Deep Learning](https://atcold.github.io/NYU-DLSP21/), Yann LeCun and Alfredo Canziani, NYU, 2021.
     - [Video lectures](https://www.youtube.com/playlist?list=PLLHTzKZzVU9e6xUfG10TkTWApKSZCzuBI).
     
