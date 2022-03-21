@@ -20,6 +20,7 @@ They are useful complements to your studies and the various [Training Courses](h
     - [Foundations](foundations)
     - [Causal Inference](causal_inference)
     - [Applied Maths](applied_maths)
+    - [Statistics](statistics)
 - [Machine Learning](machine_learning_section)
     - [Machine Learning](machine_learning_content)
     - [Deep Learning](deep_learning)
@@ -99,6 +100,12 @@ They are useful complements to your studies and the various [Training Courses](h
 ### Applied Maths
 
 - [Engineering Mathematics (ME564 and ME565)](https://www.youtube.com/playlist?list=PLMrJAkhIeNNR2W2sPWsYxfrxcASrUt_9j), Steve Brunton, University of Washington.
+
+(statistics)=
+### Statistics
+
+- [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/), Richard McElreath.
+    - [Video lectures](https://www.youtube.com/playlist?list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN)
 
 (machine_learning_section)=
 ## Machine Learning
