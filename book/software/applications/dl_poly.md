@@ -6,7 +6,7 @@ DL_POLY is a general purpose molecular dynamics simulation tool developed and pr
 
 ## Licensing
 
-To access this software you need to agree to the license terms, please submit a request to the Research Computing team via our [contact form](https://leeds.service-now.com/it?id=sc_cat_item&sys_id=7587b2530f675f00a82247ece1050eda) confirming you accept the license terms and wish to be added to the DL_POLY user group.
+To access this software you need to agree to the license terms, please submit a request to the Research Computing team via our [contact form](https://it.leeds.ac.uk/it?id=sc_cat_item&sys_id=7587b2530f675f00a82247ece1050eda) confirming you accept the license terms and wish to be added to the DL_POLY user group.
 
 The licence terms are available on the [DLpoly license page](./dlpoly/license).
 
