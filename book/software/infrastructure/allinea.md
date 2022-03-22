@@ -65,7 +65,7 @@ Once ready, click on Submit.
 
 The GUI will show the output from qstat in a new window and start at the appropriate time.
 
-If you need access to a particular set of resources for debugging purposes at a specific time, please [contact us](https://leeds.service-now.com/it?id=sc_cat_item&sys_id=7587b2530f675f00a82247ece1050eda) to discuss arranging an *advanced reservation*.
+If you need access to a particular set of resources for debugging purposes at a specific time, please [contact us](https://it.leeds.ac.uk/it?id=sc_cat_item&sys_id=7587b2530f675f00a82247ece1050eda) to discuss arranging an *advanced reservation*.
 Submit non-interactively to the batch queues
 
 ## Create a job submission script of the form and submit to the batch queue with qsub command

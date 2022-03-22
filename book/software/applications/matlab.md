@@ -119,7 +119,7 @@ According to Matlab's documentation, there may be a limit on the number of worke
 
 ### Multiple "worker" support (on multiple hosts)
 
-The multiple workers in the Parallel Toolbox can be spread across multiple hosts in order to make use of a greater number of cores and/or memory: Matlab calls this the Distributed Computing Server. Although this is very similar technology, Mathworks license it differently: at the time of writing we can only support a maximum of 32 distributed workers - please get in touch with the reserach computing team via our [contact form](https://leeds.service-now.com/it?id=sc_cat_item&sys_id=7587b2530f675f00a82247ece1050eda) if you have any queries about this.
+The multiple workers in the Parallel Toolbox can be spread across multiple hosts in order to make use of a greater number of cores and/or memory: Matlab calls this the Distributed Computing Server. Although this is very similar technology, Mathworks license it differently: at the time of writing we can only support a maximum of 32 distributed workers - please get in touch with the reserach computing team via our [contact form](https://it.leeds.ac.uk/it?id=sc_cat_item&sys_id=7587b2530f675f00a82247ece1050eda) if you have any queries about this.
 
 The same code that can make use of the Parallel Toolbox can also make use of Distributed Computing Server; however, there are currently a few setup steps required and the method of launching it is different.
 
