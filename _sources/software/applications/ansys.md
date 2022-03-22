@@ -12,7 +12,7 @@ The license is obtained by setting the `ANSYSLMD_LICENSE_FILE` variable. To set 
 $ export ANSYSLMD_LICENSE_FILE=<port>@<host>
 ```
 
-If accessing for the first time, there is an additional step (see the next section on this page) required to choose whether you are using commercial or academic licenses. To get the values of `<port>@<host>` specific to your group/department please contact the Client IT Team via [Service Now](https://leeds.service-now.com/it).
+If accessing for the first time, there is an additional step (see the next section on this page) required to choose whether you are using commercial or academic licenses. To get the values of `<port>@<host>` specific to your group/department please contact the Client IT Team via [Service Now](https://it.leeds.ac.uk/it).
 
 To make Ansys Fluent and CFX available for use:
 

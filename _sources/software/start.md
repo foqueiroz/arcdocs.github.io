@@ -60,4 +60,4 @@ Sometimes we want to switch a loaded module for another, for instance we might w
 module switch intel gnu/6.3.0
 ```
 
-If you require additional software or applications installing, please [contact us](https://leeds.service-now.com/it?id=sc_cat_item&sys_id=48d5a6d70f275f00a82247ece1050ea0). However, we do not install all software as modules and may provide you guidance about how to install your desired application yourself.
+If you require additional software or applications installing, please [contact us](https://it.leeds.ac.uk/it?id=sc_cat_item&sys_id=48d5a6d70f275f00a82247ece1050ea0). However, we do not install all software as modules and may provide you guidance about how to install your desired application yourself.
