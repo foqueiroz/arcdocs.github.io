@@ -146,6 +146,9 @@ The option `-m` will specify that we wish to receive an email about the job, in 
 * - `-l coproc=`
   - A wrapper line for requesting resources on GPGPU nodes, see [GPGPU page](./gpgpu) for more details. Passing a number between 1 and 4 requests a proportion of the resources on GPGPU nodes.
   -
+* - `-l disk=<bytes>`<br/>`-l disk_type=*|ssd|hdd`<br/>`-l disk_out=<directory>`<br/>`-l disk_usejobname`
+  - These parameters control local disk usage.  Please refer to [Temporary/Scratch Storage on Compute nodes](./scratch) for more details.
+  -
 * - `-hold_jid prev_job_id`
   - Hold the job until the previous job (`prev_job_id`) has completed – useful for chaining runs together.
   -
