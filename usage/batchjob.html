@@ -1351,47 +1351,51 @@ If you intend to runs multiple similar jobs with the same resource specification
 <td><p>A wrapper line for requesting resources on GPGPU nodes, see <a class="reference internal" href="gpgpu.html"><span class="doc std std-doc">GPGPU page</span></a> for more details. Passing a number between 1 and 4 requests a proportion of the resources on GPGPU nodes.</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-hold_jid</span> <span class="pre">prev_job_id</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">disk=&lt;bytes&gt;</span></code><br/><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">disk_type=*|ssd|hdd</span></code><br/><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">disk_out=&lt;directory&gt;</span></code><br/><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">disk_usejobname</span></code></p></td>
+<td><p>These parameters control local disk usage.  Please refer to <a class="reference internal" href="scratch.html"><span class="doc std std-doc">Temporary/Scratch Storage on Compute nodes</span></a> for more details.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-hold_jid</span> <span class="pre">prev_job_id</span></code></p></td>
 <td><p>Hold the job until the previous job (<code class="docutils literal notranslate"><span class="pre">prev_job_id</span></code>) has completed – useful for chaining runs together.</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">placement=type</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">placement=type</span></code></p></td>
 <td><p>Choose optimal for launching a process topology which minimises the number of infiniband switch hops used in the calculation, minimising latency. Choose <code class="docutils literal notranslate"><span class="pre">scatter</span></code> for running processes anywhere on the system without topology considerations.</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">start-stop</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">start-stop</span></code></p></td>
 <td><p>Produce an array of sub-tasks (loop) from <code class="docutils literal notranslate"><span class="pre">start</span></code> to <code class="docutils literal notranslate"><span class="pre">stop</span></code>, giving <code class="docutils literal notranslate"><span class="pre">$SGE_TASK_ID</span></code> variable to identify the individual sub-tasks. See <a class="reference internal" href="taskarrays.html"><span class="doc std std-doc">task array page</span></a> for more details.</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-P</span> <span class="pre">project_name</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-P</span> <span class="pre">project_name</span></code></p></td>
 <td><p>Submit the job to a specific private node queue. Where <code class="docutils literal notranslate"><span class="pre">project_name</span></code> is the name of a private queue you have permission to submit to.</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-help</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-help</span></code></p></td>
 <td><p>Prints a list of options.</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-cwd</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-cwd</span></code></p></td>
 <td><p>Execute the job from the current working directory; output files are sent to the directory form which the job was submitted, not to the user’s home directory.</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-V</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-V</span></code></p></td>
 <td><p>Export all current environment variables to all spawned processes. Necessary for current module environment to be transferred to SGE shell.</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-m</span> <span class="pre">be</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-m</span> <span class="pre">be</span></code></p></td>
 <td><p>Send mail at the beginning (<code class="docutils literal notranslate"><span class="pre">b</span></code>) and at the end (<code class="docutils literal notranslate"><span class="pre">e</span></code>) of the job to the owner.</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-M</span> <span class="pre">email&#64;leeds.ac.uk</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-M</span> <span class="pre">email&#64;leeds.ac.uk</span></code></p></td>
 <td><p>Specify mail address for <code class="docutils literal notranslate"><span class="pre">-m</span></code> option.</p></td>
 <td><p>Your user email address</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-j</span> <span class="pre">y</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-j</span> <span class="pre">y</span></code></p></td>
 <td><p>Combine the standard error and standard output into one file.</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-N</span> <span class="pre">name</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">-N</span> <span class="pre">name</span></code></p></td>
 <td><p>Give the job a specific name. Where <code class="docutils literal notranslate"><span class="pre">name</span></code> is the desired job name.</p></td>
 <td><p>Name of submission script</p></td>
 </tr>
