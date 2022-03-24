@@ -50,10 +50,10 @@ You should now run the normal SSH commands in the terminal specifying the host y
 
 ```bash
 # to connect to ARC4
-$ ssh exuser@arc4.leeds.ac.uk
+$ ssh arc4.leeds.ac.uk
 
 # to connect to ARC3
-$ ssh exuser@arc3.leeds.ac.uk
+$ ssh arc3.leeds.ac.uk
 ```
 
 You'll be prompted to login to remote-access.leeds.ac.uk first and may be presented with an interactive login that looks like below:
