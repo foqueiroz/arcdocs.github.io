@@ -1113,6 +1113,11 @@ const thebe_selector_output = ".output, .cell_output"
        Using rclone on HPC
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-shared-folders">
+       Using shared folders
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1194,6 +1199,11 @@ const thebe_selector_output = ".output, .cell_output"
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#using-rclone-on-hpc">
        Using rclone on HPC
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#using-shared-folders">
+       Using shared folders
       </a>
      </li>
     </ul>
@@ -1668,6 +1678,17 @@ Use &quot;rclone help flags&quot; for to see the global flags.
 Use &quot;rclone help backends&quot; for a list of supported services.
 </pre></div>
 </div>
+</div>
+<div class="section" id="using-shared-folders">
+<h4>Using shared folders<a class="headerlink" href="#using-shared-folders" title="Permalink to this headline">¶</a></h4>
+<p>If you want to access a folder that has been shared with you on OneDrive you can add the folder to “My Files” in the OneDrive web interface and it will then be available through your rclone connection:</p>
+<p>Go to your OneDrive home page and click on Shared</p>
+<p><img alt="Example Shared folder link" src="../_images/rclone-shared.png" /></p>
+<p>Find the folder you want to access and click on the three dots to the right</p>
+<p><img alt="Example Actions link" src="../_images/rclone-actions.png" /></p>
+<p>Click on “Add shortcut to My files”</p>
+<p><img alt="Example shortcut link" src="../_images/rclone-add-shortcut.png" /></p>
+<p>The shared folder will now appear in My files and also in your rclone connection.</p>
 </div>
 </div>
 <div class="section" id="sftp">
