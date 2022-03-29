@@ -1447,9 +1447,9 @@ title="Print to PDF"
 <span class="c1"># Load matlab module</span>
 module add user
 module add matlab
-<span class="c1"># run matlab using command file</span>
+<span class="c1"># run matlab script in the current directory (cosplot.m)</span>
 <span class="c1"># -nodisplay flag should be given to suppress graphics</span>
-matlab -nodisplay &lt; cosplot.m
+matlab -nodisplay -batch cosplot
 </pre></div>
 </div>
 <div class="admonition note">
@@ -1460,7 +1460,7 @@ matlab -nodisplay &lt; cosplot.m
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ qsub runmatlab.sh
 </pre></div>
 </div>
-<p>The output file <code class="docutils literal notranslate"><span class="pre">matlab/test/plot.ps</span></code> can be viewed with Ghostscript using the command <code class="docutils literal notranslate"><span class="pre">gs</span> <span class="pre">matlab/test/plot.ps</span></code>.</p>
+<p>The output file <code class="docutils literal notranslate"><span class="pre">matlab_test_plot.ps</span></code> can be viewed with Ghostscript using the command <code class="docutils literal notranslate"><span class="pre">gs</span> <span class="pre">matlab_test_plot.ps</span></code>.</p>
 </div>
 </div>
 <div class="section" id="parallel-matlab-jobs">
@@ -1471,6 +1471,13 @@ matlab -nodisplay &lt; cosplot.m
 <li><p>Multiple “worker” support (on a single host)</p></li>
 <li><p>Multiple “worker” support (on multiple hosts)</p></li>
 </ol>
+<div class="admonition-tip admonition">
+<p class="admonition-title">Tip</p>
+<p>If you use a mix of threads and workers, you may find performance suffers unless you ignore certain scheduler hints.  Add this line to your job script before running Matlab:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unset</span> <span class="n">GOMP_CPU_AFFINITY</span> <span class="n">KMP_AFFINITY</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="multi-threaded-support">
 <h3>Multi-threaded support<a class="headerlink" href="#multi-threaded-support" title="Permalink to this headline">¶</a></h3>
 <p>This is the simplest method of allowing Matlab to use more than one CPU core. Many functions and toolboxes, for example <code class="docutils literal notranslate"><span class="pre">fft()</span></code> and various linear algebra routines, automatically make use of multiple cores where available.</p>
@@ -1530,7 +1537,7 @@ on ARC)</em></p>
 <p>It may be useful to try combining both Matlab’s multithreading and Distributed Computing Server features (for example, your Matlab code spends all its time in a parfor loop and each trip through that loop spends all of its time in multithreaded routines like fft()): if appropriate, this would make the best use of our limited Distributed Computing Server licenses.</p>
 <p>To do this:</p>
 <ul class="simple">
-<li><p>Use the above method for changing <em>h_rt</em> to edit the cluster profile but instead change <em>use_np_syntax</em> to <em>true</em>. This will caluse entire compute nodes to be allocated to the pool.</p></li>
+<li><p>Use the above method for changing <em>h_rt</em> to edit the cluster profile but instead change <em>use_np_syntax</em> to <em>true</em>. This will cause entire compute nodes to be allocated to the pool.</p></li>
 <li><p>Repeat steps 1-4 again, but then change the value for <em>NumThreads</em> (instead of modifying the <em>AdditionalProperties</em> box). This will tell Matlab to multithread and it will also cause <em>NumThread</em> cores to be allocated to each worker.</p></li>
 <li><p>Since entire compute nodes are allocated, please select ‘sensible’ values for the number of workers and the number of cores per worker to make good use of the allocated resources. For example, on ARC3’s 24 core compute nodes, the number of workers in the pool multiplied by <em>NumThreads</em> should be a multiple of 24.</p></li>
 </ul>
