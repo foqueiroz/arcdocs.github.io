@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<style>
+	body {
+		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	}
+#drop_zone {
+  border: 2px solid lightgray;
+  width:  90%;
+  height: auto;
+	
+}
+	
+	#codearea {
+  border: 2px solid lightgray;
+  width:  90%;
+  height: auto;
+		
+ background-color: rgb(250,250,250);
+font-family: "SFMono-Regular", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+}
+	
+	h1,h2{
+		font-weight: 400;
+	}
+</style>
+<head><title>ARC Drag-and-paste: onedrive to rclone</title></head>
+<body>
+	<h1>Copy multiple files from OneDrive to ARC</h1>
+<p>Copying multiple large files from OneDrive to ARC can be time-consuming -- particularly if you cannot store them in your local machine and/or need to copy multiple specific files within a folder. As security settings might prevent drag-and-drop solutions, use this 'drag-and-copy' approach to generate a command line from dragged files. 
+	</p>
+	<h2>Step 0: Configure your OneDrive using rclone
+	</h2>
+	<p>
+	Before transfering files between OneDrive and ARC servers, you need to add your OneDrive to rclone. In case you haven't done that before, <a href="https://arcdocs.leeds.ac.uk/getting_started/file_transfer.html#adding-a-new-onedrive-remote-to-rclone" target="_blank">please follow the instructions provided by ARC Documentation</a>.
+	</p>
+	<h2>Step 1: Enter the name you have created for your OneDrive in rclone
+	</h2>
+<p>Onedrive name in ARC: <input type="text" id="onedrivename" value="onedrive"></p> 
+<h2>Step 2: Enter the source and destination folders.
+	</h2>
+	<p>Open the OneDrive folder with the files you'd like to upload in File Explorer (Windows). Copy the folders' path and enter it below (leave it blank if files are located in the root folder):</p><img src="img/step2.PNG" width="500px" alt=""/>
+	
+	<p>
+Source folder: <input type="text" id="foldername" > </p>
+	
+	<p>Now enter the name of the desination folder.</p>
+	
+	<p>
+Destination folder: <input type="text" id="destination" value="largefiles" > </p>
+
+	<h2>Step 3: Choose the files you'd like to upload
+	</h2>
+<p>You can either drag them from your OneDrive folder into the drop area below (works on modern broswers), or use the 'Choose files' button (all browsers):</p>
+<img src="img/step3.PNG" width="500px" alt=""/>
+<div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+  <p style="text-align: center" id="dragmessage">Drag one or more files to this Drop Zone (modern browsers). Alternatively, use the 'Choose Files' button below.</p>
+ <p style="text-align: center"><input type="file" name="filename" id="myFile" multiple onchange="javascript:myFunction()" label="Choose Files"> </p><br>
+	
+	
+
+	
+	
+</div>
+
+<!-- button onclick="myFunction()">Try it</button =-->
+<!-- button onclick="resetField()">Reset</button -->
+
+	<h2>Step 4: Enter the command line generated below into your terminal.
+	</h2>
+	<p>Copy and paste the command line below to upload the files.</p>
+	
+<div id="codearea">
+  <button onclick="copyCode()">Copy code</button>
+	<p id="code"></p>
+	</div>
+
+<script>
+
+document.getElementById("myFile").onchange = function(e) {
+
+var input = document.getElementById('myFile');
+    var output = document.getElementById('code');
+    var folderone = document.getElementById('foldername').value;
+     var onealias = document.getElementById('onedrivename').value;
+	var destname = document.getElementById('destination').value;
+	
+	    if(folderone != ""){
+			folderone = '/' + folderone;
+    	if(folderone.substr(folderone.length - 1) == "/"){
+        folderone.slice(0, -1);
+			
+        }
+			
+    }
+	folderone = folderone.replace(/\134/g,"/");
+	
+	folderone = folderone.replace(/\s/g, '\\'+" ");
+	
+	destname = destname.replace(/\134/g,"/");
+	
+	destname = destname.replace(/\s/g, '\\'+" ");
+
+    var children = 'rclone copy ' +onealias + ':' + folderone + ' --include "{';
+    
+	
+	 
+
+    
+    for (var i = 0; i < input.files.length; ++i) {
+		var filename = input.files.item(i).name;
+		filename = filename.replace(/\s/g, '\\'+" ");
+        children += filename + '';
+		
+		
+		
+        if(i < input.files.length-1){
+        children += ',';
+				
+			
+        }
+    }
+    output.innerHTML = ''+children+'';
+    output.innerHTML += '}" ' + destname;
+	//output.innerHTML = output.innerHTML.replace(/\134/g,"/");
+	
+	
+	var dragmessage = document.getElementById('dragmessage');
+	
+	dragmessage.innerHTML = "Dragged files added to command line (below).<br>To change file selection, you can either drag them again from your OneDrive folder into the drop area below, or use the 'Choose files' button:";
+	
+	window.scrollTo(0, document.body.scrollHeight);
+
+
+}
+
+function myFunction() {
+ var input = document.getElementById('myFile');
+    var output = document.getElementById('code');
+    var folderone = document.getElementById('foldername').value;
+    var onealias = document.getElementById('onedrivename').value;
+	var destname = document.getElementById('destination').value;
+	
+	
+	folderone = folderone.replace(/\134/g,"/");
+	
+	folderone = folderone.replace(/\s/g, '\\'+" ");
+	
+	destname = destname.replace(/\134/g,"/");
+	
+	destname = destname.replace(/\s/g, '\\'+" ");
+
+
+
+    var children = 'rclone copy ' +onealias + ':' + folderone + ' --include "{';
+    
+    
+    for (var i = 0; i < input.files.length; ++i) {
+		
+		var filename = input.files.item(i).name;
+		filename = filename.replace(/\s/g, '\\'+" ");
+        children += filename + '';
+        if(i < input.files.length-1){
+        children += ',';
+        }
+    }
+    output.innerHTML = ''+children+'';
+    output.innerHTML += '}" ' + destname;
+	//output.innerHTML = output.innerHTML.replace(/\134/g,"/");
+
+	var dragmessage = document.getElementById('dragmessage');
+	
+	dragmessage.innerHTML = "Dragged files added to command line (below).<br>To change file selection, you can either drag them again from your OneDrive folder into the drop area below, or use the 'Choose files' button:";
+	
+	window.scrollTo(0, document.body.scrollHeight);
+
+
+}
+
+function resetField() {
+document.getElementById('code').innerHTML = '';
+}
+
+function dropHandler(ev) {
+  console.log('File(s) dropped');
+  
+var output = document.getElementById('code');
+var folderone = document.getElementById('foldername').value;
+  var onealias = document.getElementById('onedrivename').value;
+		var destname = document.getElementById('destination').value;
+	
+	
+
+	    if(folderone != ""){
+			folderone = '/' + folderone;
+    	if(folderone.substr(folderone.length - 1) == "/"){
+        folderone.slice(0, -1);
+			
+        }
+			
+    }
+	
+	
+		folderone = folderone.replace(/\134/g,"/");
+	
+	folderone = folderone.replace(/\s/g, '\\'+" ");
+	
+	destname = destname.replace(/\134/g,"/");
+	
+	destname = destname.replace(/\s/g, '\\'+" ");
+	
+	
+	
+
+    var children = 'rclone copy ' +onealias + ':' + folderone + ' --include "{';
+    var lastfilenumber = 0;
+  // Prevent default behavior (Prevent file from being opened)
+  ev.preventDefault();
+
+  if (ev.dataTransfer.items) {
+  
+      for (var i = 0; i < ev.dataTransfer.items.length; i++) {
+       if (ev.dataTransfer.items[i].kind === 'file') {
+       lastfilenumber = i;
+       }
+      }
+  
+    // Use DataTransferItemList interface to access the file(s)
+    for (var i = 0; i < ev.dataTransfer.items.length; i++) {
+    
+      // If dropped items aren't files, reject them
+      if (ev.dataTransfer.items[i].kind === 'file') {
+        var file = ev.dataTransfer.items[i].getAsFile();
+        //document.getElementById('code').innerHTML += '<li>' + file.name+'</li>';
+        
+		  var filename = file.name;
+		  filename = filename.replace(/\s/g, '\\'+" ");
+        children += ''+ filename + '';
+        
+        
+        
+        if(i < lastfilenumber){
+        children += ',';
+        }
+      }
+
+//try getting links
+
+//if (ev.dataTransfer.items[i].kind === 'string') {
+        //ev.dataTransfer.items[i].getAsString(function (s){
+       //alert(ev.dataTransfer.items[i]);
+  //     data = ev.dataTransfer.items[i];
+//alert(data);
+
+    // });
+
+        //alert(ourl);
+  //      children += ''+ folderone + file.name + '';
+        
+        
+        
+    //    if(i < lastfilenumber){
+      //  children += ', ';
+        //}
+      //}
+
+
+// end try getting links
+
+    }
+  } else {
+    // Use DataTransfer interface to access the file(s)
+    for (var i = 0; i < ev.dataTransfer.files.length; i++) {
+      console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
+    }
+  }
+  output.innerHTML = ''+children+'';
+    output.innerHTML += '}" ' + destname;
+	//output.innerHTML = output.innerHTML.replace(/\134/g,"/");
+	
+	
+	
+	var dragmessage = document.getElementById('dragmessage');
+	
+	dragmessage.innerHTML = "Dragged files added to command line (below).<br>To change file selection, you can either drag them again from your OneDrive folder into the drop area below, or use the 'Choose files' button:";
+	
+	window.scrollTo(0, document.body.scrollHeight);
+
+}
+
+function dragOverHandler(ev) {
+  console.log('File(s) in drop zone');
+
+  // Prevent default behavior (Prevent file from being opened)
+  ev.preventDefault();
+}
+	
+	function copyCode() {
+  /* Get the text field */
+		//alert(document.getElementById('code').innerHTML);
+  var copyText = document.getElementById('code');
+
+  /* Select the text field */
+  //copyText.select();
+  //copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.innerHTML);
+  
+  /* Alert the copied text */
+  //alert("Copied the text: " + copyText.innerHTML);
+}
+</script>
+
+</body>
+</html>
