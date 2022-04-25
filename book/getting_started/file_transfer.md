@@ -516,7 +516,12 @@ Use "rclone [command] --help" for more information about a command.
 Use "rclone help flags" for to see the global flags.
 Use "rclone help backends" for a list of supported services.
 ```
-#### Using shared folders
+
+#### Copying multiple OneDrive files with rclone
+ 
+Copying multiple large files from OneDrive to ARC can be time-consuming -- particularly if you cannot store them in your local machine and/or need to copy multiple specific files within a folder. As security settings might prevent drag-and-drop solutions, we have designed a ['drag-and-copy'](tools/index.html) tool to generate a command line from dragged files.
+ 
+ #### Using shared folders
 
 If you want to access a folder that has been shared with you on OneDrive you can add the folder to "My Files" in the OneDrive web interface and it will then be available through your rclone connection:
 
